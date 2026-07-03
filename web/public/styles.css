@@ -9,7 +9,18 @@
     --lagging: #ef4444;
     --pos: #22c55e;
     --neg: #ef4444;
+    --pos-rgb: 34, 197, 94;
+    --neg-rgb: 239, 68, 68;
     --border: #30363d;
+    /* Per-status badge text color, chosen for contrast against that status's
+       background in this theme (checked with WCAG contrast, not eyeballed —
+       e.g. white-on-leading-green is only 2.28:1 in dark mode, black is 9.22:1). */
+    --leading-text: #000000;
+    --improving-text: #000000;
+    --weakening-text: #000000;
+    --lagging-text: #000000;
+    --card-overlay: rgba(0, 0, 0, 0.2);
+    --panel-shadow: none;
 }
 
 html[data-theme="light"] {
@@ -23,7 +34,15 @@ html[data-theme="light"] {
     --lagging: #dc2626;
     --pos: #16a34a;
     --neg: #dc2626;
+    --pos-rgb: 22, 163, 74;
+    --neg-rgb: 220, 38, 38;
     --border: #d0d7de;
+    --leading-text: #000000;
+    --improving-text: #ffffff;
+    --weakening-text: #000000;
+    --lagging-text: #ffffff;
+    --card-overlay: rgba(0, 0, 0, 0.035);
+    --panel-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -51,7 +70,9 @@ header {
 
 .header-left h1 {
     font-size: 1.25rem;
-    color: #e6edf3;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--text);
 }
 
 .header-meta {
@@ -74,7 +95,7 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background: #3b434b;
+    filter: brightness(0.9);
 }
 
 main {
@@ -102,6 +123,7 @@ main {
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 2rem;
+    box-shadow: var(--panel-shadow);
 }
 
 h2 {
@@ -151,37 +173,55 @@ table {
 }
 
 th, td {
-    padding: 0.5rem;
+    padding: 0.6rem 0.5rem;
     text-align: right;
     border-bottom: 1px solid var(--border);
+    font-variant-numeric: tabular-nums;
 }
 th:first-child, td:first-child {
     text-align: left;
+    font-variant-numeric: normal;
+}
+
+thead tr {
+    background: var(--card-overlay);
+}
+thead th {
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
 }
 
 th.sortable {
     cursor: pointer;
 }
 th.sortable:hover {
-    color: white;
+    background: var(--border);
 }
 th.sortable.active {
     text-decoration: underline;
+    color: var(--text);
+}
+
+tbody tr:hover td:first-child {
+    color: var(--improving);
 }
 
 .badge {
     display: inline-block;
-    padding: 0.1rem 0.4rem;
+    padding: 0.15rem 0.5rem;
     border-radius: 12px;
     font-size: 0.7rem;
+    font-weight: 600;
     margin-left: 0.5rem;
-    color: white;
 }
-.badge.leading { background: var(--leading); }
-.badge.improving { background: var(--improving); }
-.badge.weakening { background: var(--weakening); color: black; }
-.badge.lagging { background: var(--lagging); }
-.badge.incomplete { background: #555; color: white; }
+.badge.leading { background: var(--leading); color: var(--leading-text); }
+.badge.improving { background: var(--improving); color: var(--improving-text); }
+.badge.weakening { background: var(--weakening); color: var(--weakening-text); }
+.badge.lagging { background: var(--lagging); color: var(--lagging-text); }
+.badge.incomplete { background: var(--muted); color: var(--panel); }
 
 .playbook-grid {
     display: grid;
@@ -205,7 +245,7 @@ th.sortable.active {
     border-top: 3px solid;
     border-radius: 8px;
     padding: 1rem;
-    background: rgba(0,0,0,0.2);
+    background: var(--card-overlay);
 }
 .playbook-card.leading { border-top-color: var(--leading); }
 .playbook-card.improving { border-top-color: var(--improving); }
@@ -242,7 +282,7 @@ th.sortable.active {
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 1rem;
-    background: rgba(0,0,0,0.2);
+    background: var(--card-overlay);
 }
 .appendix-card h3 {
     font-size: 1rem;

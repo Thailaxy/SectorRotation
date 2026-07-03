@@ -86,19 +86,34 @@ function renderHeatmap() {
 
 function renderReturnCell(val) {
     if (val === null) return `<td>-</td>`;
-    
+
     let absVal = Math.min(Math.abs(val), 20); // Cap at 20% for scale
     let opacity = 0.1 + (absVal / 20) * 0.7; // From 0.1 to 0.8 opacity
-    let bgCol = val > 0 ? `rgba(34, 197, 94, ${opacity})` : `rgba(239, 68, 68, ${opacity})`;
-    
-    let color = val > 0 ? 'pos-val' : (val < 0 ? 'neg-val' : '');
-    return `<td style="background-color: ${bgCol}; border-bottom: 1px solid var(--border);" class="${color}">${val > 0 ? '+' : ''}${val.toFixed(2)}%</td>`;
+    let rgb = val > 0 ? getCssVar('--pos-rgb') : getCssVar('--neg-rgb');
+    let bgCol = `rgba(${rgb}, ${opacity})`;
+
+    // Text stays in neutral ink rather than pos/neg accent color: at high
+    // opacity the cell background is already strongly tinted, and same-hue
+    // text on a same-hue fill drops below readable contrast (validated with
+    // the dataviz skill's WCAG contrast checker). The background color and
+    // the +/- sign already carry the direction; the text doesn't need to too.
+    return `<td style="background-color: ${bgCol}; border-bottom: 1px solid var(--border); color: var(--text); font-weight: 600;">${val > 0 ? '+' : ''}${val.toFixed(2)}%</td>`;
 }
 
 function getBreadthColor(pct) {
     if (pct >= 50) return 'bb-green';
     if (pct >= 30) return 'bb-yellow';
     return 'bb-red';
+}
+
+// Same green/yellow/red breadth thresholds as getBreadthColor(), mapped to
+// the existing .badge.leading/weakening/lagging classes so this badge picks
+// up the same theme-aware background + contrast-checked text color as the
+// quadrant badges, instead of duplicating hardcoded colors inline.
+function getBreadthBadgeClass(pct) {
+    if (pct >= 50) return 'leading';
+    if (pct >= 30) return 'weakening';
+    return 'lagging';
 }
 
 function renderPlaybook() {
@@ -116,12 +131,10 @@ function renderPlaybook() {
         themesInQ.forEach(t => {
             let badge = '';
             if (t.type === 'sector_etf') {
-                badge = `<span class="badge" style="background:#555;color:white;">ETF</span>`;
+                badge = `<span class="badge incomplete">ETF</span>`;
             } else if (t.breadth_pct !== null) {
-                let colorClass = getBreadthColor(t.breadth_pct);
-                let colorHex = colorClass === 'bb-green' ? 'var(--leading)' : (colorClass === 'bb-yellow' ? 'var(--weakening)' : 'var(--lagging)');
-                let textCol = colorClass === 'bb-yellow' ? 'black' : 'white';
-                badge = `<span class="badge" style="background:${colorHex};color:${textCol};">B ${t.breadth_pct.toFixed(0)}%</span>`;
+                let badgeClass = getBreadthBadgeClass(t.breadth_pct);
+                badge = `<span class="badge ${badgeClass}">B ${t.breadth_pct.toFixed(0)}%</span>`;
             }
             
             let val = t.returns.m1_vs_spy !== null ? `${t.returns.m1_vs_spy>0?'+':''}${t.returns.m1_vs_spy.toFixed(1)}%` : '-';
