@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-03T17:20:08.792185Z",
-  "as_of_date": "",
+  "generated_at": "2026-07-03T17:26:40.482658Z",
+  "as_of_date": "2026-07-02",
   "benchmark": "SPY",
-  "benchmark_return_1D": null,
-  "benchmark_return_1M": null,
-  "benchmark_return_3M": null,
+  "benchmark_return_1D": -0.13,
+  "benchmark_return_1M": -1.69,
+  "benchmark_return_3M": 13.96,
   "config": {
     "rrg_tail_weeks": 8,
     "breadth_ma": 20,
@@ -19,17 +19,17 @@
       "name_en": "Semiconductors",
       "name_th": "เซมิคอนดักเตอร์",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -3.79,
+        "w1": -6.31,
+        "m1": -9.54,
+        "m3": 71.19,
+        "m1_vs_spy": -7.85
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 12.5,
+      "dollar_vol_ratio": 0.96,
       "rrg": null,
       "constituents": [
         "NVDA",
@@ -59,17 +59,17 @@
       "name_en": "Semi Equip & Memory",
       "name_th": "อุปกรณ์เซมิฯและเมมโมรี่",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -8.41,
+        "w1": -13.57,
+        "m1": 3.31,
+        "m3": 79.27,
+        "m1_vs_spy": 5.0
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 14.3,
+      "dollar_vol_ratio": 1.21,
       "rrg": null,
       "constituents": [
         "MU",
@@ -93,17 +93,17 @@
       "name_en": "Software",
       "name_th": "ซอฟต์แวร์",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 0.82,
+        "w1": 7.95,
+        "m1": -17.56,
+        "m3": -1.98,
+        "m1_vs_spy": -15.87
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 66.7,
+      "dollar_vol_ratio": 1.05,
       "rrg": null,
       "constituents": [
         "MSFT",
@@ -134,17 +134,17 @@
       "name_en": "Mag 7",
       "name_th": "7 นางฟ้า",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -1.04,
+        "w1": 6.61,
+        "m1": -5.92,
+        "m3": 11.15,
+        "m1_vs_spy": -4.23
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 71.4,
+      "dollar_vol_ratio": 1.29,
       "rrg": null,
       "constituents": [
         "AAPL",
@@ -168,17 +168,17 @@
       "name_en": "Cybersecurity",
       "name_th": "ไซเบอร์ซีเคียวริตี้",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -0.23,
+        "w1": 14.98,
+        "m1": 5.94,
+        "m3": 78.59,
+        "m1_vs_spy": 7.64
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 100.0,
+      "dollar_vol_ratio": 1.05,
       "rrg": null,
       "constituents": [
         "CRWD",
@@ -210,17 +210,17 @@
       "name_en": "Genomics",
       "name_th": "จีโนมิกส์",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 3.1,
+        "w1": 10.53,
+        "m1": 20.99,
+        "m3": 42.11,
+        "m1_vs_spy": 22.69
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 100.0,
+      "dollar_vol_ratio": 1.26,
       "rrg": null,
       "constituents": [
         "CRSP",
@@ -250,17 +250,17 @@
       "name_en": "Biotech Large",
       "name_th": "ไบโอเทค (ขนาดใหญ่)",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 4.31,
+        "w1": 6.91,
+        "m1": 12.95,
+        "m3": 4.17,
+        "m1_vs_spy": 14.64
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 100.0,
+      "dollar_vol_ratio": 1.17,
       "rrg": null,
       "constituents": [
         "AMGN",
@@ -287,17 +287,17 @@
       "name_en": "Pharma & Managed Care",
       "name_th": "ยาและการดูแลสุขภาพ",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 2.39,
+        "w1": 5.14,
+        "m1": 12.42,
+        "m3": 18.15,
+        "m1_vs_spy": 14.11
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 83.3,
+      "dollar_vol_ratio": 1.21,
       "rrg": null,
       "constituents": [
         "LLY",
@@ -325,17 +325,17 @@
       "name_en": "Defense",
       "name_th": "กลาโหม",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 4.17,
+        "w1": 7.67,
+        "m1": 6.51,
+        "m3": -7.19,
+        "m1_vs_spy": 8.2
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 100.0,
+      "dollar_vol_ratio": 1.08,
       "rrg": null,
       "constituents": [
         "LMT",
@@ -367,17 +367,17 @@
       "name_en": "Energy",
       "name_th": "พลังงาน",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 1.19,
+        "w1": -2.12,
+        "m1": -10.79,
+        "m3": -12.19,
+        "m1_vs_spy": -9.09
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 0.0,
+      "dollar_vol_ratio": 0.93,
       "rrg": null,
       "constituents": [
         "XOM",
@@ -409,17 +409,17 @@
       "name_en": "Banks & Brokers",
       "name_th": "ธนาคารและโบรกเกอร์",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 0.27,
+        "w1": -1.14,
+        "m1": 5.34,
+        "m3": 17.8,
+        "m1_vs_spy": 7.03
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 1.01,
       "rrg": null,
       "constituents": [
         "JPM",
@@ -451,17 +451,17 @@
       "name_en": "Staples",
       "name_th": "สินค้าอุปโภคบริโภค",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 2.81,
+        "w1": 1.51,
+        "m1": 3.36,
+        "m3": -0.62,
+        "m1_vs_spy": 5.05
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 1.21,
       "rrg": null,
       "constituents": [
         "PG",
@@ -483,17 +483,17 @@
       "name_en": "Utilities & Power",
       "name_th": "สาธารณูปโภคและไฟฟ้า",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 1.62,
+        "w1": -3.22,
+        "m1": 0.53,
+        "m3": -3.68,
+        "m1_vs_spy": 2.22
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 1.05,
       "rrg": null,
       "constituents": [
         "NEE",
@@ -520,17 +520,17 @@
       "name_en": "Materials",
       "name_th": "วัสดุอุตสาหกรรม",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 1.67,
+        "w1": 1.51,
+        "m1": 2.94,
+        "m3": 11.2,
+        "m1_vs_spy": 4.64
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 1.15,
       "rrg": null,
       "constituents": [
         "LIN",
@@ -552,17 +552,17 @@
       "name_en": "AI Infra & Data Center",
       "name_th": "โครงสร้างพื้นฐาน AI",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -4.72,
+        "w1": -7.78,
+        "m1": -18.54,
+        "m3": 34.92,
+        "m1_vs_spy": -16.85
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 0.0,
+      "dollar_vol_ratio": 1.04,
       "rrg": null,
       "constituents": [
         "VRT",
@@ -595,17 +595,17 @@
       "name_en": "Quantum",
       "name_th": "ควอนตัมคอมพิวติ้ง",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -4.17,
+        "w1": -0.86,
+        "m1": -29.71,
+        "m3": 58.03,
+        "m1_vs_spy": -28.02
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 0.0,
+      "dollar_vol_ratio": 0.79,
       "rrg": null,
       "constituents": [
         "IONQ",
@@ -625,17 +625,17 @@
       "name_en": "Nuclear & Uranium",
       "name_th": "นิวเคลียร์และยูเรเนียม",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -1.5,
+        "w1": -3.75,
+        "m1": -19.04,
+        "m3": -6.13,
+        "m1_vs_spy": -17.35
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 0.0,
+      "dollar_vol_ratio": 0.94,
       "rrg": null,
       "constituents": [
         "CCJ",
@@ -667,17 +667,17 @@
       "name_en": "Gold Miners",
       "name_th": "เหมืองทองคำ",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 2.66,
+        "w1": 2.19,
+        "m1": -6.67,
+        "m3": -12.66,
+        "m1_vs_spy": -4.97
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 25.0,
+      "dollar_vol_ratio": 0.92,
       "rrg": null,
       "constituents": [
         "NEM",
@@ -708,17 +708,17 @@
       "name_en": "Solar",
       "name_th": "พลังงานแสงอาทิตย์",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -4.24,
+        "w1": -6.27,
+        "m1": -27.64,
+        "m3": 2.22,
+        "m1_vs_spy": -25.95
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 0.0,
+      "dollar_vol_ratio": 1.21,
       "rrg": null,
       "constituents": [
         "FSLR",
@@ -744,17 +744,17 @@
       "name_en": "Crypto-linked",
       "name_th": "คริปโทเคอร์เรนซี",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 0.12,
+        "w1": 4.76,
+        "m1": -7.04,
+        "m3": 33.79,
+        "m1_vs_spy": -5.35
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 40.0,
+      "dollar_vol_ratio": 1.11,
       "rrg": null,
       "constituents": [
         "COIN",
@@ -786,17 +786,17 @@
       "name_en": "Space & Drones",
       "name_th": "อวกาศและโดรน",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 2.25,
+        "w1": 23.62,
+        "m1": -23.22,
+        "m3": 7.44,
+        "m1_vs_spy": -21.53
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 1.36,
       "rrg": null,
       "constituents": [
         "RKLB",
@@ -823,17 +823,17 @@
       "name_en": "China Tech ADR",
       "name_th": "เทคโนโลยีจีน",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -0.91,
+        "w1": 6.74,
+        "m1": -14.73,
+        "m3": -8.06,
+        "m1_vs_spy": -13.04
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 20.0,
+      "dollar_vol_ratio": 1.04,
       "rrg": null,
       "constituents": [
         "BABA",
@@ -860,17 +860,17 @@
       "name_en": "Homebuilders",
       "name_th": "สร้างบ้าน",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 0.91,
+        "w1": -3.32,
+        "m1": 7.97,
+        "m3": 9.9,
+        "m1_vs_spy": 9.66
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 80.0,
+      "dollar_vol_ratio": 0.97,
       "rrg": null,
       "constituents": [
         "DHI",
@@ -897,17 +897,17 @@
       "name_en": "Travel & Airlines",
       "name_th": "ท่องเที่ยวและสายการบิน",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -0.25,
+        "w1": -0.13,
+        "m1": 10.36,
+        "m3": 20.82,
+        "m1_vs_spy": 12.05
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 66.7,
+      "dollar_vol_ratio": 1.07,
       "rrg": null,
       "constituents": [
         "BKNG",
@@ -935,17 +935,17 @@
       "name_en": "Fintech & Payments",
       "name_th": "ฟินเทคและการชำระเงิน",
       "type": "theme",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 2.23,
+        "w1": 6.07,
+        "m1": 10.91,
+        "m3": 12.56,
+        "m1_vs_spy": 12.61
       },
-      "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "breadth_pct": 100.0,
+      "dollar_vol_ratio": 1.15,
       "rrg": null,
       "constituents": [
         "V",
@@ -972,17 +972,17 @@
       "name_en": "Tech (XLK)",
       "name_th": "เทคโนโลยี (XLK)",
       "type": "sector_etf",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -2.71,
+        "w1": -2.16,
+        "m1": -8.78,
+        "m3": 34.02,
+        "m1_vs_spy": -7.09
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "dollar_vol_ratio": 0.8,
       "rrg": null,
       "constituents": [
         "XLK"
@@ -994,17 +994,17 @@
       "name_en": "Financials (XLF)",
       "name_th": "การเงิน (XLF)",
       "type": "sector_etf",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 1.53,
+        "w1": 4.06,
+        "m1": 8.46,
+        "m3": 12.89,
+        "m1_vs_spy": 10.16
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "dollar_vol_ratio": 0.96,
       "rrg": null,
       "constituents": [
         "XLF"
@@ -1016,17 +1016,17 @@
       "name_en": "Health Care (XLV)",
       "name_th": "สุขภาพ (XLV)",
       "type": "sector_etf",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 2.63,
+        "w1": 5.21,
+        "m1": 12.34,
+        "m3": 11.33,
+        "m1_vs_spy": 14.03
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "dollar_vol_ratio": 1.16,
       "rrg": null,
       "constituents": [
         "XLV"
@@ -1038,17 +1038,17 @@
       "name_en": "Energy (XLE)",
       "name_th": "พลังงาน (XLE)",
       "type": "sector_etf",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 0.78,
+        "w1": -1.61,
+        "m1": -7.52,
+        "m3": -9.1,
+        "m1_vs_spy": -5.82
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "dollar_vol_ratio": 0.77,
       "rrg": null,
       "constituents": [
         "XLE"
@@ -1060,17 +1060,17 @@
       "name_en": "Industrials (XLI)",
       "name_th": "อุตสาหกรรม (XLI)",
       "type": "sector_etf",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 0.3,
+        "w1": -0.11,
+        "m1": 5.84,
+        "m3": 12.12,
+        "m1_vs_spy": 7.53
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "dollar_vol_ratio": 0.94,
       "rrg": null,
       "constituents": [
         "XLI"
@@ -1082,17 +1082,17 @@
       "name_en": "Utilities (XLU)",
       "name_th": "สาธารณูปโภค (XLU)",
       "type": "sector_etf",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 2.21,
+        "w1": -0.2,
+        "m1": 4.9,
+        "m3": -0.13,
+        "m1_vs_spy": 6.6
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "dollar_vol_ratio": 1.06,
       "rrg": null,
       "constituents": [
         "XLU"
@@ -1104,17 +1104,17 @@
       "name_en": "Staples (XLP)",
       "name_th": "สินค้าอุปโภคบริโภค (XLP)",
       "type": "sector_etf",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 2.03,
+        "w1": 1.25,
+        "m1": 4.58,
+        "m3": 5.06,
+        "m1_vs_spy": 6.28
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "dollar_vol_ratio": 1.0,
       "rrg": null,
       "constituents": [
         "XLP"
@@ -1126,17 +1126,17 @@
       "name_en": "Real Estate (XLRE)",
       "name_th": "อสังหาริมทรัพย์ (XLRE)",
       "type": "sector_etf",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 1.13,
+        "w1": 0.2,
+        "m1": 3.64,
+        "m3": 10.06,
+        "m1_vs_spy": 5.33
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "dollar_vol_ratio": 1.17,
       "rrg": null,
       "constituents": [
         "XLRE"
@@ -1148,17 +1148,17 @@
       "name_en": "Materials (XLB)",
       "name_th": "วัสดุอุตสาหกรรม (XLB)",
       "type": "sector_etf",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": 1.94,
+        "w1": 0.33,
+        "m1": 1.33,
+        "m3": 3.46,
+        "m1_vs_spy": 3.02
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "dollar_vol_ratio": 0.97,
       "rrg": null,
       "constituents": [
         "XLB"
@@ -1170,17 +1170,17 @@
       "name_en": "Cons Discret (XLY)",
       "name_th": "สินค้าฟุ่มเฟือย (XLY)",
       "type": "sector_etf",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -0.82,
+        "w1": 3.33,
+        "m1": -0.2,
+        "m3": 6.88,
+        "m1_vs_spy": 1.49
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "dollar_vol_ratio": 1.15,
       "rrg": null,
       "constituents": [
         "XLY"
@@ -1192,17 +1192,17 @@
       "name_en": "Comm Svcs (XLC)",
       "name_th": "สื่อสาร (XLC)",
       "type": "sector_etf",
-      "data_ok": false,
+      "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m1_vs_spy": null
+        "d1": -0.13,
+        "w1": 3.81,
+        "m1": -3.24,
+        "m3": -1.22,
+        "m1_vs_spy": -1.55
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
+      "dollar_vol_ratio": 1.09,
       "rrg": null,
       "constituents": [
         "XLC"
@@ -1210,7 +1210,5 @@
       "ref_etfs": []
     }
   ],
-  "warnings": [
-    "yfinance returned empty or failed completely."
-  ]
+  "warnings": []
 }
