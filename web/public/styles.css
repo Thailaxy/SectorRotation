@@ -217,6 +217,20 @@ tbody tr:hover td:first-child {
     font-weight: 600;
     margin-left: 0.5rem;
 }
+
+.zone-cell {
+    text-align: center;
+    white-space: nowrap;
+    width: 90px;
+}
+.zone-cell .badge {
+    margin-left: 0;
+}
+
+#heatmapTable td:first-child, #heatmapTable th:first-child {
+    white-space: nowrap;
+    min-width: 170px;
+}
 .badge.leading { background: var(--leading); color: var(--leading-text); }
 .badge.improving { background: var(--improving); color: var(--improving-text); }
 .badge.weakening { background: var(--weakening); color: var(--weakening-text); }

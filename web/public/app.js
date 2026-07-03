@@ -57,7 +57,7 @@ function renderHeatmap() {
 
     themes.forEach(theme => {
         const tr = document.createElement('tr');
-        
+
         let qBadge = '';
         if (!theme.data_ok) {
             let badgeText = dict[currentLang] && dict[currentLang]['data_incomplete'] ? dict[currentLang]['data_incomplete'] : 'Incomplete Data';
@@ -67,13 +67,14 @@ function renderHeatmap() {
             qBadge = `<span class="badge ${theme.quadrant}">${label}</span>`;
         }
 
-        let nameHtml = getThemeName(theme) + qBadge;
+        let nameHtml = getThemeName(theme);
         if (appData.user_holdings.includes(theme.id)) {
             nameHtml += ' 📍';
         }
 
         tr.innerHTML = `
             <td>${nameHtml}</td>
+            <td class="zone-cell">${qBadge}</td>
             ${renderReturnCell(theme.returns.d1)}
             ${renderReturnCell(theme.returns.w1)}
             ${renderReturnCell(theme.returns.m1)}
