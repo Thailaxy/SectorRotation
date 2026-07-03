@@ -220,7 +220,9 @@ rotation-tracker/
 
 ### 8.3 การเตรียมข้อมูล
 - ทำ forward-fill สำหรับวันหยุด/ค่าหาย (จำกัดไม่เกิน 2 วัน) 
-- Return ทั้งหมดคำนวณจาก **adjusted close** ถ้ามี (yfinance `auto_adjust=True`)
+- Return ทั้งหมดคำนวณจาก **plain close** (yfinance `auto_adjust=False`, ใช้คอลัมน์ `Close` ซึ่ง split-adjusted แต่ไม่ dividend-adjusted)
+  เพื่อให้ตัวเลข % ตรงกับกราฟราคาที่แสดงบนหน้า Yahoo Finance เอง — ถ้าใช้ `auto_adjust=True`/`Adj Close`
+  (total return รวมเงินปันผล) ตัวเลขจะต่างจากที่ Yahoo แสดงในช่วงที่มี ex-dividend date อยู่ในหน้าต่างช่วงเวลานั้น
 
 ---
 
@@ -517,7 +519,7 @@ pytest                                              # รัน unit test
 | ประวัติราคาสั้นกว่า 3M | ช่อง m3 = null, frontend แสดง "–" |
 | RRG ยังคำนวณไม่ได้ (ประวัติ < 52 สัปดาห์) | `rrg=null`, ธีมไม่ขึ้นบน RRG แต่ยังอยู่ใน heatmap |
 | หารด้วยศูนย์ / NaN | คืน null และ log; ห้าม crash pipeline ทั้งชุด |
-| ETF จ่ายปันผล/แตกพาร์ | ใช้ auto_adjust=True ของ yfinance |
+| ETF จ่ายปันผล/แตกพาร์ | ใช้ `auto_adjust=False` + คอลัมน์ `Close` (split-adjusted, ไม่รวมปันผล — ตรงกับกราฟราคาของ Yahoo) |
 
 ---
 

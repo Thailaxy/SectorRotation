@@ -34,7 +34,7 @@ def fetch_data(tickers, benchmark, history_days, retries=3, retry_wait_sec=5):
             print(f"Fetching data from yfinance (attempt {attempt+1}/{retries})...")
             from curl_cffi import requests as curl_requests
             session = curl_requests.Session(impersonate="chrome")
-            df = yf.download(all_tickers, start=start_date, end=end_date, auto_adjust=True, session=session)
+            df = yf.download(all_tickers, start=start_date, end=end_date, auto_adjust=False, session=session)
             print(f"  -> got shape {df.shape if df is not None else None}, empty={df.empty if df is not None else True}")
             if df is not None and not df.empty:
                 break
@@ -47,7 +47,9 @@ def fetch_data(tickers, benchmark, history_days, retries=3, retry_wait_sec=5):
     vol_dict = {}
     
     if df is not None and not df.empty:
-        close_col = 'Adj Close' if 'Adj Close' in df.columns.levels[0] else 'Close'
+        # Plain 'Close' (split-adjusted, not dividend-adjusted) so returns match
+        # what Yahoo Finance's price chart shows, not total-return incl. dividends.
+        close_col = 'Close'
         vol_col = 'Volume'
         for ticker in all_tickers:
             try:
