@@ -38,12 +38,24 @@ function getThemeName(theme) {
     return currentLang === 'th' ? (theme.name_th || theme.name_en) : theme.name_en;
 }
 
+// Best-to-worst zone order used elsewhere in the UI (matches the Momentum
+// Playbook's card order). Themes with no quadrant (incomplete data) sort last.
+const ZONE_SORT_ORDER = { leading: 0, improving: 1, weakening: 2, lagging: 3 };
+
 function renderHeatmap() {
     const tbody = document.querySelector('#heatmapTable tbody');
     tbody.innerHTML = '';
-    
+
     let themes = [...appData.themes];
     themes.sort((a, b) => {
+        if (currentSort === 'theme') {
+            return getThemeName(a).localeCompare(getThemeName(b));
+        }
+        if (currentSort === 'zone') {
+            let rankA = ZONE_SORT_ORDER[a.quadrant] ?? 99;
+            let rankB = ZONE_SORT_ORDER[b.quadrant] ?? 99;
+            return rankA - rankB;
+        }
         let valA, valB;
         if (currentSort === 'm1_vs_spy') {
             valA = a.returns.m1_vs_spy; valB = b.returns.m1_vs_spy;
