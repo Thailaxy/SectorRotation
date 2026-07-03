@@ -32,16 +32,16 @@ def fetch_data(tickers, benchmark, history_days, retries=3, retry_wait_sec=5):
     for attempt in range(retries):
         try:
             print(f"Fetching data from yfinance (attempt {attempt+1}/{retries})...")
-            import requests
-            session = requests.Session()
-            session.headers.update(
-                {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
-            )
+            from curl_cffi import requests as curl_requests
+            session = curl_requests.Session(impersonate="chrome")
             df = yf.download(all_tickers, start=start_date, end=end_date, auto_adjust=True, session=session)
-            break
+            print(f"  -> got shape {df.shape if df is not None else None}, empty={df.empty if df is not None else True}")
+            if df is not None and not df.empty:
+                break
         except Exception as e:
-            if attempt < retries - 1:
-                time.sleep(retry_wait_sec)
+            print(f"  -> fetch attempt {attempt+1} failed: {e!r}")
+        if attempt < retries - 1:
+            time.sleep(retry_wait_sec)
     
     close_dict = {}
     vol_dict = {}
