@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Handoff Log</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      margin: 2rem;
+      max-width: 1000px;
+    }
+    h1, h2, h3 {
+      margin-top: 1.5rem;
+    }
+    .handoff-entry {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: #fafafa;
+    }
+    .meta {
+      color: #555;
+      font-size: 0.95rem;
+    }
+    .mistakes {
+      border-left: 4px solid #d97706;
+      padding-left: 0.75rem;
+      background: #fff7ed;
+    }
+    .worked {
+      border-left: 4px solid #15803d;
+      padding-left: 0.75rem;
+      background: #f0fdf4;
+    }
+    .blockers {
+      border-left: 4px solid #b91c1c;
+      padding-left: 0.75rem;
+      background: #fef2f2;
+    }
+    code, pre {
+      background: #f3f4f6;
+      border-radius: 4px;
+    }
+    pre {
+      padding: 0.75rem;
+      overflow-x: auto;
+    }
+    ul {
+      padding-left: 1.25rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Daily Handoff Log</h1>
+  <p class="meta">Append-only team handoff history. Preserve mistakes, recovery, and next steps.</p>
+
+  <section id="handoff-log">
+    <!-- APPEND NEW HANDOFF ENTRIES BELOW THIS LINE -->
+    <section class="handoff-entry" data-date="2026-07-04">
+      <h2>2026-07-04 — Fix Yahoo fetch on GitHub Actions, fix empty RRG, add light theme, plan ticker audit</h2>
+
+      <section>
+        <h3>Goal</h3>
+        <p>Data pipeline couldn't fetch from Yahoo Finance when run in GitHub Actions (worked locally, empty in CI), forcing manual prices.csv uploads. Fix the automated fetch, then address follow-on issues found while verifying the fix.</p>
+      </section>
+
+      <section>
+        <h3>Changes</h3>
+        <ul>
+          <li><code>pipeline/fetch.py</code> — replaced a plain <code>requests.Session</code> + fake User-Agent with an explicit <code>curl_cffi.requests.Session(impersonate="chrome")</code>. The plain session had disabled yfinance's built-in curl_cffi TLS-impersonation auto-detection, which is what Yahoo's bot detection actually checks for on datacenter IPs (GitHub Actions runners). Also added per-attempt <code>df.shape</code>/error logging so future failures are diagnosable from the Actions log.</li>
+          <li><code>requirements.txt</code> — added <code>curl_cffi</code>.</li>
+          <li><code>config.yaml</code> — <code>history_days: 400 -&gt; 850</code>. <code>pipeline/metrics.py::calc_rrg()</code> z-scores RS-Ratio over a rolling 52-week window, then z-scores RS-Momentum (diff of RS-Ratio) over <em>another</em> rolling 52-week window on top of that — needs ~2x the lookback to produce even one point. 400 days (~57 weeks) was nowhere near enough, so <code>rrg</code> was <code>null</code> for every theme and the RRG chart / Momentum Playbook stayed empty despite the fetch itself working.</li>
+          <li><code>web/public/theme.js</code> (new) — light/dark theme toggle, same localStorage pattern as the existing EN/TH toggle (<code>i18n.js</code>).</li>
+          <li><code>web/public/styles.css</code> — added <code>html[data-theme="light"]</code> CSS variable overrides.</li>
+          <li><code>web/public/index.html</code> — added theme toggle button + inline head script to set <code>data-theme</code> from localStorage before first paint (avoids flash of wrong theme).</li>
+          <li><code>web/public/app.js</code> — RRG chart's axis label / gridline / quadrant colors were hardcoded hex values; changed to read from CSS custom properties at render time (<code>getCssVar</code>/<code>getColorMap</code>) so the chart actually follows the active theme instead of staying dark-only.</li>
+          <li><code>TICKER_AUDIT_PLAN.md</code> (new) — read-only verification plan for a separate AI/session to audit <code>data/universe.yaml</code>'s ~89 tickers for delistings/renames/symbol-reassignment risk. Written, not yet executed.</li>
+        </ul>
+      </section>
+
+      <section class="worked">
+        <h3>What worked</h3>
+        <ul>
+          <li>curl_cffi fix confirmed live: triggered <code>workflow_dispatch</code>, Actions run completed with <code>warnings: []</code> and real non-null returns/breadth/volume for all 36 themes (previously all null). Cache CSVs (<code>cache/prices.csv</code>, <code>cache/volumes.csv</code>) now refresh with real data too.</li>
+          <li><code>history_days</code> fix confirmed via synthetic data before pushing: fed <code>calc_rrg()</code> fabricated price series at 400/700/780/800/900/1000 days — 400 and 700 returned <code>None</code>, 780+ returned a full 8-week tail. After deploy, pulled the actual <code>data.json</code> and confirmed 0/36 themes have <code>rrg: null</code> (was 36/36 null before).</li>
+          <li>Light theme verified end-to-end with a real headless-Chromium run (installed Playwright + Chromium locally since <code>chromium-cli</code> wasn't available): default dark theme confirmed, click on <code>#themeToggle</code> switches to light bg/dark text, RRG chart colors follow, choice persists in <code>localStorage</code> across reload, zero console errors. Screenshots reviewed visually — both themes readable, chart quadrant tints and badges look correct in both.</li>
+          <li><code>tests/</code> suite (5 tests) still passes after all changes.</li>
+        </ul>
+      </section>
+
+      <section class="mistakes">
+        <h3>Mistakes &amp; recovery</h3>
+        <ul>
+          <li>A prior session's fix (before this one) had already tried a plain <code>requests.Session</code> + fake User-Agent and it didn't actually fix anything — root cause wasn't diagnosed at the time, just worked around blindly. This session found the real reason (session override disables yfinance's own curl_cffi detection) before applying a different fix.</li>
+          <li>Local Python is 3.14 with no Python 3.11 available, and <code>pandas==2.2.2</code> (pinned in requirements.txt for CI) has no prebuilt wheel for 3.14 — couldn't install requirements.txt verbatim into a local venv. Worked around by installing unpinned equivalents just for a local smoke test, without touching the pinned versions CI actually uses.</li>
+          <li>This machine's corporate network intercepts/blocks outbound TLS to Yahoo entirely (confirmed: even plain <code>requests</code> gets the identical <code>CERTIFICATE_VERIFY_FAILED</code> error as curl_cffi) — so the real fetch fix could only be verified by pushing and checking the actual GitHub Actions run, not locally.</li>
+          <li>While smoke-testing <code>fetch_data()</code> locally with only <code>['NVDA','AMD']</code>, the function's unconditional <code>to_csv(cache_file)</code> overwrote the full ~130-ticker <code>cache/prices.csv</code> / <code>volumes.csv</code> with just 3 columns. Caught via <code>git diff --stat</code> before committing anything; reverted with <code>git checkout -- cache/prices.csv cache/volumes.csv</code> before proceeding.</li>
+          <li>First deploy after the curl_cffi fix still showed an empty RRG chart in the browser — took a round of investigation to separate two different empty-RRG causes: (1) confirmed via <code>data.json</code> that the <em>first</em> deploy had a real second bug (<code>history_days</code> too short — see above); (2) after fixing that and redeploying, user reported still seeing an empty chart, which was diagnosed as likely browser/GitHub-Pages CDN caching (<code>Cache-Control: max-age=600</code>) rather than a data problem, since the pulled <code>data.json</code> at that point was already fully populated (<code>rrg</code> non-null for all 36 themes). User was advised to hard-refresh; <strong>this was not explicitly re-confirmed by the user before the session moved on to other tasks</strong> — see open items below.</li>
+        </ul>
+      </section>
+
+      <section class="blockers">
+        <h3>Open TODOs / blockers</h3>
+        <ul>
+          <li>[ ] Not yet confirmed: does the RRG chart / Momentum Playbook actually render correctly in the user's browser after a hard refresh? Backend data (<code>data.json</code>) is confirmed correct as of commit <code>6e79e26</code>; the caching theory was never explicitly verified against the live page.</li>
+          <li>[ ] <code>TICKER_AUDIT_PLAN.md</code> has not been executed yet — need another AI/session to run it and produce <code>TICKER_AUDIT_REPORT.md</code>, then a human decides what to apply to <code>data/universe.yaml</code>.</li>
+          <li>[ ] Repo root still has leftover one-off debug scripts from earlier troubleshooting (<code>debug_dummy.py</code>, <code>debug2.py</code>, <code>debug_yf_threads.py</code>, <code>test_fetch.py</code>, <code>test_fetch_2.py</code>, <code>output.log</code>, <code>output2.log</code>, stray <code>.jpg</code>/<code>.webp</code> images) — flagged as optional cleanup, not yet done.</li>
+          <li>[ ] Light theme changes (<code>theme.js</code>, <code>index.html</code>, <code>styles.css</code>, <code>app.js</code>) and <code>TICKER_AUDIT_PLAN.md</code> are uncommitted as of this handoff entry — commit + push planned as part of this same handoff.</li>
+        </ul>
+      </section>
+
+      <details>
+        <summary>Repro / verify</summary>
+        <pre><code># unit tests
+pytest tests/
+
+# local dashboard preview (no network fetch needed, uses committed data.json)
+cd web/public &amp;&amp; python -m http.server 8000
+# open http://localhost:8000, click the moon/sun button next to EN/TH to test theme toggle
+
+# full pipeline run (needs unrestricted network access to Yahoo Finance — will fail on networks
+# that block/intercept it, e.g. this dev machine; works in GitHub Actions)
+python -m pipeline.run</code></pre>
+      </details>
+
+      <p><strong>Commits today:</strong> <code>b9f2ff7 12390fa</code> (plus this handoff commit and the pending light-theme / audit-plan commit)</p>
+    </section>
+  </section>
+</body>
+</html>
