@@ -32,7 +32,12 @@ def fetch_data(tickers, benchmark, history_days, retries=3, retry_wait_sec=5):
     for attempt in range(retries):
         try:
             print(f"Fetching data from yfinance (attempt {attempt+1}/{retries})...")
-            df = yf.download(all_tickers, start=start_date, end=end_date, auto_adjust=True)
+            import requests
+            session = requests.Session()
+            session.headers.update(
+                {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
+            )
+            df = yf.download(all_tickers, start=start_date, end=end_date, auto_adjust=True, session=session)
             break
         except Exception as e:
             if attempt < retries - 1:
