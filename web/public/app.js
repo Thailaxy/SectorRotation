@@ -201,12 +201,18 @@ function renderAppendix() {
     });
 }
 
-const colorMap = {
-    leading: '#22c55e',
-    improving: '#3b82f6',
-    weakening: '#f59e0b',
-    lagging: '#ef4444'
-};
+function getCssVar(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+
+function getColorMap() {
+    return {
+        leading: getCssVar('--leading'),
+        improving: getCssVar('--improving'),
+        weakening: getCssVar('--weakening'),
+        lagging: getCssVar('--lagging')
+    };
+}
 
 let selectedTheme = null;
 
@@ -236,11 +242,15 @@ function renderRRG() {
     if (rrgFilter !== 'all') {
         filtered = filtered.filter(t => t.type === rrgFilter);
     }
-    
+
+    const colorMap = getColorMap();
+    const axisColor = getCssVar('--muted') || '#8b949e';
+    const gridColor = getCssVar('--border') || '#30363d';
+
     let series = [];
     filtered.forEach(t => {
         if (!t.rrg) return;
-        let c = colorMap[t.quadrant] || '#fff';
+        let c = colorMap[t.quadrant] || getCssVar('--text');
         let dataPts = t.rrg.tail.map(pt => [pt.ratio, pt.momentum]);
         
         let opacity = selectedTheme ? (selectedTheme === getThemeName(t) ? 1 : 0.1) : 0.5;
@@ -274,14 +284,14 @@ function renderRRG() {
                 Zone: ${t.quadrant}`;
             }
         },
-        xAxis: { type: 'value', min: 70, max: 150, splitLine: { show: false }, axisLabel: { color: '#8b949e' } },
-        yAxis: { type: 'value', min: 70, max: 150, splitLine: { show: false }, axisLabel: { color: '#8b949e' } },
+        xAxis: { type: 'value', min: 70, max: 150, splitLine: { show: false }, axisLabel: { color: axisColor } },
+        yAxis: { type: 'value', min: 70, max: 150, splitLine: { show: false }, axisLabel: { color: axisColor } },
         series: series,
         graphic: [
-            { type: 'text', z: -1, left: 'right', top: 'top', style: { text: 'LEADING', fill: '#22c55e', font: 'bold 12px Inter', opacity: 0.7 } },
-            { type: 'text', z: -1, left: 'left', top: 'top', style: { text: 'IMPROVING', fill: '#3b82f6', font: 'bold 12px Inter', opacity: 0.7 } },
-            { type: 'text', z: -1, left: 'right', bottom: 'bottom', style: { text: 'WEAKENING', fill: '#f59e0b', font: 'bold 12px Inter', opacity: 0.7 } },
-            { type: 'text', z: -1, left: 'left', bottom: 'bottom', style: { text: 'LAGGING', fill: '#ef4444', font: 'bold 12px Inter', opacity: 0.7 } }
+            { type: 'text', z: -1, left: 'right', top: 'top', style: { text: 'LEADING', fill: colorMap.leading, font: 'bold 12px Inter', opacity: 0.7 } },
+            { type: 'text', z: -1, left: 'left', top: 'top', style: { text: 'IMPROVING', fill: colorMap.improving, font: 'bold 12px Inter', opacity: 0.7 } },
+            { type: 'text', z: -1, left: 'right', bottom: 'bottom', style: { text: 'WEAKENING', fill: colorMap.weakening, font: 'bold 12px Inter', opacity: 0.7 } },
+            { type: 'text', z: -1, left: 'left', bottom: 'bottom', style: { text: 'LAGGING', fill: colorMap.lagging, font: 'bold 12px Inter', opacity: 0.7 } }
         ]
     };
     
@@ -294,7 +304,7 @@ function renderRRG() {
         markLine: {
             silent: true,
             symbol: 'none',
-            lineStyle: { color: '#30363d', width: 1, type: 'solid' },
+            lineStyle: { color: gridColor, width: 1, type: 'solid' },
             data: [
                 { xAxis: 100 },
                 { yAxis: 100 }
@@ -303,10 +313,10 @@ function renderRRG() {
         markArea: {
             silent: true,
             data: [
-                [{ xAxis: 100, yAxis: 100 }, { xAxis: 200, yAxis: 200, itemStyle: { color: 'rgba(34, 197, 94, 0.05)' } }], // Leading
-                [{ xAxis: 0, yAxis: 100 }, { xAxis: 100, yAxis: 200, itemStyle: { color: 'rgba(59, 130, 246, 0.05)' } }], // Improving
-                [{ xAxis: 100, yAxis: 0 }, { xAxis: 200, yAxis: 100, itemStyle: { color: 'rgba(245, 158, 11, 0.05)' } }], // Weakening
-                [{ xAxis: 0, yAxis: 0 }, { xAxis: 100, yAxis: 100, itemStyle: { color: 'rgba(239, 68, 68, 0.05)' } }]  // Lagging
+                [{ xAxis: 100, yAxis: 100 }, { xAxis: 200, yAxis: 200, itemStyle: { color: colorMap.leading, opacity: 0.05 } }], // Leading
+                [{ xAxis: 0, yAxis: 100 }, { xAxis: 100, yAxis: 200, itemStyle: { color: colorMap.improving, opacity: 0.05 } }], // Improving
+                [{ xAxis: 100, yAxis: 0 }, { xAxis: 200, yAxis: 100, itemStyle: { color: colorMap.weakening, opacity: 0.05 } }], // Weakening
+                [{ xAxis: 0, yAxis: 0 }, { xAxis: 100, yAxis: 100, itemStyle: { color: colorMap.lagging, opacity: 0.05 } }]  // Lagging
             ]
         }
     });
@@ -334,6 +344,12 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 document.addEventListener('langChanged', () => {
     if (appData) {
         initUI();
+    }
+});
+
+document.addEventListener('themeChanged', () => {
+    if (appData) {
+        renderRRG();
     }
 });
 

@@ -12,6 +12,20 @@
     --border: #30363d;
 }
 
+html[data-theme="light"] {
+    --bg: #f6f8fa;
+    --panel: #ffffff;
+    --text: #1c2128;
+    --muted: #57606a;
+    --leading: #16a34a;
+    --improving: #2563eb;
+    --weakening: #d97706;
+    --lagging: #dc2626;
+    --pos: #16a34a;
+    --neg: #dc2626;
+    --border: #d0d7de;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,6 +37,7 @@ body {
     background-color: var(--bg);
     color: var(--text);
     line-height: 1.5;
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 header {
@@ -43,6 +58,11 @@ header {
     font-size: 0.875rem;
     color: var(--muted);
     margin-top: 0.25rem;
+}
+
+.header-right {
+    display: flex;
+    gap: 0.5rem;
 }
 
 button {

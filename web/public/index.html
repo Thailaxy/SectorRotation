@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>US Sector & Theme Rotation Tracker</title>
+    <script>
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
@@ -17,6 +20,7 @@
             </div>
         </div>
         <div class="header-right">
+            <button id="themeToggle" title="Toggle light/dark theme">🌙</button>
             <button id="langToggle">EN / TH</button>
         </div>
     </header>
@@ -111,6 +115,7 @@
     </footer>
 
     <script src="i18n.js"></script>
+    <script src="theme.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
