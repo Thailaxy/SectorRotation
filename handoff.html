@@ -128,6 +128,69 @@ python -m pipeline.run</code></pre>
 
       <p><strong>Commits today:</strong> <code>b9f2ff7 12390fa</code> (plus this handoff commit and the pending light-theme / audit-plan commit)</p>
     </section>
+
+    <section class="handoff-entry" data-date="2026-07-04">
+      <h2>2026-07-04 (cont.) — Dividend-adjusted returns fix, theme/badge contrast fixes, sortable Zone column, deploy-on-push gap found and fixed</h2>
+
+      <section>
+        <h3>Goal</h3>
+        <p>Continue from the earlier entry today: user spotted our 1M returns didn't match Yahoo Finance's displayed % for sector ETFs (XLI, XLE), then flagged the light theme making the page title unreadable and a column-hover bug, then asked for a more "production grade" table for investor review, then reported the fix "didn't show up" on the live site, then asked for the new Theme/Zone columns to be sortable too.</p>
+      </section>
+
+      <section>
+        <h3>Changes</h3>
+        <ul>
+          <li><code>pipeline/fetch.py</code>, <code>spec.md</code> — switched <code>yf.download(..., auto_adjust=True)</code> to <code>auto_adjust=False</code> + plain <code>Close</code> column. Root cause of the Yahoo mismatch: <code>auto_adjust=True</code> bakes dividend adjustments into historical prices (total return), so our 1M/3M etc. included dividends paid during the window while Yahoo's basic price chart doesn't. Traced XLE's exact gap (-7.52% ours vs -8.18% Yahoo) to its ~June 19 ex-dividend date sitting inside that specific 1-month window, confirmed by a visible boundary in <code>cache/prices.csv</code> between long-decimal "adjusted" values before it and clean 2-decimal raw values after. User chose price-only to match Yahoo's chart, so <code>spec.md</code> (§8.3, §16) updated too since it explicitly called for <code>auto_adjust=True</code> before.</li>
+          <li><code>.github/workflows/deploy-site.yml</code> (new) — <code>daily.yml</code> only triggers on <code>schedule</code>/<code>workflow_dispatch</code>, never <code>push</code>, so frontend-only commits were being pushed but never actually deployed; the live site kept serving whatever the last cron/manual run had built. Added a separate lightweight workflow that just re-uploads and redeploys the current <code>web/public</code> on every push to <code>main</code>, without touching the data pipeline (no new commits created, so no loop risk with the daily bot's own data commits).</li>
+          <li><code>web/public/styles.css</code>, <code>app.js</code> — fixed two reported bugs (page title hardcoded to the dark theme's text color, unreadable in light mode at 1.11:1 contrast; sortable column header hover turned text white, invisible on the light theme's white panel). While fixing those, ran actual WCAG contrast numbers (dataviz skill's validator) on every quadrant badge color instead of eyeballing, and found pre-existing failures beyond what was reported — e.g. white text on the dark-theme "Leading" badge measured 2.28:1, badly under the 3:1 floor. Replaced guessed white/black badge text with per-status, per-theme <code>--*-text</code> tokens chosen from the real numbers. Also fixed heatmap return cells: hardcoded to the dark theme's raw green/red rgb() regardless of active theme, and used that same hue for the cell text on top of the same-hue background (low contrast on big moves) — cell text now uses neutral ink since the background tint + sign already carry direction.</li>
+          <li><code>web/public/index.html</code>, <code>i18n.js</code>, <code>app.js</code>, <code>styles.css</code> — added a dedicated "Zone" column to the heatmap table. The quadrant badge used to live inside the same <code>&lt;td&gt;</code> as the theme name, so rows wrapped to 2 lines whenever name+badge text was too wide and stayed 1 line otherwise — inconsistent row heights. Moved the badge to its own column between name and 1D.</li>
+          <li><code>web/public/app.js</code>, <code>index.html</code> — made the new Theme and Zone columns sortable, same as the existing return columns. Theme sorts alphabetically (locale-aware, using the currently displayed language's name). Zone sorts by the same best-to-worst quadrant order already used in the Momentum Playbook (Leading, Improving, Weakening, Lagging); incomplete-data themes sort last.</li>
+        </ul>
+      </section>
+
+      <section class="worked">
+        <h3>What worked</h3>
+        <ul>
+          <li>Root-caused the Yahoo mismatch precisely (not just "close enough") by inspecting the actual cached price series and finding the adjustment boundary at the ex-dividend date.</li>
+          <li><code>tests/</code> suite (5 tests) still passes after every change today.</li>
+          <li>Zone column verified with a headless Chromium run: all 36 rows report the identical height (43.375px) in both themes. First attempt at the fix (just moving the badge out) squeezed the name column and made long Thai names wrap instead — caught by measuring row heights again after the first "fix" instead of assuming it worked, then resolved with a min-width on the name column plus the existing horizontal scroll.</li>
+          <li>Sortable Theme/Zone columns verified the same way: clicking Theme groups Thai names alphabetically, clicking Zone groups all 6 Leading themes first, then 14 Improving, 9 Weakening, 6 Lagging (matches the Momentum Playbook's own grouping), zero console errors in every check today.</li>
+        </ul>
+      </section>
+
+      <section class="mistakes">
+        <h3>Mistakes &amp; recovery</h3>
+        <ul>
+          <li>Assumed <code>auto_adjust=True</code> (which <code>spec.md</code> originally specified) was simply "more correct" total-return data; it works as designed, but nobody had flagged that it would diverge from Yahoo's own displayed price-chart %, which is what the user was actually comparing against.</li>
+          <li>The Zone-column fix's first pass only moved the badge out but didn't check whether that changed anything else — it freed space that let long Thai names wrap for the first time, reproducing the same symptom (inconsistent row height) via a different cause. Caught by re-measuring row heights, not assumed from the screenshot alone.</li>
+          <li>User reported the Zone-column fix "didn't show up" live. Queried GitHub's public REST API directly (<code>curl .../actions/runs</code>, no <code>gh</code> CLI or token needed for a public repo's run list, since <code>/actions/jobs/{id}/logs</code> returned 403 without an authenticated admin token) and found the <code>deploy-site</code> run for that commit had failed at <code>actions/deploy-pages@v4</code>. Initially guessed "transient Pages API hiccup" and asked the user to click "Re-run failed jobs" — that was the wrong call: it re-ran the upload+deploy job within the <em>same</em> run, and a leftover artifact from the original failed attempt was still present, so deploy-pages then found two artifacts both named <code>github-pages</code> and refused to pick one ("Multiple artifacts... Artifact count is 2"). The actual fix for this workflow shape (upload + deploy in one job) is to start a brand-new run (<code>workflow_dispatch</code> "Run workflow", or a new push) rather than re-running an existing one — a fresh run has no leftover artifact to collide with. User re-ran and it resolved; confirmed live afterward.</li>
+        </ul>
+      </section>
+
+      <section class="blockers">
+        <h3>Open TODOs / blockers</h3>
+        <ul>
+          <li>[ ] If deploy-pages failures recur, consider whether <code>daily.yml</code>'s own deploy job and <code>deploy-site.yml</code> could ever collide on the shared <code>github-pages</code> environment (both target it; only <code>deploy-site.yml</code> has a <code>concurrency: group: pages</code> guard — <code>daily.yml</code> does not). Not the cause this time (that was the duplicate-artifact-from-partial-rerun issue above), but worth watching if it happens again.</li>
+          <li>[ ] <code>TICKER_AUDIT_PLAN.md</code> still not executed (carried over from the earlier entry today).</li>
+          <li>[ ] Leftover one-off debug scripts at repo root still not cleaned up (carried over).</li>
+          <li>[ ] Still no explicit user confirmation that the RRG chart itself displays correctly in an ordinary (non-incognito) browser session — screenshots taken during this session look correct, and the user did confirm the Zone column is now visible live, but that's a different part of the page.</li>
+        </ul>
+      </section>
+
+      <details>
+        <summary>Repro / verify</summary>
+        <pre><code># unit tests
+pytest tests/
+
+# local dashboard preview
+cd web/public &amp;&amp; python -m http.server 8000
+
+# check recent GitHub Actions runs without gh CLI / auth (public repo, public API)
+curl -s "https://api.github.com/repos/Thailaxy/SectorRotation/actions/runs?per_page=10"</code></pre>
+      </details>
+
+      <p><strong>Commits today:</strong> <code>460d56a 3493ec5 26f1a14 6b75163 101dd07 6861c31 8e75730 131c428</code></p>
+    </section>
   </section>
 </body>
 </html>
