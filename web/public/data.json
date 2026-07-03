@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T18:03:57.425835Z",
+  "generated_at": "2026-07-03T18:12:52.321850Z",
   "as_of_date": "2026-07-02",
   "benchmark": "SPY",
   "benchmark_return_1D": -0.13,
@@ -20,7 +20,7 @@
       "name_th": "เซมิคอนดักเตอร์",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "weakening",
       "returns": {
         "d1": -3.79,
         "w1": -6.31,
@@ -30,7 +30,45 @@
       },
       "breadth_pct": 12.5,
       "dollar_vol_ratio": 0.96,
-      "rrg": null,
+      "rrg": {
+        "ratio": 128.3,
+        "momentum": 91.15,
+        "quadrant": "weakening",
+        "tail": [
+          {
+            "ratio": 123.83,
+            "momentum": 112.29
+          },
+          {
+            "ratio": 127.37,
+            "momentum": 113.59
+          },
+          {
+            "ratio": 128.63,
+            "momentum": 101.04
+          },
+          {
+            "ratio": 129.54,
+            "momentum": 99.29
+          },
+          {
+            "ratio": 129.78,
+            "momentum": 95.91
+          },
+          {
+            "ratio": 129.14,
+            "momentum": 91.28
+          },
+          {
+            "ratio": 129.07,
+            "momentum": 94.7
+          },
+          {
+            "ratio": 128.3,
+            "momentum": 91.15
+          }
+        ]
+      },
       "constituents": [
         "NVDA",
         "AMD",
@@ -60,7 +98,7 @@
       "name_th": "อุปกรณ์เซมิฯและเมมโมรี่",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "weakening",
       "returns": {
         "d1": -8.41,
         "w1": -13.57,
@@ -70,7 +108,45 @@
       },
       "breadth_pct": 14.3,
       "dollar_vol_ratio": 1.21,
-      "rrg": null,
+      "rrg": {
+        "ratio": 125.04,
+        "momentum": 99.61,
+        "quadrant": "weakening",
+        "tail": [
+          {
+            "ratio": 122.19,
+            "momentum": 98.33
+          },
+          {
+            "ratio": 123.28,
+            "momentum": 102.6
+          },
+          {
+            "ratio": 123.58,
+            "momentum": 97.27
+          },
+          {
+            "ratio": 123.6,
+            "momentum": 95.53
+          },
+          {
+            "ratio": 124.11,
+            "momentum": 98.99
+          },
+          {
+            "ratio": 123.89,
+            "momentum": 94.17
+          },
+          {
+            "ratio": 124.5,
+            "momentum": 99.97
+          },
+          {
+            "ratio": 125.04,
+            "momentum": 99.61
+          }
+        ]
+      },
       "constituents": [
         "MU",
         "WDC",
@@ -94,7 +170,7 @@
       "name_th": "ซอฟต์แวร์",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": 0.82,
         "w1": 7.95,
@@ -104,7 +180,45 @@
       },
       "breadth_pct": 66.7,
       "dollar_vol_ratio": 1.05,
-      "rrg": null,
+      "rrg": {
+        "ratio": 81.53,
+        "momentum": 100.74,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 79.59,
+            "momentum": 105.05
+          },
+          {
+            "ratio": 79.75,
+            "momentum": 106.02
+          },
+          {
+            "ratio": 79.9,
+            "momentum": 106.76
+          },
+          {
+            "ratio": 80.33,
+            "momentum": 109.33
+          },
+          {
+            "ratio": 81.86,
+            "momentum": 117.85
+          },
+          {
+            "ratio": 82.41,
+            "momentum": 110.18
+          },
+          {
+            "ratio": 82.2,
+            "momentum": 104.32
+          },
+          {
+            "ratio": 81.53,
+            "momentum": 100.74
+          }
+        ]
+      },
       "constituents": [
         "MSFT",
         "ORCL",
@@ -135,7 +249,7 @@
       "name_th": "7 นางฟ้า",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "lagging",
       "returns": {
         "d1": -1.04,
         "w1": 6.61,
@@ -145,7 +259,45 @@
       },
       "breadth_pct": 71.4,
       "dollar_vol_ratio": 1.29,
-      "rrg": null,
+      "rrg": {
+        "ratio": 98.13,
+        "momentum": 67.28,
+        "quadrant": "lagging",
+        "tail": [
+          {
+            "ratio": 103.36,
+            "momentum": 104.75
+          },
+          {
+            "ratio": 104.74,
+            "momentum": 112.88
+          },
+          {
+            "ratio": 106.0,
+            "momentum": 111.31
+          },
+          {
+            "ratio": 106.18,
+            "momentum": 100.5
+          },
+          {
+            "ratio": 106.17,
+            "momentum": 98.75
+          },
+          {
+            "ratio": 104.66,
+            "momentum": 84.5
+          },
+          {
+            "ratio": 102.15,
+            "momentum": 76.54
+          },
+          {
+            "ratio": 98.13,
+            "momentum": 67.28
+          }
+        ]
+      },
       "constituents": [
         "AAPL",
         "MSFT",
@@ -169,7 +321,7 @@
       "name_th": "ไซเบอร์ซีเคียวริตี้",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "leading",
       "returns": {
         "d1": -0.23,
         "w1": 14.98,
@@ -179,7 +331,45 @@
       },
       "breadth_pct": 100.0,
       "dollar_vol_ratio": 1.05,
-      "rrg": null,
+      "rrg": {
+        "ratio": 103.78,
+        "momentum": 120.41,
+        "quadrant": "leading",
+        "tail": [
+          {
+            "ratio": 81.73,
+            "momentum": 113.02
+          },
+          {
+            "ratio": 84.14,
+            "momentum": 123.58
+          },
+          {
+            "ratio": 87.22,
+            "momentum": 127.03
+          },
+          {
+            "ratio": 90.9,
+            "momentum": 128.34
+          },
+          {
+            "ratio": 94.65,
+            "momentum": 126.24
+          },
+          {
+            "ratio": 97.69,
+            "momentum": 120.69
+          },
+          {
+            "ratio": 100.36,
+            "momentum": 117.6
+          },
+          {
+            "ratio": 103.78,
+            "momentum": 120.41
+          }
+        ]
+      },
       "constituents": [
         "CRWD",
         "PANW",
@@ -211,7 +401,7 @@
       "name_th": "จีโนมิกส์",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "leading",
       "returns": {
         "d1": 3.1,
         "w1": 10.53,
@@ -221,7 +411,45 @@
       },
       "breadth_pct": 100.0,
       "dollar_vol_ratio": 1.26,
-      "rrg": null,
+      "rrg": {
+        "ratio": 128.87,
+        "momentum": 147.03,
+        "quadrant": "leading",
+        "tail": [
+          {
+            "ratio": 115.46,
+            "momentum": 112.53
+          },
+          {
+            "ratio": 116.26,
+            "momentum": 101.25
+          },
+          {
+            "ratio": 112.11,
+            "momentum": 65.44
+          },
+          {
+            "ratio": 111.12,
+            "momentum": 88.55
+          },
+          {
+            "ratio": 115.14,
+            "momentum": 123.43
+          },
+          {
+            "ratio": 117.38,
+            "momentum": 110.58
+          },
+          {
+            "ratio": 118.89,
+            "momentum": 105.31
+          },
+          {
+            "ratio": 128.87,
+            "momentum": 147.03
+          }
+        ]
+      },
       "constituents": [
         "CRSP",
         "EDIT",
@@ -251,7 +479,7 @@
       "name_th": "ไบโอเทค (ขนาดใหญ่)",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": 4.31,
         "w1": 6.91,
@@ -261,7 +489,45 @@
       },
       "breadth_pct": 100.0,
       "dollar_vol_ratio": 1.17,
-      "rrg": null,
+      "rrg": {
+        "ratio": 96.91,
+        "momentum": 105.23,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 107.27,
+            "momentum": 79.97
+          },
+          {
+            "ratio": 104.62,
+            "momentum": 81.71
+          },
+          {
+            "ratio": 102.16,
+            "momentum": 83.6
+          },
+          {
+            "ratio": 100.11,
+            "momentum": 86.0
+          },
+          {
+            "ratio": 98.01,
+            "momentum": 85.8
+          },
+          {
+            "ratio": 97.06,
+            "momentum": 93.11
+          },
+          {
+            "ratio": 95.93,
+            "momentum": 92.1
+          },
+          {
+            "ratio": 96.91,
+            "momentum": 105.23
+          }
+        ]
+      },
       "constituents": [
         "AMGN",
         "GILD",
@@ -288,7 +554,7 @@
       "name_th": "ยาและการดูแลสุขภาพ",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "leading",
       "returns": {
         "d1": 2.39,
         "w1": 5.14,
@@ -298,7 +564,45 @@
       },
       "breadth_pct": 83.3,
       "dollar_vol_ratio": 1.21,
-      "rrg": null,
+      "rrg": {
+        "ratio": 109.85,
+        "momentum": 131.14,
+        "quadrant": "leading",
+        "tail": [
+          {
+            "ratio": 106.43,
+            "momentum": 89.31
+          },
+          {
+            "ratio": 104.43,
+            "momentum": 82.05
+          },
+          {
+            "ratio": 103.57,
+            "momentum": 91.13
+          },
+          {
+            "ratio": 103.88,
+            "momentum": 100.3
+          },
+          {
+            "ratio": 103.36,
+            "momentum": 91.4
+          },
+          {
+            "ratio": 104.88,
+            "momentum": 111.68
+          },
+          {
+            "ratio": 106.18,
+            "momentum": 109.04
+          },
+          {
+            "ratio": 109.85,
+            "momentum": 131.14
+          }
+        ]
+      },
       "constituents": [
         "LLY",
         "UNH",
@@ -326,7 +630,7 @@
       "name_th": "กลาโหม",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "lagging",
       "returns": {
         "d1": 4.17,
         "w1": 7.67,
@@ -336,7 +640,45 @@
       },
       "breadth_pct": 100.0,
       "dollar_vol_ratio": 1.08,
-      "rrg": null,
+      "rrg": {
+        "ratio": 92.72,
+        "momentum": 93.86,
+        "quadrant": "lagging",
+        "tail": [
+          {
+            "ratio": 110.59,
+            "momentum": 72.74
+          },
+          {
+            "ratio": 106.03,
+            "momentum": 75.19
+          },
+          {
+            "ratio": 101.99,
+            "momentum": 79.32
+          },
+          {
+            "ratio": 99.18,
+            "momentum": 86.14
+          },
+          {
+            "ratio": 96.74,
+            "momentum": 88.19
+          },
+          {
+            "ratio": 95.13,
+            "momentum": 92.53
+          },
+          {
+            "ratio": 94.12,
+            "momentum": 95.57
+          },
+          {
+            "ratio": 92.72,
+            "momentum": 93.86
+          }
+        ]
+      },
       "constituents": [
         "LMT",
         "RTX",
@@ -368,7 +710,7 @@
       "name_th": "พลังงาน",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "weakening",
       "returns": {
         "d1": 1.19,
         "w1": -2.12,
@@ -378,7 +720,45 @@
       },
       "breadth_pct": 0.0,
       "dollar_vol_ratio": 0.93,
-      "rrg": null,
+      "rrg": {
+        "ratio": 109.52,
+        "momentum": 84.23,
+        "quadrant": "weakening",
+        "tail": [
+          {
+            "ratio": 119.73,
+            "momentum": 92.96
+          },
+          {
+            "ratio": 117.05,
+            "momentum": 82.68
+          },
+          {
+            "ratio": 116.43,
+            "momentum": 93.8
+          },
+          {
+            "ratio": 115.67,
+            "momentum": 92.97
+          },
+          {
+            "ratio": 113.4,
+            "momentum": 84.99
+          },
+          {
+            "ratio": 112.7,
+            "momentum": 93.28
+          },
+          {
+            "ratio": 111.88,
+            "momentum": 92.39
+          },
+          {
+            "ratio": 109.52,
+            "momentum": 84.23
+          }
+        ]
+      },
       "constituents": [
         "XOM",
         "CVX",
@@ -410,7 +790,7 @@
       "name_th": "ธนาคารและโบรกเกอร์",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "leading",
       "returns": {
         "d1": 0.27,
         "w1": -1.14,
@@ -420,7 +800,45 @@
       },
       "breadth_pct": 60.0,
       "dollar_vol_ratio": 1.01,
-      "rrg": null,
+      "rrg": {
+        "ratio": 108.23,
+        "momentum": 122.12,
+        "quadrant": "leading",
+        "tail": [
+          {
+            "ratio": 106.09,
+            "momentum": 95.01
+          },
+          {
+            "ratio": 104.06,
+            "momentum": 82.84
+          },
+          {
+            "ratio": 101.81,
+            "momentum": 81.98
+          },
+          {
+            "ratio": 101.19,
+            "momentum": 96.29
+          },
+          {
+            "ratio": 100.59,
+            "momentum": 96.67
+          },
+          {
+            "ratio": 102.74,
+            "momentum": 119.63
+          },
+          {
+            "ratio": 105.4,
+            "momentum": 122.36
+          },
+          {
+            "ratio": 108.23,
+            "momentum": 122.12
+          }
+        ]
+      },
       "constituents": [
         "JPM",
         "GS",
@@ -452,7 +870,7 @@
       "name_th": "สินค้าอุปโภคบริโภค",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "lagging",
       "returns": {
         "d1": 2.81,
         "w1": 1.51,
@@ -462,7 +880,45 @@
       },
       "breadth_pct": 60.0,
       "dollar_vol_ratio": 1.21,
-      "rrg": null,
+      "rrg": {
+        "ratio": 90.42,
+        "momentum": 97.19,
+        "quadrant": "lagging",
+        "tail": [
+          {
+            "ratio": 101.61,
+            "momentum": 100.05
+          },
+          {
+            "ratio": 100.28,
+            "momentum": 96.31
+          },
+          {
+            "ratio": 99.36,
+            "momentum": 98.16
+          },
+          {
+            "ratio": 97.42,
+            "momentum": 93.24
+          },
+          {
+            "ratio": 93.86,
+            "momentum": 85.21
+          },
+          {
+            "ratio": 92.22,
+            "momentum": 94.44
+          },
+          {
+            "ratio": 91.4,
+            "momentum": 98.29
+          },
+          {
+            "ratio": 90.42,
+            "momentum": 97.19
+          }
+        ]
+      },
       "constituents": [
         "PG",
         "KO",
@@ -484,7 +940,7 @@
       "name_th": "สาธารณูปโภคและไฟฟ้า",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": 1.62,
         "w1": -3.22,
@@ -494,7 +950,45 @@
       },
       "breadth_pct": 60.0,
       "dollar_vol_ratio": 1.05,
-      "rrg": null,
+      "rrg": {
+        "ratio": 78.69,
+        "momentum": 114.4,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 87.33,
+            "momentum": 91.48
+          },
+          {
+            "ratio": 83.78,
+            "momentum": 82.22
+          },
+          {
+            "ratio": 79.97,
+            "momentum": 81.79
+          },
+          {
+            "ratio": 78.89,
+            "momentum": 97.25
+          },
+          {
+            "ratio": 77.85,
+            "momentum": 97.66
+          },
+          {
+            "ratio": 77.07,
+            "momentum": 99.39
+          },
+          {
+            "ratio": 76.85,
+            "momentum": 102.76
+          },
+          {
+            "ratio": 78.69,
+            "momentum": 114.4
+          }
+        ]
+      },
       "constituents": [
         "NEE",
         "DUK",
@@ -521,7 +1015,7 @@
       "name_th": "วัสดุอุตสาหกรรม",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "weakening",
       "returns": {
         "d1": 1.67,
         "w1": 1.51,
@@ -531,7 +1025,45 @@
       },
       "breadth_pct": 60.0,
       "dollar_vol_ratio": 1.15,
-      "rrg": null,
+      "rrg": {
+        "ratio": 110.62,
+        "momentum": 99.43,
+        "quadrant": "weakening",
+        "tail": [
+          {
+            "ratio": 111.49,
+            "momentum": 90.5
+          },
+          {
+            "ratio": 110.45,
+            "momentum": 89.27
+          },
+          {
+            "ratio": 109.64,
+            "momentum": 91.14
+          },
+          {
+            "ratio": 108.85,
+            "momentum": 91.5
+          },
+          {
+            "ratio": 108.17,
+            "momentum": 92.21
+          },
+          {
+            "ratio": 108.61,
+            "momentum": 100.13
+          },
+          {
+            "ratio": 110.24,
+            "momentum": 108.59
+          },
+          {
+            "ratio": 110.62,
+            "momentum": 99.43
+          }
+        ]
+      },
       "constituents": [
         "LIN",
         "FCX",
@@ -553,7 +1085,7 @@
       "name_th": "โครงสร้างพื้นฐาน AI",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "weakening",
       "returns": {
         "d1": -4.72,
         "w1": -7.78,
@@ -563,7 +1095,45 @@
       },
       "breadth_pct": 0.0,
       "dollar_vol_ratio": 1.04,
-      "rrg": null,
+      "rrg": {
+        "ratio": 120.52,
+        "momentum": 90.41,
+        "quadrant": "weakening",
+        "tail": [
+          {
+            "ratio": 127.07,
+            "momentum": 92.44
+          },
+          {
+            "ratio": 126.41,
+            "momentum": 90.02
+          },
+          {
+            "ratio": 125.72,
+            "momentum": 90.16
+          },
+          {
+            "ratio": 125.05,
+            "momentum": 90.71
+          },
+          {
+            "ratio": 124.58,
+            "momentum": 92.24
+          },
+          {
+            "ratio": 123.14,
+            "momentum": 86.43
+          },
+          {
+            "ratio": 121.5,
+            "momentum": 85.79
+          },
+          {
+            "ratio": 120.52,
+            "momentum": 90.41
+          }
+        ]
+      },
       "constituents": [
         "VRT",
         "ETN",
@@ -596,7 +1166,7 @@
       "name_th": "ควอนตัมคอมพิวติ้ง",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "lagging",
       "returns": {
         "d1": -4.17,
         "w1": -0.86,
@@ -606,7 +1176,45 @@
       },
       "breadth_pct": 0.0,
       "dollar_vol_ratio": 0.79,
-      "rrg": null,
+      "rrg": {
+        "ratio": 97.59,
+        "momentum": 97.73,
+        "quadrant": "lagging",
+        "tail": [
+          {
+            "ratio": 94.92,
+            "momentum": 101.53
+          },
+          {
+            "ratio": 95.06,
+            "momentum": 103.73
+          },
+          {
+            "ratio": 94.74,
+            "momentum": 100.46
+          },
+          {
+            "ratio": 96.84,
+            "momentum": 117.25
+          },
+          {
+            "ratio": 98.63,
+            "momentum": 114.62
+          },
+          {
+            "ratio": 98.5,
+            "momentum": 101.79
+          },
+          {
+            "ratio": 98.31,
+            "momentum": 101.51
+          },
+          {
+            "ratio": 97.59,
+            "momentum": 97.73
+          }
+        ]
+      },
       "constituents": [
         "IONQ",
         "RGTI",
@@ -626,7 +1234,7 @@
       "name_th": "นิวเคลียร์และยูเรเนียม",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "lagging",
       "returns": {
         "d1": -1.5,
         "w1": -3.75,
@@ -636,7 +1244,45 @@
       },
       "breadth_pct": 0.0,
       "dollar_vol_ratio": 0.94,
-      "rrg": null,
+      "rrg": {
+        "ratio": 84.16,
+        "momentum": 97.83,
+        "quadrant": "lagging",
+        "tail": [
+          {
+            "ratio": 92.63,
+            "momentum": 98.1
+          },
+          {
+            "ratio": 91.88,
+            "momentum": 97.15
+          },
+          {
+            "ratio": 90.39,
+            "momentum": 92.72
+          },
+          {
+            "ratio": 89.02,
+            "momentum": 93.66
+          },
+          {
+            "ratio": 87.87,
+            "momentum": 95.33
+          },
+          {
+            "ratio": 86.35,
+            "momentum": 93.13
+          },
+          {
+            "ratio": 85.11,
+            "momentum": 95.35
+          },
+          {
+            "ratio": 84.16,
+            "momentum": 97.83
+          }
+        ]
+      },
       "constituents": [
         "CCJ",
         "OKLO",
@@ -668,7 +1314,7 @@
       "name_th": "เหมืองทองคำ",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "weakening",
       "returns": {
         "d1": 2.66,
         "w1": 2.19,
@@ -678,7 +1324,45 @@
       },
       "breadth_pct": 25.0,
       "dollar_vol_ratio": 0.92,
-      "rrg": null,
+      "rrg": {
+        "ratio": 102.93,
+        "momentum": 89.3,
+        "quadrant": "weakening",
+        "tail": [
+          {
+            "ratio": 114.53,
+            "momentum": 82.13
+          },
+          {
+            "ratio": 113.14,
+            "momentum": 89.64
+          },
+          {
+            "ratio": 111.13,
+            "momentum": 85.05
+          },
+          {
+            "ratio": 109.34,
+            "momentum": 87.48
+          },
+          {
+            "ratio": 108.0,
+            "momentum": 90.06
+          },
+          {
+            "ratio": 106.04,
+            "momentum": 85.43
+          },
+          {
+            "ratio": 104.49,
+            "momentum": 89.1
+          },
+          {
+            "ratio": 102.93,
+            "momentum": 89.3
+          }
+        ]
+      },
       "constituents": [
         "NEM",
         "AEM",
@@ -709,7 +1393,7 @@
       "name_th": "พลังงานแสงอาทิตย์",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "weakening",
       "returns": {
         "d1": -4.24,
         "w1": -6.27,
@@ -719,7 +1403,45 @@
       },
       "breadth_pct": 0.0,
       "dollar_vol_ratio": 1.21,
-      "rrg": null,
+      "rrg": {
+        "ratio": 106.38,
+        "momentum": 85.89,
+        "quadrant": "weakening",
+        "tail": [
+          {
+            "ratio": 104.64,
+            "momentum": 91.44
+          },
+          {
+            "ratio": 104.38,
+            "momentum": 95.47
+          },
+          {
+            "ratio": 105.3,
+            "momentum": 103.58
+          },
+          {
+            "ratio": 106.04,
+            "momentum": 102.43
+          },
+          {
+            "ratio": 108.86,
+            "momentum": 116.63
+          },
+          {
+            "ratio": 108.97,
+            "momentum": 97.93
+          },
+          {
+            "ratio": 108.14,
+            "momentum": 91.72
+          },
+          {
+            "ratio": 106.38,
+            "momentum": 85.89
+          }
+        ]
+      },
       "constituents": [
         "FSLR",
         "ENPH",
@@ -745,7 +1467,7 @@
       "name_th": "คริปโทเคอร์เรนซี",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": 0.12,
         "w1": 4.76,
@@ -755,7 +1477,45 @@
       },
       "breadth_pct": 40.0,
       "dollar_vol_ratio": 1.11,
-      "rrg": null,
+      "rrg": {
+        "ratio": 88.37,
+        "momentum": 112.7,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 84.91,
+            "momentum": 100.61
+          },
+          {
+            "ratio": 85.23,
+            "momentum": 106.57
+          },
+          {
+            "ratio": 85.39,
+            "momentum": 105.4
+          },
+          {
+            "ratio": 85.35,
+            "momentum": 104.09
+          },
+          {
+            "ratio": 86.54,
+            "momentum": 114.37
+          },
+          {
+            "ratio": 86.57,
+            "momentum": 104.81
+          },
+          {
+            "ratio": 87.39,
+            "momentum": 111.37
+          },
+          {
+            "ratio": 88.37,
+            "momentum": 112.7
+          }
+        ]
+      },
       "constituents": [
         "COIN",
         "MSTR",
@@ -787,7 +1547,7 @@
       "name_th": "อวกาศและโดรน",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "weakening",
       "returns": {
         "d1": 2.25,
         "w1": 23.62,
@@ -797,7 +1557,45 @@
       },
       "breadth_pct": 60.0,
       "dollar_vol_ratio": 1.36,
-      "rrg": null,
+      "rrg": {
+        "ratio": 111.03,
+        "momentum": 85.91,
+        "quadrant": "weakening",
+        "tail": [
+          {
+            "ratio": 110.47,
+            "momentum": 91.77
+          },
+          {
+            "ratio": 110.23,
+            "momentum": 98.38
+          },
+          {
+            "ratio": 111.02,
+            "momentum": 104.62
+          },
+          {
+            "ratio": 113.03,
+            "momentum": 111.6
+          },
+          {
+            "ratio": 115.2,
+            "momentum": 112.18
+          },
+          {
+            "ratio": 114.75,
+            "momentum": 96.69
+          },
+          {
+            "ratio": 113.44,
+            "momentum": 91.79
+          },
+          {
+            "ratio": 111.03,
+            "momentum": 85.91
+          }
+        ]
+      },
       "constituents": [
         "RKLB",
         "ASTS",
@@ -824,7 +1622,7 @@
       "name_th": "เทคโนโลยีจีน",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "lagging",
       "returns": {
         "d1": -0.91,
         "w1": 6.74,
@@ -834,7 +1632,45 @@
       },
       "breadth_pct": 20.0,
       "dollar_vol_ratio": 1.04,
-      "rrg": null,
+      "rrg": {
+        "ratio": 72.17,
+        "momentum": 86.22,
+        "quadrant": "lagging",
+        "tail": [
+          {
+            "ratio": 81.16,
+            "momentum": 99.2
+          },
+          {
+            "ratio": 81.48,
+            "momentum": 107.52
+          },
+          {
+            "ratio": 81.05,
+            "momentum": 101.99
+          },
+          {
+            "ratio": 79.23,
+            "momentum": 92.07
+          },
+          {
+            "ratio": 77.15,
+            "momentum": 89.97
+          },
+          {
+            "ratio": 75.73,
+            "momentum": 94.65
+          },
+          {
+            "ratio": 74.64,
+            "momentum": 96.63
+          },
+          {
+            "ratio": 72.17,
+            "momentum": 86.22
+          }
+        ]
+      },
       "constituents": [
         "BABA",
         "PDD",
@@ -861,7 +1697,7 @@
       "name_th": "สร้างบ้าน",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": 0.91,
         "w1": -3.32,
@@ -871,7 +1707,45 @@
       },
       "breadth_pct": 80.0,
       "dollar_vol_ratio": 0.97,
-      "rrg": null,
+      "rrg": {
+        "ratio": 80.32,
+        "momentum": 124.44,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 78.44,
+            "momentum": 78.74
+          },
+          {
+            "ratio": 75.32,
+            "momentum": 80.55
+          },
+          {
+            "ratio": 71.56,
+            "momentum": 78.02
+          },
+          {
+            "ratio": 71.45,
+            "momentum": 100.67
+          },
+          {
+            "ratio": 72.15,
+            "momentum": 105.59
+          },
+          {
+            "ratio": 73.73,
+            "momentum": 110.75
+          },
+          {
+            "ratio": 76.02,
+            "momentum": 114.47
+          },
+          {
+            "ratio": 80.32,
+            "momentum": 124.44
+          }
+        ]
+      },
       "constituents": [
         "DHI",
         "LEN",
@@ -898,7 +1772,7 @@
       "name_th": "ท่องเที่ยวและสายการบิน",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": -0.25,
         "w1": -0.13,
@@ -908,7 +1782,45 @@
       },
       "breadth_pct": 66.7,
       "dollar_vol_ratio": 1.07,
-      "rrg": null,
+      "rrg": {
+        "ratio": 93.5,
+        "momentum": 135.5,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 85.21,
+            "momentum": 79.7
+          },
+          {
+            "ratio": 82.36,
+            "momentum": 87.46
+          },
+          {
+            "ratio": 77.67,
+            "momentum": 79.42
+          },
+          {
+            "ratio": 76.4,
+            "momentum": 96.38
+          },
+          {
+            "ratio": 79.05,
+            "momentum": 115.21
+          },
+          {
+            "ratio": 81.19,
+            "momentum": 112.33
+          },
+          {
+            "ratio": 84.84,
+            "momentum": 118.57
+          },
+          {
+            "ratio": 93.5,
+            "momentum": 135.5
+          }
+        ]
+      },
       "constituents": [
         "BKNG",
         "ABNB",
@@ -936,7 +1848,7 @@
       "name_th": "ฟินเทคและการชำระเงิน",
       "type": "theme",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": 2.23,
         "w1": 6.07,
@@ -946,7 +1858,45 @@
       },
       "breadth_pct": 100.0,
       "dollar_vol_ratio": 1.15,
-      "rrg": null,
+      "rrg": {
+        "ratio": 80.75,
+        "momentum": 117.17,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 77.86,
+            "momentum": 108.51
+          },
+          {
+            "ratio": 77.59,
+            "momentum": 102.78
+          },
+          {
+            "ratio": 77.6,
+            "momentum": 105.03
+          },
+          {
+            "ratio": 77.79,
+            "momentum": 106.59
+          },
+          {
+            "ratio": 78.0,
+            "momentum": 106.68
+          },
+          {
+            "ratio": 78.38,
+            "momentum": 107.9
+          },
+          {
+            "ratio": 79.04,
+            "momentum": 109.85
+          },
+          {
+            "ratio": 80.75,
+            "momentum": 117.17
+          }
+        ]
+      },
       "constituents": [
         "V",
         "MA",
@@ -973,7 +1923,7 @@
       "name_th": "เทคโนโลยี (XLK)",
       "type": "sector_etf",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "weakening",
       "returns": {
         "d1": -2.71,
         "w1": -2.16,
@@ -983,7 +1933,45 @@
       },
       "breadth_pct": null,
       "dollar_vol_ratio": 0.8,
-      "rrg": null,
+      "rrg": {
+        "ratio": 131.02,
+        "momentum": 93.21,
+        "quadrant": "weakening",
+        "tail": [
+          {
+            "ratio": 111.96,
+            "momentum": 112.06
+          },
+          {
+            "ratio": 117.82,
+            "momentum": 125.31
+          },
+          {
+            "ratio": 122.43,
+            "momentum": 118.36
+          },
+          {
+            "ratio": 126.4,
+            "momentum": 114.9
+          },
+          {
+            "ratio": 130.81,
+            "momentum": 116.82
+          },
+          {
+            "ratio": 131.25,
+            "momentum": 98.13
+          },
+          {
+            "ratio": 131.69,
+            "momentum": 98.22
+          },
+          {
+            "ratio": 131.02,
+            "momentum": 93.21
+          }
+        ]
+      },
       "constituents": [
         "XLK"
       ],
@@ -995,7 +1983,7 @@
       "name_th": "การเงิน (XLF)",
       "type": "sector_etf",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": 1.53,
         "w1": 4.06,
@@ -1005,7 +1993,45 @@
       },
       "breadth_pct": null,
       "dollar_vol_ratio": 0.96,
-      "rrg": null,
+      "rrg": {
+        "ratio": 82.13,
+        "momentum": 119.15,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 81.56,
+            "momentum": 102.89
+          },
+          {
+            "ratio": 80.24,
+            "momentum": 95.05
+          },
+          {
+            "ratio": 79.31,
+            "momentum": 98.57
+          },
+          {
+            "ratio": 79.01,
+            "momentum": 104.31
+          },
+          {
+            "ratio": 78.38,
+            "momentum": 101.16
+          },
+          {
+            "ratio": 79.24,
+            "momentum": 113.84
+          },
+          {
+            "ratio": 80.43,
+            "momentum": 115.97
+          },
+          {
+            "ratio": 82.13,
+            "momentum": 119.15
+          }
+        ]
+      },
       "constituents": [
         "XLF"
       ],
@@ -1017,7 +2043,7 @@
       "name_th": "สุขภาพ (XLV)",
       "type": "sector_etf",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": 2.63,
         "w1": 5.21,
@@ -1027,7 +2053,45 @@
       },
       "breadth_pct": null,
       "dollar_vol_ratio": 1.16,
-      "rrg": null,
+      "rrg": {
+        "ratio": 85.91,
+        "momentum": 127.81,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 91.47,
+            "momentum": 76.76
+          },
+          {
+            "ratio": 87.58,
+            "momentum": 70.61
+          },
+          {
+            "ratio": 84.35,
+            "momentum": 77.24
+          },
+          {
+            "ratio": 82.51,
+            "momentum": 87.62
+          },
+          {
+            "ratio": 80.46,
+            "momentum": 85.54
+          },
+          {
+            "ratio": 81.24,
+            "momentum": 106.94
+          },
+          {
+            "ratio": 82.04,
+            "momentum": 106.84
+          },
+          {
+            "ratio": 85.91,
+            "momentum": 127.81
+          }
+        ]
+      },
       "constituents": [
         "XLV"
       ],
@@ -1039,7 +2103,7 @@
       "name_th": "พลังงาน (XLE)",
       "type": "sector_etf",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "weakening",
       "returns": {
         "d1": 0.78,
         "w1": -1.61,
@@ -1049,7 +2113,45 @@
       },
       "breadth_pct": null,
       "dollar_vol_ratio": 0.77,
-      "rrg": null,
+      "rrg": {
+        "ratio": 110.5,
+        "momentum": 89.55,
+        "quadrant": "weakening",
+        "tail": [
+          {
+            "ratio": 121.2,
+            "momentum": 92.0
+          },
+          {
+            "ratio": 118.26,
+            "momentum": 84.46
+          },
+          {
+            "ratio": 117.42,
+            "momentum": 93.91
+          },
+          {
+            "ratio": 116.46,
+            "momentum": 93.33
+          },
+          {
+            "ratio": 114.03,
+            "momentum": 86.89
+          },
+          {
+            "ratio": 113.19,
+            "momentum": 93.94
+          },
+          {
+            "ratio": 112.27,
+            "momentum": 93.39
+          },
+          {
+            "ratio": 110.5,
+            "momentum": 89.55
+          }
+        ]
+      },
       "constituents": [
         "XLE"
       ],
@@ -1061,7 +2163,7 @@
       "name_th": "อุตสาหกรรม (XLI)",
       "type": "sector_etf",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "leading",
       "returns": {
         "d1": 0.3,
         "w1": -0.11,
@@ -1071,7 +2173,45 @@
       },
       "breadth_pct": null,
       "dollar_vol_ratio": 0.94,
-      "rrg": null,
+      "rrg": {
+        "ratio": 103.47,
+        "momentum": 113.38,
+        "quadrant": "leading",
+        "tail": [
+          {
+            "ratio": 114.31,
+            "momentum": 89.31
+          },
+          {
+            "ratio": 110.76,
+            "momentum": 86.76
+          },
+          {
+            "ratio": 107.11,
+            "momentum": 86.98
+          },
+          {
+            "ratio": 103.77,
+            "momentum": 88.43
+          },
+          {
+            "ratio": 100.68,
+            "momentum": 89.64
+          },
+          {
+            "ratio": 100.26,
+            "momentum": 99.76
+          },
+          {
+            "ratio": 100.32,
+            "momentum": 101.84
+          },
+          {
+            "ratio": 103.47,
+            "momentum": 113.38
+          }
+        ]
+      },
       "constituents": [
         "XLI"
       ],
@@ -1083,7 +2223,7 @@
       "name_th": "สาธารณูปโภค (XLU)",
       "type": "sector_etf",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": 2.21,
         "w1": -0.2,
@@ -1093,7 +2233,45 @@
       },
       "breadth_pct": null,
       "dollar_vol_ratio": 1.06,
-      "rrg": null,
+      "rrg": {
+        "ratio": 81.44,
+        "momentum": 111.49,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 102.94,
+            "momentum": 91.87
+          },
+          {
+            "ratio": 96.89,
+            "momentum": 78.77
+          },
+          {
+            "ratio": 90.6,
+            "momentum": 79.27
+          },
+          {
+            "ratio": 87.12,
+            "momentum": 89.82
+          },
+          {
+            "ratio": 82.3,
+            "momentum": 85.49
+          },
+          {
+            "ratio": 80.22,
+            "momentum": 95.27
+          },
+          {
+            "ratio": 78.77,
+            "momentum": 97.47
+          },
+          {
+            "ratio": 81.44,
+            "momentum": 111.49
+          }
+        ]
+      },
       "constituents": [
         "XLU"
       ],
@@ -1105,7 +2283,7 @@
       "name_th": "สินค้าอุปโภคบริโภค (XLP)",
       "type": "sector_etf",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": 2.03,
         "w1": 1.25,
@@ -1115,7 +2293,45 @@
       },
       "breadth_pct": null,
       "dollar_vol_ratio": 1.0,
-      "rrg": null,
+      "rrg": {
+        "ratio": 89.91,
+        "momentum": 104.68,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 94.7,
+            "momentum": 96.04
+          },
+          {
+            "ratio": 93.5,
+            "momentum": 93.49
+          },
+          {
+            "ratio": 92.6,
+            "momentum": 95.73
+          },
+          {
+            "ratio": 91.68,
+            "momentum": 95.68
+          },
+          {
+            "ratio": 89.94,
+            "momentum": 89.8
+          },
+          {
+            "ratio": 89.35,
+            "momentum": 97.89
+          },
+          {
+            "ratio": 89.49,
+            "momentum": 103.05
+          },
+          {
+            "ratio": 89.91,
+            "momentum": 104.68
+          }
+        ]
+      },
       "constituents": [
         "XLP"
       ],
@@ -1127,7 +2343,7 @@
       "name_th": "อสังหาริมทรัพย์ (XLRE)",
       "type": "sector_etf",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": 1.13,
         "w1": 0.2,
@@ -1137,7 +2353,45 @@
       },
       "breadth_pct": null,
       "dollar_vol_ratio": 1.17,
-      "rrg": null,
+      "rrg": {
+        "ratio": 93.12,
+        "momentum": 112.7,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 94.55,
+            "momentum": 100.7
+          },
+          {
+            "ratio": 93.92,
+            "momentum": 96.2
+          },
+          {
+            "ratio": 92.57,
+            "momentum": 90.51
+          },
+          {
+            "ratio": 92.08,
+            "momentum": 97.84
+          },
+          {
+            "ratio": 90.83,
+            "momentum": 91.08
+          },
+          {
+            "ratio": 91.15,
+            "momentum": 104.24
+          },
+          {
+            "ratio": 91.76,
+            "momentum": 106.53
+          },
+          {
+            "ratio": 93.12,
+            "momentum": 112.7
+          }
+        ]
+      },
       "constituents": [
         "XLRE"
       ],
@@ -1149,7 +2403,7 @@
       "name_th": "วัสดุอุตสาหกรรม (XLB)",
       "type": "sector_etf",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "leading",
       "returns": {
         "d1": 1.94,
         "w1": 0.33,
@@ -1159,7 +2413,45 @@
       },
       "breadth_pct": null,
       "dollar_vol_ratio": 0.97,
-      "rrg": null,
+      "rrg": {
+        "ratio": 100.32,
+        "momentum": 102.72,
+        "quadrant": "leading",
+        "tail": [
+          {
+            "ratio": 108.76,
+            "momentum": 87.77
+          },
+          {
+            "ratio": 106.96,
+            "momentum": 85.15
+          },
+          {
+            "ratio": 104.44,
+            "momentum": 81.19
+          },
+          {
+            "ratio": 102.05,
+            "momentum": 82.9
+          },
+          {
+            "ratio": 100.19,
+            "momentum": 86.76
+          },
+          {
+            "ratio": 99.31,
+            "momentum": 93.19
+          },
+          {
+            "ratio": 99.67,
+            "momentum": 100.95
+          },
+          {
+            "ratio": 100.32,
+            "momentum": 102.72
+          }
+        ]
+      },
       "constituents": [
         "XLB"
       ],
@@ -1171,7 +2463,7 @@
       "name_th": "สินค้าฟุ่มเฟือย (XLY)",
       "type": "sector_etf",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": -0.82,
         "w1": 3.33,
@@ -1181,7 +2473,45 @@
       },
       "breadth_pct": null,
       "dollar_vol_ratio": 1.15,
-      "rrg": null,
+      "rrg": {
+        "ratio": 74.28,
+        "momentum": 110.03,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 75.19,
+            "momentum": 103.1
+          },
+          {
+            "ratio": 74.76,
+            "momentum": 101.21
+          },
+          {
+            "ratio": 72.87,
+            "momentum": 89.88
+          },
+          {
+            "ratio": 73.02,
+            "momentum": 105.85
+          },
+          {
+            "ratio": 73.54,
+            "momentum": 108.73
+          },
+          {
+            "ratio": 72.99,
+            "momentum": 100.54
+          },
+          {
+            "ratio": 73.56,
+            "momentum": 109.12
+          },
+          {
+            "ratio": 74.28,
+            "momentum": 110.03
+          }
+        ]
+      },
       "constituents": [
         "XLY"
       ],
@@ -1193,7 +2523,7 @@
       "name_th": "สื่อสาร (XLC)",
       "type": "sector_etf",
       "data_ok": true,
-      "quadrant": null,
+      "quadrant": "improving",
       "returns": {
         "d1": -0.13,
         "w1": 3.81,
@@ -1203,7 +2533,45 @@
       },
       "breadth_pct": null,
       "dollar_vol_ratio": 1.09,
-      "rrg": null,
+      "rrg": {
+        "ratio": 65.21,
+        "momentum": 104.43,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 74.84,
+            "momentum": 77.43
+          },
+          {
+            "ratio": 69.01,
+            "momentum": 78.13
+          },
+          {
+            "ratio": 65.79,
+            "momentum": 90.18
+          },
+          {
+            "ratio": 64.07,
+            "momentum": 97.0
+          },
+          {
+            "ratio": 63.61,
+            "momentum": 102.53
+          },
+          {
+            "ratio": 64.06,
+            "momentum": 106.46
+          },
+          {
+            "ratio": 65.17,
+            "momentum": 109.21
+          },
+          {
+            "ratio": 65.21,
+            "momentum": 104.43
+          }
+        ]
+      },
       "constituents": [
         "XLC"
       ],
