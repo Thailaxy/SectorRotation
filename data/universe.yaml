@@ -1,0 +1,376 @@
+themes:
+  - id: semiconductors
+    name_en: Semiconductors
+    name_th: เซมิคอนดักเตอร์
+    type: theme
+    constituents: [NVDA, AMD, AVGO, TSM, QCOM, TXN, INTC, MRVL]
+    ref_etfs:
+      - ticker: SMH
+        label_en: VanEck Semiconductor
+        label_th: VanEck Semiconductor
+      - ticker: SOXX
+        label_en: iShares Semiconductor
+        label_th: iShares Semiconductor
+  - id: semi_equip_memory
+    name_en: Semi Equip & Memory
+    name_th: อุปกรณ์เซมิฯและเมมโมรี่
+    type: theme
+    constituents: [MU, WDC, STX, AMAT, LRCX, KLAC, ASML]
+    ref_etfs:
+      - ticker: SMH
+        label_en: VanEck Semiconductor
+        label_th: VanEck Semiconductor
+  - id: software
+    name_en: Software
+    name_th: ซอฟต์แวร์
+    type: theme
+    constituents: [MSFT, ORCL, CRM, ADBE, NOW, PLTR, INTU, SNPS, CDNS]
+    ref_etfs:
+      - ticker: IGV
+        label_en: iShares Expanded Tech-Software
+        label_th: iShares Expanded Tech-Software
+      - ticker: XSW
+        label_en: SPDR S&P Software
+        label_th: SPDR S&P Software
+  - id: mag7
+    name_en: Mag 7
+    name_th: 7 นางฟ้า
+    type: theme
+    constituents: [AAPL, MSFT, NVDA, AMZN, GOOGL, META, TSLA]
+    ref_etfs:
+      - ticker: MAGS
+        label_en: Roundhill Magnificent Seven
+        label_th: Roundhill Magnificent Seven
+  - id: cybersecurity
+    name_en: Cybersecurity
+    name_th: ไซเบอร์ซีเคียวริตี้
+    type: theme
+    constituents: [CRWD, PANW, FTNT, ZS, OKTA]
+    ref_etfs:
+      - ticker: CIBR
+        label_en: First Trust Nasdaq Cybersecurity
+        label_th: First Trust Nasdaq Cybersecurity
+      - ticker: HACK
+        label_en: Amplify Cybersecurity
+        label_th: Amplify Cybersecurity
+      - ticker: BUG
+        label_en: Global X Cybersecurity
+        label_th: Global X Cybersecurity
+  - id: genomics
+    name_en: Genomics
+    name_th: จีโนมิกส์
+    type: theme
+    constituents: [CRSP, EDIT, BEAM, NTLA, ILMN, RXRX, TWST, PACB]
+    ref_etfs:
+      - ticker: ARKG
+        label_en: ARK Genomic Revolution
+        label_th: ARK Genomic Revolution
+      - ticker: IDNA
+        label_en: iShares Genomics & Immunology
+        label_th: iShares Genomics & Immunology
+  - id: biotech_large
+    name_en: Biotech Large
+    name_th: ไบโอเทค (ขนาดใหญ่)
+    type: theme
+    constituents: [AMGN, GILD, VRTX, REGN, BIIB]
+    ref_etfs:
+      - ticker: IBB
+        label_en: iShares Biotechnology
+        label_th: iShares Biotechnology
+      - ticker: XBI
+        label_en: SPDR S&P Biotech
+        label_th: SPDR S&P Biotech
+  - id: pharma_managed_care
+    name_en: Pharma & Managed Care
+    name_th: ยาและการดูแลสุขภาพ
+    type: theme
+    constituents: [LLY, UNH, JNJ, MRK, ABBV, PFE]
+    ref_etfs:
+      - ticker: IHE
+        label_en: iShares US Pharmaceuticals
+        label_th: iShares US Pharmaceuticals
+      - ticker: XLV
+        label_en: Health Care Select Sector
+        label_th: Health Care Select Sector
+  - id: defense
+    name_en: Defense
+    name_th: กลาโหม
+    type: theme
+    constituents: [LMT, RTX, NOC, GD, LHX]
+    ref_etfs:
+      - ticker: ITA
+        label_en: iShares US Aerospace & Defense
+        label_th: iShares US Aerospace & Defense
+      - ticker: XAR
+        label_en: SPDR Aerospace & Defense
+        label_th: SPDR Aerospace & Defense
+      - ticker: PPA
+        label_en: Invesco Aerospace & Defense
+        label_th: Invesco Aerospace & Defense
+  - id: energy
+    name_en: Energy
+    name_th: พลังงาน
+    type: theme
+    constituents: [XOM, CVX, COP, SLB, EOG]
+    ref_etfs:
+      - ticker: XLE
+        label_en: Energy Select Sector
+        label_th: Energy Select Sector
+      - ticker: XOP
+        label_en: SPDR Oil & Gas E&P
+        label_th: SPDR Oil & Gas E&P
+      - ticker: OIH
+        label_en: VanEck Oil Services
+        label_th: VanEck Oil Services
+  - id: banks_brokers
+    name_en: Banks & Brokers
+    name_th: ธนาคารและโบรกเกอร์
+    type: theme
+    constituents: [JPM, GS, MS, BAC, WFC]
+    ref_etfs:
+      - ticker: KBWB
+        label_en: Invesco KBW Bank
+        label_th: Invesco KBW Bank
+      - ticker: KBE
+        label_en: SPDR S&P Bank
+        label_th: SPDR S&P Bank
+      - ticker: IAI
+        label_en: iShares US Broker-Dealers
+        label_th: iShares US Broker-Dealers
+  - id: staples
+    name_en: Staples
+    name_th: สินค้าอุปโภคบริโภค
+    type: theme
+    constituents: [PG, KO, PEP, COST, WMT]
+    ref_etfs:
+      - ticker: XLP
+        label_en: Consumer Staples Select Sector
+        label_th: Consumer Staples Select Sector
+  - id: utilities_power
+    name_en: Utilities & Power
+    name_th: สาธารณูปโภคและไฟฟ้า
+    type: theme
+    constituents: [NEE, DUK, SO, VST, CEG]
+    ref_etfs:
+      - ticker: XLU
+        label_en: Utilities Select Sector
+        label_th: Utilities Select Sector
+      - ticker: GRID
+        label_en: First Trust Smart Grid Infrastructure
+        label_th: First Trust Smart Grid Infrastructure
+  - id: materials
+    name_en: Materials
+    name_th: วัสดุอุตสาหกรรม
+    type: theme
+    constituents: [LIN, FCX, NUE, SHW, APD]
+    ref_etfs:
+      - ticker: XLB
+        label_en: Materials Select Sector
+        label_th: Materials Select Sector
+  - id: ai_infra_datacenter
+    name_en: AI Infra & Data Center
+    name_th: โครงสร้างพื้นฐาน AI
+    type: theme
+    constituents: [VRT, ETN, ANET, SMCI, DELL, CIEN]
+    ref_etfs:
+      - ticker: AIQ
+        label_en: Global X Artificial Intelligence & Technology
+        label_th: Global X Artificial Intelligence & Technology
+      - ticker: DTCR
+        label_en: Global X Data Center & Digital Infrastructure
+        label_th: Global X Data Center & Digital Infrastructure
+      - ticker: GRID
+        label_en: First Trust Smart Grid Infrastructure
+        label_th: First Trust Smart Grid Infrastructure
+  - id: quantum
+    name_en: Quantum
+    name_th: ควอนตัมคอมพิวติ้ง
+    type: theme
+    constituents: [IONQ, RGTI, QBTS]
+    ref_etfs:
+      - ticker: QTUM
+        label_en: Defiance Quantum
+        label_th: Defiance Quantum
+  - id: nuclear_uranium
+    name_en: Nuclear & Uranium
+    name_th: นิวเคลียร์และยูเรเนียม
+    type: theme
+    constituents: [CCJ, OKLO, SMR, LEU, BWXT]
+    ref_etfs:
+      - ticker: URA
+        label_en: Global X Uranium
+        label_th: Global X Uranium
+      - ticker: NLR
+        label_en: VanEck Uranium & Nuclear
+        label_th: VanEck Uranium & Nuclear
+      - ticker: URNM
+        label_en: Sprott Uranium Miners
+        label_th: Sprott Uranium Miners
+  - id: gold_miners
+    name_en: Gold Miners
+    name_th: เหมืองทองคำ
+    type: theme
+    constituents: [NEM, AEM, GOLD, WPM]
+    ref_etfs:
+      - ticker: GDX
+        label_en: VanEck Gold Miners
+        label_th: VanEck Gold Miners
+      - ticker: GDXJ
+        label_en: VanEck Junior Gold Miners
+        label_th: VanEck Junior Gold Miners
+      - ticker: GLD
+        label_en: SPDR Gold
+        label_th: SPDR Gold
+  - id: solar
+    name_en: Solar
+    name_th: พลังงานแสงอาทิตย์
+    type: theme
+    constituents: [FSLR, ENPH, NXT, RUN]
+    ref_etfs:
+      - ticker: TAN
+        label_en: Invesco Solar
+        label_th: Invesco Solar
+      - ticker: ICLN
+        label_en: iShares Global Clean Energy
+        label_th: iShares Global Clean Energy
+  - id: crypto_linked
+    name_en: Crypto-linked
+    name_th: คริปโทเคอร์เรนซี
+    type: theme
+    constituents: [COIN, MSTR, HOOD, MARA, RIOT]
+    ref_etfs:
+      - ticker: IBIT
+        label_en: iShares Bitcoin Trust
+        label_th: iShares Bitcoin Trust
+      - ticker: DAPP
+        label_en: VanEck Digital Transformation
+        label_th: VanEck Digital Transformation
+      - ticker: WGMI
+        label_en: CoinShares Bitcoin Miners
+        label_th: CoinShares Bitcoin Miners
+  - id: space_drones
+    name_en: Space & Drones
+    name_th: อวกาศและโดรน
+    type: theme
+    constituents: [RKLB, ASTS, AVAV, KTOS, LUNR]
+    ref_etfs:
+      - ticker: ARKX
+        label_en: ARK Space Exploration
+        label_th: ARK Space Exploration
+      - ticker: UFO
+        label_en: Procure Space
+        label_th: Procure Space
+  - id: china_tech_adr
+    name_en: China Tech ADR
+    name_th: เทคโนโลยีจีน
+    type: theme
+    constituents: [BABA, PDD, BIDU, JD, BEKE]
+    ref_etfs:
+      - ticker: KWEB
+        label_en: KraneShares CSI China Internet
+        label_th: KraneShares CSI China Internet
+      - ticker: CQQQ
+        label_en: Invesco China Technology
+        label_th: Invesco China Technology
+  - id: homebuilders
+    name_en: Homebuilders
+    name_th: สร้างบ้าน
+    type: theme
+    constituents: [DHI, LEN, PHM, TOL, NVR]
+    ref_etfs:
+      - ticker: ITB
+        label_en: iShares US Home Construction
+        label_th: iShares US Home Construction
+      - ticker: XHB
+        label_en: SPDR S&P Homebuilders
+        label_th: SPDR S&P Homebuilders
+  - id: travel_airlines
+    name_en: Travel & Airlines
+    name_th: ท่องเที่ยวและสายการบิน
+    type: theme
+    constituents: [BKNG, ABNB, MAR, DAL, UAL, RCL]
+    ref_etfs:
+      - ticker: JETS
+        label_en: US Global Jets
+        label_th: US Global Jets
+      - ticker: PEJ
+        label_en: Invesco Leisure & Entertainment
+        label_th: Invesco Leisure & Entertainment
+  - id: fintech_payments
+    name_en: Fintech & Payments
+    name_th: ฟินเทคและการชำระเงิน
+    type: theme
+    constituents: [V, MA, PYPL, AXP, COF]
+    ref_etfs:
+      - ticker: IPAY
+        label_en: Amplify Mobile Payments
+        label_th: Amplify Mobile Payments
+      - ticker: FINX
+        label_en: Global X FinTech
+        label_th: Global X FinTech
+  - id: xlk
+    name_en: Tech (XLK)
+    name_th: เทคโนโลยี (XLK)
+    type: sector_etf
+    constituents: [XLK]
+    ref_etfs: []
+  - id: xlf
+    name_en: Financials (XLF)
+    name_th: การเงิน (XLF)
+    type: sector_etf
+    constituents: [XLF]
+    ref_etfs: []
+  - id: xlv
+    name_en: Health Care (XLV)
+    name_th: สุขภาพ (XLV)
+    type: sector_etf
+    constituents: [XLV]
+    ref_etfs: []
+  - id: xle
+    name_en: Energy (XLE)
+    name_th: พลังงาน (XLE)
+    type: sector_etf
+    constituents: [XLE]
+    ref_etfs: []
+  - id: xli
+    name_en: Industrials (XLI)
+    name_th: อุตสาหกรรม (XLI)
+    type: sector_etf
+    constituents: [XLI]
+    ref_etfs: []
+  - id: xlu
+    name_en: Utilities (XLU)
+    name_th: สาธารณูปโภค (XLU)
+    type: sector_etf
+    constituents: [XLU]
+    ref_etfs: []
+  - id: xlp
+    name_en: Staples (XLP)
+    name_th: สินค้าอุปโภคบริโภค (XLP)
+    type: sector_etf
+    constituents: [XLP]
+    ref_etfs: []
+  - id: xlre
+    name_en: Real Estate (XLRE)
+    name_th: อสังหาริมทรัพย์ (XLRE)
+    type: sector_etf
+    constituents: [XLRE]
+    ref_etfs: []
+  - id: xlb
+    name_en: Materials (XLB)
+    name_th: วัสดุอุตสาหกรรม (XLB)
+    type: sector_etf
+    constituents: [XLB]
+    ref_etfs: []
+  - id: xly
+    name_en: Cons Discret (XLY)
+    name_th: สินค้าฟุ่มเฟือย (XLY)
+    type: sector_etf
+    constituents: [XLY]
+    ref_etfs: []
+  - id: xlc
+    name_en: Comm Svcs (XLC)
+    name_th: สื่อสาร (XLC)
+    type: sector_etf
+    constituents: [XLC]
+    ref_etfs: []

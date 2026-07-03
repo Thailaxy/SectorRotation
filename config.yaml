@@ -1,0 +1,32 @@
+benchmark: SPY
+history_days: 400            # จำนวนวันปฏิทินที่ดึงย้อนหลัง
+
+returns:
+  d1: 1
+  w1: 5
+  m1: 21
+  m3: 63
+
+breadth:
+  ma_window: 20              # 20DMA
+
+dollar_volume:
+  short: 5
+  long: 20
+
+rrg:
+  smoothing: 10              # span ของ EMA (สัปดาห์)
+  lookback_weeks: 52         # หน้าต่าง normalize (z-score)
+  scale: 10                  # ตัวคูณ z-score (คุมช่วงค่าให้ราว 70..140)
+  tail_weeks: 8              # จำนวนจุดหางบน RRG
+
+breadth_health:              # เกณฑ์สีใน Playbook
+  green_min: 50
+  yellow_min: 30
+
+user_holdings:               # ธีมที่ผู้ใช้ถือ (ใส่ป้าย 📍)
+  - semiconductors
+
+fetch:
+  retries: 3
+  retry_wait_sec: 5

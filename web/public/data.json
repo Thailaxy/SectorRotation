@@ -1,0 +1,2584 @@
+{
+  "generated_at": "2026-07-03T16:57:35.744492Z",
+  "as_of_date": "2026-07-03",
+  "benchmark": "SPY",
+  "benchmark_return_1D": 0.4,
+  "benchmark_return_1M": 3.83,
+  "benchmark_return_3M": 8.49,
+  "config": {
+    "rrg_tail_weeks": 8,
+    "breadth_ma": 20,
+    "rrg_scale": 10
+  },
+  "user_holdings": [
+    "semiconductors"
+  ],
+  "themes": [
+    {
+      "id": "semiconductors",
+      "name_en": "Semiconductors",
+      "name_th": "เซมิคอนดักเตอร์",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 0.39,
+        "w1": -1.26,
+        "m1": 0.16,
+        "m3": -2.45,
+        "m1_vs_spy": -3.66
+      },
+      "breadth_pct": 37.5,
+      "dollar_vol_ratio": 0.94,
+      "rrg": {
+        "ratio": 81.55,
+        "momentum": 108.57,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 78.38,
+            "momentum": 103.03
+          },
+          {
+            "ratio": 78.87,
+            "momentum": 106.17
+          },
+          {
+            "ratio": 79.27,
+            "momentum": 105.31
+          },
+          {
+            "ratio": 79.56,
+            "momentum": 104.38
+          },
+          {
+            "ratio": 79.83,
+            "momentum": 104.22
+          },
+          {
+            "ratio": 80.42,
+            "momentum": 108.09
+          },
+          {
+            "ratio": 80.95,
+            "momentum": 107.74
+          },
+          {
+            "ratio": 81.55,
+            "momentum": 108.57
+          }
+        ]
+      },
+      "constituents": [
+        "NVDA",
+        "AMD",
+        "AVGO",
+        "TSM",
+        "QCOM",
+        "TXN",
+        "INTC",
+        "MRVL"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "SMH",
+          "label_en": "VanEck Semiconductor",
+          "label_th": "VanEck Semiconductor"
+        },
+        {
+          "ticker": "SOXX",
+          "label_en": "iShares Semiconductor",
+          "label_th": "iShares Semiconductor"
+        }
+      ]
+    },
+    {
+      "id": "semi_equip_memory",
+      "name_en": "Semi Equip & Memory",
+      "name_th": "อุปกรณ์เซมิฯและเมมโมรี่",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.79,
+        "w1": 1.05,
+        "m1": 2.28,
+        "m3": -0.78,
+        "m1_vs_spy": -1.55
+      },
+      "breadth_pct": 71.4,
+      "dollar_vol_ratio": 0.93,
+      "rrg": {
+        "ratio": 79.16,
+        "momentum": 109.93,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 75.36,
+            "momentum": 102.0
+          },
+          {
+            "ratio": 76.14,
+            "momentum": 109.04
+          },
+          {
+            "ratio": 76.58,
+            "momentum": 106.13
+          },
+          {
+            "ratio": 76.83,
+            "momentum": 104.5
+          },
+          {
+            "ratio": 77.17,
+            "momentum": 105.12
+          },
+          {
+            "ratio": 77.76,
+            "momentum": 107.11
+          },
+          {
+            "ratio": 78.22,
+            "momentum": 105.93
+          },
+          {
+            "ratio": 79.16,
+            "momentum": 109.93
+          }
+        ]
+      },
+      "constituents": [
+        "MU",
+        "WDC",
+        "STX",
+        "AMAT",
+        "LRCX",
+        "KLAC",
+        "ASML"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "SMH",
+          "label_en": "VanEck Semiconductor",
+          "label_th": "VanEck Semiconductor"
+        }
+      ]
+    },
+    {
+      "id": "software",
+      "name_en": "Software",
+      "name_th": "ซอฟต์แวร์",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.34,
+        "w1": 1.26,
+        "m1": 4.37,
+        "m3": 3.93,
+        "m1_vs_spy": 0.54
+      },
+      "breadth_pct": 77.8,
+      "dollar_vol_ratio": 1.03,
+      "rrg": {
+        "ratio": 81.69,
+        "momentum": 113.87,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 79.58,
+            "momentum": 99.09
+          },
+          {
+            "ratio": 79.79,
+            "momentum": 105.73
+          },
+          {
+            "ratio": 79.84,
+            "momentum": 103.26
+          },
+          {
+            "ratio": 80.0,
+            "momentum": 105.21
+          },
+          {
+            "ratio": 80.18,
+            "momentum": 105.33
+          },
+          {
+            "ratio": 80.64,
+            "momentum": 109.77
+          },
+          {
+            "ratio": 80.94,
+            "momentum": 107.1
+          },
+          {
+            "ratio": 81.69,
+            "momentum": 113.87
+          }
+        ]
+      },
+      "constituents": [
+        "MSFT",
+        "ORCL",
+        "CRM",
+        "ADBE",
+        "NOW",
+        "PLTR",
+        "INTU",
+        "SNPS",
+        "CDNS"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "IGV",
+          "label_en": "iShares Expanded Tech-Software",
+          "label_th": "iShares Expanded Tech-Software"
+        },
+        {
+          "ticker": "XSW",
+          "label_en": "SPDR S&P Software",
+          "label_th": "SPDR S&P Software"
+        }
+      ]
+    },
+    {
+      "id": "mag7",
+      "name_en": "Mag 7",
+      "name_th": "7 นางฟ้า",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 0.24,
+        "w1": 1.09,
+        "m1": 2.38,
+        "m3": 0.04,
+        "m1_vs_spy": -1.45
+      },
+      "breadth_pct": 57.1,
+      "dollar_vol_ratio": 0.95,
+      "rrg": {
+        "ratio": 81.61,
+        "momentum": 109.23,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 79.31,
+            "momentum": 103.33
+          },
+          {
+            "ratio": 79.52,
+            "momentum": 103.07
+          },
+          {
+            "ratio": 79.96,
+            "momentum": 105.53
+          },
+          {
+            "ratio": 80.08,
+            "momentum": 102.26
+          },
+          {
+            "ratio": 80.23,
+            "momentum": 102.81
+          },
+          {
+            "ratio": 80.6,
+            "momentum": 105.37
+          },
+          {
+            "ratio": 80.93,
+            "momentum": 105.29
+          },
+          {
+            "ratio": 81.61,
+            "momentum": 109.23
+          }
+        ]
+      },
+      "constituents": [
+        "AAPL",
+        "MSFT",
+        "NVDA",
+        "AMZN",
+        "GOOGL",
+        "META",
+        "TSLA"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "MAGS",
+          "label_en": "Roundhill Magnificent Seven",
+          "label_th": "Roundhill Magnificent Seven"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity",
+      "name_en": "Cybersecurity",
+      "name_th": "ไซเบอร์ซีเคียวริตี้",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.87,
+        "w1": -1.44,
+        "m1": -4.47,
+        "m3": -2.83,
+        "m1_vs_spy": -8.3
+      },
+      "breadth_pct": 20.0,
+      "dollar_vol_ratio": 0.73,
+      "rrg": {
+        "ratio": 79.45,
+        "momentum": 103.7,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 77.02,
+            "momentum": 104.33
+          },
+          {
+            "ratio": 78.0,
+            "momentum": 107.44
+          },
+          {
+            "ratio": 78.74,
+            "momentum": 105.87
+          },
+          {
+            "ratio": 78.92,
+            "momentum": 102.53
+          },
+          {
+            "ratio": 78.98,
+            "momentum": 101.96
+          },
+          {
+            "ratio": 79.15,
+            "momentum": 102.57
+          },
+          {
+            "ratio": 79.14,
+            "momentum": 101.76
+          },
+          {
+            "ratio": 79.45,
+            "momentum": 103.7
+          }
+        ]
+      },
+      "constituents": [
+        "CRWD",
+        "PANW",
+        "FTNT",
+        "ZS",
+        "OKTA"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "CIBR",
+          "label_en": "First Trust Nasdaq Cybersecurity",
+          "label_th": "First Trust Nasdaq Cybersecurity"
+        },
+        {
+          "ticker": "HACK",
+          "label_en": "Amplify Cybersecurity",
+          "label_th": "Amplify Cybersecurity"
+        },
+        {
+          "ticker": "BUG",
+          "label_en": "Global X Cybersecurity",
+          "label_th": "Global X Cybersecurity"
+        }
+      ]
+    },
+    {
+      "id": "genomics",
+      "name_en": "Genomics",
+      "name_th": "จีโนมิกส์",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.09,
+        "w1": 0.59,
+        "m1": 2.59,
+        "m3": 10.14,
+        "m1_vs_spy": -1.24
+      },
+      "breadth_pct": 50.0,
+      "dollar_vol_ratio": 0.88,
+      "rrg": {
+        "ratio": 83.7,
+        "momentum": 105.64,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 75.2,
+            "momentum": 104.87
+          },
+          {
+            "ratio": 77.06,
+            "momentum": 108.46
+          },
+          {
+            "ratio": 78.73,
+            "momentum": 107.63
+          },
+          {
+            "ratio": 79.82,
+            "momentum": 105.19
+          },
+          {
+            "ratio": 80.96,
+            "momentum": 105.4
+          },
+          {
+            "ratio": 81.93,
+            "momentum": 104.69
+          },
+          {
+            "ratio": 82.51,
+            "momentum": 103.2
+          },
+          {
+            "ratio": 83.7,
+            "momentum": 105.64
+          }
+        ]
+      },
+      "constituents": [
+        "CRSP",
+        "EDIT",
+        "BEAM",
+        "NTLA",
+        "ILMN",
+        "RXRX",
+        "TWST",
+        "PACB"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "ARKG",
+          "label_en": "ARK Genomic Revolution",
+          "label_th": "ARK Genomic Revolution"
+        },
+        {
+          "ticker": "IDNA",
+          "label_en": "iShares Genomics & Immunology",
+          "label_th": "iShares Genomics & Immunology"
+        }
+      ]
+    },
+    {
+      "id": "biotech_large",
+      "name_en": "Biotech Large",
+      "name_th": "ไบโอเทค (ขนาดใหญ่)",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 0.21,
+        "w1": 2.59,
+        "m1": 2.87,
+        "m3": 6.88,
+        "m1_vs_spy": -0.96
+      },
+      "breadth_pct": 80.0,
+      "dollar_vol_ratio": 1.0,
+      "rrg": {
+        "ratio": 81.55,
+        "momentum": 107.45,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 74.02,
+            "momentum": 104.31
+          },
+          {
+            "ratio": 75.66,
+            "momentum": 110.96
+          },
+          {
+            "ratio": 77.47,
+            "momentum": 111.51
+          },
+          {
+            "ratio": 78.31,
+            "momentum": 106.03
+          },
+          {
+            "ratio": 78.94,
+            "momentum": 104.88
+          },
+          {
+            "ratio": 80.07,
+            "momentum": 107.44
+          },
+          {
+            "ratio": 80.42,
+            "momentum": 103.21
+          },
+          {
+            "ratio": 81.55,
+            "momentum": 107.45
+          }
+        ]
+      },
+      "constituents": [
+        "AMGN",
+        "GILD",
+        "VRTX",
+        "REGN",
+        "BIIB"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "IBB",
+          "label_en": "iShares Biotechnology",
+          "label_th": "iShares Biotechnology"
+        },
+        {
+          "ticker": "XBI",
+          "label_en": "SPDR S&P Biotech",
+          "label_th": "SPDR S&P Biotech"
+        }
+      ]
+    },
+    {
+      "id": "pharma_managed_care",
+      "name_en": "Pharma & Managed Care",
+      "name_th": "ยาและการดูแลสุขภาพ",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.82,
+        "w1": -1.07,
+        "m1": 0.05,
+        "m3": 3.36,
+        "m1_vs_spy": -3.77
+      },
+      "breadth_pct": 16.7,
+      "dollar_vol_ratio": 0.89,
+      "rrg": {
+        "ratio": 81.19,
+        "momentum": 106.13,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 78.38,
+            "momentum": 104.28
+          },
+          {
+            "ratio": 79.33,
+            "momentum": 111.56
+          },
+          {
+            "ratio": 80.0,
+            "momentum": 108.65
+          },
+          {
+            "ratio": 80.13,
+            "momentum": 103.23
+          },
+          {
+            "ratio": 80.33,
+            "momentum": 104.07
+          },
+          {
+            "ratio": 80.67,
+            "momentum": 105.45
+          },
+          {
+            "ratio": 80.78,
+            "momentum": 103.1
+          },
+          {
+            "ratio": 81.19,
+            "momentum": 106.13
+          }
+        ]
+      },
+      "constituents": [
+        "LLY",
+        "UNH",
+        "JNJ",
+        "MRK",
+        "ABBV",
+        "PFE"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "IHE",
+          "label_en": "iShares US Pharmaceuticals",
+          "label_th": "iShares US Pharmaceuticals"
+        },
+        {
+          "ticker": "XLV",
+          "label_en": "Health Care Select Sector",
+          "label_th": "Health Care Select Sector"
+        }
+      ]
+    },
+    {
+      "id": "defense",
+      "name_en": "Defense",
+      "name_th": "กลาโหม",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.03,
+        "w1": -0.71,
+        "m1": 3.24,
+        "m3": 0.9,
+        "m1_vs_spy": -0.58
+      },
+      "breadth_pct": 80.0,
+      "dollar_vol_ratio": 0.98,
+      "rrg": {
+        "ratio": 81.41,
+        "momentum": 105.82,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 75.48,
+            "momentum": 104.85
+          },
+          {
+            "ratio": 76.71,
+            "momentum": 106.85
+          },
+          {
+            "ratio": 77.68,
+            "momentum": 105.74
+          },
+          {
+            "ratio": 78.15,
+            "momentum": 103.81
+          },
+          {
+            "ratio": 78.67,
+            "momentum": 104.03
+          },
+          {
+            "ratio": 79.63,
+            "momentum": 105.85
+          },
+          {
+            "ratio": 80.5,
+            "momentum": 105.61
+          },
+          {
+            "ratio": 81.41,
+            "momentum": 105.82
+          }
+        ]
+      },
+      "constituents": [
+        "LMT",
+        "RTX",
+        "NOC",
+        "GD",
+        "LHX"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "ITA",
+          "label_en": "iShares US Aerospace & Defense",
+          "label_th": "iShares US Aerospace & Defense"
+        },
+        {
+          "ticker": "XAR",
+          "label_en": "SPDR Aerospace & Defense",
+          "label_th": "SPDR Aerospace & Defense"
+        },
+        {
+          "ticker": "PPA",
+          "label_en": "Invesco Aerospace & Defense",
+          "label_th": "Invesco Aerospace & Defense"
+        }
+      ]
+    },
+    {
+      "id": "energy",
+      "name_en": "Energy",
+      "name_th": "พลังงาน",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 0.18,
+        "w1": 1.32,
+        "m1": 0.3,
+        "m3": 3.13,
+        "m1_vs_spy": -3.53
+      },
+      "breadth_pct": 80.0,
+      "dollar_vol_ratio": 1.16,
+      "rrg": {
+        "ratio": 79.69,
+        "momentum": 109.4,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 74.68,
+            "momentum": 109.49
+          },
+          {
+            "ratio": 76.08,
+            "momentum": 112.33
+          },
+          {
+            "ratio": 77.06,
+            "momentum": 109.16
+          },
+          {
+            "ratio": 77.39,
+            "momentum": 104.53
+          },
+          {
+            "ratio": 77.65,
+            "momentum": 104.1
+          },
+          {
+            "ratio": 78.11,
+            "momentum": 105.47
+          },
+          {
+            "ratio": 78.66,
+            "momentum": 106.2
+          },
+          {
+            "ratio": 79.69,
+            "momentum": 109.4
+          }
+        ]
+      },
+      "constituents": [
+        "XOM",
+        "CVX",
+        "COP",
+        "SLB",
+        "EOG"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "XLE",
+          "label_en": "Energy Select Sector",
+          "label_th": "Energy Select Sector"
+        },
+        {
+          "ticker": "XOP",
+          "label_en": "SPDR Oil & Gas E&P",
+          "label_th": "SPDR Oil & Gas E&P"
+        },
+        {
+          "ticker": "OIH",
+          "label_en": "VanEck Oil Services",
+          "label_th": "VanEck Oil Services"
+        }
+      ]
+    },
+    {
+      "id": "banks_brokers",
+      "name_en": "Banks & Brokers",
+      "name_th": "ธนาคารและโบรกเกอร์",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.94,
+        "w1": -2.2,
+        "m1": 0.65,
+        "m3": 0.48,
+        "m1_vs_spy": -3.18
+      },
+      "breadth_pct": 20.0,
+      "dollar_vol_ratio": 1.08,
+      "rrg": {
+        "ratio": 79.19,
+        "momentum": 107.73,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 72.08,
+            "momentum": 106.11
+          },
+          {
+            "ratio": 73.41,
+            "momentum": 108.15
+          },
+          {
+            "ratio": 74.6,
+            "momentum": 107.65
+          },
+          {
+            "ratio": 75.16,
+            "momentum": 105.53
+          },
+          {
+            "ratio": 76.11,
+            "momentum": 107.07
+          },
+          {
+            "ratio": 77.11,
+            "momentum": 107.33
+          },
+          {
+            "ratio": 78.1,
+            "momentum": 107.47
+          },
+          {
+            "ratio": 79.19,
+            "momentum": 107.73
+          }
+        ]
+      },
+      "constituents": [
+        "JPM",
+        "GS",
+        "MS",
+        "BAC",
+        "WFC"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "KBWB",
+          "label_en": "Invesco KBW Bank",
+          "label_th": "Invesco KBW Bank"
+        },
+        {
+          "ticker": "KBE",
+          "label_en": "SPDR S&P Bank",
+          "label_th": "SPDR S&P Bank"
+        },
+        {
+          "ticker": "IAI",
+          "label_en": "iShares US Broker-Dealers",
+          "label_th": "iShares US Broker-Dealers"
+        }
+      ]
+    },
+    {
+      "id": "staples",
+      "name_en": "Staples",
+      "name_th": "สินค้าอุปโภคบริโภค",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.17,
+        "w1": -0.73,
+        "m1": 1.92,
+        "m3": 3.64,
+        "m1_vs_spy": -1.91
+      },
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 1.07,
+      "rrg": {
+        "ratio": 80.64,
+        "momentum": 106.25,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 72.47,
+            "momentum": 106.57
+          },
+          {
+            "ratio": 73.94,
+            "momentum": 108.28
+          },
+          {
+            "ratio": 75.13,
+            "momentum": 106.99
+          },
+          {
+            "ratio": 76.32,
+            "momentum": 106.81
+          },
+          {
+            "ratio": 77.6,
+            "momentum": 107.16
+          },
+          {
+            "ratio": 78.66,
+            "momentum": 106.22
+          },
+          {
+            "ratio": 79.59,
+            "momentum": 105.78
+          },
+          {
+            "ratio": 80.64,
+            "momentum": 106.25
+          }
+        ]
+      },
+      "constituents": [
+        "PG",
+        "KO",
+        "PEP",
+        "COST",
+        "WMT"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "XLP",
+          "label_en": "Consumer Staples Select Sector",
+          "label_th": "Consumer Staples Select Sector"
+        }
+      ]
+    },
+    {
+      "id": "utilities_power",
+      "name_en": "Utilities & Power",
+      "name_th": "สาธารณูปโภคและไฟฟ้า",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.28,
+        "w1": -0.03,
+        "m1": -2.29,
+        "m3": 5.18,
+        "m1_vs_spy": -6.12
+      },
+      "breadth_pct": 20.0,
+      "dollar_vol_ratio": 1.0,
+      "rrg": {
+        "ratio": 81.1,
+        "momentum": 104.92,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 78.18,
+            "momentum": 100.74
+          },
+          {
+            "ratio": 78.82,
+            "momentum": 106.18
+          },
+          {
+            "ratio": 79.49,
+            "momentum": 106.51
+          },
+          {
+            "ratio": 80.03,
+            "momentum": 105.74
+          },
+          {
+            "ratio": 80.45,
+            "momentum": 105.0
+          },
+          {
+            "ratio": 80.73,
+            "momentum": 103.97
+          },
+          {
+            "ratio": 80.73,
+            "momentum": 102.02
+          },
+          {
+            "ratio": 81.1,
+            "momentum": 104.92
+          }
+        ]
+      },
+      "constituents": [
+        "NEE",
+        "DUK",
+        "SO",
+        "VST",
+        "CEG"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "XLU",
+          "label_en": "Utilities Select Sector",
+          "label_th": "Utilities Select Sector"
+        },
+        {
+          "ticker": "GRID",
+          "label_en": "First Trust Smart Grid Infrastructure",
+          "label_th": "First Trust Smart Grid Infrastructure"
+        }
+      ]
+    },
+    {
+      "id": "materials",
+      "name_en": "Materials",
+      "name_th": "วัสดุอุตสาหกรรม",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 0.48,
+        "w1": 1.38,
+        "m1": 3.21,
+        "m3": 4.7,
+        "m1_vs_spy": -0.62
+      },
+      "breadth_pct": 80.0,
+      "dollar_vol_ratio": 0.89,
+      "rrg": {
+        "ratio": 80.07,
+        "momentum": 110.52,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 75.4,
+            "momentum": 101.75
+          },
+          {
+            "ratio": 76.36,
+            "momentum": 110.76
+          },
+          {
+            "ratio": 77.24,
+            "momentum": 109.71
+          },
+          {
+            "ratio": 77.83,
+            "momentum": 106.81
+          },
+          {
+            "ratio": 77.99,
+            "momentum": 102.73
+          },
+          {
+            "ratio": 78.63,
+            "momentum": 107.27
+          },
+          {
+            "ratio": 79.07,
+            "momentum": 105.34
+          },
+          {
+            "ratio": 80.07,
+            "momentum": 110.52
+          }
+        ]
+      },
+      "constituents": [
+        "LIN",
+        "FCX",
+        "NUE",
+        "SHW",
+        "APD"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "XLB",
+          "label_en": "Materials Select Sector",
+          "label_th": "Materials Select Sector"
+        }
+      ]
+    },
+    {
+      "id": "ai_infra_datacenter",
+      "name_en": "AI Infra & Data Center",
+      "name_th": "โครงสร้างพื้นฐาน AI",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 0.81,
+        "w1": 1.21,
+        "m1": 2.5,
+        "m3": 8.82,
+        "m1_vs_spy": -1.32
+      },
+      "breadth_pct": 50.0,
+      "dollar_vol_ratio": 1.59,
+      "rrg": {
+        "ratio": 83.14,
+        "momentum": 106.9,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 79.16,
+            "momentum": 108.98
+          },
+          {
+            "ratio": 80.08,
+            "momentum": 109.28
+          },
+          {
+            "ratio": 80.89,
+            "momentum": 108.49
+          },
+          {
+            "ratio": 81.3,
+            "momentum": 104.78
+          },
+          {
+            "ratio": 81.72,
+            "momentum": 104.73
+          },
+          {
+            "ratio": 82.13,
+            "momentum": 104.48
+          },
+          {
+            "ratio": 82.44,
+            "momentum": 103.67
+          },
+          {
+            "ratio": 83.14,
+            "momentum": 106.9
+          }
+        ]
+      },
+      "constituents": [
+        "VRT",
+        "ETN",
+        "ANET",
+        "SMCI",
+        "DELL",
+        "CIEN"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "AIQ",
+          "label_en": "Global X Artificial Intelligence & Technology",
+          "label_th": "Global X Artificial Intelligence & Technology"
+        },
+        {
+          "ticker": "DTCR",
+          "label_en": "Global X Data Center & Digital Infrastructure",
+          "label_th": "Global X Data Center & Digital Infrastructure"
+        },
+        {
+          "ticker": "GRID",
+          "label_en": "First Trust Smart Grid Infrastructure",
+          "label_th": "First Trust Smart Grid Infrastructure"
+        }
+      ]
+    },
+    {
+      "id": "quantum",
+      "name_en": "Quantum",
+      "name_th": "ควอนตัมคอมพิวติ้ง",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.75,
+        "w1": 1.26,
+        "m1": 3.88,
+        "m3": 7.87,
+        "m1_vs_spy": 0.05
+      },
+      "breadth_pct": 66.7,
+      "dollar_vol_ratio": 0.96,
+      "rrg": {
+        "ratio": 82.53,
+        "momentum": 108.26,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 78.88,
+            "momentum": 102.73
+          },
+          {
+            "ratio": 80.81,
+            "momentum": 108.24
+          },
+          {
+            "ratio": 81.44,
+            "momentum": 103.05
+          },
+          {
+            "ratio": 80.18,
+            "momentum": 95.78
+          },
+          {
+            "ratio": 80.34,
+            "momentum": 101.28
+          },
+          {
+            "ratio": 80.47,
+            "momentum": 101.13
+          },
+          {
+            "ratio": 80.58,
+            "momentum": 101.2
+          },
+          {
+            "ratio": 82.53,
+            "momentum": 108.26
+          }
+        ]
+      },
+      "constituents": [
+        "IONQ",
+        "RGTI",
+        "QBTS"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "QTUM",
+          "label_en": "Defiance Quantum",
+          "label_th": "Defiance Quantum"
+        }
+      ]
+    },
+    {
+      "id": "nuclear_uranium",
+      "name_en": "Nuclear & Uranium",
+      "name_th": "นิวเคลียร์และยูเรเนียม",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 0.36,
+        "w1": -0.25,
+        "m1": 3.77,
+        "m3": 6.82,
+        "m1_vs_spy": -0.06
+      },
+      "breadth_pct": 40.0,
+      "dollar_vol_ratio": 0.94,
+      "rrg": {
+        "ratio": 80.68,
+        "momentum": 105.77,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 74.89,
+            "momentum": 105.11
+          },
+          {
+            "ratio": 76.24,
+            "momentum": 107.67
+          },
+          {
+            "ratio": 77.03,
+            "momentum": 105.12
+          },
+          {
+            "ratio": 77.4,
+            "momentum": 103.28
+          },
+          {
+            "ratio": 77.92,
+            "momentum": 104.0
+          },
+          {
+            "ratio": 78.9,
+            "momentum": 105.94
+          },
+          {
+            "ratio": 79.71,
+            "momentum": 105.2
+          },
+          {
+            "ratio": 80.68,
+            "momentum": 105.77
+          }
+        ]
+      },
+      "constituents": [
+        "CCJ",
+        "OKLO",
+        "SMR",
+        "LEU",
+        "BWXT"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "URA",
+          "label_en": "Global X Uranium",
+          "label_th": "Global X Uranium"
+        },
+        {
+          "ticker": "NLR",
+          "label_en": "VanEck Uranium & Nuclear",
+          "label_th": "VanEck Uranium & Nuclear"
+        },
+        {
+          "ticker": "URNM",
+          "label_en": "Sprott Uranium Miners",
+          "label_th": "Sprott Uranium Miners"
+        }
+      ]
+    },
+    {
+      "id": "gold_miners",
+      "name_en": "Gold Miners",
+      "name_th": "เหมืองทองคำ",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 0.36,
+        "w1": 1.41,
+        "m1": 2.84,
+        "m3": 4.68,
+        "m1_vs_spy": -0.99
+      },
+      "breadth_pct": 75.0,
+      "dollar_vol_ratio": 0.87,
+      "rrg": {
+        "ratio": 82.66,
+        "momentum": 114.34,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 78.73,
+            "momentum": 108.3
+          },
+          {
+            "ratio": 79.41,
+            "momentum": 112.26
+          },
+          {
+            "ratio": 80.12,
+            "momentum": 112.38
+          },
+          {
+            "ratio": 80.58,
+            "momentum": 109.04
+          },
+          {
+            "ratio": 80.91,
+            "momentum": 107.29
+          },
+          {
+            "ratio": 81.44,
+            "momentum": 110.66
+          },
+          {
+            "ratio": 81.93,
+            "momentum": 110.76
+          },
+          {
+            "ratio": 82.66,
+            "momentum": 114.34
+          }
+        ]
+      },
+      "constituents": [
+        "NEM",
+        "AEM",
+        "GOLD",
+        "WPM"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "GDX",
+          "label_en": "VanEck Gold Miners",
+          "label_th": "VanEck Gold Miners"
+        },
+        {
+          "ticker": "GDXJ",
+          "label_en": "VanEck Junior Gold Miners",
+          "label_th": "VanEck Junior Gold Miners"
+        },
+        {
+          "ticker": "GLD",
+          "label_en": "SPDR Gold",
+          "label_th": "SPDR Gold"
+        }
+      ]
+    },
+    {
+      "id": "solar",
+      "name_en": "Solar",
+      "name_th": "พลังงานแสงอาทิตย์",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 0.76,
+        "w1": -0.36,
+        "m1": -1.53,
+        "m3": 0.97,
+        "m1_vs_spy": -5.36
+      },
+      "breadth_pct": 50.0,
+      "dollar_vol_ratio": 1.03,
+      "rrg": {
+        "ratio": 79.58,
+        "momentum": 106.39,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 72.71,
+            "momentum": 104.32
+          },
+          {
+            "ratio": 74.03,
+            "momentum": 108.52
+          },
+          {
+            "ratio": 75.27,
+            "momentum": 107.96
+          },
+          {
+            "ratio": 76.0,
+            "momentum": 105.07
+          },
+          {
+            "ratio": 77.02,
+            "momentum": 106.67
+          },
+          {
+            "ratio": 77.94,
+            "momentum": 106.11
+          },
+          {
+            "ratio": 78.62,
+            "momentum": 104.81
+          },
+          {
+            "ratio": 79.58,
+            "momentum": 106.39
+          }
+        ]
+      },
+      "constituents": [
+        "FSLR",
+        "ENPH",
+        "NXT",
+        "RUN"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "TAN",
+          "label_en": "Invesco Solar",
+          "label_th": "Invesco Solar"
+        },
+        {
+          "ticker": "ICLN",
+          "label_en": "iShares Global Clean Energy",
+          "label_th": "iShares Global Clean Energy"
+        }
+      ]
+    },
+    {
+      "id": "crypto_linked",
+      "name_en": "Crypto-linked",
+      "name_th": "คริปโทเคอร์เรนซี",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -1.0,
+        "w1": -0.72,
+        "m1": 1.56,
+        "m3": 3.92,
+        "m1_vs_spy": -2.27
+      },
+      "breadth_pct": 20.0,
+      "dollar_vol_ratio": 0.78,
+      "rrg": {
+        "ratio": 82.74,
+        "momentum": 106.8,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 78.51,
+            "momentum": 104.49
+          },
+          {
+            "ratio": 78.99,
+            "momentum": 104.35
+          },
+          {
+            "ratio": 79.68,
+            "momentum": 105.84
+          },
+          {
+            "ratio": 80.16,
+            "momentum": 104.7
+          },
+          {
+            "ratio": 80.77,
+            "momentum": 105.69
+          },
+          {
+            "ratio": 81.61,
+            "momentum": 107.05
+          },
+          {
+            "ratio": 82.04,
+            "momentum": 104.9
+          },
+          {
+            "ratio": 82.74,
+            "momentum": 106.8
+          }
+        ]
+      },
+      "constituents": [
+        "COIN",
+        "MSTR",
+        "HOOD",
+        "MARA",
+        "RIOT"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "IBIT",
+          "label_en": "iShares Bitcoin Trust",
+          "label_th": "iShares Bitcoin Trust"
+        },
+        {
+          "ticker": "DAPP",
+          "label_en": "VanEck Digital Transformation",
+          "label_th": "VanEck Digital Transformation"
+        },
+        {
+          "ticker": "WGMI",
+          "label_en": "CoinShares Bitcoin Miners",
+          "label_th": "CoinShares Bitcoin Miners"
+        }
+      ]
+    },
+    {
+      "id": "space_drones",
+      "name_en": "Space & Drones",
+      "name_th": "อวกาศและโดรน",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.01,
+        "w1": -1.15,
+        "m1": -1.89,
+        "m3": 1.05,
+        "m1_vs_spy": -5.72
+      },
+      "breadth_pct": 40.0,
+      "dollar_vol_ratio": 1.14,
+      "rrg": {
+        "ratio": 81.97,
+        "momentum": 103.0,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 76.22,
+            "momentum": 103.33
+          },
+          {
+            "ratio": 77.31,
+            "momentum": 104.22
+          },
+          {
+            "ratio": 78.27,
+            "momentum": 103.73
+          },
+          {
+            "ratio": 79.06,
+            "momentum": 103.1
+          },
+          {
+            "ratio": 79.76,
+            "momentum": 102.78
+          },
+          {
+            "ratio": 80.54,
+            "momentum": 103.03
+          },
+          {
+            "ratio": 81.24,
+            "momentum": 102.87
+          },
+          {
+            "ratio": 81.97,
+            "momentum": 103.0
+          }
+        ]
+      },
+      "constituents": [
+        "RKLB",
+        "ASTS",
+        "AVAV",
+        "KTOS",
+        "LUNR"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "ARKX",
+          "label_en": "ARK Space Exploration",
+          "label_th": "ARK Space Exploration"
+        },
+        {
+          "ticker": "UFO",
+          "label_en": "Procure Space",
+          "label_th": "Procure Space"
+        }
+      ]
+    },
+    {
+      "id": "china_tech_adr",
+      "name_en": "China Tech ADR",
+      "name_th": "เทคโนโลยีจีน",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 0.12,
+        "w1": 1.05,
+        "m1": 0.88,
+        "m3": 8.39,
+        "m1_vs_spy": -2.95
+      },
+      "breadth_pct": 80.0,
+      "dollar_vol_ratio": 0.77,
+      "rrg": {
+        "ratio": 79.51,
+        "momentum": 108.07,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 74.84,
+            "momentum": 105.08
+          },
+          {
+            "ratio": 75.88,
+            "momentum": 109.75
+          },
+          {
+            "ratio": 76.69,
+            "momentum": 107.75
+          },
+          {
+            "ratio": 77.2,
+            "momentum": 105.47
+          },
+          {
+            "ratio": 77.45,
+            "momentum": 103.29
+          },
+          {
+            "ratio": 78.17,
+            "momentum": 106.63
+          },
+          {
+            "ratio": 78.55,
+            "momentum": 104.11
+          },
+          {
+            "ratio": 79.51,
+            "momentum": 108.07
+          }
+        ]
+      },
+      "constituents": [
+        "BABA",
+        "PDD",
+        "BIDU",
+        "JD",
+        "BEKE"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "KWEB",
+          "label_en": "KraneShares CSI China Internet",
+          "label_th": "KraneShares CSI China Internet"
+        },
+        {
+          "ticker": "CQQQ",
+          "label_en": "Invesco China Technology",
+          "label_th": "Invesco China Technology"
+        }
+      ]
+    },
+    {
+      "id": "homebuilders",
+      "name_en": "Homebuilders",
+      "name_th": "สร้างบ้าน",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.35,
+        "w1": 0.54,
+        "m1": -2.81,
+        "m3": -2.71,
+        "m1_vs_spy": -6.64
+      },
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 1.06,
+      "rrg": {
+        "ratio": 80.23,
+        "momentum": 103.39,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 80.55,
+            "momentum": 98.89
+          },
+          {
+            "ratio": 80.66,
+            "momentum": 101.53
+          },
+          {
+            "ratio": 80.54,
+            "momentum": 99.1
+          },
+          {
+            "ratio": 80.27,
+            "momentum": 97.21
+          },
+          {
+            "ratio": 79.97,
+            "momentum": 96.93
+          },
+          {
+            "ratio": 79.98,
+            "momentum": 99.88
+          },
+          {
+            "ratio": 79.91,
+            "momentum": 99.45
+          },
+          {
+            "ratio": 80.23,
+            "momentum": 103.39
+          }
+        ]
+      },
+      "constituents": [
+        "DHI",
+        "LEN",
+        "PHM",
+        "TOL",
+        "NVR"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "ITB",
+          "label_en": "iShares US Home Construction",
+          "label_th": "iShares US Home Construction"
+        },
+        {
+          "ticker": "XHB",
+          "label_en": "SPDR S&P Homebuilders",
+          "label_th": "SPDR S&P Homebuilders"
+        }
+      ]
+    },
+    {
+      "id": "travel_airlines",
+      "name_en": "Travel & Airlines",
+      "name_th": "ท่องเที่ยวและสายการบิน",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 0.28,
+        "w1": -0.59,
+        "m1": 0.49,
+        "m3": -1.82,
+        "m1_vs_spy": -3.33
+      },
+      "breadth_pct": 50.0,
+      "dollar_vol_ratio": 0.99,
+      "rrg": {
+        "ratio": 84.07,
+        "momentum": 105.15,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 81.33,
+            "momentum": 101.71
+          },
+          {
+            "ratio": 81.83,
+            "momentum": 104.28
+          },
+          {
+            "ratio": 82.24,
+            "momentum": 103.63
+          },
+          {
+            "ratio": 82.6,
+            "momentum": 103.21
+          },
+          {
+            "ratio": 82.91,
+            "momentum": 103.02
+          },
+          {
+            "ratio": 83.28,
+            "momentum": 103.62
+          },
+          {
+            "ratio": 83.61,
+            "momentum": 103.81
+          },
+          {
+            "ratio": 84.07,
+            "momentum": 105.15
+          }
+        ]
+      },
+      "constituents": [
+        "BKNG",
+        "ABNB",
+        "MAR",
+        "DAL",
+        "UAL",
+        "RCL"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "JETS",
+          "label_en": "US Global Jets",
+          "label_th": "US Global Jets"
+        },
+        {
+          "ticker": "PEJ",
+          "label_en": "Invesco Leisure & Entertainment",
+          "label_th": "Invesco Leisure & Entertainment"
+        }
+      ]
+    },
+    {
+      "id": "fintech_payments",
+      "name_en": "Fintech & Payments",
+      "name_th": "ฟินเทคและการชำระเงิน",
+      "type": "theme",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 1.48,
+        "w1": 3.19,
+        "m1": 5.92,
+        "m3": 5.8,
+        "m1_vs_spy": 2.09
+      },
+      "breadth_pct": 80.0,
+      "dollar_vol_ratio": 0.8,
+      "rrg": {
+        "ratio": 81.26,
+        "momentum": 106.06,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 78.82,
+            "momentum": 100.09
+          },
+          {
+            "ratio": 79.73,
+            "momentum": 103.98
+          },
+          {
+            "ratio": 79.91,
+            "momentum": 101.29
+          },
+          {
+            "ratio": 79.51,
+            "momentum": 99.21
+          },
+          {
+            "ratio": 79.06,
+            "momentum": 99.12
+          },
+          {
+            "ratio": 79.45,
+            "momentum": 102.23
+          },
+          {
+            "ratio": 79.86,
+            "momentum": 102.43
+          },
+          {
+            "ratio": 81.26,
+            "momentum": 106.06
+          }
+        ]
+      },
+      "constituents": [
+        "V",
+        "MA",
+        "PYPL",
+        "AXP",
+        "COF"
+      ],
+      "ref_etfs": [
+        {
+          "ticker": "IPAY",
+          "label_en": "Amplify Mobile Payments",
+          "label_th": "Amplify Mobile Payments"
+        },
+        {
+          "ticker": "FINX",
+          "label_en": "Global X FinTech",
+          "label_th": "Global X FinTech"
+        }
+      ]
+    },
+    {
+      "id": "xlk",
+      "name_en": "Tech (XLK)",
+      "name_th": "เทคโนโลยี (XLK)",
+      "type": "sector_etf",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 1.54,
+        "w1": -2.55,
+        "m1": -0.07,
+        "m3": -5.02,
+        "m1_vs_spy": -3.9
+      },
+      "breadth_pct": null,
+      "dollar_vol_ratio": 0.33,
+      "rrg": {
+        "ratio": 80.09,
+        "momentum": 100.78,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 80.55,
+            "momentum": 99.62
+          },
+          {
+            "ratio": 80.94,
+            "momentum": 105.16
+          },
+          {
+            "ratio": 81.07,
+            "momentum": 102.43
+          },
+          {
+            "ratio": 80.61,
+            "momentum": 96.52
+          },
+          {
+            "ratio": 80.4,
+            "momentum": 99.4
+          },
+          {
+            "ratio": 80.45,
+            "momentum": 102.16
+          },
+          {
+            "ratio": 80.18,
+            "momentum": 98.88
+          },
+          {
+            "ratio": 80.09,
+            "momentum": 100.78
+          }
+        ]
+      },
+      "constituents": [
+        "XLK"
+      ],
+      "ref_etfs": []
+    },
+    {
+      "id": "xlf",
+      "name_en": "Financials (XLF)",
+      "name_th": "การเงิน (XLF)",
+      "type": "sector_etf",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.45,
+        "w1": 1.1,
+        "m1": -1.9,
+        "m3": -4.14,
+        "m1_vs_spy": -5.72
+      },
+      "breadth_pct": null,
+      "dollar_vol_ratio": 1.57,
+      "rrg": {
+        "ratio": 85.01,
+        "momentum": 100.56,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 93.66,
+            "momentum": 91.37
+          },
+          {
+            "ratio": 92.59,
+            "momentum": 95.94
+          },
+          {
+            "ratio": 90.98,
+            "momentum": 94.2
+          },
+          {
+            "ratio": 88.91,
+            "momentum": 92.71
+          },
+          {
+            "ratio": 87.36,
+            "momentum": 94.94
+          },
+          {
+            "ratio": 86.57,
+            "momentum": 98.04
+          },
+          {
+            "ratio": 85.26,
+            "momentum": 96.29
+          },
+          {
+            "ratio": 85.01,
+            "momentum": 100.56
+          }
+        ]
+      },
+      "constituents": [
+        "XLF"
+      ],
+      "ref_etfs": []
+    },
+    {
+      "id": "xlv",
+      "name_en": "Health Care (XLV)",
+      "name_th": "สุขภาพ (XLV)",
+      "type": "sector_etf",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 4.28,
+        "w1": 4.78,
+        "m1": 8.18,
+        "m3": -10.65,
+        "m1_vs_spy": 4.35
+      },
+      "breadth_pct": null,
+      "dollar_vol_ratio": 0.94,
+      "rrg": {
+        "ratio": 80.31,
+        "momentum": 107.99,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 79.09,
+            "momentum": 98.93
+          },
+          {
+            "ratio": 78.97,
+            "momentum": 100.75
+          },
+          {
+            "ratio": 78.76,
+            "momentum": 100.14
+          },
+          {
+            "ratio": 78.67,
+            "momentum": 101.17
+          },
+          {
+            "ratio": 78.52,
+            "momentum": 100.81
+          },
+          {
+            "ratio": 78.82,
+            "momentum": 103.62
+          },
+          {
+            "ratio": 79.31,
+            "momentum": 104.94
+          },
+          {
+            "ratio": 80.31,
+            "momentum": 107.99
+          }
+        ]
+      },
+      "constituents": [
+        "XLV"
+      ],
+      "ref_etfs": []
+    },
+    {
+      "id": "xle",
+      "name_en": "Energy (XLE)",
+      "name_th": "พลังงาน (XLE)",
+      "type": "sector_etf",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -1.28,
+        "w1": 1.04,
+        "m1": 1.44,
+        "m3": 0.07,
+        "m1_vs_spy": -2.39
+      },
+      "breadth_pct": null,
+      "dollar_vol_ratio": 0.93,
+      "rrg": {
+        "ratio": 81.23,
+        "momentum": 104.15,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 76.22,
+            "momentum": 100.31
+          },
+          {
+            "ratio": 76.87,
+            "momentum": 103.19
+          },
+          {
+            "ratio": 77.64,
+            "momentum": 103.63
+          },
+          {
+            "ratio": 78.04,
+            "momentum": 102.38
+          },
+          {
+            "ratio": 79.0,
+            "momentum": 104.3
+          },
+          {
+            "ratio": 79.69,
+            "momentum": 103.32
+          },
+          {
+            "ratio": 80.29,
+            "momentum": 103.02
+          },
+          {
+            "ratio": 81.23,
+            "momentum": 104.15
+          }
+        ]
+      },
+      "constituents": [
+        "XLE"
+      ],
+      "ref_etfs": []
+    },
+    {
+      "id": "xli",
+      "name_en": "Industrials (XLI)",
+      "name_th": "อุตสาหกรรม (XLI)",
+      "type": "sector_etf",
+      "data_ok": true,
+      "quadrant": "lagging",
+      "returns": {
+        "d1": -0.34,
+        "w1": 0.46,
+        "m1": -3.54,
+        "m3": -3.97,
+        "m1_vs_spy": -7.37
+      },
+      "breadth_pct": null,
+      "dollar_vol_ratio": 1.3,
+      "rrg": {
+        "ratio": 84.93,
+        "momentum": 99.91,
+        "quadrant": "lagging",
+        "tail": [
+          {
+            "ratio": 85.28,
+            "momentum": 98.02
+          },
+          {
+            "ratio": 85.4,
+            "momentum": 100.66
+          },
+          {
+            "ratio": 85.48,
+            "momentum": 99.64
+          },
+          {
+            "ratio": 85.35,
+            "momentum": 96.42
+          },
+          {
+            "ratio": 85.18,
+            "momentum": 95.78
+          },
+          {
+            "ratio": 85.02,
+            "momentum": 96.24
+          },
+          {
+            "ratio": 84.88,
+            "momentum": 96.89
+          },
+          {
+            "ratio": 84.93,
+            "momentum": 99.91
+          }
+        ]
+      },
+      "constituents": [
+        "XLI"
+      ],
+      "ref_etfs": []
+    },
+    {
+      "id": "xlu",
+      "name_en": "Utilities (XLU)",
+      "name_th": "สาธารณูปโภค (XLU)",
+      "type": "sector_etf",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.91,
+        "w1": -1.49,
+        "m1": 0.59,
+        "m3": 4.32,
+        "m1_vs_spy": -3.24
+      },
+      "breadth_pct": null,
+      "dollar_vol_ratio": 0.95,
+      "rrg": {
+        "ratio": 83.95,
+        "momentum": 109.77,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 81.22,
+            "momentum": 108.65
+          },
+          {
+            "ratio": 81.63,
+            "momentum": 108.83
+          },
+          {
+            "ratio": 82.03,
+            "momentum": 108.52
+          },
+          {
+            "ratio": 82.23,
+            "momentum": 107.2
+          },
+          {
+            "ratio": 82.46,
+            "momentum": 107.42
+          },
+          {
+            "ratio": 83.04,
+            "momentum": 110.08
+          },
+          {
+            "ratio": 83.48,
+            "momentum": 109.69
+          },
+          {
+            "ratio": 83.95,
+            "momentum": 109.77
+          }
+        ]
+      },
+      "constituents": [
+        "XLU"
+      ],
+      "ref_etfs": []
+    },
+    {
+      "id": "xlp",
+      "name_en": "Staples (XLP)",
+      "name_th": "สินค้าอุปโภคบริโภค (XLP)",
+      "type": "sector_etf",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -1.72,
+        "w1": -3.94,
+        "m1": 3.04,
+        "m3": -7.11,
+        "m1_vs_spy": -0.78
+      },
+      "breadth_pct": null,
+      "dollar_vol_ratio": 1.29,
+      "rrg": {
+        "ratio": 81.34,
+        "momentum": 105.39,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 78.0,
+            "momentum": 101.63
+          },
+          {
+            "ratio": 78.58,
+            "momentum": 105.87
+          },
+          {
+            "ratio": 78.83,
+            "momentum": 103.72
+          },
+          {
+            "ratio": 78.8,
+            "momentum": 101.89
+          },
+          {
+            "ratio": 79.16,
+            "momentum": 104.72
+          },
+          {
+            "ratio": 80.13,
+            "momentum": 108.56
+          },
+          {
+            "ratio": 80.8,
+            "momentum": 106.43
+          },
+          {
+            "ratio": 81.34,
+            "momentum": 105.39
+          }
+        ]
+      },
+      "constituents": [
+        "XLP"
+      ],
+      "ref_etfs": []
+    },
+    {
+      "id": "xlre",
+      "name_en": "Real Estate (XLRE)",
+      "name_th": "อสังหาริมทรัพย์ (XLRE)",
+      "type": "sector_etf",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": -0.66,
+        "w1": -2.15,
+        "m1": -2.33,
+        "m3": -27.32,
+        "m1_vs_spy": -6.15
+      },
+      "breadth_pct": null,
+      "dollar_vol_ratio": 0.58,
+      "rrg": {
+        "ratio": 80.29,
+        "momentum": 105.66,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 78.43,
+            "momentum": 101.57
+          },
+          {
+            "ratio": 78.54,
+            "momentum": 102.2
+          },
+          {
+            "ratio": 78.73,
+            "momentum": 102.68
+          },
+          {
+            "ratio": 78.76,
+            "momentum": 101.93
+          },
+          {
+            "ratio": 78.88,
+            "momentum": 102.63
+          },
+          {
+            "ratio": 79.31,
+            "momentum": 104.44
+          },
+          {
+            "ratio": 79.77,
+            "momentum": 104.93
+          },
+          {
+            "ratio": 80.29,
+            "momentum": 105.66
+          }
+        ]
+      },
+      "constituents": [
+        "XLRE"
+      ],
+      "ref_etfs": []
+    },
+    {
+      "id": "xlb",
+      "name_en": "Materials (XLB)",
+      "name_th": "วัสดุอุตสาหกรรม (XLB)",
+      "type": "sector_etf",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 1.64,
+        "w1": 6.61,
+        "m1": 13.68,
+        "m3": 6.96,
+        "m1_vs_spy": 9.85
+      },
+      "breadth_pct": null,
+      "dollar_vol_ratio": 0.96,
+      "rrg": {
+        "ratio": 80.3,
+        "momentum": 115.04,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 77.7,
+            "momentum": 91.98
+          },
+          {
+            "ratio": 77.0,
+            "momentum": 96.61
+          },
+          {
+            "ratio": 76.54,
+            "momentum": 98.62
+          },
+          {
+            "ratio": 76.61,
+            "momentum": 102.61
+          },
+          {
+            "ratio": 77.29,
+            "momentum": 107.27
+          },
+          {
+            "ratio": 77.98,
+            "momentum": 107.11
+          },
+          {
+            "ratio": 78.55,
+            "momentum": 106.35
+          },
+          {
+            "ratio": 80.3,
+            "momentum": 115.04
+          }
+        ]
+      },
+      "constituents": [
+        "XLB"
+      ],
+      "ref_etfs": []
+    },
+    {
+      "id": "xly",
+      "name_en": "Cons Discret (XLY)",
+      "name_th": "สินค้าฟุ่มเฟือย (XLY)",
+      "type": "sector_etf",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 1.2,
+        "w1": -0.47,
+        "m1": 1.36,
+        "m3": 8.23,
+        "m1_vs_spy": -2.47
+      },
+      "breadth_pct": null,
+      "dollar_vol_ratio": 1.36,
+      "rrg": {
+        "ratio": 83.45,
+        "momentum": 106.91,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 79.18,
+            "momentum": 102.99
+          },
+          {
+            "ratio": 80.06,
+            "momentum": 107.91
+          },
+          {
+            "ratio": 81.1,
+            "momentum": 109.12
+          },
+          {
+            "ratio": 81.51,
+            "momentum": 103.87
+          },
+          {
+            "ratio": 81.76,
+            "momentum": 102.6
+          },
+          {
+            "ratio": 82.09,
+            "momentum": 103.48
+          },
+          {
+            "ratio": 82.7,
+            "momentum": 105.7
+          },
+          {
+            "ratio": 83.45,
+            "momentum": 106.91
+          }
+        ]
+      },
+      "constituents": [
+        "XLY"
+      ],
+      "ref_etfs": []
+    },
+    {
+      "id": "xlc",
+      "name_en": "Comm Svcs (XLC)",
+      "name_th": "สื่อสาร (XLC)",
+      "type": "sector_etf",
+      "data_ok": true,
+      "quadrant": "improving",
+      "returns": {
+        "d1": 1.04,
+        "w1": -4.96,
+        "m1": 3.69,
+        "m3": 2.89,
+        "m1_vs_spy": -0.14
+      },
+      "breadth_pct": null,
+      "dollar_vol_ratio": 0.79,
+      "rrg": {
+        "ratio": 83.56,
+        "momentum": 107.82,
+        "quadrant": "improving",
+        "tail": [
+          {
+            "ratio": 78.87,
+            "momentum": 105.61
+          },
+          {
+            "ratio": 79.29,
+            "momentum": 105.35
+          },
+          {
+            "ratio": 80.23,
+            "momentum": 110.8
+          },
+          {
+            "ratio": 80.49,
+            "momentum": 103.62
+          },
+          {
+            "ratio": 81.2,
+            "momentum": 108.48
+          },
+          {
+            "ratio": 81.83,
+            "momentum": 107.39
+          },
+          {
+            "ratio": 82.88,
+            "momentum": 111.73
+          },
+          {
+            "ratio": 83.56,
+            "momentum": 107.82
+          }
+        ]
+      },
+      "constituents": [
+        "XLC"
+      ],
+      "ref_etfs": []
+    }
+  ],
+  "warnings": [
+    "yfinance returned empty or failed completely."
+  ]
+}

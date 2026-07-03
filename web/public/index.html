@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Sector & Theme Rotation Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1 data-i18n="title">US Sector & Theme Rotation Tracker</h1>
+            <div class="header-meta">
+                <span id="asOfDate"></span> | SPY 1D: <span id="spy1D"></span> | 1M: <span id="spy1M"></span> | 3M: <span id="spy3M"></span>
+            </div>
+        </div>
+        <div class="header-right">
+            <button id="langToggle">EN / TH</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="top-section">
+            <div class="rrg-container">
+                <div class="rrg-header">
+                    <h2 data-i18n="rrg_title">Relative Rotation Graph</h2>
+                    <div class="rrg-filters">
+                        <button class="filter-btn active" data-filter="theme" data-i18n="filter_theme">Theme</button>
+                        <button class="filter-btn" data-filter="sector_etf" data-i18n="filter_sector">Sector ETF</button>
+                        <button class="filter-btn" data-filter="all" data-i18n="filter_all">All</button>
+                    </div>
+                </div>
+                <div id="rrgChart" class="chart-area"></div>
+                <div class="rrg-legend" data-i18n="rrg_legend"></div>
+            </div>
+
+            <div class="heatmap-container">
+                <h2 data-i18n="heatmap_title">Heatmap Returns</h2>
+                <div class="table-scroll">
+                    <table id="heatmapTable">
+                        <thead>
+                            <tr>
+                                <th data-i18n="col_theme">Theme</th>
+                                <th class="sortable" data-sort="d1">1D</th>
+                                <th class="sortable" data-sort="w1">1W</th>
+                                <th class="sortable active" data-sort="m1">1M</th>
+                                <th class="sortable" data-sort="m3">3M</th>
+                                <th class="sortable" data-sort="m1_vs_spy">1M vs SPY</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="playbook-section">
+            <h2 data-i18n="playbook_title">Momentum Playbook</h2>
+            <div class="playbook-grid">
+                <div class="playbook-card leading" id="pb-leading">
+                    <h3 data-i18n="pb_leading_title">Leading</h3>
+                    <p class="pb-desc" data-i18n="pb_leading_desc"></p>
+                    <div class="pb-list"></div>
+                </div>
+                <div class="playbook-card improving" id="pb-improving">
+                    <h3 data-i18n="pb_improving_title">Improving</h3>
+                    <p class="pb-desc" data-i18n="pb_improving_desc"></p>
+                    <div class="pb-list"></div>
+                </div>
+                <div class="playbook-card weakening" id="pb-weakening">
+                    <h3 data-i18n="pb_weakening_title">Weakening</h3>
+                    <p class="pb-desc" data-i18n="pb_weakening_desc"></p>
+                    <div class="pb-list"></div>
+                </div>
+                <div class="playbook-card lagging" id="pb-lagging">
+                    <h3 data-i18n="pb_lagging_title">Lagging</h3>
+                    <p class="pb-desc" data-i18n="pb_lagging_desc"></p>
+                    <div class="pb-list"></div>
+                </div>
+            </div>
+            <div class="pb-legend" data-i18n="pb_legend"></div>
+        </section>
+
+        <section class="breadth-section">
+            <h2 data-i18n="breadth_title">Breadth & Volume</h2>
+            <div class="table-scroll">
+                <table id="breadthTable">
+                    <thead>
+                        <tr>
+                            <th data-i18n="col_theme">Theme</th>
+                            <th data-i18n="col_breadth_bar">% Above 20DMA</th>
+                            <th data-i18n="col_vol">Dollar Vol Ratio</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="appendix-section">
+            <h2 data-i18n="appendix_title">Appendix</h2>
+            <div class="appendix-grid" id="appendixGrid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-i18n="disclaimer"></p>
+        <p class="note" data-i18n="footer_note"></p>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
