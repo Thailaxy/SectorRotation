@@ -1,5 +1,6 @@
 let appData = null;
 let currentSort = 'm1';
+let sortDesc = true;
 let rrgFilter = 'theme';
 let rrgChart = null;
 
@@ -49,12 +50,13 @@ function renderHeatmap() {
     let themes = [...appData.themes];
     themes.sort((a, b) => {
         if (currentSort === 'theme') {
-            return getThemeName(a).localeCompare(getThemeName(b));
+            let res = getThemeName(a).localeCompare(getThemeName(b));
+            return sortDesc ? res : -res;
         }
         if (currentSort === 'zone') {
             let rankA = ZONE_SORT_ORDER[a.quadrant] ?? 99;
             let rankB = ZONE_SORT_ORDER[b.quadrant] ?? 99;
-            return rankA - rankB;
+            return sortDesc ? rankA - rankB : rankB - rankA;
         }
         let valA, valB;
         if (currentSort === 'm1_vs_spy') {
@@ -64,7 +66,7 @@ function renderHeatmap() {
         }
         valA = valA !== null ? valA : -999;
         valB = valB !== null ? valB : -999;
-        return valB - valA;
+        return sortDesc ? valB - valA : valA - valB;
     });
 
     themes.forEach(theme => {
@@ -351,9 +353,15 @@ function renderRRG() {
 
 document.querySelectorAll('th.sortable').forEach(th => {
     th.addEventListener('click', () => {
+        let clickedSort = th.getAttribute('data-sort');
+        if (currentSort === clickedSort) {
+            sortDesc = !sortDesc;
+        } else {
+            currentSort = clickedSort;
+            sortDesc = true;
+        }
         document.querySelectorAll('th.sortable').forEach(el => el.classList.remove('active'));
         th.classList.add('active');
-        currentSort = th.getAttribute('data-sort');
         renderHeatmap();
     });
 });
