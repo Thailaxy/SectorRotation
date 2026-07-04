@@ -1,7 +1,12 @@
 __pycache__/
 *.pyc
 
+# Price/volume cache (now persisted via GitHub Actions cache, not git).
+# ~15-20MB per snapshot × daily commits would bloat the repo fast.
+cache/
+
 # Firebase service account key (NEVER commit — deploy via GitHub Actions secret)
 FIREBASE_SERVICE_ACCOUNT.json
 *-firebase-adminsdk-*.json
 sectorrotation-*.json
+

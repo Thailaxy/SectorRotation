@@ -4,7 +4,7 @@ on:
     - cron: "30 22 * * 1-5"   # จ-ศ 22:30 UTC (หลังตลาดสหรัฐปิด) — ปรับตาม DST เองถ้าจำเป็น
   workflow_dispatch: {}       # กดรันเองได้จากหน้า GitHub
 permissions:
-  contents: write             # ให้ commit data.json + cache ได้
+  contents: write             # ให้ commit data.json + holdings.yaml ได้
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,15 +13,54 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
       - run: pip install -r requirements.txt
+
+      # ─────────── Price cache (persist across runs, out of git) ───────────
+      # cache/ ใหญ่ขึ้นทุกวัน (~15-20MB) ถ้า commit เข้า git ทุกวัน repo จะบวมเร็วมาก
+      # เลยใช้ actions/cache แทน: restore รันล่าสุดมาใช้ แล้วเซฟใหม่หลัง pipeline รันเสร็จ
+      # cache จะอยู่ใน runner ได้ 7 วัน (LRU) — พอสำหรับรันรายวัน
+      - name: Restore price cache
+        id: cache-restore
+        uses: actions/cache@v4
+        with:
+          path: cache/
+          key: cache-v1-${{ github.run_id }}
+          restore-keys: |
+            cache-v1-
+
+      # Cold-start fallback: ถ้า cache หาย (จบอายุ 7 วัน หรือรันครั้งแรก) ให้ seed ใหม่
+      # seed_real_cache.py ดึง ~480 tickers × 5Y → ใช้เวลา ~3-5 นาที
+      - name: Cold-start cache seed (if missing)
+        if: steps.cache-restore.outputs.cache-hit != 'true'
+        run: |
+          echo "Cache miss — seeding from scratch..."
+          python seed_real_cache.py
+
       - run: python -m pipeline.run        # ดึง+คำนวณ+เขียน web/public/data.json
+
       - name: commit updated data
         run: |
           git config user.name "rotation-bot"
           git config user.email "bot@users.noreply.github.com"
           git add web/public/data.json
-          if [ -d "cache" ]; then git add cache/; fi
           git commit -m "chore: daily data update ($(date -u +%F))" || echo "no changes"
           git push
+
+      # ─────────── Monthly holdings refresh (1st Monday only) ───────────
+      # ใช้ bash date check แทน cron แยก เพราะ workflow มี cron เดียว (30 22 * * 1-5)
+      # date +%u = วันในสัปดาห์ (1=จ), date +%d = วันที่ (01-07 → สัปดาห์แรก)
+      - name: Refresh holdings (1st Monday only)
+        run: |
+          if [ "$(date +%u)" -eq 1 ] && [ "$(date +%d)" -le 7 ]; then
+            echo "First Monday of month — refreshing ETF holdings..."
+            python scripts/generate_holdings.py
+            git add data/holdings.yaml
+            git commit -m "chore: monthly holdings refresh" || echo "no holdings changes"
+            git push || echo "push failed"
+          else
+            echo "Not 1st Monday (today: $(date +%A day $(date +%d))) — skipping holdings refresh"
+          fi
+
+      # ─────────── Deploy (Firebase) ───────────
       # NOTE: git push ด้วย GITHUB_TOKEN ไม่ trigger workflow อื่น (กันลูป) —
       # เลยต้อง deploy Firebase ตรงนี้เลย ไม่ใช่พึ่ง deploy-site.yml
       - name: Deploy to Firebase Hosting (live channel)

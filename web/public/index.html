@@ -41,21 +41,33 @@
             </div>
 
             <div class="heatmap-container">
-                <h2 data-i18n="heatmap_title">Heatmap Returns</h2>
-                <p style="margin-top: -10px; margin-bottom: 15px; font-size: 0.85rem; color: var(--text-secondary);" data-i18n="heatmap_note">* Based on Yahoo Finance daily close</p>
+                <div class="heatmap-header">
+                    <div>
+                        <h2 data-i18n="heatmap_title">Heatmap Returns</h2>
+                        <p style="margin-top: -10px; margin-bottom: 5px; font-size: 0.85rem; color: var(--text-secondary);" data-i18n="heatmap_note">* Based on Yahoo Finance daily close</p>
+                    </div>
+                    <!-- View toggle + ETF selector + reset -->
+                    <div class="heatmap-controls">
+                        <button id="viewToggle" class="view-toggle-btn">View: ETFs</button>
+                        <button id="etfSelectBtn" class="etf-select-btn">⚙️ Select ETFs</button>
+                        <button id="resetBtn" class="reset-btn">Reset</button>
+                    </div>
+                </div>
+
+                <!-- Period selector: 7 toggle buttons, exactly 4 active -->
+                <div class="period-selector" id="periodSelector"></div>
+
+                <!-- vs SPY period dropdown -->
+                <div class="vs-spy-row">
+                    <label>
+                        <span data-i18n="vs_spy_suffix">vs SPY</span>:
+                        <select id="vsPeriodSelect"></select>
+                    </label>
+                </div>
+
                 <div class="table-scroll">
                     <table id="heatmapTable">
-                        <thead>
-                            <tr>
-                                <th class="sortable" data-sort="theme" data-i18n="col_theme">Theme</th>
-                                <th class="sortable" data-sort="zone" data-i18n="col_zone">Zone</th>
-                                <th class="sortable" data-sort="d1">1D</th>
-                                <th class="sortable" data-sort="w1">1W</th>
-                                <th class="sortable active" data-sort="m1">1M</th>
-                                <th class="sortable" data-sort="m3">3M</th>
-                                <th class="sortable" data-sort="m1_vs_spy">1M vs SPY</th>
-                            </tr>
-                        </thead>
+                        <thead><tr></tr></thead>
                         <tbody></tbody>
                     </table>
                 </div>
@@ -110,6 +122,21 @@
             <div class="appendix-grid" id="appendixGrid"></div>
         </section>
     </main>
+
+    <!-- ETF selection modal (shown only in ETF mode) -->
+    <div id="etfModal" class="etf-modal" style="display:none">
+        <div class="etf-modal-content">
+            <div class="etf-modal-header">
+                <h3 data-i18n="select_etfs_title">Select ETFs (max 20)</h3>
+                <div>
+                    <span id="etfCounter"></span>
+                    <button id="etfResetBtn" data-i18n="reset_to_default">Reset to default</button>
+                    <button id="etfModalClose">✕</button>
+                </div>
+            </div>
+            <div id="etfChecklist" class="etf-checklist"></div>
+        </div>
+    </div>
 
     <footer>
         <p data-i18n="disclaimer"></p>

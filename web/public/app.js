@@ -4,6 +4,26 @@ let sortDesc = true;
 let rrgFilter = 'theme';
 let rrgChart = null;
 
+// ─── User personalization state (localStorage-persisted) ───
+// Period selector: user picks exactly 4 of the 7 available periods to display.
+const ALL_PERIODS = ['d1', 'w1', 'm1', 'm3', 'm6', 'y1', 'y5'];
+const PERIOD_LABELS = { d1: '1D', w1: '1W', m1: '1M', m3: '3M', m6: '6M', y1: '1Y', y5: '5Y' };
+const DEFAULT_PERIODS = ['d1', 'w1', 'm1', 'm3'];
+const DEFAULT_VS_PERIOD = 'm1';
+
+// The 20 ETFs that map to the current theme batch — used as the default
+// selection the first time a user enters ETF mode. Picked to mirror what the
+// theme heatmap already shows.
+const DEFAULT_ETF_SELECTION = [
+    'SPY', 'QQQ', 'IWM', 'XLF', 'XLV', 'XLU', 'XLP', 'XLY', 'XLC',
+    'XLE', 'XLK', 'XLI', 'SMH', 'GDX', 'EEM', 'HYG', 'TLT', 'VNQ', 'XBI', 'IBB'
+];
+
+let selectedPeriods = JSON.parse(localStorage.getItem('selectedPeriods')) || DEFAULT_PERIODS;
+let vsPeriod = localStorage.getItem('vsPeriod') || DEFAULT_VS_PERIOD;
+let selectedEtfs = JSON.parse(localStorage.getItem('selectedEtfs')) || null;  // null = theme mode
+let etfMode = localStorage.getItem('etfMode') === 'true';
+
 async function loadData() {
     try {
         const res = await fetch('data.json');
@@ -33,6 +53,19 @@ function initUI() {
     renderBreadth();
     renderAppendix();
     initRRG();
+
+    // Wire the new state-driven controls (re-bound on every initUI because
+    // some elements are re-rendered on lang change).
+    initPeriodSelector();
+    initVsSpyDropdown();
+    initViewToggle();
+    initEtfPanel();
+    initResetButton();
+
+    // The "Select ETFs" button is always visible (clicking it auto-enters ETF mode
+    // + opens the modal in one action — more discoverable than hiding it).
+    const etfBtn = document.getElementById('etfSelectBtn');
+    if (etfBtn) etfBtn.style.display = '';
 }
 
 function getThemeName(theme) {
@@ -44,58 +77,128 @@ function getThemeName(theme) {
 const ZONE_SORT_ORDER = { leading: 0, improving: 1, weakening: 2, lagging: 3 };
 
 function renderHeatmap() {
-    const tbody = document.querySelector('#heatmapTable tbody');
+    const table = document.getElementById('heatmapTable');
+    const thead = table.querySelector('thead tr');
+    const tbody = table.querySelector('tbody');
+    thead.innerHTML = '';
     tbody.innerHTML = '';
 
-    let themes = [...appData.themes];
-    themes.sort((a, b) => {
-        if (currentSort === 'theme') {
-            let res = getThemeName(a).localeCompare(getThemeName(b));
+    // Build dynamic header from selectedPeriods + vs SPY column.
+    // The vs SPY column reflects the current vsPeriod (e.g. "3M vs SPY").
+    const t = dict[currentLang] || dict.en;
+    const vsLabel = `${PERIOD_LABELS[vsPeriod]} ${t.vs_spy_suffix}`;
+
+    const nameTh = document.createElement('th');
+    nameTh.className = 'sortable';
+    nameTh.setAttribute('data-sort', 'name');
+    nameTh.setAttribute('data-i18n', etfMode ? 'etf_name_label' : 'col_theme');
+    nameTh.innerText = etfMode ? t.etf_name_label : t.col_theme;
+    thead.appendChild(nameTh);
+
+    const zoneTh = document.createElement('th');
+    zoneTh.className = 'sortable';
+    zoneTh.setAttribute('data-sort', 'zone');
+    zoneTh.setAttribute('data-i18n', 'col_zone');
+    zoneTh.innerText = t.col_zone;
+    thead.appendChild(zoneTh);
+
+    selectedPeriods.forEach(p => {
+        const th = document.createElement('th');
+        th.className = 'sortable' + (currentSort === p ? ' active' : '');
+        th.setAttribute('data-sort', p);
+        th.innerText = PERIOD_LABELS[p];
+        thead.appendChild(th);
+    });
+
+    const vsTh = document.createElement('th');
+    vsTh.className = 'sortable' + (currentSort === 'vs_spy' ? ' active' : '');
+    vsTh.setAttribute('data-sort', 'vs_spy');
+    vsTh.innerText = vsLabel;
+    thead.appendChild(vsTh);
+
+    // Pick the row source: themes vs ETFs.
+    let rows;
+    if (etfMode) {
+        const sel = selectedEtfs || DEFAULT_ETF_SELECTION;
+        rows = (appData.etfs || []).filter(e => sel.includes(e.ticker));
+    } else {
+        rows = [...(appData.themes || [])];
+    }
+
+    // Sorting (works for both theme rows and ETF rows).
+    rows.sort((a, b) => {
+        // Name column
+        if (currentSort === 'name') {
+            const na = etfMode ? a.ticker : getThemeName(a);
+            const nb = etfMode ? b.ticker : getThemeName(b);
+            const res = String(na).localeCompare(String(nb));
             return sortDesc ? res : -res;
         }
         if (currentSort === 'zone') {
-            let rankA = ZONE_SORT_ORDER[a.quadrant] ?? 99;
-            let rankB = ZONE_SORT_ORDER[b.quadrant] ?? 99;
+            const rankA = ZONE_SORT_ORDER[a.quadrant] ?? 99;
+            const rankB = ZONE_SORT_ORDER[b.quadrant] ?? 99;
             return sortDesc ? rankA - rankB : rankB - rankA;
         }
+        // Period columns or vs_spy.
         let valA, valB;
-        if (currentSort === 'm1_vs_spy') {
-            valA = a.returns.m1_vs_spy; valB = b.returns.m1_vs_spy;
+        if (currentSort === 'vs_spy') {
+            valA = (a.returns.vs_spy || {})[vsPeriod];
+            valB = (b.returns.vs_spy || {})[vsPeriod];
         } else {
-            valA = a.returns[currentSort]; valB = b.returns[currentSort];
+            valA = a.returns[currentSort];
+            valB = b.returns[currentSort];
         }
-        valA = valA !== null ? valA : -999;
-        valB = valB !== null ? valB : -999;
+        valA = valA !== null && valA !== undefined ? valA : -999;
+        valB = valB !== null && valB !== undefined ? valB : -999;
         return sortDesc ? valB - valA : valA - valB;
     });
 
-    themes.forEach(theme => {
+    rows.forEach(row => {
         const tr = document.createElement('tr');
 
+        // Zone badge — same logic for themes and ETFs.
         let qBadge = '';
-        if (!theme.data_ok) {
-            let badgeText = dict[currentLang] && dict[currentLang]['data_incomplete'] ? dict[currentLang]['data_incomplete'] : 'Incomplete Data';
-            qBadge = `<span class="badge incomplete" data-i18n="data_incomplete">${badgeText}</span>`;
-        } else if (theme.quadrant) {
-            let label = theme.quadrant.charAt(0).toUpperCase() + theme.quadrant.slice(1);
-            qBadge = `<span class="badge ${theme.quadrant}">${label}</span>`;
+        if (!row.data_ok) {
+            qBadge = `<span class="badge incomplete" data-i18n="data_incomplete">${t.data_incomplete}</span>`;
+        } else if (row.quadrant) {
+            const label = row.quadrant.charAt(0).toUpperCase() + row.quadrant.slice(1);
+            qBadge = `<span class="badge ${row.quadrant}">${label}</span>`;
         }
 
-        let nameHtml = getThemeName(theme);
-        if (appData.user_holdings.includes(theme.id)) {
-            nameHtml += ' 📍';
+        // Name cell — ETF mode shows ticker; theme mode shows localized name + 📍.
+        let nameHtml;
+        if (etfMode) {
+            nameHtml = `<strong>${row.ticker}</strong><br><span style="font-size:0.75rem;color:var(--text-secondary)">${row.name || ''}</span>`;
+        } else {
+            nameHtml = getThemeName(row);
+            if (appData.user_holdings.includes(row.id)) nameHtml += ' 📍';
         }
+
+        const cellsHtml = selectedPeriods.map(p => renderReturnCell(row.returns[p])).join('');
+        const vsVal = (row.returns.vs_spy || {})[vsPeriod];
+        const vsCell = renderReturnCell(vsVal);
 
         tr.innerHTML = `
             <td>${nameHtml}</td>
             <td class="zone-cell">${qBadge}</td>
-            ${renderReturnCell(theme.returns.d1)}
-            ${renderReturnCell(theme.returns.w1)}
-            ${renderReturnCell(theme.returns.m1)}
-            ${renderReturnCell(theme.returns.m3)}
-            ${renderReturnCell(theme.returns.m1_vs_spy)}
+            ${cellsHtml}
+            ${vsCell}
         `;
         tbody.appendChild(tr);
+    });
+
+    // Re-bind sort handlers for the freshly rendered header cells.
+    thead.querySelectorAll('th.sortable').forEach(th => {
+        th.addEventListener('click', () => {
+            const clickedSort = th.getAttribute('data-sort');
+            if (currentSort === clickedSort) {
+                sortDesc = !sortDesc;
+            } else {
+                currentSort = clickedSort;
+                sortDesc = true;
+            }
+            renderHeatmap();
+        });
     });
 }
 
@@ -351,20 +454,8 @@ function renderRRG() {
     rrgChart.setOption(option, true);
 }
 
-document.querySelectorAll('th.sortable').forEach(th => {
-    th.addEventListener('click', () => {
-        let clickedSort = th.getAttribute('data-sort');
-        if (currentSort === clickedSort) {
-            sortDesc = !sortDesc;
-        } else {
-            currentSort = clickedSort;
-            sortDesc = true;
-        }
-        document.querySelectorAll('th.sortable').forEach(el => el.classList.remove('active'));
-        th.classList.add('active');
-        renderHeatmap();
-    });
-});
+// ─── Period selector / vs SPY dropdown / ETF mode — all dynamic UI ───
+// Re-rendered by initUI() so handlers bind on every render.
 
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -390,5 +481,194 @@ document.addEventListener('themeChanged', () => {
 window.addEventListener('resize', () => {
     if (rrgChart) rrgChart.resize();
 });
+
+// ─── New: period selector + vs SPY dropdown + ETF mode wiring ───
+function initPeriodSelector() {
+    const container = document.getElementById('periodSelector');
+    if (!container) return;
+    container.innerHTML = '';
+
+    ALL_PERIODS.forEach(p => {
+        const btn = document.createElement('button');
+        btn.className = 'period-btn' + (selectedPeriods.includes(p) ? ' active' : '');
+        btn.setAttribute('data-period', p);
+        btn.innerText = PERIOD_LABELS[p];
+        btn.addEventListener('click', () => togglePeriod(p));
+        container.appendChild(btn);
+    });
+}
+
+function togglePeriod(p) {
+    const t = dict[currentLang] || dict.en;
+    if (selectedPeriods.includes(p)) {
+        // Deselect is always allowed — no minimum. Users may want fewer columns.
+        selectedPeriods = selectedPeriods.filter(x => x !== p);
+    } else {
+        // Block selecting past 4 active.
+        if (selectedPeriods.length >= 4) {
+            alert(t.periods_max);
+            return;
+        }
+        selectedPeriods.push(p);
+    }
+    localStorage.setItem('selectedPeriods', JSON.stringify(selectedPeriods));
+    initPeriodSelector();
+    renderHeatmap();
+}
+
+function initVsSpyDropdown() {
+    const sel = document.getElementById('vsPeriodSelect');
+    if (!sel) return;
+    sel.innerHTML = '';
+    ALL_PERIODS.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p;
+        opt.innerText = PERIOD_LABELS[p];
+        if (p === vsPeriod) opt.selected = true;
+        sel.appendChild(opt);
+    });
+    sel.addEventListener('change', () => {
+        vsPeriod = sel.value;
+        localStorage.setItem('vsPeriod', vsPeriod);
+        renderHeatmap();
+    });
+}
+
+function initViewToggle() {
+    const btn = document.getElementById('viewToggle');
+    if (!btn) return;
+    const t = dict[currentLang] || dict.en;
+    btn.innerText = etfMode ? t.view_themes : t.view_etfs;
+    btn.addEventListener('click', () => {
+        etfMode = !etfMode;
+        localStorage.setItem('etfMode', etfMode ? 'true' : 'false');
+        // First entry to ETF mode with no saved selection → use the default 20.
+        if (etfMode && !selectedEtfs) {
+            selectedEtfs = [...DEFAULT_ETF_SELECTION];
+            localStorage.setItem('selectedEtfs', JSON.stringify(selectedEtfs));
+        }
+        currentSort = 'm1';
+        sortDesc = true;
+        initUI();
+    });
+}
+
+function initEtfPanel() {
+    const openBtn = document.getElementById('etfSelectBtn');
+    const modal = document.getElementById('etfModal');
+    const closeBtn = document.getElementById('etfModalClose');
+    const resetBtn = document.getElementById('etfResetBtn');
+    if (!openBtn || !modal) return;
+
+    // Open/close toggle. Clicking the gear also auto-enters ETF mode so users
+    // don't have to click "View: ETFs" first — one click to see the selector.
+    openBtn.addEventListener('click', () => {
+        if (modal.style.display === 'block') {
+            modal.style.display = 'none';
+            return;
+        }
+        // Auto-switch to ETF mode (no-op if already in it).
+        if (!etfMode) {
+            etfMode = true;
+            localStorage.setItem('etfMode', 'true');
+            if (!selectedEtfs) {
+                selectedEtfs = [...DEFAULT_ETF_SELECTION];
+                localStorage.setItem('selectedEtfs', JSON.stringify(selectedEtfs));
+            }
+            currentSort = 'm1';
+            sortDesc = true;
+            initUI();
+        }
+        renderEtfChecklist();
+        modal.style.display = 'block';
+    });
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => modal.style.display = 'none');
+    }
+    if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+            selectedEtfs = [...DEFAULT_ETF_SELECTION];
+            localStorage.setItem('selectedEtfs', JSON.stringify(selectedEtfs));
+            renderEtfChecklist();
+            renderHeatmap();
+        });
+    }
+    // Click outside modal closes it.
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+    });
+}
+
+function renderEtfChecklist() {
+    const list = document.getElementById('etfChecklist');
+    const counter = document.getElementById('etfCounter');
+    if (!list || !counter) return;
+    const t = dict[currentLang] || dict.en;
+    list.innerHTML = '';
+
+    // Group ETFs by theme_label for easier scanning.
+    const groups = {};
+    (appData.etfs || []).forEach(e => {
+        const g = e.theme_label || 'Other';
+        (groups[g] = groups[g] || []).push(e);
+    });
+
+    const sel = selectedEtfs || [];
+    Object.keys(groups).sort().forEach(g => {
+        const groupDiv = document.createElement('div');
+        groupDiv.className = 'etf-group';
+        const title = document.createElement('div');
+        title.className = 'etf-group-title';
+        title.innerText = g;
+        groupDiv.appendChild(title);
+
+        groups[g].sort((a, b) => (a.rank || 999) - (b.rank || 999)).forEach(e => {
+            const label = document.createElement('label');
+            label.className = 'etf-check';
+            const cb = document.createElement('input');
+            cb.type = 'checkbox';
+            cb.value = e.ticker;
+            cb.checked = sel.includes(e.ticker);
+            cb.addEventListener('change', () => {
+                if (cb.checked) {
+                    if ((selectedEtfs || []).length >= 20) {
+                        cb.checked = false;
+                        alert(t.etfs_max);
+                        return;
+                    }
+                    selectedEtfs = [...(selectedEtfs || []), e.ticker];
+                } else {
+                    selectedEtfs = (selectedEtfs || []).filter(x => x !== e.ticker);
+                }
+                localStorage.setItem('selectedEtfs', JSON.stringify(selectedEtfs));
+                counter.innerText = t.etfs_selected((selectedEtfs || []).length);
+                renderHeatmap();
+            });
+            label.appendChild(cb);
+            label.appendChild(document.createTextNode(` ${e.ticker} — ${e.name || ''}`));
+            groupDiv.appendChild(label);
+        });
+        list.appendChild(groupDiv);
+    });
+    counter.innerText = t.etfs_selected((selectedEtfs || []).length);
+}
+
+function initResetButton() {
+    const btn = document.getElementById('resetBtn');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+        localStorage.removeItem('selectedPeriods');
+        localStorage.removeItem('vsPeriod');
+        localStorage.removeItem('selectedEtfs');
+        localStorage.removeItem('etfMode');
+        selectedPeriods = [...DEFAULT_PERIODS];
+        vsPeriod = DEFAULT_VS_PERIOD;
+        selectedEtfs = null;
+        etfMode = false;
+        currentSort = 'm1';
+        sortDesc = true;
+        initUI();
+    });
+}
 
 loadData();

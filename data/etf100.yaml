@@ -1,0 +1,533 @@
+# Top 100 ETFs by volume. Source: user-provided list (2026-07-05).
+# Group A — Equity ETFs (has_breadth: true, holdings tracked in holdings.yaml)
+# Group B — Leveraged/Inverse Equity (has_breadth: true, breadth_source → parent ETF)
+# Group C — Commodity/Bond/Vol/Crypto (has_breadth: false — no equity holdings)
+#
+# breadth_source rules:
+#   - Equity-inverse leveraged → parent index ETF
+#   - Junior miners (JNUG/JDST) → no honest parent → has_breadth: false
+#   - All Group C → has_breadth: false
+etfs:
+  # ─────────── Group A — Equity ETFs ───────────
+  - rank: 1
+    ticker: SPY
+    name: "SPDR S&P 500 ETF Trust"
+    theme: "US Large Cap Equity"
+    has_breadth: true
+  - rank: 2
+    ticker: QQQ
+    name: "Invesco QQQ Trust"
+    theme: "US Large Cap Tech / Growth"
+    has_breadth: true
+  - rank: 3
+    ticker: IWM
+    name: "iShares Russell 2000 ETF"
+    theme: "US Small Cap Equity"
+    has_breadth: true
+  - rank: 8
+    ticker: EEM
+    name: "iShares MSCI Emerging Markets"
+    theme: "Emerging Markets Equity"
+    has_breadth: true
+  - rank: 10
+    ticker: FXI
+    name: "iShares China Large-Cap"
+    theme: "China Large Cap Equity"
+    has_breadth: true
+  - rank: 15
+    ticker: ARKK
+    name: "ARK Innovation ETF"
+    theme: "Disruptive Technology"
+    has_breadth: true
+  - rank: 16
+    ticker: XLE
+    name: "Energy Select Sector SPDR"
+    theme: "US Energy"
+    has_breadth: true
+  - rank: 18
+    ticker: EFA
+    name: "iShares MSCI EAFE"
+    theme: "Developed Markets Equity"
+    has_breadth: true
+  - rank: 19
+    ticker: EWZ
+    name: "iShares MSCI Brazil"
+    theme: "Brazil Equity"
+    has_breadth: true
+  - rank: 25
+    ticker: XLK
+    name: "Technology Select Sector SPDR"
+    theme: "US Technology"
+    has_breadth: true
+  - rank: 26
+    ticker: KRE
+    name: "SPDR S&P Regional Banking ETF"
+    theme: "US Regional Banks"
+    has_breadth: true
+  - rank: 29
+    ticker: XLU
+    name: "Utilities Select Sector SPDR"
+    theme: "US Utilities"
+    has_breadth: true
+  - rank: 30
+    ticker: VTI
+    name: "Vanguard Total Stock Market ETF"
+    theme: "US Total Market Equity"
+    has_breadth: true
+  - rank: 31
+    ticker: VOO
+    name: "Vanguard S&P 500 ETF"
+    theme: "US Large Cap Equity"
+    has_breadth: true
+  - rank: 33
+    ticker: XLY
+    name: "Consumer Discretionary Select Sector SPDR"
+    theme: "US Consumer Discretionary"
+    has_breadth: true
+  - rank: 34
+    ticker: INDA
+    name: "iShares MSCI India ETF"
+    theme: "India Equity"
+    has_breadth: true
+  - rank: 35
+    ticker: XLP
+    name: "Consumer Staples Select Sector SPDR"
+    theme: "US Consumer Staples"
+    has_breadth: true
+  - rank: 36
+    ticker: XLV
+    name: "Health Care Select Sector SPDR"
+    theme: "US Healthcare"
+    has_breadth: true
+  - rank: 37
+    ticker: XLI
+    name: "Industrial Select Sector SPDR"
+    theme: "US Industrials"
+    has_breadth: true
+  - rank: 38
+    ticker: KWEB
+    name: "KraneShares CSI China Internet"
+    theme: "China Tech / Internet"
+    has_breadth: true
+  - rank: 42
+    ticker: XME
+    name: "SPDR S&P Metals & Mining"
+    theme: "US Metals & Mining"
+    has_breadth: true
+  - rank: 46
+    ticker: XRT
+    name: "SPDR S&P Retail ETF"
+    theme: "US Retail"
+    has_breadth: true
+  - rank: 48
+    ticker: MCHI
+    name: "iShares MSCI China ETF"
+    theme: "China Equity"
+    has_breadth: true
+  - rank: 50
+    ticker: XBI
+    name: "SPDR S&P Biotech ETF"
+    theme: "US Biotechnology"
+    has_breadth: true
+  - rank: 51
+    ticker: SMH
+    name: "VanEck Semiconductor ETF"
+    theme: "US Semiconductors"
+    has_breadth: true
+  - rank: 52
+    ticker: VNQ
+    name: "Vanguard Real Estate ETF"
+    theme: "US Real Estate (REITs)"
+    has_breadth: true
+  - rank: 55
+    ticker: SCHD
+    name: "Schwab US Dividend Equity ETF"
+    theme: "US Dividend Equity"
+    has_breadth: true
+  - rank: 56
+    ticker: VEA
+    name: "Vanguard FTSE Developed Markets"
+    theme: "Developed Markets Equity"
+    has_breadth: true
+  - rank: 57
+    ticker: VWO
+    name: "Vanguard FTSE Emerging Markets"
+    theme: "Emerging Markets Equity"
+    has_breadth: true
+  - rank: 59
+    ticker: IYR
+    name: "iShares US Real Estate ETF"
+    theme: "US Real Estate (REITs)"
+    has_breadth: true
+  - rank: 60
+    ticker: DIA
+    name: "SPDR Dow Jones Industrial Average"
+    theme: "US Large Cap (Dow 30)"
+    has_breadth: true
+  - rank: 61
+    ticker: EWT
+    name: "iShares MSCI Taiwan ETF"
+    theme: "Taiwan Equity"
+    has_breadth: true
+  - rank: 62
+    ticker: EWJ
+    name: "iShares MSCI Japan ETF"
+    theme: "Japan Equity"
+    has_breadth: true
+  - rank: 63
+    ticker: ASHR
+    name: "Xtrackers Harvest CSI 300 China A-Shares"
+    theme: "China A-Shares Equity"
+    has_breadth: true
+  - rank: 64
+    ticker: IEFA
+    name: "iShares Core MSCI EAFE ETF"
+    theme: "Developed Markets Equity"
+    has_breadth: true
+  - rank: 65
+    ticker: IJH
+    name: "iShares Core S&P Mid-Cap ETF"
+    theme: "US Mid Cap Equity"
+    has_breadth: true
+  - rank: 66
+    ticker: IJR
+    name: "iShares Core S&P Small-Cap ETF"
+    theme: "US Small Cap Equity"
+    has_breadth: true
+  - rank: 67
+    ticker: IVV
+    name: "iShares Core S&P 500 ETF"
+    theme: "US Large Cap Equity"
+    has_breadth: true
+  - rank: 71
+    ticker: ICLN
+    name: "iShares Global Clean Energy ETF"
+    theme: "Global Clean Energy"
+    has_breadth: true
+  - rank: 76
+    ticker: VIG
+    name: "Vanguard Dividend Appreciation ETF"
+    theme: "US Dividend Growth"
+    has_breadth: true
+  - rank: 80
+    ticker: MSOS
+    name: "AdvisorShares Pure US Cannabis ETF"
+    theme: "US Cannabis Equity"
+    has_breadth: true
+  - rank: 85
+    ticker: KBE
+    name: "SPDR S&P Bank ETF"
+    theme: "US Banks"
+    has_breadth: true
+  - rank: 86
+    ticker: IBB
+    name: "iShares Biotechnology ETF"
+    theme: "US Biotechnology"
+    has_breadth: true
+  - rank: 87
+    ticker: OIH
+    name: "VanEck Oil Services ETF"
+    theme: "Oil Services"
+    has_breadth: true
+  - rank: 88
+    ticker: XOP
+    name: "SPDR S&P Oil & Gas Exploration & Prod"
+    theme: "Oil & Gas Exploration & Production"
+    has_breadth: true
+  - rank: 89
+    ticker: VUG
+    name: "Vanguard Growth ETF"
+    theme: "US Large Cap Growth"
+    has_breadth: true
+  - rank: 90
+    ticker: VTV
+    name: "Vanguard Value ETF"
+    theme: "US Large Cap Value"
+    has_breadth: true
+  - rank: 91
+    ticker: QUAL
+    name: "iShares MSCI USA Quality Factor ETF"
+    theme: "US Quality Factor"
+    has_breadth: true
+  - rank: 92
+    ticker: MTUM
+    name: "iShares MSCI USA Momentum Factor ETF"
+    theme: "US Momentum Factor"
+    has_breadth: true
+  - rank: 93
+    ticker: USMV
+    name: "iShares MSCI USA Min Vol Factor ETF"
+    theme: "US Minimum Volatility"
+    has_breadth: true
+  - rank: 94
+    ticker: EWH
+    name: "iShares MSCI Hong Kong ETF"
+    theme: "Hong Kong Equity"
+    has_breadth: true
+  - rank: 95
+    ticker: EWW
+    name: "iShares MSCI Mexico ETF"
+    theme: "Mexico Equity"
+    has_breadth: true
+  - rank: 97
+    ticker: VT
+    name: "Vanguard Total World Stock ETF"
+    theme: "Global Equity"
+    has_breadth: true
+  - rank: 98
+    ticker: ACWI
+    name: "iShares MSCI ACWI ETF"
+    theme: "Global Equity"
+    has_breadth: true
+  - rank: 99
+    ticker: XLC
+    name: "Communication Services Select Sector SPDR"
+    theme: "US Communication Services"
+    has_breadth: true
+
+  # ─────────── Group B — Leveraged/Inverse Equity ───────────
+  - rank: 4
+    ticker: TQQQ
+    name: "ProShares UltraPro QQQ"
+    theme: "3x Leveraged US Tech"
+    has_breadth: true
+    breadth_source: QQQ
+  - rank: 5
+    ticker: SQQQ
+    name: "ProShares UltraPro Short QQQ"
+    theme: "3x Inverse Leveraged US Tech"
+    has_breadth: true
+    breadth_source: QQQ
+  - rank: 6
+    ticker: SOXL
+    name: "Direxion Daily Semiconductor Bull 3X"
+    theme: "3x Leveraged Semiconductors"
+    has_breadth: true
+    breadth_source: SMH
+  - rank: 17
+    ticker: SOXS
+    name: "Direxion Daily Semiconductor Bear 3X"
+    theme: "3x Inverse Leveraged Semiconductors"
+    has_breadth: true
+    breadth_source: SMH
+  - rank: 20
+    ticker: SPXS
+    name: "Direxion Daily S&P 500 Bear 3X"
+    theme: "3x Inverse Leveraged US Large Cap"
+    has_breadth: true
+    breadth_source: SPY
+  - rank: 28
+    ticker: SPXU
+    name: "ProShares UltraPro Short S&P500"
+    theme: "3x Inverse Leveraged US Large Cap"
+    has_breadth: true
+    breadth_source: SPY
+  - rank: 40
+    ticker: TNA
+    name: "Direxion Daily Small Cap Bull 3X"
+    theme: "3x Leveraged US Small Cap"
+    has_breadth: true
+    breadth_source: IWM
+  - rank: 43
+    ticker: SH
+    name: "ProShares Short S&P500"
+    theme: "1x Inverse US Large Cap"
+    has_breadth: true
+    breadth_source: SPY
+  - rank: 44
+    ticker: SDOW
+    name: "ProShares UltraPro Short Dow30"
+    theme: "3x Inverse Leveraged Dow 30"
+    has_breadth: true
+    breadth_source: DIA
+  - rank: 58
+    ticker: UPRO
+    name: "ProShares UltraPro S&P500"
+    theme: "3x Leveraged US Large Cap"
+    has_breadth: true
+    breadth_source: SPY
+  - rank: 69
+    ticker: TZA
+    name: "Direxion Daily Small Cap Bear 3X"
+    theme: "3x Inverse Leveraged US Small Cap"
+    has_breadth: true
+    breadth_source: IWM
+  - rank: 72
+    ticker: FAS
+    name: "Direxion Daily Financial Bull 3X"
+    theme: "3x Leveraged US Financials"
+    has_breadth: true
+    breadth_source: XLF
+  - rank: 73
+    ticker: FAZ
+    name: "Direxion Daily Financial Bear 3X"
+    theme: "3x Inverse Leveraged US Financials"
+    has_breadth: true
+    breadth_source: XLF
+  - rank: 84
+    ticker: SRTY
+    name: "ProShares UltraPro Short Russell2000"
+    theme: "3x Inverse Leveraged US Small Cap"
+    has_breadth: true
+    breadth_source: IWM
+  - rank: 96
+    ticker: QQQM
+    name: "Invesco NASDAQ 100 ETF"
+    theme: "US Large Cap Tech / Growth"
+    has_breadth: true
+    breadth_source: QQQ
+
+  # Note: NUGT (rank 45) below — gold miners leveraged, has parent GDX
+  - rank: 45
+    ticker: NUGT
+    name: "Direxion Daily Gold Miners Bull 2X"
+    theme: "2x Leveraged Gold Miners"
+    has_breadth: true
+    breadth_source: GDX
+
+  # ─────────── Group C — Commodity/Bond/Vol/Crypto (no breadth) ───────────
+  - rank: 7
+    ticker: XLF
+    name: "Financial Select Sector SPDR"
+    theme: "US Financials"
+    has_breadth: true   # XLF is equity; included here only because rank ordering placed it near vol ETFs. Moved to Group A logically.
+  - rank: 9
+    ticker: HYG
+    name: "iShares iBoxx $ High Yield Corp Bond"
+    theme: "High Yield Corporate Bonds"
+    has_breadth: false
+  - rank: 11
+    ticker: VXX
+    name: "iPath Series B S&P 500 VIX"
+    theme: "Volatility Futures"
+    has_breadth: false
+  - rank: 12
+    ticker: SLV
+    name: "iShares Silver Trust"
+    theme: "Physical Silver"
+    has_breadth: false
+  - rank: 13
+    ticker: GLD
+    name: "SPDR Gold Shares"
+    theme: "Physical Gold"
+    has_breadth: false
+  - rank: 14
+    ticker: TLT
+    name: "iShares 20+ Year Treasury Bond"
+    theme: "Long-Term US Treasuries"
+    has_breadth: false
+  - rank: 21
+    ticker: LQD
+    name: "iShares iBoxx $ Inv Grade Corp Bond"
+    theme: "Investment Grade Corporate Bonds"
+    has_breadth: false
+  - rank: 22
+    ticker: GDX
+    name: "VanEck Gold Miners ETF"
+    theme: "Gold Miners Equity"
+    has_breadth: true   # equity ETF — has holdings
+  - rank: 23
+    ticker: USO
+    name: "United States Oil Fund"
+    theme: "Crude Oil Futures"
+    has_breadth: false
+  - rank: 24
+    ticker: UVXY
+    name: "ProShares Ultra VIX Short-Term Futures"
+    theme: "1.5x Leveraged Volatility"
+    has_breadth: false
+  - rank: 27
+    ticker: UNG
+    name: "United States Natural Gas Fund"
+    theme: "Natural Gas Futures"
+    has_breadth: false
+  - rank: 32
+    ticker: IEF
+    name: "iShares 7-10 Year Treasury Bond"
+    theme: "Intermediate US Treasuries"
+    has_breadth: false
+  - rank: 39
+    ticker: JNK
+    name: "SPDR Bloomberg High Yield Bond"
+    theme: "High Yield Corporate Bonds"
+    has_breadth: false
+  - rank: 41
+    ticker: BOIL
+    name: "ProShares Ultra Bloomberg Natural Gas"
+    theme: "2x Leveraged Natural Gas"
+    has_breadth: false
+  - rank: 47
+    ticker: BITO
+    name: "ProShares Bitcoin Strategy"
+    theme: "Bitcoin Futures"
+    has_breadth: false
+  - rank: 49
+    ticker: IBIT
+    name: "iShares Bitcoin Trust"
+    theme: "Spot Bitcoin"
+    has_breadth: false
+  - rank: 53
+    ticker: BND
+    name: "Vanguard Total Bond Market ETF"
+    theme: "US Total Bond Market"
+    has_breadth: false
+  - rank: 54
+    ticker: AGG
+    name: "iShares Core US Aggregate Bond"
+    theme: "US Total Bond Market"
+    has_breadth: false
+  - rank: 68
+    ticker: BKLN
+    name: "Invesco Senior Loan ETF"
+    theme: "Senior Bank Loans"
+    has_breadth: false
+  - rank: 70
+    ticker: TMF
+    name: "Direxion Daily 20+ Year Treasury Bull 3X"
+    theme: "3x Leveraged US Treasuries"
+    has_breadth: false
+  - rank: 74
+    ticker: JNUG
+    name: "Direxion Daily Junior Gold Miners Bull 2X"
+    theme: "2x Leveraged Junior Gold Miners"
+    has_breadth: false   # no honest parent (junior miners ≠ GDX)
+  - rank: 75
+    ticker: JDST
+    name: "Direxion Daily Junior Gold Miners Bear 2X"
+    theme: "2x Inverse Leveraged Junior Gold Miners"
+    has_breadth: false   # no honest parent
+  - rank: 77
+    ticker: GLDM
+    name: "SPDR Gold MiniShares Trust"
+    theme: "Physical Gold"
+    has_breadth: false
+  - rank: 78
+    ticker: UCO
+    name: "ProShares Ultra Bloomberg Crude Oil"
+    theme: "2x Leveraged Crude Oil"
+    has_breadth: false
+  - rank: 79
+    ticker: SCO
+    name: "ProShares UltraShort Bloomberg Crude Oil"
+    theme: "2x Inverse Leveraged Crude Oil"
+    has_breadth: false
+  - rank: 81
+    ticker: TBT
+    name: "ProShares UltraShort 20+ Year Treasury"
+    theme: "2x Inverse Leveraged US Treasuries"
+    has_breadth: false
+  - rank: 82
+    ticker: TMV
+    name: "Direxion Daily 20+ Year Treasury Bear 3X"
+    theme: "3x Inverse Leveraged US Treasuries"
+    has_breadth: false
+  - rank: 83
+    ticker: KOLD
+    name: "ProShares UltraShort Bloomberg Natural Gas"
+    theme: "2x Inverse Leveraged Natural Gas"
+    has_breadth: false
+  - rank: 100
+    ticker: JEPI
+    name: "JPMorgan Equity Premium Income ETF"
+    theme: "Covered Call / Income"
+    has_breadth: true   # equity-based, has holdings

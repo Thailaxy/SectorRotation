@@ -27,7 +27,17 @@ const dict = {
         disclaimer: "This dashboard is for educational and observational purposes only. It is not investment advice or a recommendation to buy/sell any security. Calculations use equal-weight baskets, which may differ from real ETFs (market-cap weighted). Investing involves risk; consult a licensed professional before making decisions.",
         footer_note: "Note: Data is automatically updated daily after US market close.",
         col_constituents: "Constituents: ",
-        data_incomplete: "Incomplete Data"
+        data_incomplete: "Incomplete Data",
+        // ─── New keys: period selector / ETF mode ───
+        periods_max: "Select 4 periods maximum.",
+        etfs_max: "Select 20 ETFs maximum.",
+        view_themes: "View: Themes",
+        view_etfs: "View: ETFs",
+        select_etfs_title: "Select ETFs (max 20)",
+        etfs_selected: (n) => `${n} / 20 ETFs selected`,
+        reset_to_default: "Reset to default",
+        etf_name_label: "ETF",
+        vs_spy_suffix: "vs SPY"
     },
     th: {
         title: "US Sector & Theme Rotation Tracker",
@@ -57,7 +67,17 @@ const dict = {
         disclaimer: "ข้อมูลบนหน้านี้เป็นเครื่องมือเพื่อการศึกษาและสังเกตการณ์เท่านั้น ไม่ใช่คำแนะนำการลงทุนหรือคำแนะนำซื้อขายรายตัว การคำนวณใช้ตะกร้าแบบ equal-weight ซึ่งอาจต่างจาก ETF จริงที่ถ่วงตาม market cap การลงทุนมีความเสี่ยง ผู้ลงทุนควรศึกษาข้อมูลและปรึกษาผู้เชี่ยวชาญที่มีใบอนุญาตก่อนตัดสินใจ",
         footer_note: "ข้อควรรู้: ข้อมูลอัปเดตอัตโนมัติวันละครั้งหลังตลาดสหรัฐปิด",
         col_constituents: "หุ้นในตะกร้า: ",
-        data_incomplete: "ข้อมูลไม่ครบ"
+        data_incomplete: "ข้อมูลไม่ครบ",
+        // ─── New keys: period selector / ETF mode ───
+        periods_max: "เลือกได้สูงสุด 4 ช่วงเวลา",
+        etfs_max: "เลือก ETF ได้สูงสุด 20 ตัว",
+        view_themes: "มุมมอง: ธีม",
+        view_etfs: "มุมมอง: ETF",
+        select_etfs_title: "เลือก ETF (สูงสุด 20)",
+        etfs_selected: (n) => `เลือกแล้ว ${n} / 20 ETF`,
+        reset_to_default: "คืนค่าเริ่มต้น",
+        etf_name_label: "ETF",
+        vs_spy_suffix: "เทียบ SPY"
     }
 };
 
