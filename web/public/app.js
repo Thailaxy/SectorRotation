@@ -61,6 +61,7 @@ function initUI() {
     initViewToggle();
     initEtfPanel();
     initResetButton();
+    initFeedbackButton();
 
     // The "Select ETFs" button is always visible (clicking it auto-enters ETF mode
     // + opens the modal in one action — more discoverable than hiding it).
@@ -270,19 +271,37 @@ function renderPlaybook() {
 function renderBreadth() {
     const tbody = document.querySelector('#breadthTable tbody');
     tbody.innerHTML = '';
-    
-    let themes = appData.themes.filter(t => t.type === 'theme');
-    themes.sort((a, b) => {
+
+    // In ETF mode, show selected ETFs instead of themes. Same columns,
+    // same rendering — just a different row source. Group C ETFs (bonds,
+    // commodities, vol, crypto) have breadth_pct=null and show '-'.
+    let rows;
+    if (etfMode) {
+        const sel = selectedEtfs || DEFAULT_ETF_SELECTION;
+        rows = (appData.etfs || []).filter(e => sel.includes(e.ticker));
+    } else {
+        rows = appData.themes.filter(t => t.type === 'theme');
+    }
+
+    rows.sort((a, b) => {
         let va = a.breadth_pct !== null ? a.breadth_pct : -1;
         let vb = b.breadth_pct !== null ? b.breadth_pct : -1;
         return vb - va;
     });
-    
-    themes.forEach(t => {
+
+    rows.forEach(row => {
         const tr = document.createElement('tr');
-        let pct = t.breadth_pct;
-        let vol = t.dollar_vol_ratio;
-        
+        let pct = row.breadth_pct;
+        let vol = row.dollar_vol_ratio;
+
+        // Name cell: ETF mode shows ticker + name, theme mode shows localized name.
+        let nameHtml;
+        if (etfMode) {
+            nameHtml = `<strong>${row.ticker}</strong><br><span style="font-size:0.75rem;color:var(--text-secondary)">${row.name || ''}</span>`;
+        } else {
+            nameHtml = getThemeName(row);
+        }
+
         let pctHtml = '-';
         if (pct !== null) {
             let color = getBreadthColor(pct);
@@ -291,15 +310,15 @@ function renderBreadth() {
                 <div class="breadth-bar-container"><div class="breadth-bar ${color}" style="width:${pct}%"></div></div>
             `;
         }
-        
+
         let volHtml = '-';
         if (vol !== null) {
             let col = vol > 1 ? 'pos-val' : (vol < 1 ? 'neg-val' : '');
             volHtml = `<span class="${col}">${vol.toFixed(2)}x</span>`;
         }
-        
+
         tr.innerHTML = `
-            <td>${getThemeName(t)}</td>
+            <td>${nameHtml}</td>
             <td>${pctHtml}</td>
             <td>${volHtml}</td>
         `;
@@ -469,6 +488,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 document.addEventListener('langChanged', () => {
     if (appData) {
         initUI();
+        renderFeedbackTable();
     }
 });
 
@@ -671,4 +691,123 @@ function initResetButton() {
     });
 }
 
+// ─── Feedback feature ───
+// Submissions go to Formspree (formId xjgqjnen) — emails the admin the full
+// payload including the optional reply-to email. Admin curates which entries
+// appear publicly by editing web/public/feedback.json and committing.
+// EMAIL NEVER ENTERS feedback.json.
+
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xjgqjnen';
+let feedbackData = null;
+
+function initFeedbackButton() {
+    const openBtn = document.getElementById('feedbackBtn');
+    const modal = document.getElementById('feedbackModal');
+    const closeBtn = document.getElementById('feedbackModalClose');
+    const form = document.getElementById('feedbackForm');
+    if (!openBtn || !modal || !form) return;
+
+    openBtn.addEventListener('click', () => {
+        modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+    });
+    closeBtn.addEventListener('click', () => modal.style.display = 'none');
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+    });
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const t = dict[currentLang] || dict.en;
+        const submitBtn = document.getElementById('feedbackSubmit');
+        const status = document.getElementById('feedbackStatus');
+        submitBtn.disabled = true;
+        submitBtn.innerText = t.feedback_sending;
+        status.className = 'feedback-status';
+        status.innerText = '';
+
+        try {
+            const formData = new FormData(form);
+            const res = await fetch(FORMSPREE_ENDPOINT, {
+                method: 'POST',
+                body: formData,
+                headers: { Accept: 'application/json' }
+            });
+            if (res.ok) {
+                status.classList.add('success');
+                status.innerText = t.feedback_success;
+                form.reset();
+                setTimeout(() => { modal.style.display = 'none'; status.innerText = ''; }, 3000);
+            } else {
+                const data = await res.json().catch(() => ({}));
+                status.classList.add('error');
+                status.innerText = data?.errors?.[0]?.message || t.feedback_error;
+            }
+        } catch (err) {
+            status.classList.add('error');
+            status.innerText = t.feedback_error;
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerText = t.feedback_submit;
+        }
+    });
+}
+
+async function loadFeedback() {
+    try {
+        const res = await fetch('feedback.json');
+        feedbackData = await res.json();
+        renderFeedbackTable();
+    } catch (e) {
+        console.error('Error loading feedback.json', e);
+    }
+}
+
+function renderFeedbackTable() {
+    const tbody = document.querySelector('#feedbackTable tbody');
+    if (!tbody || !feedbackData) return;
+    tbody.innerHTML = '';
+    const t = dict[currentLang] || dict.en;
+    const entries = feedbackData.feedback || [];
+
+    if (entries.length === 0) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td colspan="3" style="text-align:center;color:var(--muted);padding:24px">${t.feedback_empty}</td>`;
+        tbody.appendChild(tr);
+        return;
+    }
+
+    entries.forEach(entry => {
+        const tr = document.createElement('tr');
+        const statusKey = `feedback_status_${(entry.status || 'open').replace('-', '_')}`;
+        const statusLabel = t[statusKey] || entry.status || '';
+        const photoHtml = entry.photo
+            ? `<a href="${entry.photo}" target="_blank" rel="noopener"><img src="${entry.photo}" alt="feedback photo" class="feedback-thumb"></a>`
+            : '-';
+
+        tr.innerHTML = `
+            <td>
+                <strong>${escapeHtml(entry.requestor || 'Anonymous')}</strong>
+                <div style="font-size:0.75rem;color:var(--muted);margin-top:2px">${escapeHtml(entry.date || '')}</div>
+                <span class="badge ${statusBadgeClass(entry.status)}" style="margin-top:4px;display:inline-block">${statusLabel}</span>
+            </td>
+            <td>${escapeHtml(entry.details || '')}</td>
+            <td>${photoHtml}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
+function statusBadgeClass(status) {
+    if (status === 'done') return 'leading';
+    if (status === 'in-progress' || status === 'progress') return 'weakening';
+    return 'incomplete';
+}
+
+function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+}
+
 loadData();
+loadFeedback();

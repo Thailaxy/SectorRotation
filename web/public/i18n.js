@@ -37,7 +37,28 @@ const dict = {
         etfs_selected: (n) => `${n} / 20 ETFs selected`,
         reset_to_default: "Reset to default",
         etf_name_label: "ETF",
-        vs_spy_suffix: "vs SPY"
+        vs_spy_suffix: "vs SPY",
+        // ─── Feedback feature ───
+        feedback_btn: "Feedback",
+        feedback_title: "Send Feedback / Feature Request",
+        feedback_intro: "Spotted a bug? Have an idea? Let me know.",
+        feedback_requestor: "Nickname",
+        feedback_details: "Details",
+        feedback_photo: "Attach photo (optional)",
+        feedback_email: "Email (optional — only seen by admin, never public)",
+        feedback_submit: "Send",
+        feedback_sending: "Sending...",
+        feedback_success: "Thanks! Your feedback was sent. The admin will review it.",
+        feedback_error: "Something went wrong. Please try again or email directly.",
+        feedback_public_title: "Feedback & Feature Requests",
+        feedback_public_intro: "Public log of submitted feedback. Email addresses are kept private.",
+        feedback_col_requestor: "Requestor",
+        feedback_col_details: "Details",
+        feedback_col_picture: "Picture",
+        feedback_status_open: "open",
+        feedback_status_progress: "in progress",
+        feedback_status_done: "done",
+        feedback_empty: "No feedback yet. Be the first to send some!"
     },
     th: {
         title: "US Sector & Theme Rotation Tracker",
@@ -77,7 +98,28 @@ const dict = {
         etfs_selected: (n) => `เลือกแล้ว ${n} / 20 ETF`,
         reset_to_default: "คืนค่าเริ่มต้น",
         etf_name_label: "ETF",
-        vs_spy_suffix: "เทียบ SPY"
+        vs_spy_suffix: "เทียบ SPY",
+        // ─── Feedback feature ───
+        feedback_btn: "ส่งความคิดเห็น",
+        feedback_title: "ส่งความคิดเห็น / คำขอฟีเจอร์",
+        feedback_intro: "เจอบั๊ก? มีไอเดีย? บอกเราได้เลย",
+        feedback_requestor: "ชื่อเล่น",
+        feedback_details: "รายละเอียด",
+        feedback_photo: "แนบรูป (ไม่บังคับ)",
+        feedback_email: "อีเมล (ไม่บังคับ — ผู้ดูแลเท่านั้นที่เห็น, ไม่เผยแพร่)",
+        feedback_submit: "ส่ง",
+        feedback_sending: "กำลังส่ง...",
+        feedback_success: "ขอบคุณ! ความคิดเห็นของคุณถูกส่งแล้ว ผู้ดูแลจะตรวจสอบ",
+        feedback_error: "ส่งไม่สำเร็จ ลองอีกครั้งหรือส่งอีเมลตรงๆ",
+        feedback_public_title: "ความคิดเห็น & คำขอฟีเจอร์",
+        feedback_public_intro: "บันทึกความคิดเห็นที่ส่งเข้ามา (อีเมลเก็บส่วนตัว ไม่เผยแพร่)",
+        feedback_col_requestor: "ผู้ส่ง",
+        feedback_col_details: "รายละเอียด",
+        feedback_col_picture: "รูป",
+        feedback_status_open: "เปิด",
+        feedback_status_progress: "กำลังทำ",
+        feedback_status_done: "เสร็จแล้ว",
+        feedback_empty: "ยังไม่มีความคิดเห็น เป็นคนแรกที่ส่งได้เลย!"
     }
 };
 

@@ -1,0 +1,12 @@
+{
+  "feedback": [
+    {
+      "id": "example-001",
+      "requestor": "Example User",
+      "details": "This is an example entry showing the format. Delete it before going live, or keep it as a placeholder until real feedback arrives.",
+      "photo": "",
+      "date": "2026-07-05",
+      "status": "open"
+    }
+  ]
+}

@@ -20,6 +20,7 @@
             </div>
         </div>
         <div class="header-right">
+            <button id="feedbackBtn" class="feedback-btn" title="Send feedback">💬</button>
             <button id="themeToggle" title="Toggle light/dark theme">🌙</button>
             <button id="langToggle">EN / TH</button>
         </div>
@@ -121,7 +122,59 @@
             <h2 data-i18n="appendix_title">Appendix</h2>
             <div class="appendix-grid" id="appendixGrid"></div>
         </section>
+
+        <section class="feedback-section">
+            <h2 data-i18n="feedback_public_title">Feedback & Feature Requests</h2>
+            <p class="section-intro" data-i18n="feedback_public_intro">Public log of submitted feedback. Email addresses are kept private.</p>
+            <div class="table-scroll">
+                <table id="feedbackTable">
+                    <thead>
+                        <tr>
+                            <th data-i18n="feedback_col_requestor">Requestor</th>
+                            <th data-i18n="feedback_col_details">Details</th>
+                            <th data-i18n="feedback_col_picture">Picture</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
     </main>
+
+    <!-- Feedback submission modal -->
+    <div id="feedbackModal" class="etf-modal" style="display:none">
+        <div class="etf-modal-content feedback-modal-content">
+            <div class="etf-modal-header">
+                <h3 data-i18n="feedback_title">Send Feedback / Feature Request</h3>
+                <button id="feedbackModalClose">✕</button>
+            </div>
+            <p class="feedback-intro" data-i18n="feedback_intro">Spotted a bug? Have an idea? Let me know.</p>
+            <form id="feedbackForm" class="feedback-form">
+                <label>
+                    <span data-i18n="feedback_requestor">Nickname</span>
+                    <input type="text" name="requestor" maxlength="50">
+                </label>
+                <label>
+                    <span data-i18n="feedback_details">Details</span> <span class="req">*</span>
+                    <textarea name="details" rows="4" required maxlength="2000"></textarea>
+                </label>
+                <label>
+                    <span data-i18n="feedback_photo">Attach photo (optional)</span>
+                    <input type="file" name="photo" accept="image/*">
+                </label>
+                <label>
+                    <span data-i18n="feedback_email">Email (optional — only seen by admin, never public)</span>
+                    <input type="email" name="email" maxlength="100">
+                </label>
+                <!-- Honeypot: bots fill this in, humans don't see it -->
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                <div class="feedback-actions">
+                    <button type="submit" id="feedbackSubmit" class="feedback-submit-btn" data-i18n="feedback_submit">Send</button>
+                </div>
+                <div id="feedbackStatus" class="feedback-status"></div>
+            </form>
+        </div>
+    </div>
 
     <!-- ETF selection modal (shown only in ETF mode) -->
     <div id="etfModal" class="etf-modal" style="display:none">
