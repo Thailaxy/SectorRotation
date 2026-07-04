@@ -5,8 +5,6 @@ on:
   workflow_dispatch: {}       # กดรันเองได้จากหน้า GitHub
 permissions:
   contents: write             # ให้ commit data.json + cache ได้
-  pages: write
-  id-token: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,12 +22,12 @@ jobs:
           if [ -d "cache" ]; then git add cache/; fi
           git commit -m "chore: daily data update ($(date -u +%F))" || echo "no changes"
           git push
-      - uses: actions/upload-pages-artifact@v3
-        with: { path: web/public }
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment: { name: github-pages, url: "${{ steps.deploy.outputs.page_url }}" }
-    steps:
-      - id: deploy
-        uses: actions/deploy-pages@v4
+      # NOTE: git push ด้วย GITHUB_TOKEN ไม่ trigger workflow อื่น (กันลูป) —
+      # เลยต้อง deploy Firebase ตรงนี้เลย ไม่ใช่พึ่ง deploy-site.yml
+      - name: Deploy to Firebase Hosting (live channel)
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: sectorrotation-546e0
+          channelId: live

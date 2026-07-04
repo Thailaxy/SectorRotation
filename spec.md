@@ -113,15 +113,16 @@
                     │     - คำนวณ metrics ทั้งหมด             │
                     │     - เขียน web/public/data.json       │
                     │  5. git commit data.json + cache       │
-                    │  6. deploy → GitHub Pages              │
+                    │  6. deploy → Firebase Hosting          │
                     └───────────────┬──────────────────────┘
-                                    │ (build static site)
+                                    │ (deploy static site)
                                     ▼
                     ┌──────────────────────────────────────┐
-                    │        GitHub Pages (โฮสต์ฟรี)         │
+                    │     Firebase Hosting (โฮสต์ฟรี)         │
                     │   index.html + app.js + data.json     │
+                    │   URL: sectorrotation-546e0.web.app    │
                     └───────────────┬──────────────────────┘
-                                    │ HTTPS
+                                    │ HTTPS (global CDN)
                                     ▼
                     ┌──────────────────────────────────────┐
                     │  Browser (ผู้ใช้ + เพื่อน, มือถือ/PC)   │
@@ -161,7 +162,10 @@
 | ส่วน | เครื่องมือ | โควตาฟรี |
 |---|---|---|
 | อัตโนมัติ | **GitHub Actions** | 2,000 นาที/เดือน (ใช้จริง ~90 นาที/เดือน) |
-| โฮสต์ | **GitHub Pages** | ฟรีไม่จำกัด สำหรับ public repo |
+| โฮสต์ | **Firebase Hosting** | ฟรีไม่จำกัด บน Spark plan (10 GB storage, 360 MB/day transfer) |
+
+> **หมายเหตุ:** ก่อนหน้านี้ใช้ GitHub Pages แต่ย้ายมา Firebase Hosting แล้วเพื่อ global CDN + cache-control ละเอียดกว่า + จัดการ custom domain ง่ายกว่า
+> **ตั้งค่า deploy (ทำครั้งเดียว):** สร้าง service account ชื่อ `github-actions-deploy` ใน Google Cloud Console ให้ role **Firebase Hosting Admin** (ขั้นต่ำ) แล้ว generate JSON key เก็บเป็น GitHub Actions secret ชื่อ `FIREBASE_SERVICE_ACCOUNT`
 
 ---
 
@@ -419,6 +423,9 @@ def classify(rs_ratio_latest, rs_momentum_latest):
 
 ## 12. CI/CD — GitHub Actions (`.github/workflows/daily.yml`)
 
+> มี 2 workflows: `daily.yml` (รัน pipeline + deploy รายวัน) และ `deploy-site.yml` (deploy frontend เมื่อมี push)
+> ทั้งคู่ deploy ไป Firebase Hosting ผ่าน `FirebaseExtended/action-hosting-deploy@v0` ที่อ่าน secret `FIREBASE_SERVICE_ACCOUNT`
+
 ```yaml
 name: daily-update
 on:
@@ -427,8 +434,6 @@ on:
   workflow_dispatch: {}       # กดรันเองได้จากหน้า GitHub
 permissions:
   contents: write             # ให้ commit data.json + cache ได้
-  pages: write
-  id-token: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -442,22 +447,27 @@ jobs:
         run: |
           git config user.name "rotation-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add cache/prices.csv web/public/data.json
+          git add web/public/data.json
+          if [ -d "cache" ]; then git add cache/; fi
           git commit -m "chore: daily data update ($(date -u +%F))" || echo "no changes"
           git push
-      - uses: actions/upload-pages-artifact@v3
-        with: { path: web/public }
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment: { name: github-pages, url: "${{ steps.deploy.outputs.page_url }}" }
-    steps:
-      - id: deploy
-        uses: actions/deploy-pages@v4
+      # NOTE: git push ด้วย GITHUB_TOKEN ไม่ trigger workflow อื่น (กันลูป) —
+      # เลยต้อง deploy Firebase ตรงนี้เลย ไม่ใช่พึ่ง deploy-site.yml
+      - name: Deploy to Firebase Hosting (live channel)
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: sectorrotation-546e0
+          channelId: live
 ```
 
 > **หมายเหตุ DST:** ตลาดสหรัฐปิด 16:00 ET = 20:00 UTC (ช่วง summer/EDT) หรือ 21:00 UTC (winter/EST)
 > ตั้ง cron ที่ 22:30 UTC เพื่อเผื่อทั้งสองกรณี · เอกสารในโค้ดต้องอธิบายจุดนี้
+>
+> **ทำไม `daily.yml` จึง deploy เอง ไม่พึ่ง `deploy-site.yml`?** เพราะ `git push` ที่ทำด้วย
+> `GITHUB_TOKEN` เริ่มต้นถูกออกแบบให้ *ไม่* trigger workflow อื่น (กันลูป) ถ้าปล่อยให้ push
+> ไป trigger `deploy-site.yml` การอัปเดตข้อมูลรายวันจะไม่ถูก deploy เลย
 
 ---
 

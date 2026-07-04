@@ -58,7 +58,12 @@ pytest
 ```
 
 ## สถาปัตยกรรม (Architecture)
-โปรเจกต์นี้ใช้ GitHub Actions ในการดึงข้อมูลและอัปเดตไฟล์ `data.json` โดยอัตโนมัติทุกวันหลังตลาดสหรัฐปิดทำการ และใช้ GitHub Pages ในการโฮสต์หน้าเว็บ ทำให้ไม่มีค่าใช้จ่ายในการดูแลระบบ (100% Free)
+โปรเจกต์นี้ใช้ GitHub Actions ในการดึงข้อมูลและอัปเดตไฟล์ `data.json` โดยอัตโนมัติทุกวันหลังตลาดสหรัฐปิดทำการ และใช้ **Firebase Hosting** ในการโฮสต์หน้าเว็บ ทำให้ไม่มีค่าใช้จ่ายในการดูแลระบบ (100% Free บน Firebase Spark plan)
+
+- **Live URL:** https://sectorrotation-546e0.web.app
+- **Deploy workflow ทั้งสองตัว:**
+  - `.github/workflows/daily.yml` — รัน pipeline + commit data + deploy ทุกวันทำการ 22:30 UTC
+  - `.github/workflows/deploy-site.yml` — deploy เฉพาะ frontend เมื่อมี push ไปยัง `main`
 
 ## Handoff Log
 
@@ -273,3 +278,60 @@ curl -s "https://api.github.com/repos/Thailaxy/SectorRotation/actions/runs?per_p
 
 **Commits today (this entry):** `460d56a` `3493ec5` `26f1a14` `6b75163` `101dd07` `6861c31`
 `8e75730` `131c428`
+
+### 2026-07-04 (cont. 2) — Migrate hosting from GitHub Pages to Firebase Hosting
+
+**Goal:** Move the dashboard's hosting from GitHub Pages to Firebase Hosting
+(project `sectorrotation-546e0`, Spark/free tier). The data pipeline and frontend
+are untouched — only the deploy target and related config/docs change.
+
+**Changes:**
+- `firebase.json` (new) — hosting config: `public: web/public`, with cache headers
+  tuned for this app (`data.json` 5 min, `*.js`/`*.css` 1h + must-revalidate,
+  `*.html` no-cache). Replaces Pages' blanket 10-min TTL with finer control.
+- `.firebaserc` (new) — binds repo to project `sectorrotation-546e0`.
+- `.github/workflows/deploy-site.yml` — replaced `actions/upload-pages-artifact`
+  + `actions/deploy-pages` with `FirebaseExtended/action-hosting-deploy@v0` on the
+  live channel. Trigger unchanged (push to `main` + `workflow_dispatch`).
+- `.github/workflows/daily.yml` — removed the Pages deploy step but **kept a
+  Firebase deploy step at the end of the build job.** Reason: the bot's
+  `git push` uses GitHub's default `GITHUB_TOKEN`, and pushes made with that
+  token deliberately do NOT trigger other workflows (GitHub anti-loop), so the
+  push would not fire `deploy-site.yml` — daily data would never deploy. Inline
+  deploy is the correct shape. (Also drops the now-unused `pages: write` /
+  `id-token: write` permissions.)
+- `.gitignore` — added `FIREBASE_SERVICE_ACCOUNT.json` + key-file patterns.
+- `README.md` (architecture section) + `spec.md` (§6.3, §12) — swapped Pages for
+  Firebase, added the `.web.app` URL.
+- **Setup done by the user (one-time, manual):** created the
+  `github-actions-deploy-752` service account with **Firebase Hosting Admin**
+  role only (minimum privilege), generated a JSON key, and stored it as the
+  `FIREBASE_SERVICE_ACCOUNT` GitHub Actions secret.
+
+**Resolves open TODO from the earlier 2026-07-04 entry:** the
+`concurrency: group: pages` collision risk between `daily.yml` and
+`deploy-site.yml` (both previously targeted the shared `github-pages`
+environment) is gone — Firebase Hosting deploys are atomic and have no shared
+environment to collide on.
+
+**What still needs manual follow-up (the user, ~2 min, once):**
+- [ ] Push the migration, then in repo → Actions → `deploy-site` → Run workflow;
+      open https://sectorrotation-546e0.web.app and verify the dashboard loads.
+- [ ] After Firebase looks good, disable GitHub Pages: repo Settings → Pages →
+      "Build and deployment" → Source = None. (Until then both sites stay live —
+      zero downtime during the swap.)
+- [ ] Optional: custom domain + DNS.
+
+**Notes for next session:**
+- The local `FIREBASE_SERVICE_ACCOUNT.json` at repo root is gitignored and safe
+  to keep until after the first successful deploy, then should be deleted.
+- This handoff entry was written *before* the migration was committed/pushed, so
+  none of the file changes above are verified end-to-end against a real Firebase
+  deploy yet — the live check is the open item above.
+
+**Repro / verify (after pushing):**
+```bash
+# Trigger a deploy from the GitHub UI or REST API, then:
+curl -sI https://sectorrotation-546e0.web.app/data.json | grep -i cache-control
+# Expect: cache-control: public, max-age=300, must-revalidate
+```
