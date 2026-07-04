@@ -60,7 +60,8 @@ pytest
 ## สถาปัตยกรรม (Architecture)
 โปรเจกต์นี้ใช้ GitHub Actions ในการดึงข้อมูลและอัปเดตไฟล์ `data.json` โดยอัตโนมัติทุกวันหลังตลาดสหรัฐปิดทำการ และใช้ **Firebase Hosting** ในการโฮสต์หน้าเว็บ ทำให้ไม่มีค่าใช้จ่ายในการดูแลระบบ (100% Free บน Firebase Spark plan)
 
-- **Live URL:** https://sectorrotation-546e0.web.app
+- **Live URL:** https://sectorrotation-wk.web.app
+  - (เดิมใช้ `sectorrotation-546e0.web.app` ระหว่าง migrate — ตอนนี้ deploy ไปที่ site `sectorrotation-wk` ในโปรเจกต์เดียวกันผ่าน multisite target)
 - **Deploy workflow ทั้งสองตัว:**
   - `.github/workflows/daily.yml` — รัน pipeline + commit data + deploy ทุกวันทำการ 22:30 UTC
   - `.github/workflows/deploy-site.yml` — deploy เฉพาะ frontend เมื่อมี push ไปยัง `main`

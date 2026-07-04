@@ -120,7 +120,9 @@
                     ┌──────────────────────────────────────┐
                     │     Firebase Hosting (โฮสต์ฟรี)         │
                     │   index.html + app.js + data.json     │
-                    │   URL: sectorrotation-546e0.web.app    │
+                    │   URL: sectorrotation-wk.web.app        │
+                    │   (multisite target `wk` ในโปรเจกต์     │
+                    │    sectorrotation-546e0)                │
                     └───────────────┬──────────────────────┘
                                     │ HTTPS (global CDN)
                                     ▼

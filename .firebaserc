@@ -1,5 +1,12 @@
 {
   "projects": {
     "default": "sectorrotation-546e0"
+  },
+  "targets": {
+    "sectorrotation-546e0": {
+      "hosting": {
+        "wk": ["sectorrotation-wk"]
+      }
+    }
   }
 }

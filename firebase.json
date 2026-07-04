@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "wk",
     "public": "web/public",
     "ignore": [
       "firebase.json",
