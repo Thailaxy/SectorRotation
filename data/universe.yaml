@@ -210,7 +210,7 @@ themes:
     name_en: Gold Miners
     name_th: เหมืองทองคำ
     type: theme
-    constituents: [NEM, AEM, GOLD, WPM]
+    constituents: [NEM, AEM, B, WPM]
     ref_etfs:
       - ticker: GDX
         label_en: VanEck Gold Miners
