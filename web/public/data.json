@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T23:36:15.265708Z",
+  "generated_at": "2026-07-04T15:46:26.315882Z",
   "as_of_date": "2026-07-02",
   "benchmark": "SPY",
   "benchmark_return_1D": -0.13,
@@ -1316,57 +1316,57 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 2.66,
-        "w1": 2.19,
-        "m1": -6.67,
-        "m3": -12.92,
-        "m1_vs_spy": -4.72
+        "d1": 3.01,
+        "w1": 1.65,
+        "m1": -12.03,
+        "m3": -16.58,
+        "m1_vs_spy": -10.09
       },
-      "breadth_pct": 25.0,
-      "dollar_vol_ratio": 0.92,
+      "breadth_pct": 0.0,
+      "dollar_vol_ratio": 0.8,
       "rrg": {
-        "ratio": 102.92,
-        "momentum": 89.37,
+        "ratio": 102.27,
+        "momentum": 87.43,
         "quadrant": "weakening",
         "tail": [
           {
-            "ratio": 114.58,
-            "momentum": 82.08
+            "ratio": 112.93,
+            "momentum": 83.19
           },
           {
-            "ratio": 113.19,
-            "momentum": 89.61
+            "ratio": 111.76,
+            "momentum": 92.16
           },
           {
-            "ratio": 111.17,
-            "momentum": 85.06
+            "ratio": 110.08,
+            "momentum": 87.32
           },
           {
-            "ratio": 109.38,
-            "momentum": 87.39
+            "ratio": 108.41,
+            "momentum": 87.91
           },
           {
-            "ratio": 108.02,
-            "momentum": 89.92
+            "ratio": 107.24,
+            "momentum": 91.01
           },
           {
-            "ratio": 106.04,
-            "momentum": 85.28
+            "ratio": 105.44,
+            "momentum": 84.97
           },
           {
-            "ratio": 104.47,
-            "momentum": 88.92
+            "ratio": 103.88,
+            "momentum": 87.69
           },
           {
-            "ratio": 102.92,
-            "momentum": 89.37
+            "ratio": 102.27,
+            "momentum": 87.43
           }
         ]
       },
       "constituents": [
         "NEM",
         "AEM",
-        "GOLD",
+        "B",
         "WPM"
       ],
       "ref_etfs": [
