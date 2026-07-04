@@ -700,6 +700,62 @@ function initResetButton() {
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xjgqjnen';
 let feedbackData = null;
 
+// Convert a pasted clipboard image into a File and inject it into the
+// <input type="file"> so Formspree receives it like a normal upload. Also
+// updates the file input's files list via DataTransfer (the only cross-browser
+// way to programmatically set input.files).
+function initPhotoPasteHandler(form) {
+    const fileInput = document.getElementById('feedbackPhotoInput');
+    const pasteZone = document.getElementById('feedbackPasteZone');
+    const preview = document.getElementById('feedbackPhotoPreview');
+    if (!fileInput || !pasteZone) return;
+
+    const t = dict[currentLang] || dict.en;
+
+    const attachPastedImage = (file) => {
+        const dt = new DataTransfer();
+        dt.items.add(file);
+        fileInput.files = dt.files;
+        // Show a thumbnail + "attached" hint so the user knows it worked.
+        const url = URL.createObjectURL(file);
+        preview.innerHTML = `<img src="${url}" class="feedback-thumb" alt="preview">`;
+        pasteZone.innerText = t.feedback_paste_attached;
+        pasteZone.classList.add('attached');
+    };
+
+    // Listen for paste anywhere in the form — works for Ctrl+V / ⌘+V.
+    form.addEventListener('paste', (e) => {
+        const items = e.clipboardData?.items || [];
+        for (const item of items) {
+            if (item.type.startsWith('image/')) {
+                const file = item.getAsFile();
+                if (file) {
+                    e.preventDefault();
+                    // Give the file a sensible name + correct extension.
+                    const ext = file.type.split('/')[1] || 'png';
+                    const named = new File([file], `pasted-${Date.now()}.${ext}`, { type: file.type });
+                    attachPastedImage(named);
+                    return;
+                }
+            }
+        }
+    });
+
+    // Clicking the paste zone also opens the file picker (alternative entry).
+    pasteZone.addEventListener('click', () => fileInput.click());
+
+    // When user picks via the file picker, show preview + "attached" too.
+    fileInput.addEventListener('change', () => {
+        const file = fileInput.files?.[0];
+        if (file) {
+            const url = URL.createObjectURL(file);
+            preview.innerHTML = `<img src="${url}" class="feedback-thumb" alt="preview">`;
+            pasteZone.innerText = t.feedback_paste_attached;
+            pasteZone.classList.add('attached');
+        }
+    });
+}
+
 function initFeedbackButton() {
     const openBtn = document.getElementById('feedbackBtn');
     const modal = document.getElementById('feedbackModal');
@@ -714,6 +770,8 @@ function initFeedbackButton() {
     modal.addEventListener('click', (e) => {
         if (e.target === modal) modal.style.display = 'none';
     });
+
+    initPhotoPasteHandler(form);
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -736,6 +794,14 @@ function initFeedbackButton() {
                 status.classList.add('success');
                 status.innerText = t.feedback_success;
                 form.reset();
+                // Clear the photo preview + reset paste zone hint.
+                const preview = document.getElementById('feedbackPhotoPreview');
+                const pasteZone = document.getElementById('feedbackPasteZone');
+                if (preview) preview.innerHTML = '';
+                if (pasteZone) {
+                    pasteZone.innerText = t.feedback_paste_hint;
+                    pasteZone.classList.remove('attached');
+                }
                 setTimeout(() => { modal.style.display = 'none'; status.innerText = ''; }, 3000);
             } else {
                 const data = await res.json().catch(() => ({}));

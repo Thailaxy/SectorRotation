@@ -651,3 +651,27 @@ html[data-theme="light"] .etf-modal-content {
 .feedback-thumb:hover {
     transform: scale(1.05);
 }
+
+/* Paste-to-upload zone + preview thumbnail */
+.feedback-paste-zone {
+    margin-top: 6px;
+    padding: 10px 12px;
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    cursor: pointer;
+    transition: border-color 0.12s, color 0.12s, background 0.12s;
+}
+.feedback-paste-zone:hover {
+    border-color: var(--muted);
+    background: var(--card-overlay);
+}
+.feedback-paste-zone.attached {
+    border-style: solid;
+    border-color: var(--leading);
+    color: var(--leading);
+}
+.feedback-photo-preview {
+    margin-top: 8px;
+}

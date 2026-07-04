@@ -160,7 +160,9 @@
                 </label>
                 <label>
                     <span data-i18n="feedback_photo">Attach photo (optional)</span>
-                    <input type="file" name="photo" accept="image/*">
+                    <input type="file" name="photo" id="feedbackPhotoInput" accept="image/*">
+                    <div id="feedbackPasteZone" class="feedback-paste-zone" data-i18n="feedback_paste_hint">…or paste an image with Ctrl+V / ⌘+V</div>
+                    <div id="feedbackPhotoPreview" class="feedback-photo-preview"></div>
                 </label>
                 <label>
                     <span data-i18n="feedback_email">Email (optional — only seen by admin, never public)</span>
