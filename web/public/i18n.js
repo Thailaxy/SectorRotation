@@ -61,7 +61,7 @@ const dict = {
     }
 };
 
-let currentLang = localStorage.getItem('lang') || 'th';
+let currentLang = localStorage.getItem('lang') || 'en';
 
 function applyTranslations() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
