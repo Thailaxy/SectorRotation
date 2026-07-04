@@ -344,3 +344,196 @@ footer .note {
 .bb-green { background: var(--leading); }
 .bb-yellow { background: var(--weakening); }
 .bb-red { background: var(--lagging); }
+
+/* ─── Period selector / view toggle / ETF modal ─── */
+.heatmap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.heatmap-controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.view-toggle-btn, .etf-select-btn, .reset-btn {
+    padding: 6px 12px;
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: inherit;
+    transition: background 0.12s, border-color 0.12s;
+}
+.view-toggle-btn:hover, .etf-select-btn:hover, .reset-btn:hover {
+    background: var(--card-overlay);
+    border-color: var(--muted);
+}
+
+.period-selector {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.period-btn {
+    padding: 5px 12px;
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.15s;
+}
+.period-btn.active {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+}
+.period-btn:hover { border-color: var(--muted); }
+
+.vs-spy-row {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+.vs-spy-row select {
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 3px 6px;
+    font-family: inherit;
+    margin-left: 4px;
+}
+
+/* ETF modal */
+.etf-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    /* Theme-aware backdrop: dark page gets dark scrim, light page gets light scrim.
+       Using a semi-opaque panel color keeps the page readable behind the modal
+       while avoiding the "black sheet over a white page" look. */
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    overflow: auto;
+    animation: etf-fade-in 0.15s ease-out;
+}
+html[data-theme="light"] .etf-modal {
+    background: rgba(110, 118, 128, 0.45);
+}
+@keyframes etf-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.etf-modal-content {
+    /* Use --panel (always defined) not --card (was undefined → transparent!). */
+    background: var(--panel);
+    color: var(--text);
+    margin: 5vh auto;
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    max-width: 720px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    animation: etf-slide-in 0.18s ease-out;
+}
+html[data-theme="light"] .etf-modal-content {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+@keyframes etf-slide-in {
+    from { transform: translateY(-12px); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+}
+.etf-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.etf-modal-header h3 { margin: 0; font-size: 1.05rem; }
+.etf-modal-header button {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    margin-left: 6px;
+    transition: background 0.12s, border-color 0.12s;
+}
+.etf-modal-header button:hover {
+    background: var(--card-overlay);
+    border-color: var(--muted);
+}
+.etf-modal-header #etfCounter {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-right: 8px;
+    font-variant-numeric: tabular-nums;
+}
+.etf-checklist {
+    column-count: 2;
+    column-gap: 28px;
+}
+@media (max-width: 600px) {
+    .etf-checklist { column-count: 1; }
+}
+.etf-group {
+    break-inside: avoid;
+    margin-bottom: 16px;
+}
+.etf-group-title {
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--border);
+}
+.etf-check {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    padding: 4px 6px;
+    margin: 2px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.1s;
+}
+.etf-check:hover {
+    background: var(--card-overlay);
+}
+/* Native checkbox recolor so it picks up the theme accent instead of the
+   browser default blue — matches the toggle-on affordance elsewhere. */
+.etf-check input[type="checkbox"] {
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+    accent-color: var(--text);
+    cursor: pointer;
+}
+.etf-check input[type="checkbox"]:checked {
+    accent-color: var(--leading);
+}
