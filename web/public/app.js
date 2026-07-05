@@ -61,7 +61,10 @@ function initUI() {
     initViewToggle();
     initEtfPanel();
     initResetButton();
-    initFeedbackButton();
+    // NOTE: initFeedbackButton() is NOT called here. It binds a submit handler
+    // to the form, and re-binding on every lang toggle / mode switch would
+    // stack multiple handlers and break the form. It's bound once at page load
+    // instead (see bottom of file).
 
     // The "Select ETFs" button is always visible (clicking it auto-enters ETF mode
     // + opens the modal in one action — more discoverable than hiding it).
@@ -707,6 +710,12 @@ function initFeedbackButton() {
     const form = document.getElementById('feedbackForm');
     if (!openBtn || !modal || !form) return;
 
+    // Guard against double-binding — if this ever runs twice (e.g. called from
+    // multiple places), don't stack submit handlers. The data-bound flag is
+    // more robust than a module-level boolean.
+    if (form.dataset.bound === 'true') return;
+    form.dataset.bound = 'true';
+
     openBtn.addEventListener('click', () => {
         modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
     });
@@ -811,3 +820,6 @@ function escapeHtml(s) {
 
 loadData();
 loadFeedback();
+// Bind feedback button ONCE on initial page load. Re-binding inside initUI()
+// stacked multiple submit handlers and broke the form on lang toggle.
+initFeedbackButton();
