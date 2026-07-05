@@ -155,33 +155,51 @@ def fetch_data(tickers, benchmark, history_days, retries=3, retry_wait_sec=5):
     # Normalize indexes: yfinance sometimes returns tz-aware or intraday
     # timestamps which then fail to align with cache data (tz-naive midnight).
     # Force everything to clean tz-naive midnight before merging.
-    if not final_close.empty:
-        final_close.index = pd.to_datetime(final_close.index).tz_localize(None).normalize()
-        final_close = final_close[~final_close.index.duplicated(keep='last')]
-    if not final_vol.empty:
-        final_vol.index = pd.to_datetime(final_vol.index).tz_localize(None).normalize()
-        final_vol = final_vol[~final_vol.index.duplicated(keep='last')]
-    if cache_df is not None:
-        cache_df.index = pd.to_datetime(cache_df.index).tz_localize(None).normalize()
-        cache_df = cache_df[~cache_df.index.duplicated(keep='last')]
-    if vol_cache_df is not None:
-        vol_cache_df.index = pd.to_datetime(vol_cache_df.index).tz_localize(None).normalize()
-        vol_cache_df = vol_cache_df[~vol_cache_df.index.duplicated(keep='last')]
+    def _normalize_idx(df):
+        if df is None or df.empty:
+            return df
+        # tz_convert(None) converts tz-aware → UTC naive; tz_localize(None) is a
+        # no-op on tz-naive. Use a try/except to handle both safely.
+        idx = pd.to_datetime(df.index)
+        try:
+            idx = idx.tz_convert(None)
+        except (TypeError, AttributeError):
+            pass
+        df = df.copy()
+        df.index = idx.normalize()
+        return df[~df.index.duplicated(keep='last')]
 
+    final_close = _normalize_idx(final_close)
+    final_vol = _normalize_idx(final_vol)
+    cache_df = _normalize_idx(cache_df)
+    vol_cache_df = _normalize_idx(vol_cache_df)
+
+    # Merge cache as FALLBACK ONLY. The previous bug: combine_first preferred
+    # cache values where cache was non-null, even when fresh data existed. That
+    # meant stale cache entries (e.g. 6 rows of SPY at $720) survived even when
+    # the live fetch had clean data. New rule: only use cache to FILL NaN gaps
+    # in the live data, never to overwrite.
     if cache_df is not None:
         for ticker in all_tickers:
-            if ticker not in final_close.columns or final_close[ticker].isna().all():
-                if ticker in cache_df.columns:
-                    # reindex cache values onto final_close's index, then assign
-                    aligned = cache_df[ticker].reindex(final_close.index)
-                    final_close[ticker] = aligned.combine_first(final_close[ticker])
+            if ticker in cache_df.columns:
+                if ticker not in final_close.columns:
+                    # Ticker entirely missing from live → use cache entirely.
+                    final_close[ticker] = cache_df[ticker].reindex(final_close.index)
+                else:
+                    # Ticker exists in live → only fill NaN gaps from cache.
+                    live = final_close[ticker]
+                    cache_aligned = cache_df[ticker].reindex(final_close.index)
+                    final_close[ticker] = live.where(live.notna(), cache_aligned)
 
     if vol_cache_df is not None:
         for ticker in all_tickers:
-            if ticker not in final_vol.columns or final_vol[ticker].isna().all():
-                if ticker in vol_cache_df.columns:
-                    aligned = vol_cache_df[ticker].reindex(final_vol.index)
-                    final_vol[ticker] = aligned.combine_first(final_vol[ticker])
+            if ticker in vol_cache_df.columns:
+                if ticker not in final_vol.columns:
+                    final_vol[ticker] = vol_cache_df[ticker].reindex(final_vol.index)
+                else:
+                    live = final_vol[ticker]
+                    cache_aligned = vol_cache_df[ticker].reindex(final_vol.index)
+                    final_vol[ticker] = live.where(live.notna(), cache_aligned)
 
     os.makedirs("cache", exist_ok=True)
     if not final_close.empty:
