@@ -49,19 +49,23 @@ def fetch_top_holdings(ticker):
 
     NOTE: funds_data returns None for non-fund tickers or on yfinance failures.
     ARKK and some active ETFs may return None — caller leaves them unchanged.
+
+    BUGFIX: top_holdings is a DataFrame whose INDEX is the symbol (ticker),
+    not a column. The columns are ['Name', 'Holding Percent']. Earlier code
+    looked for a 'Symbol' column that didn't exist, so it returned None for
+    every ETF and the script silently populated nothing.
     """
     try:
         t = yf.Ticker(ticker)
         fd = t.funds_data
         if fd is None:
             return None
-        # top_holdings is a DataFrame: columns include 'Symbol', 'Holding Percent'
+        # top_holdings DataFrame: index=Symbol, columns=['Name', 'Holding Percent']
         th = fd.top_holdings
         if th is None or th.empty:
             return None
-        if "Symbol" not in th.columns:
-            return None
-        symbols = th["Symbol"].dropna().astype(str).tolist()
+        # Symbol is the INDEX. Use th.index, not a 'Symbol' column.
+        symbols = th.index.dropna().astype(str).tolist()
         return symbols[:TOP_N]
     except Exception as e:
         print(f"  ! {ticker}: error fetching holdings: {e!r}", file=sys.stderr)

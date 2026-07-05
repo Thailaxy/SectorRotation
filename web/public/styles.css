@@ -675,3 +675,40 @@ html[data-theme="light"] .etf-modal-content {
 .feedback-photo-preview {
     margin-top: 8px;
 }
+
+/* ETF selector: search input + clear-all button */
+.etf-search-input {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    width: 220px;
+    margin-left: 6px;
+}
+.etf-search-input:focus {
+    outline: none;
+    border-color: var(--muted);
+}
+.etf-search-clear {
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 2px 4px;
+    margin-left: -22px;
+    position: relative;
+    z-index: 2;
+}
+.etf-search-empty {
+    color: var(--muted);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 24px;
+}
+@media (max-width: 600px) {
+    .etf-search-input { width: 100%; margin: 6px 0; }
+}

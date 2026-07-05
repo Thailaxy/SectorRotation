@@ -36,6 +36,9 @@ const dict = {
         select_etfs_title: "Select ETFs (max 20)",
         etfs_selected: (n) => `${n} / 20 ETFs selected`,
         reset_to_default: "Reset to default",
+        clear_all: "Clear all",
+        etf_search_placeholder: "Search ETF by ticker or name...",
+        etf_min_one: "Select at least 1 ETF.",
         etf_name_label: "ETF",
         vs_spy_suffix: "vs SPY",
         // ─── Feedback feature ───
@@ -97,6 +100,9 @@ const dict = {
         select_etfs_title: "เลือก ETF (สูงสุด 20)",
         etfs_selected: (n) => `เลือกแล้ว ${n} / 20 ETF`,
         reset_to_default: "คืนค่าเริ่มต้น",
+        clear_all: "ล้างทั้งหมด",
+        etf_search_placeholder: "ค้นหา ETF ตามรหัสหรือชื่อ...",
+        etf_min_one: "เลือก ETF อย่างน้อย 1 ตัว",
         etf_name_label: "ETF",
         vs_spy_suffix: "เทียบ SPY",
         // ─── Feedback feature ───

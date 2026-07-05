@@ -581,6 +581,8 @@ function initEtfPanel() {
     const modal = document.getElementById('etfModal');
     const closeBtn = document.getElementById('etfModalClose');
     const resetBtn = document.getElementById('etfResetBtn');
+    const clearBtn = document.getElementById('etfClearBtn');
+    const searchInput = document.getElementById('etfSearchInput');
     if (!openBtn || !modal) return;
 
     // Open/close toggle. Clicking the gear also auto-enters ETF mode so users
@@ -604,6 +606,11 @@ function initEtfPanel() {
         }
         renderEtfChecklist();
         modal.style.display = 'block';
+        // Focus the search input for instant typing.
+        if (searchInput) {
+            searchInput.value = '';
+            setTimeout(() => searchInput.focus(), 50);
+        }
     });
     if (closeBtn) {
         closeBtn.addEventListener('click', () => modal.style.display = 'none');
@@ -614,7 +621,37 @@ function initEtfPanel() {
             localStorage.setItem('selectedEtfs', JSON.stringify(selectedEtfs));
             renderEtfChecklist();
             renderHeatmap();
+            renderBreadth();
         });
+    }
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            // Clear all but enforce minimum 1 — pick SPY as the canonical default.
+            selectedEtfs = ['SPY'];
+            localStorage.setItem('selectedEtfs', JSON.stringify(selectedEtfs));
+            renderEtfChecklist();
+            renderHeatmap();
+            renderBreadth();
+        });
+    }
+    // Live search filter — re-renders the checklist as the user types.
+    if (searchInput) {
+        searchInput.addEventListener('input', () => {
+            const term = searchInput.value.toLowerCase().trim();
+            const clearX = document.getElementById('etfSearchClear');
+            if (clearX) clearX.style.display = term ? '' : 'none';
+            renderEtfChecklist(term);
+        });
+        // Click the ✕ inside the search field to clear it.
+        const searchClear = document.getElementById('etfSearchClear');
+        if (searchClear) {
+            searchClear.addEventListener('click', () => {
+                searchInput.value = '';
+                searchClear.style.display = 'none';
+                renderEtfChecklist();
+                searchInput.focus();
+            });
+        }
     }
     // Click outside modal closes it.
     modal.addEventListener('click', (e) => {
@@ -622,19 +659,36 @@ function initEtfPanel() {
     });
 }
 
-function renderEtfChecklist() {
+function renderEtfChecklist(filterTerm = '') {
     const list = document.getElementById('etfChecklist');
     const counter = document.getElementById('etfCounter');
     if (!list || !counter) return;
     const t = dict[currentLang] || dict.en;
     list.innerHTML = '';
 
+    const term = (filterTerm || '').toLowerCase().trim();
+
     // Group ETFs by theme_label for easier scanning.
     const groups = {};
     (appData.etfs || []).forEach(e => {
+        // When a search term is active, filter by ticker or name match.
+        if (term) {
+            const hay = `${e.ticker} ${e.name || ''} ${e.theme_label || ''}`.toLowerCase();
+            if (!hay.includes(term)) return;
+        }
         const g = e.theme_label || 'Other';
         (groups[g] = groups[g] || []).push(e);
     });
+
+    // If the search matched nothing, show a friendly empty state.
+    if (Object.keys(groups).length === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'etf-search-empty';
+        empty.innerText = `No ETFs match "${filterTerm}"`;
+        list.appendChild(empty);
+        counter.innerText = t.etfs_selected((selectedEtfs || []).length);
+        return;
+    }
 
     const sel = selectedEtfs || [];
     Object.keys(groups).sort().forEach(g => {
@@ -661,11 +715,18 @@ function renderEtfChecklist() {
                     }
                     selectedEtfs = [...(selectedEtfs || []), e.ticker];
                 } else {
+                    // Enforce minimum 1 selection.
+                    if ((selectedEtfs || []).length <= 1) {
+                        cb.checked = true;
+                        alert(t.etf_min_one);
+                        return;
+                    }
                     selectedEtfs = (selectedEtfs || []).filter(x => x !== e.ticker);
                 }
                 localStorage.setItem('selectedEtfs', JSON.stringify(selectedEtfs));
                 counter.innerText = t.etfs_selected((selectedEtfs || []).length);
                 renderHeatmap();
+                renderBreadth();
             });
             label.appendChild(cb);
             label.appendChild(document.createTextNode(` ${e.ticker} — ${e.name || ''}`));
