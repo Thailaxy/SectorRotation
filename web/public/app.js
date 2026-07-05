@@ -550,6 +550,11 @@ function initVsSpyDropdown() {
         if (p === vsPeriod) opt.selected = true;
         sel.appendChild(opt);
     });
+    // Guard: bind change handler once. The <select> element persists across
+    // initUI() calls (only its options are rebuilt), so without this the
+    // change handler would stack on every lang toggle and fire multiple times.
+    if (sel.dataset.bound === 'true') return;
+    sel.dataset.bound = 'true';
     sel.addEventListener('change', () => {
         vsPeriod = sel.value;
         localStorage.setItem('vsPeriod', vsPeriod);
@@ -561,7 +566,12 @@ function initViewToggle() {
     const btn = document.getElementById('viewToggle');
     if (!btn) return;
     const t = dict[currentLang] || dict.en;
+    // Always update the label (lang changes need this).
     btn.innerText = etfMode ? t.view_themes : t.view_etfs;
+    // Guard: bind the click handler only once. initUI() runs on every lang/mode
+    // change and would otherwise stack handlers and break the button.
+    if (btn.dataset.bound === 'true') return;
+    btn.dataset.bound = 'true';
     btn.addEventListener('click', () => {
         etfMode = !etfMode;
         localStorage.setItem('etfMode', etfMode ? 'true' : 'false');
@@ -585,6 +595,12 @@ function initEtfPanel() {
     const searchInput = document.getElementById('etfSearchInput');
     if (!openBtn || !modal) return;
 
+    // Guard against double-binding — initUI() runs on every lang/mode toggle
+    // and would otherwise stack click handlers on this button, breaking it
+    // (the classic "open on second click" bug).
+    if (openBtn.dataset.bound === 'true') return;
+    openBtn.dataset.bound = 'true';
+
     // Open/close toggle. Clicking the gear also auto-enters ETF mode so users
     // don't have to click "View: ETFs" first — one click to see the selector.
     openBtn.addEventListener('click', () => {
@@ -592,7 +608,11 @@ function initEtfPanel() {
             modal.style.display = 'none';
             return;
         }
-        // Auto-switch to ETF mode (no-op if already in it).
+        // Auto-switch to ETF mode (no-op if already in it). Do TARGETED
+        // re-renders instead of calling initUI() — calling initUI() here would
+        // re-run initEtfPanel (no-op now thanks to the guard) and re-render
+        // unrelated sections, but more importantly it used to interfere with
+        // the modal display line below. Targeted renders avoid that.
         if (!etfMode) {
             etfMode = true;
             localStorage.setItem('etfMode', 'true');
@@ -602,7 +622,11 @@ function initEtfPanel() {
             }
             currentSort = 'm1';
             sortDesc = true;
-            initUI();
+            // Update the view-toggle button label to reflect new mode.
+            const toggleBtn = document.getElementById('viewToggle');
+            if (toggleBtn) toggleBtn.innerText = (dict[currentLang] || dict.en).view_themes;
+            renderHeatmap();
+            renderBreadth();
         }
         renderEtfChecklist();
         modal.style.display = 'block';
@@ -740,6 +764,8 @@ function renderEtfChecklist(filterTerm = '') {
 function initResetButton() {
     const btn = document.getElementById('resetBtn');
     if (!btn) return;
+    if (btn.dataset.bound === 'true') return;
+    btn.dataset.bound = 'true';
     btn.addEventListener('click', () => {
         localStorage.removeItem('selectedPeriods');
         localStorage.removeItem('vsPeriod');
