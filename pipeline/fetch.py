@@ -151,18 +151,37 @@ def fetch_data(tickers, benchmark, history_days, retries=3, retry_wait_sec=5):
     
     final_close = pd.DataFrame(close_dict)
     final_vol = pd.DataFrame(vol_dict)
-    
+
+    # Normalize indexes: yfinance sometimes returns tz-aware or intraday
+    # timestamps which then fail to align with cache data (tz-naive midnight).
+    # Force everything to clean tz-naive midnight before merging.
+    if not final_close.empty:
+        final_close.index = pd.to_datetime(final_close.index).tz_localize(None).normalize()
+        final_close = final_close[~final_close.index.duplicated(keep='last')]
+    if not final_vol.empty:
+        final_vol.index = pd.to_datetime(final_vol.index).tz_localize(None).normalize()
+        final_vol = final_vol[~final_vol.index.duplicated(keep='last')]
+    if cache_df is not None:
+        cache_df.index = pd.to_datetime(cache_df.index).tz_localize(None).normalize()
+        cache_df = cache_df[~cache_df.index.duplicated(keep='last')]
+    if vol_cache_df is not None:
+        vol_cache_df.index = pd.to_datetime(vol_cache_df.index).tz_localize(None).normalize()
+        vol_cache_df = vol_cache_df[~vol_cache_df.index.duplicated(keep='last')]
+
     if cache_df is not None:
         for ticker in all_tickers:
             if ticker not in final_close.columns or final_close[ticker].isna().all():
                 if ticker in cache_df.columns:
-                    final_close[ticker] = cache_df[ticker]
-                    
+                    # reindex cache values onto final_close's index, then assign
+                    aligned = cache_df[ticker].reindex(final_close.index)
+                    final_close[ticker] = aligned.combine_first(final_close[ticker])
+
     if vol_cache_df is not None:
         for ticker in all_tickers:
             if ticker not in final_vol.columns or final_vol[ticker].isna().all():
                 if ticker in vol_cache_df.columns:
-                    final_vol[ticker] = vol_cache_df[ticker]
+                    aligned = vol_cache_df[ticker].reindex(final_vol.index)
+                    final_vol[ticker] = aligned.combine_first(final_vol[ticker])
 
     os.makedirs("cache", exist_ok=True)
     if not final_close.empty:

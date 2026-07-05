@@ -712,3 +712,304 @@ html[data-theme="light"] .etf-modal-content {
 @media (max-width: 600px) {
     .etf-search-input { width: 100%; margin: 6px 0; }
 }
+
+/* ════════════════════════════════════════════════════════════════════
+   MOBILE / TABLET RESPONSIVE OVERHAUL
+   Breakpoints: 768px (tablet portrait), 480px (phone)
+   ════════════════════════════════════════════════════════════════════ */
+
+/* ─── HEADER ─── */
+@media (max-width: 768px) {
+    header {
+        padding: 12px 14px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    header h1 {
+        font-size: 1.1rem;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+    .header-right {
+        display: flex;
+        gap: 6px;
+        flex-wrap: nowrap;
+    }
+    .header-right button {
+        font-size: 0.8rem;
+        padding: 6px 8px;
+    }
+    #langToggle {
+        min-width: 60px;
+    }
+    main {
+        padding: 14px 12px;
+    }
+    .hero {
+        margin-bottom: 1.25rem;
+    }
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+    .hero p, .section-intro {
+        font-size: 0.85rem;
+    }
+}
+
+/* ─── HEATMAP CONTROLS (period selector, vs SPY dropdown, view buttons) ─── */
+@media (max-width: 768px) {
+    .heatmap-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .heatmap-controls {
+        justify-content: space-between;
+        gap: 6px;
+    }
+    .heatmap-controls button {
+        flex: 1 1 auto;
+        font-size: 0.8rem;
+        padding: 7px 6px;
+        min-width: 0;
+    }
+    .period-selector {
+        gap: 4px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .period-btn {
+        flex: 0 0 auto;
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+    .vs-spy-row {
+        font-size: 0.8rem;
+    }
+    .vs-spy-row select {
+        max-width: 90px;
+    }
+}
+
+/* ─── HEATMAP TABLE — the worst offender on mobile ─── */
+@media (max-width: 768px) {
+    /* Make the heatmap horizontally scrollable so all columns stay visible.
+       Users pan horizontally to see columns that don't fit. */
+    .table-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -12px;
+        padding: 0 12px;
+    }
+    .table-scroll table {
+        width: 100%;
+        min-width: 600px;  /* forces scroll on narrow screens */
+    }
+    #heatmapTable td, #heatmapTable th {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+    }
+    /* First column (theme/ETF name) — allow wrapping instead of forcing nowrap */
+    #heatmapTable td:first-child, #heatmapTable th:first-child {
+        white-space: normal;
+        min-width: 110px;
+        max-width: 160px;
+        word-break: break-word;
+    }
+    .zone-cell {
+        width: auto;
+        min-width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Phone: shrink fonts further, denser rows */
+    #heatmapTable td, #heatmapTable th {
+        padding: 6px 4px;
+        font-size: 0.78rem;
+    }
+    #heatmapTable td:first-child, #heatmapTable th:first-child {
+        min-width: 90px;
+        max-width: 130px;
+    }
+    /* Hide the "ETF name" subtitle line on phone to save vertical space */
+    #heatmapTable td br + span {
+        display: none;
+    }
+}
+
+/* ─── BREADTH TABLE ─── */
+@media (max-width: 768px) {
+    #breadthTable td, #breadthTable th {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+    }
+    .breadth-bar-container {
+        height: 4px;
+    }
+}
+@media (max-width: 480px) {
+    #breadthTable td:first-child {
+        max-width: 110px;
+        word-break: break-word;
+    }
+    #breadthTable td br + span {
+        display: none;
+    }
+}
+
+/* ─── ETF SELECTOR MODAL ─── */
+@media (max-width: 768px) {
+    .etf-modal-content {
+        margin: 2vh 8px;
+        padding: 16px 14px;
+        max-height: 92vh;
+        max-width: calc(100% - 16px);
+        border-radius: 8px;
+    }
+    .etf-modal-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .etf-modal-header h3 {
+        font-size: 0.95rem;
+    }
+    .etf-modal-header > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+    }
+    .etf-modal-header button {
+        flex: 0 0 auto;
+        font-size: 0.78rem;
+        padding: 5px 8px;
+        margin-left: 0;
+    }
+    #etfCounter {
+        flex: 1 1 100%;
+        font-size: 0.8rem;
+    }
+    .etf-search-input {
+        flex: 1 1 100%;
+        width: 100%;
+        margin: 0;
+    }
+    .etf-checklist {
+        column-count: 1;  /* single column on tablet/phone for readability */
+    }
+    .etf-check {
+        padding: 6px 4px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ─── FEEDBACK MODAL ─── */
+@media (max-width: 768px) {
+    .feedback-modal-content {
+        margin: 2vh 8px;
+        max-width: calc(100% - 16px);
+        padding: 16px 14px;
+    }
+}
+
+/* ─── PLAYBOOK / BREADTH / APPENDIX grids ─── */
+@media (max-width: 768px) {
+    .playbook-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .appendix-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ─── FEEDBACK TABLE ─── */
+@media (max-width: 768px) {
+    #feedbackTable td:nth-child(2) {
+        max-width: 60vw;
+    }
+    .feedback-thumb {
+        max-width: 90px;
+        max-height: 60px;
+    }
+}
+@media (max-width: 480px) {
+    /* Phone: stack the feedback rows vertically instead of side-by-side */
+    #feedbackTable, #feedbackTable tbody, #feedbackTable tr, #feedbackTable td {
+        display: block;
+        width: 100%;
+    }
+    #feedbackTable thead { display: none; }
+    #feedbackTable tr {
+        margin-bottom: 12px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 8px;
+    }
+    #feedbackTable td {
+        border: none;
+        padding: 4px 0;
+    }
+    #feedbackTable td:nth-child(2) {
+        max-width: none;
+    }
+}
+
+/* ─── RRG CHART ─── */
+@media (max-width: 768px) {
+    #rrgChart {
+        height: 400px;
+    }
+}
+@media (max-width: 480px) {
+    #rrgChart {
+        height: 320px;
+    }
+}
+
+/* ─── Prevent iOS Safari zoom-on-focus for form inputs ─── */
+/* iOS Safari auto-zooms when input font-size < 16px. Force 16px on phones
+   to prevent the disorienting zoom when a user focuses the search/email field. */
+@media (max-width: 768px) {
+    .etf-search-input,
+    .feedback-form input[type="text"],
+    .feedback-form input[type="email"],
+    .feedback-form textarea {
+        font-size: 16px;
+    }
+    .vs-spy-row select {
+        font-size: 16px;
+    }
+}
+
+/* ─── Tap target sizing (Apple/Google recommend ≥44px) ─── */
+@media (max-width: 768px) {
+    .period-btn,
+    .view-toggle-btn,
+    .etf-select-btn,
+    .reset-btn,
+    .feedback-btn,
+    .header-right button {
+        min-height: 36px;
+    }
+    .etf-check {
+        min-height: 36px;
+    }
+}
+
+/* ─── SAFE AREA INSETS for notched phones (iPhone X+) ─── */
+@supports (padding: max(0px)) {
+    header {
+        padding-left: max(14px, env(safe-area-inset-left));
+        padding-right: max(14px, env(safe-area-inset-right));
+        padding-top: max(12px, env(safe-area-inset-top));
+    }
+    main {
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+        padding-bottom: max(20px, env(safe-area-inset-bottom));
+    }
+}
