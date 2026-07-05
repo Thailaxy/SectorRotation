@@ -21,6 +21,7 @@
     --lagging-text: #000000;
     --card-overlay: rgba(0, 0, 0, 0.2);
     --panel-shadow: none;
+    --header-bg: rgba(22, 27, 34, 0.85);
 }
 
 html[data-theme="light"] {
@@ -43,6 +44,7 @@ html[data-theme="light"] {
     --lagging-text: #ffffff;
     --card-overlay: rgba(0, 0, 0, 0.035);
     --panel-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --header-bg: rgba(255, 255, 255, 0.85);
 }
 
 * {
@@ -65,12 +67,17 @@ header {
     align-items: center;
     padding: 1rem 2rem;
     border-bottom: 1px solid var(--border);
-    background-color: var(--panel);
+    background-color: var(--header-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .header-left h1 {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: -0.01em;
     color: var(--text);
 }
@@ -257,9 +264,14 @@ tbody tr:hover td:first-child {
 .playbook-card {
     border: 1px solid var(--border);
     border-top: 3px solid;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 1rem;
     background: var(--card-overlay);
+    box-shadow: var(--panel-shadow);
+    transition: transform 0.1s ease;
+}
+.playbook-card:active {
+    transform: translateY(-2px);
 }
 .playbook-card.leading { border-top-color: var(--leading); }
 .playbook-card.improving { border-top-color: var(--improving); }
@@ -294,9 +306,10 @@ tbody tr:hover td:first-child {
 }
 .appendix-card {
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 1rem;
     background: var(--card-overlay);
+    box-shadow: var(--panel-shadow);
 }
 .appendix-card h3 {
     font-size: 1rem;
@@ -596,6 +609,15 @@ html[data-theme="light"] .etf-modal-content {
     padding: 8px 10px;
     font-family: inherit;
     font-size: 0.9rem;
+    transition: box-shadow 0.15s, border-color 0.15s;
+}
+.feedback-form input[type="text"]:focus,
+.feedback-form input[type="email"]:focus,
+.feedback-form textarea:focus,
+.etf-search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--improving);
+    border-color: var(--improving);
 }
 .feedback-form input[type="file"] {
     font-size: 0.85rem;
@@ -690,7 +712,8 @@ html[data-theme="light"] .etf-modal-content {
 }
 .etf-search-input:focus {
     outline: none;
-    border-color: var(--muted);
+    box-shadow: 0 0 0 2px var(--improving);
+    border-color: var(--improving);
 }
 .etf-search-clear {
     background: transparent;
@@ -745,6 +768,10 @@ html[data-theme="light"] .etf-modal-content {
     main {
         padding: 14px 12px;
     }
+    h2 {
+        font-size: 1.15rem;
+        border-bottom-width: 2px;
+    }
     .hero {
         margin-bottom: 1.25rem;
     }
@@ -753,6 +780,12 @@ html[data-theme="light"] .etf-modal-content {
     }
     .hero p, .section-intro {
         font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rrg-container, .heatmap-container, .playbook-section, .breadth-section, .appendix-section, .feedback-section {
+        padding: 1rem 12px;
     }
 }
 
@@ -850,12 +883,39 @@ html[data-theme="light"] .etf-modal-content {
     }
 }
 @media (max-width: 480px) {
-    #breadthTable td:first-child {
-        max-width: 110px;
-        word-break: break-word;
+    /* Stack breadth table rows vertically */
+    #breadthTable, #breadthTable tbody, #breadthTable tr, #breadthTable td {
+        display: block;
+        width: 100%;
+        text-align: left;
     }
-    #breadthTable td br + span {
-        display: none;
+    #breadthTable thead { display: none; }
+    #breadthTable tr {
+        margin-bottom: 12px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 12px;
+        background: var(--card-overlay);
+    }
+    #breadthTable td {
+        border: none;
+        padding: 4px 0;
+    }
+    #breadthTable td:first-child {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 4px;
+        max-width: none;
+    }
+    #breadthTable td:nth-child(2)::before {
+        content: '% Above 20DMA: ';
+        font-size: 0.8rem;
+        color: var(--muted);
+    }
+    #breadthTable td:nth-child(3)::before {
+        content: 'Dollar Vol Ratio: ';
+        font-size: 0.8rem;
+        color: var(--muted);
     }
 }
 
@@ -993,10 +1053,10 @@ html[data-theme="light"] .etf-modal-content {
     .reset-btn,
     .feedback-btn,
     .header-right button {
-        min-height: 36px;
+        min-height: 44px;
     }
     .etf-check {
-        min-height: 36px;
+        min-height: 44px;
     }
 }
 
@@ -1010,6 +1070,8 @@ html[data-theme="light"] .etf-modal-content {
     main {
         padding-left: max(12px, env(safe-area-inset-left));
         padding-right: max(12px, env(safe-area-inset-right));
-        padding-bottom: max(20px, env(safe-area-inset-bottom));
+    }
+    footer {
+        padding-bottom: max(2rem, env(safe-area-inset-bottom));
     }
 }
