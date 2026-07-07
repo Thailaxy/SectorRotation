@@ -227,7 +227,20 @@ def fetch_data(tickers, benchmark, history_days, retries=3, retry_wait_sec=5):
         final_close.to_csv(cache_file)
     if not final_vol.empty:
         final_vol.to_csv(vol_cache_file)
-    
+
+    # Trim trailing rows the benchmark hasn't traded yet. The pipeline runs at
+    # 22:30 UTC, when Asian/Australian markets are already on "tomorrow" from a
+    # US perspective; their tickers inject a future-date row that US tickers
+    # have no data for. Without this trim, ffill below copies each US ticker's
+    # last real close into that future row, making the last two rows identical
+    # and zeroing every 1D return. Anchoring to the benchmark's last real close
+    # restricts ffill to interior gaps (its intended purpose).
+    if benchmark in final_close.columns:
+        bench_last = final_close[benchmark].last_valid_index()
+        if bench_last is not None:
+            final_close = final_close.loc[:bench_last]
+            final_vol = final_vol.loc[:bench_last]
+
     final_close = final_close.ffill(limit=2)
     final_vol = final_vol.ffill(limit=2)
     
