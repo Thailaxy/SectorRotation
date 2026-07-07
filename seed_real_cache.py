@@ -27,7 +27,10 @@ for holds in holdings.values():
 all_tickers = list(set(tickers))
 
 # Match fetch.py: history_days is calendar days. 1825 ≈ 5Y (per config.yaml).
-end_date = pd.Timestamp.today().normalize()
+# Use the same UTC-anchored, exclusive end_date as fetch_data() so the cache
+# seed covers the same range the daily pipeline will request.
+from pipeline.fetch import _fetch_end_date
+end_date = _fetch_end_date()
 start_date = end_date - datetime.timedelta(days=1825)
 
 # Match fetch.py exactly: auto_adjust=False, read 'Close' (not 'Adj Close').

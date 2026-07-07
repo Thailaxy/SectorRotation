@@ -4,6 +4,27 @@ import pandas as pd
 import yfinance as yf
 
 
+def _fetch_end_date(now_utc=None):
+    """Return the exclusive end_date for yfinance downloads, anchored to UTC.
+
+    yfinance's `end` is exclusive (pandas convention), so to include today's
+    close we pass tomorrow's date. We anchor to UTC (not local time) so CI
+    runners and developer machines compute the same date regardless of their
+    timezone — the previous code used `pd.Timestamp.today()`, which made the
+    GitHub Actions runner (UTC) cut off one day earlier than a +07 developer
+    machine, producing a stale `as_of_date` and all-zero 1D returns.
+    """
+    ts = now_utc if now_utc is not None else pd.Timestamp.utcnow()
+    # Drop tz info. We avoid tz_convert(None): on Python 3.14 it triggers a
+    # SIGBUS in pandas' tz-conversion C-extension. pd.Timestamp(ts.value)
+    # reconstructs a tz-naive timestamp from the epoch, sidestepping the bug
+    # while producing identical results across pandas versions.
+    ts = pd.Timestamp(ts.value)
+    # DateOffset (not Timedelta) avoids a second C-ext SIGBUS on 3.14 when
+    # adding to a tz-naive Timestamp. Equivalent result.
+    return ts.normalize() + pd.DateOffset(days=1)
+
+
 def _fetch_via_yahoo_chart_api(ticker, start_date, end_date):
     """
     Fallback for tickers where yfinance's bulk download crashes (known bug
@@ -61,7 +82,7 @@ def fetch_data(tickers, benchmark, history_days, retries=3, retry_wait_sec=5):
             pass
 
     import datetime
-    end_date = pd.Timestamp.today().normalize()
+    end_date = _fetch_end_date()
     start_date = end_date - datetime.timedelta(days=history_days)
     
     all_tickers = list(set(tickers + [benchmark]))
