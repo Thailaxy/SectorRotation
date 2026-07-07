@@ -1,145 +1,336 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>US Sector & Theme Rotation Tracker - Onboarding Handoff</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handoff Document: Sector Rotation Tracker</title>
   <style>
+    :root {
+      --bg: #f9fafb;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+      --warning-bg: #fef3c7;
+      --warning-text: #92400e;
+      --warning-border: #fcd34d;
+      --info-bg: #dbeafe;
+      --info-text: #1e40af;
+      --info-border: #bfdbfe;
+      --code-bg: #f3f4f6;
+      --pre-bg: #1f2937;
+      --pre-text: #f3f4f6;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1117;
+        --surface: #1a1d27;
+        --text: #f0f0f5;
+        --text-muted: #9ca3af;
+        --border: #2a2e3a;
+        --accent: #60a5fa;
+        --warning-bg: rgba(255, 165, 2, 0.12);
+        --warning-text: #fcd34d;
+        --warning-border: rgba(255, 165, 2, 0.4);
+        --info-bg: rgba(37, 99, 235, 0.15);
+        --info-text: #93c5fd;
+        --info-border: rgba(37, 99, 235, 0.4);
+        --code-bg: #2a2e3a;
+        --pre-bg: #0a0c12;
+        --pre-text: #e5e7eb;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      margin: 2rem auto;
-      max-width: 900px;
-      color: #333;
+      color: var(--text);
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+      background: var(--bg);
     }
-    h1, h2, h3 {
-      color: #111;
-      border-bottom: 1px solid #eaeaea;
-      padding-bottom: 0.3em;
+
+    h1, h2, h3, h4 {
+      color: var(--text);
+      margin-top: 2rem;
     }
-    .callout {
-      background: #f1f8ff;
-      border-left: 4px solid #0366d6;
-      padding: 1rem;
-      border-radius: 4px;
-      margin: 1rem 0;
+    h1 {
+      border-bottom: 2px solid var(--accent);
+      color: var(--accent);
+      padding-bottom: 0.5rem;
+      font-size: 1.8rem;
     }
+    h2 {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      font-size: 1.4rem;
+    }
+    h3 { font-size: 1.15rem; }
+
+    p { margin: 0.6rem 0; }
+
+    a { color: var(--accent); }
+
     code {
-      background: #f6f8fa;
-      padding: 0.2em 0.4em;
-      border-radius: 3px;
-      font-size: 85%;
+      background: var(--code-bg);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
     }
+
     pre {
-      background: #f6f8fa;
-      padding: 1rem;
-      border-radius: 6px;
+      background: var(--pre-bg);
+      color: var(--pre-text);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
       overflow-x: auto;
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
+    pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+
+    ul, ol { padding-left: 1.5rem; }
+    li { margin: 0.25rem 0; }
+
     table {
-      border-collapse: collapse;
       width: 100%;
+      border-collapse: collapse;
       margin: 1rem 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 0.95rem;
     }
     th, td {
-      border: 1px solid #dfe2e5;
-      padding: 0.6rem 1rem;
+      padding: 0.7rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
     }
     th {
-      background: #f6f8fa;
+      background: var(--code-bg);
+      font-weight: 600;
+      color: var(--text);
+    }
+    tr:last-child td { border-bottom: none; }
+
+    .card {
+      background: var(--surface);
+      padding: 1.25rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin: 1.25rem 0;
+    }
+
+    .alert {
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      font-weight: 500;
+    }
+    .alert.warning {
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      border: 1px solid var(--warning-border);
+    }
+    .alert.info {
+      background: var(--info-bg);
+      color: var(--info-text);
+      border: 1px solid var(--info-border);
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .toc ul { margin: 0.3rem 0; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+    @media (max-width: 640px) {
+      body { padding: 20px 14px 40px; }
+      h1 { font-size: 1.5rem; }
+      h2 { font-size: 1.2rem; }
+      th, td { padding: 0.5rem 0.6rem; }
+      pre { padding: 0.75rem 1rem; }
     }
   </style>
 </head>
 <body>
-  <h1>Project Handoff & Onboarding</h1>
-  <p>Welcome to the <strong>US Sector & Theme Rotation Tracker</strong>. This document provides a high-level overview of the project architecture, tech stack, and setup instructions to get you started immediately.</p>
 
-  <div class="callout">
-    <strong>Note:</strong> For historical logs of what decisions were made and why, please refer to <code>readme.md</code> in the repository root.
+  <h1>Sector Rotation Tracker — Handoff Document</h1>
+
+  <div class="card">
+    <p>A US sector &amp; theme rotation dashboard. A Python pipeline pulls prices from Yahoo Finance, computes rotation/breadth metrics, and writes a single <code>data.json</code> consumed by a static vanilla-JS frontend. Fully automated via GitHub Actions and hosted on Firebase — runs for free, no server.</p>
   </div>
 
-  <h2>1. Project Architecture</h2>
-  <p>The system is a fully static website powered by a Python data pipeline. It runs completely for free using GitHub Actions and Firebase Hosting.</p>
+  <div class="toc">
+    <strong>Contents</strong>
+    <ul>
+      <li><a href="#overview">1. Project Overview</a></li>
+      <li><a href="#architecture">2. Architecture &amp; File Structure</a></li>
+      <li><a href="#features">3. Core Features &amp; Complexities</a></li>
+      <li><a href="#security">4. Security Architecture</a></li>
+      <li><a href="#setup">5. Local Development Setup</a></li>
+      <li><a href="#deploy">6. Deployment</a></li>
+      <li><a href="#env">7. Environment &amp; Configuration</a></li>
+      <li><a href="#tests">8. Testing</a></li>
+    </ul>
+  </div>
+
+  <h2 id="overview">1. Project Overview</h2>
+  <p>The dashboard tracks ~36 sector/theme groups and 100 user-selectable ETFs, showing each on a Relative Rotation Graph (RRG) quadrant (Leading / Weakening / Lagging / Improving) alongside per-period returns (1D/1W/1M/3M/6M/1Y/5Y) vs SPY, breadth (% of constituents above 20DMA), and dollar-volume ratio.</p>
+  <p><strong>Tech stack:</strong></p>
   <ul>
-    <li><strong>Frontend:</strong> Vanilla HTML, CSS, and JavaScript. No build tools (no Webpack, Vite, React, etc.). UI logic lives in <code>web/public/app.js</code>.</li>
-    <li><strong>Backend / Pipeline:</strong> Python scripts that fetch data from Yahoo Finance via <code>yfinance</code> and <code>curl_cffi</code> (to avoid bot blocking), perform calculations (RRG, returns, breadth), and output a single <code>data.json</code> file.</li>
-    <li><strong>Hosting:</strong> Firebase Hosting (migrating from GitHub Pages).</li>
-    <li><strong>Automation:</strong> GitHub Actions runs the Python pipeline daily after market close, saves the data cache, and deploys the updated <code>data.json</code> and frontend to Firebase.</li>
+    <li><strong>Frontend:</strong> Vanilla HTML/CSS/JS — no build tools, no framework. <code>web/public/app.js</code> is the single entry point.</li>
+    <li><strong>Pipeline:</strong> Python 3.11 (CI) — <code>yfinance</code> + <code>curl_cffi</code> (TLS-impersonation fallback for blocked tickers), <code>pandas</code>, <code>PyYAML</code>.</li>
+    <li><strong>Data store:</strong> None. <code>cache/prices.csv</code> + <code>cache/volumes.csv</code> (CSV, persisted via <code>actions/cache</code>, NOT in git) + the generated <code>web/public/data.json</code>.</li>
+    <li><strong>Hosting:</strong> Firebase Hosting (target <code>wk</code> → <code>sectorrotation-wk.web.app</code>).</li>
+    <li><strong>Automation:</strong> GitHub Actions <code>daily.yml</code> — cron <code>30 22 * * 1-5</code> (22:30 UTC, after US close).</li>
+    <li><strong>Auth:</strong> None (public read-only site).</li>
   </ul>
 
-  <h2>2. Key Files & Directories</h2>
+  <h2 id="architecture">2. Architecture &amp; File Structure</h2>
   <table>
     <thead>
-      <tr>
-        <th>Path</th>
-        <th>Purpose</th>
-      </tr>
+      <tr><th>Path</th><th>Purpose</th></tr>
     </thead>
     <tbody>
-      <tr>
-        <td><code>config.yaml</code></td>
-        <td>Core configuration: benchmark ticker, return periods, RRG lookback lengths.</td>
-      </tr>
-      <tr>
-        <td><code>data/universe.yaml</code></td>
-        <td>The master list of themes, sectors, and their constituent tickers.</td>
-      </tr>
-      <tr>
-        <td><code>pipeline/run.py</code></td>
-        <td>Entry point for the data pipeline. Executes fetch and build steps.</td>
-      </tr>
-      <tr>
-        <td><code>pipeline/fetch.py</code></td>
-        <td>Fetches market data from Yahoo Finance. Uses <code>curl_cffi</code> to bypass blocks.</td>
-      </tr>
-      <tr>
-        <td><code>pipeline/build_json.py</code></td>
-        <td>Aggregates fetched data and metrics into the final <code>data.json</code>.</td>
-      </tr>
-      <tr>
-        <td><code>web/public/</code></td>
-        <td>The static frontend. Contains <code>index.html</code>, <code>app.js</code>, <code>styles.css</code>, and the generated <code>data.json</code>.</td>
-      </tr>
-      <tr>
-        <td><code>cache/</code></td>
-        <td>Local CSV files holding historical prices and volumes to reduce API calls. (Moving to GitHub Actions cache).</td>
-      </tr>
+      <tr><td><code>config.yaml</code></td><td>Master config: benchmark (SPY), return periods, RRG lookback, breadth MA, fetch retries. <strong>Source of truth for all tunables.</strong></td></tr>
+      <tr><td><code>data/universe.yaml</code></td><td>The ~36 themes/sectors + their constituent tickers + reference ETFs.</td></tr>
+      <tr><td><code>data/etf100.yaml</code></td><td>The selectable 100-ETF list (group A equity / B leveraged with <code>breadth_source</code> / C no-breadth).</td></tr>
+      <tr><td><code>data/holdings.yaml</code></td><td>Top-10 holdings per equity ETF, refreshed monthly by <code>scripts/generate_holdings.py</code> (used for breadth calc).</td></tr>
+      <tr><td><code>pipeline/run.py</code></td><td>Entry point (<code>python -m pipeline.run</code>). Loads YAML, calls fetch → build_json → writes <code>data.json</code>.</td></tr>
+      <tr><td><code>pipeline/fetch.py</code></td><td>Fetches prices from Yahoo. Batched (20 tickers + 2s sleep) with Yahoo chart-API fallback via <code>curl_cffi</code>. Handles cache merge + ffill.</td></tr>
+      <tr><td><code>pipeline/metrics.py</code></td><td>Pure calc functions: <code>period_return</code>, <code>calc_pct_above_ma</code>, <code>calc_dollar_vol_ratio</code>, <code>calc_rrg</code>, <code>classify</code>.</td></tr>
+      <tr><td><code>pipeline/build_json.py</code></td><td>Aggregates metrics across themes + ETFs into the final <code>data.json</code> structure.</td></tr>
+      <tr><td><code>seed_real_cache.py</code></td><td>Cold-start cache seed (~480 tickers × 5Y). Runs only when the <code>actions/cache</code> misses.</td></tr>
+      <tr><td><code>scripts/generate_holdings.py</code></td><td>Monthly holdings refresh via <code>yf.Ticker().funds_data.top_holdings</code>.</td></tr>
+      <tr><td><code>web/public/</code></td><td>Static frontend: <code>index.html</code>, <code>app.js</code>, <code>styles.css</code>, <code>i18n.js</code>, <code>theme.js</code>, generated <code>data.json</code>.</td></tr>
+      <tr><td><code>cache/</code></td><td>CSV price/volume cache. <strong>Gitignored</strong> — persisted via <code>actions/cache@v4</code>, 7-day LRU.</td></tr>
+      <tr><td><code>tests/</code></td><td><code>test_metrics.py</code> (metric logic), <code>test_fetch.py</code> (date/tz regression tests).</td></tr>
+      <tr><td><code>.github/workflows/daily.yml</code></td><td>The daily pipeline: restore cache → cold-start seed → run pipeline → commit <code>data.json</code> → monthly holdings refresh → Firebase deploy.</td></tr>
     </tbody>
   </table>
 
-  <h2>3. Local Development Setup</h2>
-  <p>You need Python 3.11+ installed. No database required.</p>
-  
-  <pre><code># 1. Clone the repo
-git clone &lt;repo-url&gt;
-cd Rotation
+  <h2 id="features">3. Core Features &amp; Complexities</h2>
+  <p>Things a newcomer will trip over if not documented:</p>
+  <ul>
+    <li><strong>Two interlocking timezone bugs (recently fixed — see <code>readme.md</code> 2026-07-07).</strong> The pipeline runs at 22:30 UTC. (1) <code>_fetch_end_date()</code> in <code>fetch.py</code> anchors to UTC + adds 1 day because yfinance's <code>end</code> is exclusive — get this wrong and CI silently produces data one day stale. (2) At 22:30 UTC, Asian/Australian markets are already on "tomorrow"; their tickers inject a future-date row that US tickers have no data for. <code>fetch.py</code> trims trailing rows beyond the benchmark's (SPY's) last real close <em>before</em> <code>ffill(limit=2)</code> to prevent ffill from copying US closes into future slots and zeroing every 1D return.</li>
+    <li><strong><code>ffill(limit=2)</code> is load-bearing.</strong> It fills interior gaps from yfinance fetch flakiness and keeps row-counting aligned with trading-day-counting for 1W/1M/3M. Do NOT remove it — verified that removing it changes those periods. It must run <em>after</em> the benchmark-anchored trim.</li>
+    <li><strong>yfinance is flaky on GitHub Actions.</strong> Batch downloads fail non-deterministically (<code>SystemError</code>, <code>TypeError: expected string or bytes-like object</code>). The Yahoo chart-API fallback in <code>_fetch_via_yahoo_chart_api</code> (using <code>curl_cffi</code> with <code>impersonate="chrome"</code>) is what makes the pipeline reliable — it typically recovers 30–300 tickers per run. A "successful" run still emits many <code>Warning: ...</code> lines; that is normal.</li>
+    <li><strong>Breadth for leveraged/inverse ETFs</strong> is inherited from a parent via the <code>breadth_source</code> key in <code>etf100.yaml</code> (e.g. TQQQ → QQQ). Without it, leveraged ETFs show <code>null</code> breadth because they have no holdings of their own.</li>
+    <li><strong>RRG weekly resample workaround.</strong> <code>metrics.py</code> <code>to_weekly()</code> filters to Fridays (<code>dayofweek == 4</code>) instead of <code>.resample()</code> to avoid a pandas C-extension segfault on Python 3.14. (CI runs 3.11 where it's fine, but local dev may hit it.)</li>
+    <li><strong>Frontend personalization</strong> (period selection, ETF picks, vs-SPY period) is stored in browser <code>localStorage</code> — no backend, no login.</li>
+  </ul>
 
-# 2. Create and activate a virtual environment
-python -m venv .venv
-source .venv/bin/activate  # (On Windows: .venv\Scripts\activate)
+  <h2 id="security">4. Security Architecture</h2>
+  <div class="alert warning">
+    <strong>Heads up:</strong> A Firebase service-account key (<code>FIREBASE_SERVICE_ACCOUNT.json</code>) exists in the working tree for local deploy tests. It is <strong>gitignored</strong> and must never be committed. CI uses the <code>FIREBASE_SERVICE_ACCOUNT</code> GitHub Actions secret instead.
+  </div>
+  <ul>
+    <li><strong>No auth, no PII.</strong> The site is public read-only. No user accounts, no database writes, no form submissions.</li>
+    <li><strong>Secret handling:</strong> <code>.gitignore</code> blocks <code>FIREBASE_SERVICE_ACCOUNT.json</code>, <code>*-firebase-adminsdk-*.json</code>, and <code>sectorrotation-*.json</code>. CI injects the key via repo secret, never logs it.</li>
+    <li><strong>Deploy permissions:</strong> The <code>GITHUB_TOKEN</code> (auto-injected) is used for both the <code>git push</code> of <code>data.json</code> and the Firebase deploy step. <code>permissions: contents: write</code> is set explicitly in <code>daily.yml</code>.</li>
+  </ul>
 
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Run the data pipeline to generate web/public/data.json
+  <h2 id="setup">5. Local Development Setup</h2>
+  <p>Python 3.11+ recommended. <strong>Avoid Python 3.14 for running the pipeline locally</strong> — pandas 2.2.2 has C-extension SIGBUS crashes in <code>tz_convert</code> and <code>Timedelta</code> arithmetic on 3.14 (the code works around some, but running the full fetch locally on 3.14 is unstable). CI uses 3.11.</p>
+  <ol>
+    <li>
+      <pre><code># Clone and enter
+git clone https://github.com/Thailaxy/SectorRotation.git
+cd SectorRotation</code></pre>
+    </li>
+    <li>
+      <pre><code># Virtual env + deps
+python3.11 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt</code></pre>
+    </li>
+    <li>
+      <pre><code># Run the full pipeline (needs network access to Yahoo Finance;
+# will fail on networks that block/intercept it — works in CI)
 python -m pipeline.run
-
-# 5. Serve the frontend locally
+# → writes web/public/data.json</code></pre>
+    </li>
+    <li>
+      <pre><code># Serve the frontend locally
 cd web/public
 python -m http.server 8000
-# Open http://localhost:8000 in your browser</code></pre>
+# open http://localhost:8000</code></pre>
+    </li>
+    <li>
+      <pre><code># Preview WITHOUT a network fetch (uses the committed data.json)
+cd web/public && python -m http.server 8000</code></pre>
+    </li>
+  </ol>
 
-  <h2>4. Testing</h2>
-  <p>Run unit tests using <code>pytest</code> to ensure metrics logic remains correct:</p>
+  <h2 id="deploy">6. Deployment</h2>
+  <p>Deployment is fully automated via <code>.github/workflows/daily.yml</code>. There is no manual deploy step in the normal flow.</p>
+  <ol>
+    <li><strong>Scheduled:</strong> cron <code>30 22 * * 1-5</code> (Mon–Fri 22:30 UTC).</li>
+    <li><strong>Manual:</strong> GitHub Actions UI → "Run workflow" on the <code>daily-update</code> workflow (uses the <code>workflow_dispatch</code> trigger).</li>
+  </ol>
+  <p>The workflow runs, in order:</p>
+  <ol>
+    <li>Restore <code>cache/</code> via <code>actions/cache@v4</code> (key <code>cache-v1-$GITHUB_RUN_ID</code>, fallback <code>cache-v1-</code>).</li>
+    <li>If cache miss: <code>python seed_real_cache.py</code> (cold start, ~3–5 min).</li>
+    <li><code>python -m pipeline.run</code> → writes <code>web/public/data.json</code>.</li>
+    <li>Commit + push <code>data.json</code> as <code>rotation-bot</code>.</li>
+    <li>1st Monday of month: refresh <code>data/holdings.yaml</code>.</li>
+    <li>Deploy to Firebase Hosting (live channel, target <code>wk</code>).</li>
+  </ol>
+  <p><strong>Live URL:</strong> <a href="https://sectorrotation-wk.web.app/">sectorrotation-wk.web.app</a></p>
+  <div class="alert info">
+    <strong>Cache headers</strong> (set in <code>firebase.json</code>): <code>data.json</code> = 5 min, JS/CSS = 1 hour, HTML = no-cache.
+  </div>
+
+  <h2 id="env">7. Environment &amp; Configuration</h2>
+  <table>
+    <thead><tr><th>Variable / File</th><th>Where</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td><code>config.yaml</code></td><td>repo root</td><td>All tunables: benchmark, return periods (d1/w1/m1/m3/m6/y1/y5), RRG params, breadth MA, fetch retries.</td></tr>
+      <tr><td><code>FIREBASE_SERVICE_ACCOUNT</code></td><td>GitHub Actions secret</td><td>Firebase deploy credentials. Local equivalent: <code>FIREBASE_SERVICE_ACCOUNT.json</code> (gitignored).</td></tr>
+      <tr><td><code>GITHUB_TOKEN</code></td><td>auto-injected</td><td>Used for the <code>git push</code> of <code>data.json</code>. Note: pushes via <code>GITHUB_TOKEN</code> do NOT trigger other workflows (anti-loop) — hence the inline Firebase deploy.</td></tr>
+      <tr><td><code>cache/prices.csv</code></td><td><code>actions/cache</code></td><td>~520 tickers × ~1300 days of closes. Restored each run, rewritten after pipeline.</td></tr>
+      <tr><td><code>cache/volumes.csv</code></td><td><code>actions/cache</code></td><td>Same shape, daily volumes (for dollar-volume ratio).</td></tr>
+      <tr><td><code>data/universe.yaml</code> / <code>etf100.yaml</code> / <code>holdings.yaml</code></td><td>repo</td><td>Static data definitions. <code>holdings.yaml</code> is the only one that changes (monthly).</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="tests">8. Testing</h2>
+  <p>Run the test suite with:</p>
   <pre><code>pytest tests/</code></pre>
-
-  <h2>5. Upcoming Major Features (Pending Execution)</h2>
-  <p>We have a finalized implementation plan awaiting execution (intended for GLM5.2 agent):</p>
+  <p>Current coverage:</p>
   <ul>
-    <li><strong>100-ETF Custom Heatmap:</strong> Users will be able to select up to 20 ETFs from a predefined list of 100 to view on the heatmap.</li>
-    <li><strong>LocalStorage Personalization:</strong> User ETF choices and preferred return periods (1D, 1W, 1M, 3M, 6M, 1Y, 5Y) will be stored in the browser's `localStorage` (no backend).</li>
-    <li><strong>Holdings Generation:</strong> A new script <code>scripts/generate_holdings.py</code> will fetch top-10 holdings for ETFs monthly to compute breadth. Leveraged ETFs (like TQQQ) will inherit holdings from their parent (QQQ) via a new <code>breadth_source</code> config key.</li>
-    <li><strong>Firebase Migration:</strong> Full transition of hosting to Firebase to better control <code>Cache-Control</code> headers.</li>
+    <li><code>tests/test_metrics.py</code> — unit tests for <code>period_return</code>, <code>calc_pct_above_ma</code>, <code>calc_dollar_vol_ratio</code>, <code>classify</code>, and RRG reproducibility.</li>
+    <li><code>tests/test_fetch.py</code> — regression tests pinning: (a) <code>_fetch_end_date</code> is timezone-independent (CI vs local agree); (b) the benchmark-anchored trim prevents international-ticker future-date rows from zeroing 1D returns.</li>
   </ul>
+  <div class="alert info">
+    <strong>End-to-end verification</strong> (not automated): after a CI run, confirm the live site's <code>1D</code> column shows real values (not all 0.00%) and <code>as_of_date</code> in the header matches the latest US trading day.
+  </div>
+
+  <hr>
+  <div class="alert info">
+    <strong>Historical context:</strong> Read <code>readme.md</code> in the project root for a chronological log of every major decision, mistake, and lesson learned during development.
+  </div>
+
 </body>
 </html>

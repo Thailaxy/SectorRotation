@@ -357,3 +357,37 @@ curl -sI https://sectorrotation-546e0.web.app/data.json | grep -i cache-control
 
 **Next Steps:**
 - Hand off the implementation plan to GLM5.2 to begin Phase 1 (Data Foundation) and Phase 2 (Pipeline).
+
+### 2026-07-07 — Fixed all-zero 1D returns (two interlocking bugs)
+
+**Goal:** The day after launch, the 1D column showed 0.00% for every ETF/theme while 1W/1M/etc. worked. Diagnose and fix.
+
+**What We Did:**
+- Diagnosed via the live site, CI run logs, and the committed `data.json` (CI was demonstrably succeeding — pipeline finished, commit pushed, Firebase deployed — yet 1D stayed zero).
+- Fixed two distinct bugs across three commits:
+  - `64d5018` — Timezone fix in `pipeline/fetch.py`: replaced `pd.Timestamp.today()` (local-tz) with a new UTC-anchored `_fetch_end_date()` helper that adds 1 day (yfinance's `end` is exclusive). Applied in both `fetch.py` and `seed_real_cache.py`. Added 2 regression tests in `tests/test_fetch.py`.
+  - `d121537` — Benchmark-anchored trim in `pipeline/fetch.py`: before `ffill(limit=2)`, drop trailing rows beyond the benchmark's (SPY's) last real close. Added 1 regression test reproducing the international-ticker contamination scenario.
+- Updated `handoff.html` (full rewrite — the Jul 5 version still listed the 100-ETF heatmap as "upcoming", which has since shipped).
+
+**Process:**
+- Iterated empirically. The timezone fix was real but insufficient — after deploying it, 1D was still all-zero, which forced a deeper investigation. The real root cause was found by reproducing the exact CI output in pure pandas: an international ticker (already on "tomorrow" at 22:30 UTC) injected a future-date row; US tickers were NaN there; `ffill` copied their last close into it → last two rows identical → d1 = 0.
+- Verified each fix with a targeted regression test and by inspecting CI's committed `data.json` after the run (d1 went from 95/95 zero to 0/93 zero; `as_of_date` correct).
+
+**Key Decisions:**
+- **Trim to the benchmark's last close (not "drop trailing NaN rows" generally).** The benchmark defines the app's "as of" date for a US-market focus. A generic trailing-NaN drop would break if SPY itself ever had a trailing NaN. Using `benchmark.last_valid_index()` (already `.dropna()`'d in `build_json`) is both correct and uses an existing value.
+- **Keep `ffill(limit=2)`, don't remove it.** Considered the simpler "just delete ffill" but verified it changes 1W/1M/3M returns — ffill keeps row-counting aligned with trading-day-counting for those periods. Its legitimate job is filling interior gaps; the trim restricts it to exactly that.
+- **Anchor `_fetch_end_date` to UTC, not local time.** CI runners are UTC; dev machines vary. The old `pd.Timestamp.today()` made CI silently produce data one day stale vs. local. Also `+1 day` because yfinance's `end` is exclusive.
+
+**Mistakes & Lessons Learned:**
+- **Declared victory too early on the timezone fix.** Shipped `64d5018`, told the user to trigger CI and go to work, and only discovered it was insufficient when they came back 14 hours later to an unchanged all-zero site. Lesson: when a bug has multiple plausible causes, verify the fix end-to-end against real output before declaring it done — don't reason from "the hypothesis sounds right."
+- **The duration-based CI diagnosis was wrong.** Initially argued short CI runs (35–47s) "must be failures" and that CI wasn't producing data. It was — those were warm-cache runs. Should have checked the actual commit history (the bot commits are right there in `git log`) before theorizing about run durations.
+- **Python 3.14 pandas instability cost real debugging time.** `tz_convert(None)`, `Timedelta` arithmetic, and `.resample()` all SIGBUS on pandas 2.2.2 + Python 3.14. The local dev environment couldn't run the full fetch path, forcing pure-pandas synthetic reproductions instead of just running the pipeline. CI (Python 3.11) was unaffected. Workarounds: `pd.Timestamp(ts.value)` to drop tz, `pd.DateOffset` instead of `pd.Timedelta`. Documented in `handoff.html` §3 and §5.
+- **Root cause was non-obvious because two bugs compounded.** Either bug alone produced a milder symptom (timezone → one-day-stale, mostly invisible; future-date trim → only zero on the first run after a holiday). Both together produced the dramatic all-zero-1D that was reported. Reproducing the exact CI output in pure pandas was what finally isolated it.
+
+**Verify (after deploy):**
+```bash
+# CI's committed data.json should now show real d1 values
+git show origin/main:web/public/data.json | python -c "import json,sys; d=json.load(sys.stdin); print('as_of:', d['as_of_date']); print('benchmark d1:', d['benchmark_returns']['d1'])"
+# Expect: as_of = latest US trading day, benchmark d1 != 0.0
+# Then visit https://sectorrotation-wk.web.app/ — 1D column should show real dispersion.
+```
