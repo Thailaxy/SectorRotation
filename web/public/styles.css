@@ -86,6 +86,26 @@ header {
     font-size: 0.875rem;
     color: var(--muted);
     margin-top: 0.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 8px;
+}
+
+.bench-chips {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+.bench-chip {
+    display: inline-block;
+    background: var(--card-overlay);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0 8px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
 }
 
 .header-right {
@@ -116,6 +136,14 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
+}
+
+/* Grid items default to min-width:auto, which lets the heatmap table's
+   min-width propagate up and widen the whole document on phones instead of
+   triggering .table-scroll's overflow-x. min-width:0 keeps the overflow
+   inside the scroll container. */
+.top-section > * {
+    min-width: 0;
 }
 
 @media (max-width: 1024px) {
@@ -216,6 +244,21 @@ tbody tr:hover td:first-child {
     color: var(--improving);
 }
 
+/* Heatmap rows are clickable: they spotlight the theme's tail on the RRG. */
+#heatmapTable tbody tr {
+    cursor: pointer;
+}
+#heatmapTable tbody tr.row-focused td:first-child {
+    color: var(--improving);
+    font-weight: 600;
+}
+
+.section-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: -8px 0 12px;
+}
+
 .badge {
     display: inline-block;
     padding: 0.15rem 0.5rem;
@@ -238,11 +281,43 @@ tbody tr:hover td:first-child {
     white-space: nowrap;
     min-width: 170px;
 }
+
+/* Heatmap table: cap height so the 36-row table scrolls internally instead of
+   stretching the page (kills the desktop dead space under the RRG), and pin
+   the header row + name column so context survives scrolling in both axes. */
+.heatmap-container .table-scroll {
+    max-height: 540px;
+    overflow-y: auto;
+}
+#heatmapTable thead th {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    /* Opaque panel base + the same translucent overlay thead normally gets —
+       a bare var(--card-overlay) background would let rows show through. */
+    background-color: var(--panel);
+    background-image: linear-gradient(var(--card-overlay), var(--card-overlay));
+}
+#heatmapTable th:first-child, #heatmapTable td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: var(--panel);
+    box-shadow: 1px 0 0 var(--border);
+}
+#heatmapTable td:first-child { z-index: 2; }
+#heatmapTable thead th:first-child { z-index: 4; }
 .badge.leading { background: var(--leading); color: var(--leading-text); }
 .badge.improving { background: var(--improving); color: var(--improving-text); }
 .badge.weakening { background: var(--weakening); color: var(--weakening-text); }
 .badge.lagging { background: var(--lagging); color: var(--lagging-text); }
 .badge.incomplete { background: var(--muted); color: var(--panel); }
+/* Outline style keeps the Theme/ETF tag visually distinct from the colored
+   status badges — it labels row *kind*, not momentum state. */
+.badge.etf {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+}
 
 .playbook-grid {
     display: grid;
@@ -297,6 +372,14 @@ tbody tr:hover td:first-child {
     font-size: 0.8rem;
     color: var(--muted);
     margin-top: 1rem;
+}
+/* Desktop: Improving can hold 3x the items of Leading — cap the list so one
+   long card doesn't stretch the whole grid row into empty space. */
+@media (min-width: 769px) {
+    .pb-list {
+        max-height: 300px;
+        overflow-y: auto;
+    }
 }
 
 .appendix-grid {
@@ -839,6 +922,14 @@ html[data-theme="light"] .etf-modal-content {
         width: 100%;
         min-width: 600px;  /* forces scroll on narrow screens */
     }
+    /* The bleed-to-edge negative margin fights the sticky first column
+       (rows would scroll visibly through the 12px gutter beside the pinned
+       cell), so the heatmap keeps a plain scroll box on phones. */
+    .heatmap-container .table-scroll {
+        margin: 0;
+        padding: 0;
+        max-height: 75vh;
+    }
     #heatmapTable td, #heatmapTable th {
         padding: 8px 6px;
         font-size: 0.85rem;
@@ -888,6 +979,10 @@ html[data-theme="light"] .etf-modal-content {
         display: block;
         width: 100%;
         text-align: left;
+    }
+    /* Stacked cards must not inherit the 600px scroll-forcing min-width. */
+    #breadthTable {
+        min-width: 0;
     }
     #breadthTable thead { display: none; }
     #breadthTable tr {
@@ -1001,6 +1096,10 @@ html[data-theme="light"] .etf-modal-content {
     #feedbackTable, #feedbackTable tbody, #feedbackTable tr, #feedbackTable td {
         display: block;
         width: 100%;
+    }
+    /* Stacked cards must not inherit the 600px scroll-forcing min-width. */
+    #feedbackTable {
+        min-width: 0;
     }
     #feedbackTable thead { display: none; }
     #feedbackTable tr {

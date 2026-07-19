@@ -7,6 +7,10 @@
     <script>
         document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
     </script>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#0d1117">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
@@ -16,7 +20,9 @@
         <div class="header-left">
             <h1 data-i18n="title">US Sector & Theme Rotation Tracker</h1>
             <div class="header-meta">
-                <span id="asOfDate"></span> | SPY 1D: <span id="spy1D"></span> | 1M: <span id="spy1M"></span> | 3M: <span id="spy3M"></span>
+                <span id="asOfDate"></span>
+                <span>SPY</span>
+                <span id="benchChips" class="bench-chips"></span>
             </div>
         </div>
         <div class="header-right">
@@ -104,13 +110,14 @@
 
         <section class="breadth-section">
             <h2 data-i18n="breadth_title">Breadth & Volume</h2>
+            <p class="section-note" data-i18n="breadth_note"></p>
             <div class="table-scroll">
                 <table id="breadthTable">
                     <thead>
                         <tr>
-                            <th data-i18n="col_theme">Theme</th>
-                            <th data-i18n="col_breadth_bar">% Above 20DMA</th>
-                            <th data-i18n="col_vol">Dollar Vol Ratio</th>
+                            <th class="sortable" data-sort="name" data-i18n="col_theme">Theme</th>
+                            <th class="sortable" data-sort="breadth" data-i18n="col_breadth_bar">% Above 20DMA</th>
+                            <th class="sortable" data-sort="vol" data-i18n="col_vol">Dollar Vol Ratio</th>
                         </tr>
                     </thead>
                     <tbody></tbody>

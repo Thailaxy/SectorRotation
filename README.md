@@ -391,3 +391,44 @@ git show origin/main:web/public/data.json | python -c "import json,sys; d=json.l
 # Expect: as_of = latest US trading day, benchmark d1 != 0.0
 # Then visit https://sectorrotation-wk.web.app/ — 1D column should show real dispersion.
 ```
+
+### 2026-07-20 — Implemented all 12 items of the UI improvement plan (mobile was effectively broken)
+
+**Goal:** Execute `UI_improvement_plan.md` (written 2026-07-19 from a live-site inspection at 1440px and 390px): fix the broken phone layout, make the RRG readable, and work through the moderate/minor polish items.
+
+**What We Did:**
+- Implemented every item, Critical → Minor, then verified with Playwright and deployed:
+  - **Mobile overflow (#1):** added `min-width: 0` to `.top-section` grid children in `styles.css` and a next-frame `rrgChart.resize()` in `app.js`. Document width went 638px → exactly 390px on a 390px viewport; all four RRG quadrants and the full heatmap are now on-screen.
+  - **Sticky heatmap (#2, #5):** sticky first column (`left: 0`, opaque `var(--panel)` + hairline shadow) and sticky `thead` (opaque panel base + gradient overlay), enabled by capping `.heatmap-container .table-scroll` at `max-height: 540px` with internal vertical scroll — which simultaneously removed the desktop dead space under the RRG (both top panels now measure exactly 741px).
+  - **RRG readability (#3, #9):** labeled each tail's head dot (ticker for sector rows, theme name otherwise) with `labelLayout: { hideOverlap: true }` and a 2px text border; spotlighting hides other labels; widened `grid.right` to 45 and silenced the markLine's "100" end-labels that collided with axis labels.
+  - **Heatmap ↔ RRG linking (#12):** clicking a theme row toggles `selectedTheme` and re-renders both views (widening the filter to "All" if the row's type was filtered out); chart clicks sync the row highlight back. Legend text now advertises the interaction (EN + TH).
+  - **Theme/ETF disambiguation (#4):** outlined gray "ETF" badge (`.badge.etf`) on sector-ETF rows in the heatmap.
+  - **Placeholder feedback (#6):** emptied `web/public/feedback.json`; the table shows its i18n empty state.
+  - **Header strip (#7):** replaced hardcoded SPY 1D/1M/3M with `renderBenchChips()` — pill chips for whatever periods the user selected, wrapping cleanly on mobile, fed by `benchmark_returns` (already in `data.json`).
+  - **Breadth section (#8):** in-place one-line legend (EN + TH `breadth_note`) and click-to-sort on all three columns.
+  - **PWA (#10):** `favicon.svg` (four-quadrant RRG motif), generated `icon-192/512.png` + `apple-touch-icon.png` with a dependency-free Python PNG writer, `manifest.webmanifest` with `display: standalone`.
+  - **Playbook heights (#11):** `.pb-list` capped at 300px with internal scroll on desktop.
+- Checked off all 12 items in `UI_improvement_plan.md`.
+- Updated `handoff.html` §2/§3/§8 (new files, the mobile-overflow and sticky-table gotchas, the Playwright verification harness).
+
+**Process:**
+- Worked in the plan's priority order, CSS first, then HTML, then `app.js`, then i18n strings and assets — verifying after each batch rather than at the end.
+- Verified with local Playwright (`playwright-core` + cached Chromium) against `python -m http.server`: mobile emulation 390×844 `isMobile: true` asserting `scrollWidth ≤ 390`, the plan's leaf-offender finder, sticky-position deltas measured in page context, element screenshots of every section in both themes, and an ETF-mode toggle sanity check (20 rows, zero JS errors).
+
+**Key Decisions:**
+- **Capped the heatmap's height instead of making the RRG panel sticky** (the plan offered either for #5): one CSS change solves both the desktop dead space *and* gives the sticky `thead` a scroll container to stick to — the sticky-RRG alternative would have solved only the dead space.
+- **Outline-style badge for the ETF tag** rather than reusing the filled gray `.badge.incomplete` look: it labels row *kind*, not momentum state, so it should not visually compete with the colored zone badges.
+- **Dropped the bleed-to-edge negative margin on the heatmap scroller (mobile only):** rows would otherwise scroll visibly through the 12px gutter beside the sticky first column.
+- **Labels: full theme names with `hideOverlap`, not top-N filtering.** Keeping all 36 series with overlap pruning preserves the "whole market at a glance" value; the tap-to-spotlight interaction covers dense regions.
+
+**Mistakes & Lessons Learned:**
+- **Fixing #1 exposed a latent bug in the previously-dead 480px CSS.** Once the viewport stopped inflating to 638px, the stacked breadth/feedback card layouts finally applied — and inherited the generic `.table-scroll table { min-width: 600px }`, rendering 600px-wide "cards" inside a 340px container. Fixed with `min-width: 0` on those tables at ≤480px. Lesson: when reviving media queries that never ran in production, re-test everything inside them — dead CSS accumulates untested interactions.
+- **The plan's diagnosis was accurate and made execution nearly mechanical.** The one thing it under-specified ("1–2 more offenders need the same treatment") turned out to be nothing extra on the current codebase — the grid `min-width: 0` plus the chart resize sufficed. Verifying with the plan's own harness caught this early instead of chasing phantom offenders.
+
+**Verify (after deploy):**
+```bash
+npx playwright screenshot --viewport-size=390,844 --full-page "https://sectorrotation-wk.web.app" mobile_check.png
+# All 4 RRG quadrants visible, heatmap scrolls inside its card, labels on tail heads.
+curl -s https://sectorrotation-wk.web.app/manifest.webmanifest | head -3
+# Expect the PWA manifest, not a 404.
+```

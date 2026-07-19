@@ -1,6 +1,8 @@
 let appData = null;
 let currentSort = 'm1';
 let sortDesc = true;
+let breadthSort = 'breadth';
+let breadthSortDesc = true;
 let rrgFilter = 'theme';
 let rrgChart = null;
 
@@ -29,18 +31,6 @@ async function loadData() {
         const res = await fetch('data.json');
         appData = await res.json();
         document.getElementById('asOfDate').innerText = appData.as_of_date;
-        const updateSpy = (id, val) => {
-            const el = document.getElementById(id);
-            if (!el) return;
-            el.innerText = val !== null ? `${val.toFixed(2)}%` : 'N/A';
-            el.className = '';
-            if (val > 0) el.classList.add('pos-val');
-            else if (val < 0) el.classList.add('neg-val');
-        };
-        updateSpy('spy1D', appData.benchmark_return_1D);
-        updateSpy('spy1M', appData.benchmark_return_1M);
-        updateSpy('spy3M', appData.benchmark_return_3M);
-        
         initUI();
     } catch (e) {
         console.error("Error loading data.json", e);
@@ -48,6 +38,7 @@ async function loadData() {
 }
 
 function initUI() {
+    renderBenchChips();
     renderHeatmap();
     renderPlaybook();
     renderBreadth();
@@ -70,6 +61,22 @@ function initUI() {
     // + opens the modal in one action — more discoverable than hiding it).
     const etfBtn = document.getElementById('etfSelectBtn');
     if (etfBtn) etfBtn.style.display = '';
+}
+
+// Header benchmark strip: SPY returns for the same periods the user picked
+// for the heatmap (was hardcoded 1D/1M/3M), rendered as compact chips that
+// wrap cleanly on narrow screens.
+function renderBenchChips() {
+    const el = document.getElementById('benchChips');
+    if (!el || !appData) return;
+    const br = appData.benchmark_returns || {};
+    el.innerHTML = selectedPeriods.map(p => {
+        const v = br[p];
+        const ok = v !== null && v !== undefined;
+        const cls = ok && v > 0 ? 'pos-val' : ok && v < 0 ? 'neg-val' : '';
+        const txt = ok ? `${v > 0 ? '+' : ''}${v.toFixed(2)}%` : 'N/A';
+        return `<span class="bench-chip">${PERIOD_LABELS[p]} <span class="${cls}">${txt}</span></span>`;
+    }).join('');
 }
 
 function getThemeName(theme) {
@@ -176,6 +183,9 @@ function renderHeatmap() {
         } else {
             nameHtml = getThemeName(row);
             if (appData.user_holdings.includes(row.id)) nameHtml += ' 📍';
+            // Tag sector-ETF rows so "Energy (XLE)" and the equal-weight
+            // "Energy" theme basket are visually distinct in the same table.
+            if (row.type === 'sector_etf') nameHtml += ' <span class="badge etf">ETF</span>';
         }
 
         const cellsHtml = selectedPeriods.map(p => renderReturnCell(row.returns[p])).join('');
@@ -188,6 +198,24 @@ function renderHeatmap() {
             ${cellsHtml}
             ${vsCell}
         `;
+
+        // Clicking a theme row spotlights its tail on the RRG (and back off).
+        if (!etfMode && row.rrg) {
+            const name = getThemeName(row);
+            if (selectedTheme === name) tr.classList.add('row-focused');
+            tr.addEventListener('click', () => {
+                selectedTheme = selectedTheme === name ? null : name;
+                // If the RRG filter currently hides this row's type, widen to All
+                // so the spotlighted tail is actually visible.
+                if (selectedTheme && rrgFilter !== 'all' && row.type !== rrgFilter) {
+                    rrgFilter = 'all';
+                    document.querySelectorAll('.filter-btn').forEach(el =>
+                        el.classList.toggle('active', el.getAttribute('data-filter') === 'all'));
+                }
+                renderRRG();
+                renderHeatmap();
+            });
+        }
         tbody.appendChild(tr);
     });
 
@@ -287,9 +315,34 @@ function renderBreadth() {
     }
 
     rows.sort((a, b) => {
-        let va = a.breadth_pct !== null ? a.breadth_pct : -1;
-        let vb = b.breadth_pct !== null ? b.breadth_pct : -1;
-        return vb - va;
+        if (breadthSort === 'name') {
+            const na = etfMode ? a.ticker : getThemeName(a);
+            const nb = etfMode ? b.ticker : getThemeName(b);
+            const res = String(na).localeCompare(String(nb));
+            return breadthSortDesc ? res : -res;
+        }
+        const key = breadthSort === 'vol' ? 'dollar_vol_ratio' : 'breadth_pct';
+        let va = a[key] !== null ? a[key] : -999;
+        let vb = b[key] !== null ? b[key] : -999;
+        return breadthSortDesc ? vb - va : va - vb;
+    });
+
+    // Header sort wiring. The thead is static HTML, so bind once and just
+    // refresh the active-column underline on each render.
+    document.querySelectorAll('#breadthTable th.sortable').forEach(th => {
+        th.classList.toggle('active', th.getAttribute('data-sort') === breadthSort);
+        if (th.dataset.bound === 'true') return;
+        th.dataset.bound = 'true';
+        th.addEventListener('click', () => {
+            const s = th.getAttribute('data-sort');
+            if (breadthSort === s) {
+                breadthSortDesc = !breadthSortDesc;
+            } else {
+                breadthSort = s;
+                breadthSortDesc = true;
+            }
+            renderBreadth();
+        });
     });
 
     rows.forEach(row => {
@@ -377,17 +430,31 @@ function initRRG() {
         if (params.seriesType === 'line') {
             selectedTheme = params.seriesName;
             renderRRG();
+            if (!etfMode) renderHeatmap();  // sync row-focused highlight
         }
     });
-    
+
     rrgChart.getZr().on('click', function(e) {
         if (!e.target) {
             selectedTheme = null;
             renderRRG();
+            if (!etfMode) renderHeatmap();
         }
     });
 
     renderRRG();
+
+    // The canvas can initialize at a fallback width if measured before layout
+    // settles (the window resize listener never fires on load) — re-measure
+    // on the next frame so the chart matches its container.
+    requestAnimationFrame(() => { if (rrgChart) rrgChart.resize(); });
+}
+
+// Short label for the head dot of each RRG tail: sector rows like
+// "Tech (XLK)" reduce to their ticker; theme rows use the localized name.
+function getRrgLabel(t) {
+    const m = (t.name_en || '').match(/\(([A-Z]+)\)$/);
+    return m ? m[1] : getThemeName(t);
 }
 
 function renderRRG() {
@@ -406,8 +473,9 @@ function renderRRG() {
         let c = colorMap[t.quadrant] || getCssVar('--text');
         let dataPts = t.rrg.tail.map(pt => [pt.ratio, pt.momentum]);
         
-        let opacity = selectedTheme ? (selectedTheme === getThemeName(t) ? 1 : 0.1) : 0.5;
-        let width = selectedTheme && selectedTheme === getThemeName(t) ? 2 : 1;
+        const isSelected = selectedTheme === getThemeName(t);
+        let opacity = selectedTheme ? (isSelected ? 1 : 0.1) : 0.5;
+        let width = selectedTheme && isSelected ? 2 : 1;
         series.push({
             name: getThemeName(t),
             type: 'line',
@@ -417,15 +485,30 @@ function renderRRG() {
             symbolSize: (val, params) => params.dataIndex === dataPts.length - 1 ? 10 : 4,
             lineStyle: { width: width, color: c, opacity: opacity },
             itemStyle: { color: c, opacity: opacity },
+            // Name the head dot of each tail so themes are identifiable without
+            // hovering. When one theme is spotlighted, hide the other labels.
+            label: {
+                show: !selectedTheme || isSelected,
+                fontSize: 10,
+                fontWeight: isSelected ? 'bold' : 'normal',
+                color: c,
+                textBorderColor: getCssVar('--panel'),
+                textBorderWidth: 2,
+                position: 'right',
+                distance: 6,
+                formatter: (params) =>
+                    params.dataIndex === dataPts.length - 1 ? getRrgLabel(t) : ''
+            },
+            labelLayout: { hideOverlap: true },
             emphasis: {
                 focus: 'series',
                 lineStyle: { width: 2, opacity: 1 }
             }
         });
     });
-    
+
     let option = {
-        grid: { top: 20, right: 20, bottom: 20, left: 30, containLabel: true },
+        grid: { top: 28, right: 45, bottom: 20, left: 30, containLabel: true },
         tooltip: {
             formatter: (params) => {
                 let p = params[0] || params;
@@ -457,6 +540,7 @@ function renderRRG() {
         markLine: {
             silent: true,
             symbol: 'none',
+            label: { show: false },  /* the "100" end labels collide with axis labels */
             lineStyle: { color: gridColor, width: 1, type: 'solid' },
             data: [
                 { xAxis: 100 },
@@ -537,6 +621,7 @@ function togglePeriod(p) {
     localStorage.setItem('selectedPeriods', JSON.stringify(selectedPeriods));
     initPeriodSelector();
     renderHeatmap();
+    renderBenchChips();
 }
 
 function initVsSpyDropdown() {

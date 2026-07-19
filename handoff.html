@@ -222,7 +222,8 @@
       <tr><td><code>pipeline/build_json.py</code></td><td>Aggregates metrics across themes + ETFs into the final <code>data.json</code> structure.</td></tr>
       <tr><td><code>seed_real_cache.py</code></td><td>Cold-start cache seed (~480 tickers × 5Y). Runs only when the <code>actions/cache</code> misses.</td></tr>
       <tr><td><code>scripts/generate_holdings.py</code></td><td>Monthly holdings refresh via <code>yf.Ticker().funds_data.top_holdings</code>.</td></tr>
-      <tr><td><code>web/public/</code></td><td>Static frontend: <code>index.html</code>, <code>app.js</code>, <code>styles.css</code>, <code>i18n.js</code>, <code>theme.js</code>, generated <code>data.json</code>.</td></tr>
+      <tr><td><code>web/public/</code></td><td>Static frontend: <code>index.html</code>, <code>app.js</code>, <code>styles.css</code>, <code>i18n.js</code>, <code>theme.js</code>, generated <code>data.json</code>, curated <code>feedback.json</code>, PWA assets (<code>favicon.svg</code>, <code>manifest.webmanifest</code>, <code>icon-192/512.png</code>, <code>apple-touch-icon.png</code>).</td></tr>
+      <tr><td><code>UI_improvement_plan.md</code></td><td>The 12-item UI improvement plan (mobile overflow, sticky heatmap, RRG labels, etc.) — fully implemented 2026-07-20; kept as the record of the diagnosis and verification method.</td></tr>
       <tr><td><code>cache/</code></td><td>CSV price/volume cache. <strong>Gitignored</strong> — persisted via <code>actions/cache@v4</code>, 7-day LRU.</td></tr>
       <tr><td><code>tests/</code></td><td><code>test_metrics.py</code> (metric logic), <code>test_fetch.py</code> (date/tz regression tests).</td></tr>
       <tr><td><code>.github/workflows/daily.yml</code></td><td>The daily pipeline: restore cache → cold-start seed → run pipeline → commit <code>data.json</code> → monthly holdings refresh → Firebase deploy.</td></tr>
@@ -238,6 +239,11 @@
     <li><strong>Breadth for leveraged/inverse ETFs</strong> is inherited from a parent via the <code>breadth_source</code> key in <code>etf100.yaml</code> (e.g. TQQQ → QQQ). Without it, leveraged ETFs show <code>null</code> breadth because they have no holdings of their own.</li>
     <li><strong>RRG weekly resample workaround.</strong> <code>metrics.py</code> <code>to_weekly()</code> filters to Fridays (<code>dayofweek == 4</code>) instead of <code>.resample()</code> to avoid a pandas C-extension segfault on Python 3.14. (CI runs 3.11 where it's fine, but local dev may hit it.)</li>
     <li><strong>Frontend personalization</strong> (period selection, ETF picks, vs-SPY period) is stored in browser <code>localStorage</code> — no backend, no login.</li>
+    <li><strong>Mobile layout depends on <code>min-width: 0</code> on the <code>.top-section</code> grid children.</strong> Grid items default to <code>min-width: auto</code>, so the heatmap table's <code>min-width: 600px</code> propagates upward and widens the whole document to ~638px on a 390px phone (breaking every <code>@media (max-width: 480px)</code> rule, which then never applies). If mobile ever renders zoomed-out again, check <code>document.documentElement.scrollWidth</code> at a 390px viewport first — it must be ≤ 390.</li>
+    <li><strong>The heatmap table scrolls internally</strong> (<code>.heatmap-container .table-scroll</code> has <code>max-height</code> + <code>overflow-y: auto</code>) with a sticky <code>thead</code> and sticky first column. The sticky cells need <em>opaque</em> backgrounds (<code>var(--panel)</code> plus a gradient overlay on the header) — a bare <code>var(--card-overlay)</code> is translucent and lets rows show through. The internal scroll is also what kills the desktop dead-space under the RRG and makes <code>position: sticky; top: 0</code> work at all.</li>
+    <li><strong>RRG ↔ heatmap focus is two-way.</strong> Clicking a tail or a theme row sets <code>selectedTheme</code> and re-renders both views (<code>renderRRG()</code> + <code>renderHeatmap()</code>); clicking empty chart space clears it. Head dots are labeled via ECharts series <code>label</code> + <code>labelLayout: { hideOverlap: true }</code>; the markLine's own "100" end-labels are silenced because they collide with axis labels.</li>
+    <li><strong>The ECharts canvas can initialize at a fallback 600px width</strong> if measured before layout settles — <code>initRRG()</code> calls <code>rrgChart.resize()</code> on the next animation frame because the <code>window.resize</code> listener never fires on load.</li>
+    <li><strong>The header SPY strip renders from <code>appData.benchmark_returns</code> + the user's <code>selectedPeriods</code></strong> (<code>renderBenchChips()</code>) — the old hardcoded <code>benchmark_return_1D/1M/3M</code> top-level fields are still in <code>data.json</code> but no longer read by the frontend.</li>
   </ul>
 
   <h2 id="security">4. Security Architecture</h2>
@@ -326,6 +332,7 @@ cd web/public && python -m http.server 8000</code></pre>
   <div class="alert info">
     <strong>End-to-end verification</strong> (not automated): after a CI run, confirm the live site's <code>1D</code> column shows real values (not all 0.00%) and <code>as_of_date</code> in the header matches the latest US trading day.
   </div>
+  <p><strong>UI verification harness</strong> (manual, no test files): the frontend has no automated tests. UI changes are verified with Playwright against a local server — the reusable recipe (mobile emulation at 390×844 with <code>isMobile: true</code>, the <code>scrollWidth ≤ 390</code> assertion, and a leaf-offender finder snippet for hunting overflow) is documented at the bottom of <code>UI_improvement_plan.md</code>. Chromium lives in <code>~/Library/Caches/ms-playwright/</code>; scripts need the <code>playwright-core</code> npm package in their cwd.</p>
 
   <hr>
   <div class="alert info">
