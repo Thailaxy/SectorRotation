@@ -8,44 +8,44 @@ ACWI:
   - MSFT
   - AMZN
   - GOOGL
-  - AVGO
   - 2330.TW
+  - AVGO
   - GOOG
+  - MU
   - META
-  - TSLA
 ARKK:
   - TSLA
-  - AMD
-  - HOOD
-  - CRSP
   - TEM
-  - CRCL
+  - AMD
+  - CRSP
+  - HOOD
+  - SPCX
   - SHOP
-  - ROKU
+  - TWST
   - COIN
-  - PLTR
+  - BEAM
 ASHR:
   - 300308.SZ
   - 300750.SZ
-  - 600519.SS
   - 300502.SZ
+  - 600519.SS
+  - 603986.SS
   - 601318.SS
-  - 601899.SS
-  - 600036.SS
   - 688256.SS
-  - 000333.SZ
-  - 002475.SZ
+  - 600036.SS
+  - 601899.SS
+  - 002371.SZ
 DIA:
-  - GS
   - CAT
-  - MSFT
+  - GS
   - UNH
+  - MSFT
   - AMGN
-  - V
+  - GOOGL
   - HD
-  - AXP
-  - AAPL
   - SHW
+  - V
+  - AXP
 EEM:
   - 2330.TW
   - 005930.KS
@@ -54,62 +54,62 @@ EEM:
   - 9988.HK
   - 2454.TW
   - 2308.TW
-  - 2317.TW
   - 005935
-  - 00939
+  - 402340.KS
+  - 2317.TW
 EFA:
   - ASML.AS
   - HSBA.L
   - ROP.SW
-  - AZN.L
   - NOVN.SW
+  - AZN.L
   - NESN.SW
-  - SHEL.L
   - SIE.DE
-  - BHP.AX
+  - SHEL.L
+  - 8035.T
   - 8306.T
 EWH:
   - 1299.HK
   - 0388.HK
   - 0001.HK
-  - 2388.HK
   - 0669.HK
-  - 0016.HK
+  - 2388.HK
   - 0002.HK
+  - 0016.HK
   - 0823.HK
   - 1113.HK
   - 0006.HK
 EWJ:
-  - 8306.T
-  - 7203.T
-  - 9984.T
   - 8035.T
-  - 6501.T
-  - 8316.T
+  - 8306.T
   - 285A.T
-  - 6758.T
+  - 7203.T
   - 6857.T
-  - 8411.T
+  - 8316.T
+  - 9984.T
+  - 6501.T
+  - 6758.T
+  - 6981.T
 EWT:
   - 2330.TW
   - 2454.TW
   - 2308.TW
   - 2317.TW
+  - 2327.TW
   - 3711.TW
+  - 2303.TW
   - 3037.TW
   - 2383.TW
-  - 2303.TW
-  - 2327.TW
   - 2345.TW
 EWW:
   - GMEXICOB.MX
   - GFNORTEO.MX
-  - AMXB.MX
   - FEMSAUBD.MX
+  - AMXB.MX
   - CEMEXCPO.MX
-  - PE&OLES.MX
   - WALMEX.MX
   - GAPB.MX
+  - PE&OLES.MX
   - AC.MX
   - ASURB.MX
 EWZ:
@@ -119,94 +119,94 @@ EWZ:
   - PETR4
   - PETR3.SA
   - BBDC4
-  - B3SA3.SA
-  - ABEV3.SA
+  - AXIA3.SA
   - WEGE3.SA
-  - SBSP3.SA
+  - ABEV3.SA
+  - B3SA3.SA
 FXI:
-  - 9988.HK
-  - 00939
   - 0700.HK
+  - 00939
+  - 9988.HK
   - 01398
   - 1810.HK
   - 3690.HK
-  - 02318
-  - 03988
   - 9999.HK
+  - 03988
+  - 02318
   - 01211
 GDX:
-  - NEM
   - AEM.TO
+  - NEM
   - ABX.TO
-  - AU
   - WPM.TO
+  - AU
   - FNV.TO
   - K.TO
   - GFI
   - PAAS.TO
-  - CDE
+  - NST.AX
 IBB:
-  - GILD
   - VRTX
   - AMGN
+  - GILD
   - REGN
-  - ALNY
   - ARGX
+  - ALNY
   - NTRA
-  - BIIB
   - RVMD
+  - BIIB
   - ILMN
 ICLN:
   - BE
   - FSLR
   - NXT
-  - ENPH
   - 600900.SS
+  - ENPH
+  - VWS.CO
   - PLUG
   - SEDG
-  - VWS.CO
   - EQTL3.SA
   - SUZLON.BO
 IEFA:
   - ASML.AS
   - HSBA.L
   - ROP.SW
-  - AZN.L
   - NOVN.SW
+  - AZN.L
   - NESN.SW
-  - SHEL.L
   - SIE.DE
-  - BHP.AX
+  - SHEL.L
+  - 8035.T
   - 8306.T
 IJH:
-  - FLEX
   - TWLO
-  - FTI
+  - CRS
+  - MKSI
   - CW
   - NVT
-  - STRL
-  - XPO
-  - P
+  - ENTG
+  - ATI
   - ILMN
-  - UTHR
+  - FTI
+  - STRL
 IJR:
   - XTSLA
-  - SANM
-  - SMTC
-  - VIAV
-  - VSAT
-  - LUMN
   - FORM
-  - ESI
+  - VSAT
+  - MOH
   - AGX
-  - ENPH
+  - BTSG
+  - ESI
+  - MXL
+  - KRYS
+  - ESE
 INDA:
-  - RELIANCE.NS
   - HDFCBANK.NS
+  - RELIANCE.NS
   - ICICIBANK.NS
   - BHARTIARTL.NS
-  - INFY.NS
   - XTSLA
+  - INFY.NS
   - AXISBANK.BO
   - LT.NS
   - M&M.NS
@@ -219,154 +219,155 @@ IVV:
   - GOOGL
   - AVGO
   - GOOG
+  - MU
   - META
   - TSLA
-  - MU
 IWM:
-  - BE
-  - CRDO
-  - STRL
-  - IONQ
-  - FN
-  - NXT
-  - CDE
-  - TTMI
-  - ECHO
-  - GH
+  - MOG-A
+  - HUT
+  - VSAT
+  - BTSG
+  - CYTK
+  - MXL
+  - AGX
+  - UMBF
+  - FROG
+  - RIOT
 IYR:
   - WELL
   - PLD
-  - EQIX
   - SPG
+  - EQIX
   - DLR
-  - AMT
   - O
+  - AMT
   - PSA
   - VTR
-  - CCI
+  - CBRE
 JEPI:
-  - AVGO
-  - ROST
-  - AMZN
-  - AAPL
-  - HWM
-  - NVDA
-  - GOOGL
-  - ETN
   - ABBV
-  - EOG
+  - HWM
+  - JNJ
+  - ETN
+  - TT
+  - LRCX
+  - NVDA
+  - AAPL
+  - ROST
+  - GOOGL
 KBE:
-  - TFIN
-  - VOYA
-  - APO
-  - CATY
-  - BNY
-  - FBP
-  - UMBF
-  - NTRS
-  - WAFD
-  - EWBC
+  - RKT
+  - NIC
+  - TBBK
+  - NMIH
+  - AX
+  - MTG
+  - ESNT
+  - AUB
+  - WSBC
+  - PFSI
 KRE:
-  - UMBF
-  - EWBC
-  - VLY
-  - BPOP
   - PNFP
-  - WAL
-  - ZION
-  - FLG
+  - UMBF
+  - AUB
+  - CFG
+  - GBCI
   - ASB
-  - WTFC
+  - CFR
+  - FULT
+  - FIBK
+  - WBS
 KWEB:
-  - 9988.HK
   - 0700.HK
   - PDD
+  - 9988.HK
   - 9999.HK
   - 3690.HK
   - 9888.HK
+  - YMM
+  - 1024.HK
   - 2423.HK
   - 9618.HK
-  - YMM
-  - 9961.HK
 MCHI:
   - 0700.HK
   - 9988.HK
   - 00939
-  - 1810.HK
   - 01398
-  - 02318
-  - PDD
-  - 3690.HK
-  - 03988
+  - 1810.HK
   - 9999.HK
+  - 3690.HK
+  - PDD
+  - 03988
+  - 02318
 MSOS:
-  - CURA
+  - CURA.TO
+  - TRLV
 MTUM:
   - MU
-  - AMD
-  - AVGO
   - INTC
+  - AMD
   - CAT
-  - XOM
+  - AVGO
   - LRCX
-  - JNJ
+  - AMAT
   - GEV
-  - GOOGL
+  - JNJ
+  - XOM
 OIH:
   - SLB
   - BKR
-  - HAL
   - FTI
+  - HAL
   - TS
+  - SEI
+  - RIG
   - WFRD
   - NE
-  - RIG
-  - VAL
-  - SEI
+  - LBRT
 QQQ:
   - NVDA
   - AAPL
-  - MSFT
   - MU
-  - AMZN
+  - MSFT
   - AMD
-  - GOOGL
+  - AMZN
   - TSLA
-  - AVGO
+  - GOOGL
+  - INTC
   - GOOG
 QUAL:
-  - MSFT
   - AAPL
   - NVDA
-  - META
-  - TJX
+  - MSFT
   - LRCX
-  - LLY
-  - V
   - AMAT
   - KLAC
+  - TJX
+  - LLY
+  - META
+  - V
 SCHD:
-  - QCOM
-  - TXN
-  - UNH
-  - KO
   - MRK
-  - CVX
-  - VZ
-  - PG
-  - COP
+  - HD
+  - UNH
   - AMGN
+  - ABT
+  - PG
+  - KO
+  - PEP
+  - VZ
+  - TXN
 SMH:
   - NVDA
   - TSM
   - MU
+  - AMAT
   - AMD
-  - INTC
   - AVGO
-  - QCOM
-  - TXN
-  - LRCX
   - KLAC
+  - LRCX
+  - INTC
+  - ASML
 SPY:
   - NVDA
   - AAPL
@@ -375,42 +376,42 @@ SPY:
   - GOOGL
   - AVGO
   - GOOG
+  - MU
   - META
   - TSLA
-  - MU
 USMV:
-  - MSFT
-  - CSCO
   - APH
-  - VZ
-  - NEM
-  - DUK
-  - SO
-  - NVDA
-  - IBM
+  - JNJ
+  - VRTX
+  - WELL
   - CB
+  - CSCO
+  - SO
+  - DUK
+  - BRK-B
+  - WM
 VEA:
   - 005930.KS
   - 000660.KS
   - ASML.AS
   - HSBA.L
-  - ROP.SW
   - NOVN.SW
-  - AZN.L
   - RY
+  - ROP.SW
+  - AZN.L
   - NESN.SW
-  - SHEL.L
+  - SIE.DE
 VIG:
   - AVGO
   - AAPL
-  - MSFT
   - LLY
   - JPM
-  - XOM
+  - MSFT
   - JNJ
+  - XOM
+  - LRCX
   - V
   - WMT
-  - CSCO
 VNQ:
   - VRTPX
   - WELL
@@ -430,20 +431,20 @@ VOO:
   - GOOGL
   - AVGO
   - GOOG
+  - MU
   - META
   - TSLA
-  - MU
 VT:
   - NVDA
   - AAPL
   - MSFT
   - AMZN
   - GOOGL
-  - AVGO
   - 2330.TW
+  - AVGO
   - GOOG
+  - MU
   - META
-  - TSLA
 VTI:
   - NVDA
   - AAPL
@@ -452,28 +453,28 @@ VTI:
   - GOOGL
   - AVGO
   - GOOG
+  - MU
   - META
   - TSLA
-  - MU
 VTV:
   - MU
   - JPM
   - BRK-B
-  - XOM
   - JNJ
+  - XOM
   - WMT
-  - INTC
-  - CSCO
   - CAT
   - ABBV
+  - CSCO
+  - UNH
 VUG:
   - NVDA
   - AAPL
   - MSFT
   - GOOGL
-  - AVGO
-  - AMZN
   - GOOG
+  - AMZN
+  - AVGO
   - META
   - TSLA
   - LLY
@@ -484,43 +485,43 @@ VWO:
   - 2454.TW
   - 2308.TW
   - 2317.TW
+  - HDFCBANK.NS
   - RELIANCE.NS
   - 00939
-  - HDFCBANK.NS
   - ICICIBANK.NS
 XBI:
-  - TVTX
-  - RVMD
-  - ALKS
+  - APGE
+  - MRNA
   - TWST
-  - TGTX
-  - ARWR
-  - BEAM
-  - NBIX
-  - KRYS
-  - EXEL
+  - ORKA
+  - KYMR
+  - VKTX
+  - PRAX
+  - ERAS
+  - RVMD
+  - RYTM
 XLC:
   - META
   - GOOGL
   - GOOG
   - TTWO
-  - LYV
-  - ECHO
-  - DIS
+  - NFLX
+  - CMCSA
   - WBD
   - EA
-  - OMC
+  - DIS
+  - TMUS
 XLE:
   - XOM
   - CVX
   - COP
   - SLB
   - WMB
-  - VLO
   - MPC
   - EOG
+  - VLO
   - PSX
-  - BKR
+  - KMI
 XLF:
   - BRK-B
   - JPM
@@ -528,8 +529,8 @@ XLF:
   - MA
   - BAC
   - GS
-  - MS
   - WFC
+  - MS
   - C
   - AXP
 XLI:
@@ -538,33 +539,33 @@ XLI:
   - GEV
   - RTX
   - BA
-  - UNP
   - ETN
-  - HON
-  - UBER
+  - UNP
   - DE
+  - UBER
+  - VRT
 XLK:
   - NVDA
   - AAPL
   - MSFT
+  - AMD
   - MU
   - AVGO
-  - AMD
   - INTC
-  - CSCO
+  - AMAT
   - LRCX
-  - ORCL
+  - CSCO
 XLP:
   - WMT
   - COST
   - PG
   - KO
   - PM
-  - MDLZ
-  - MO
   - CL
-  - PEP
+  - MO
   - MNST
+  - PEP
+  - MDLZ
 XLU:
   - NEE
   - SO
@@ -573,8 +574,8 @@ XLU:
   - AEP
   - SRE
   - D
-  - VST
   - ETR
+  - VST
   - XEL
 XLV:
   - LLY
@@ -582,52 +583,52 @@ XLV:
   - ABBV
   - UNH
   - MRK
-  - TMO
   - AMGN
+  - TMO
+  - ABT
   - GILD
   - ISRG
-  - PFE
 XLY:
   - AMZN
   - TSLA
   - HD
-  - TJX
   - MCD
+  - TJX
   - BKNG
   - LOW
   - SBUX
   - MAR
-  - GM
+  - RCL
 XME:
-  - CLF
-  - NUE
-  - STLD
-  - RS
-  - AA
-  - CMC
+  - UEC
+  - HL
+  - LEU
   - USAR
-  - HCC
-  - FCX
+  - CDE
   - MP
+  - FCX
+  - RGLD
+  - NEM
+  - MTRN
 XOP:
-  - DINO
-  - SM
-  - APA
-  - MPC
-  - FANG
-  - MUR
+  - TPL
+  - PBF
+  - DK
+  - EXE
+  - CNX
+  - EQT
   - VLO
-  - CHRD
-  - VNOM
-  - PSX
+  - AR
+  - DINO
+  - PARR
 XRT:
-  - GO
-  - SAH
-  - ETSY
-  - AMZN
-  - M
-  - BBY
+  - GRPN
+  - REAL
+  - BBWI
+  - WRBY
+  - UPBD
+  - CART
+  - CPNG
+  - RVLV
   - VSXY
-  - EBAY
-  - CVNA
   - HZO
