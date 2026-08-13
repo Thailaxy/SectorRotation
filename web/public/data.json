@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-12T23:14:31.264455Z",
-  "as_of_date": "2026-08-12",
+  "generated_at": "2026-08-13T23:15:25.926809Z",
+  "as_of_date": "2026-08-13",
   "benchmark": "SPY",
-  "benchmark_return_1D": 0.25,
-  "benchmark_return_1M": 2.75,
-  "benchmark_return_3M": 4.51,
+  "benchmark_return_1D": 0.7,
+  "benchmark_return_1M": 3.06,
+  "benchmark_return_3M": 5.31,
   "benchmark_returns": {
-    "d1": 0.25,
-    "w1": 0.35,
-    "m1": 2.75,
-    "m3": 4.51,
-    "m6": 13.13,
-    "y1": 20.24,
-    "y5": 74.57
+    "d1": 0.7,
+    "w1": 1.21,
+    "m1": 3.06,
+    "m3": 5.31,
+    "m6": 13.35,
+    "y1": 20.57,
+    "y5": 74.46
   },
   "config": {
     "rrg_tail_weeks": 8,
@@ -31,62 +31,62 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 1.09,
-        "w1": 1.31,
-        "m1": -4.22,
-        "m3": 0.81,
-        "m6": 73.0,
-        "y1": 123.79,
-        "y5": 248.4,
-        "m1_vs_spy": -6.97,
+        "d1": 0.89,
+        "w1": 1.89,
+        "m1": -0.19,
+        "m3": 3.02,
+        "m6": 69.22,
+        "y1": 112.41,
+        "y5": 333.0,
+        "m1_vs_spy": -3.25,
         "vs_spy": {
-          "d1": 0.84,
-          "w1": 0.96,
-          "m1": -6.97,
-          "m3": -3.7,
-          "m6": 59.87,
-          "y1": 103.55,
-          "y5": 173.83
+          "d1": 0.19,
+          "w1": 0.68,
+          "m1": -3.25,
+          "m3": -2.29,
+          "m6": 55.87,
+          "y1": 91.84,
+          "y5": 258.54
         }
       },
-      "breadth_pct": 57.1,
-      "dollar_vol_ratio": 0.78,
+      "breadth_pct": 75.0,
+      "dollar_vol_ratio": 0.82,
       "rrg": {
-        "ratio": 116.91,
-        "momentum": 93.94,
+        "ratio": 116.71,
+        "momentum": 96.56,
         "quadrant": "weakening",
         "tail": [
           {
-            "ratio": 128.72,
-            "momentum": 100.43
+            "ratio": 127.23,
+            "momentum": 102.84
           },
           {
-            "ratio": 127.32,
-            "momentum": 88.2
+            "ratio": 125.91,
+            "momentum": 89.11
           },
           {
-            "ratio": 125.27,
-            "momentum": 84.08
+            "ratio": 123.94,
+            "momentum": 84.86
           },
           {
-            "ratio": 123.92,
-            "momentum": 89.15
+            "ratio": 122.96,
+            "momentum": 91.99
           },
           {
-            "ratio": 121.37,
-            "momentum": 81.21
+            "ratio": 120.62,
+            "momentum": 81.78
           },
           {
-            "ratio": 119.7,
-            "momentum": 87.99
+            "ratio": 119.19,
+            "momentum": 89.38
           },
           {
-            "ratio": 117.86,
-            "momentum": 87.3
+            "ratio": 117.33,
+            "momentum": 86.55
           },
           {
-            "ratio": 116.91,
-            "momentum": 93.94
+            "ratio": 116.71,
+            "momentum": 96.56
           }
         ]
       },
@@ -121,62 +121,62 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 4.16,
-        "w1": 2.7,
-        "m1": -6.88,
-        "m3": 15.2,
-        "m6": 65.59,
-        "y1": 332.65,
-        "y5": 660.61,
-        "m1_vs_spy": -9.63,
+        "d1": 1.68,
+        "w1": 7.27,
+        "m1": -0.2,
+        "m3": 23.91,
+        "m6": 53.92,
+        "y1": 237.12,
+        "y5": 499.46,
+        "m1_vs_spy": -3.26,
         "vs_spy": {
-          "d1": 3.91,
-          "w1": 2.35,
-          "m1": -9.63,
-          "m3": 10.69,
-          "m6": 52.46,
-          "y1": 312.41,
-          "y5": 586.04
+          "d1": 0.98,
+          "w1": 6.06,
+          "m1": -3.26,
+          "m3": 18.6,
+          "m6": 40.57,
+          "y1": 216.55,
+          "y5": 425.0
         }
       },
-      "breadth_pct": 85.7,
-      "dollar_vol_ratio": 0.81,
+      "breadth_pct": 100.0,
+      "dollar_vol_ratio": 0.84,
       "rrg": {
-        "ratio": 116.7,
-        "momentum": 88.2,
+        "ratio": 116.35,
+        "momentum": 89.62,
         "quadrant": "weakening",
         "tail": [
           {
-            "ratio": 125.34,
-            "momentum": 107.2
+            "ratio": 124.27,
+            "momentum": 106.1
           },
           {
-            "ratio": 125.19,
-            "momentum": 95.48
+            "ratio": 124.23,
+            "momentum": 96.42
           },
           {
-            "ratio": 123.8,
-            "momentum": 86.92
+            "ratio": 123.05,
+            "momentum": 88.61
           },
           {
-            "ratio": 122.71,
-            "momentum": 89.47
+            "ratio": 122.1,
+            "momentum": 90.6
           },
           {
-            "ratio": 120.82,
-            "momentum": 84.2
+            "ratio": 120.4,
+            "momentum": 85.65
           },
           {
-            "ratio": 119.63,
-            "momentum": 89.82
+            "ratio": 119.21,
+            "momentum": 89.73
           },
           {
-            "ratio": 118.24,
-            "momentum": 88.76
+            "ratio": 117.69,
+            "momentum": 87.87
           },
           {
-            "ratio": 116.7,
-            "momentum": 88.2
+            "ratio": 116.35,
+            "momentum": 89.62
           }
         ]
       },
@@ -205,62 +205,62 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -0.74,
-        "w1": 2.5,
-        "m1": 14.27,
-        "m3": 3.49,
-        "m6": 8.27,
-        "y1": -21.62,
-        "y5": 81.45,
-        "m1_vs_spy": 11.52,
+        "d1": 2.62,
+        "w1": 5.48,
+        "m1": 16.42,
+        "m3": 3.43,
+        "m6": 8.58,
+        "y1": -19.47,
+        "y5": 102.57,
+        "m1_vs_spy": 13.36,
         "vs_spy": {
-          "d1": -0.99,
-          "w1": 2.15,
-          "m1": 11.52,
-          "m3": -1.02,
-          "m6": -4.86,
-          "y1": -41.86,
-          "y5": 6.88
+          "d1": 1.92,
+          "w1": 4.27,
+          "m1": 13.36,
+          "m3": -1.88,
+          "m6": -4.77,
+          "y1": -40.04,
+          "y5": 28.11
         }
       },
-      "breadth_pct": 88.9,
-      "dollar_vol_ratio": 0.87,
+      "breadth_pct": 87.5,
+      "dollar_vol_ratio": 0.89,
       "rrg": {
-        "ratio": 85.37,
-        "momentum": 118.0,
+        "ratio": 85.39,
+        "momentum": 120.15,
         "quadrant": "improving",
         "tail": [
           {
+            "ratio": 83.61,
+            "momentum": 105.77
+          },
+          {
+            "ratio": 83.15,
+            "momentum": 102.6
+          },
+          {
+            "ratio": 83.25,
+            "momentum": 107.38
+          },
+          {
             "ratio": 83.36,
-            "momentum": 104.99
+            "momentum": 107.33
           },
           {
-            "ratio": 82.96,
-            "momentum": 102.66
+            "ratio": 83.46,
+            "momentum": 107.25
           },
           {
-            "ratio": 83.1,
-            "momentum": 106.82
+            "ratio": 83.3,
+            "momentum": 105.1
           },
           {
-            "ratio": 83.23,
-            "momentum": 106.67
+            "ratio": 83.71,
+            "momentum": 109.94
           },
           {
-            "ratio": 83.38,
-            "momentum": 106.8
-          },
-          {
-            "ratio": 83.27,
-            "momentum": 104.82
-          },
-          {
-            "ratio": 83.73,
-            "momentum": 109.26
-          },
-          {
-            "ratio": 85.37,
-            "momentum": 118.0
+            "ratio": 85.39,
+            "momentum": 120.15
           }
         ]
       },
@@ -294,64 +294,64 @@
       "name_th": "7 นางฟ้า",
       "type": "theme",
       "data_ok": true,
-      "quadrant": "lagging",
+      "quadrant": "improving",
       "returns": {
-        "d1": -1.67,
-        "w1": -1.47,
-        "m1": -0.38,
-        "m3": -3.84,
-        "m6": 9.26,
-        "y1": 14.01,
-        "y5": 79.09,
-        "m1_vs_spy": -3.13,
+        "d1": 1.29,
+        "w1": 0.21,
+        "m1": -0.61,
+        "m3": -1.6,
+        "m6": 11.21,
+        "y1": 16.39,
+        "y5": 201.34,
+        "m1_vs_spy": -3.67,
         "vs_spy": {
-          "d1": -1.92,
-          "w1": -1.82,
-          "m1": -3.13,
-          "m3": -8.35,
-          "m6": -3.87,
-          "y1": -6.23,
-          "y5": 4.52
+          "d1": 0.59,
+          "w1": -1.0,
+          "m1": -3.67,
+          "m3": -6.91,
+          "m6": -2.14,
+          "y1": -4.18,
+          "y5": 126.88
         }
       },
-      "breadth_pct": 33.3,
-      "dollar_vol_ratio": 0.75,
+      "breadth_pct": 57.1,
+      "dollar_vol_ratio": 0.77,
       "rrg": {
-        "ratio": 81.07,
-        "momentum": 99.34,
-        "quadrant": "lagging",
+        "ratio": 87.77,
+        "momentum": 115.21,
+        "quadrant": "improving",
         "tail": [
           {
-            "ratio": 92.18,
-            "momentum": 78.96
+            "ratio": 103.44,
+            "momentum": 88.06
           },
           {
-            "ratio": 87.61,
-            "momentum": 71.86
+            "ratio": 98.76,
+            "momentum": 65.53
           },
           {
-            "ratio": 86.16,
-            "momentum": 92.66
+            "ratio": 95.07,
+            "momentum": 74.99
           },
           {
-            "ratio": 86.02,
-            "momentum": 101.34
+            "ratio": 94.55,
+            "momentum": 98.89
           },
           {
-            "ratio": 86.36,
-            "momentum": 104.48
+            "ratio": 93.31,
+            "momentum": 93.52
           },
           {
-            "ratio": 82.32,
-            "momentum": 77.39
+            "ratio": 89.78,
+            "momentum": 76.42
           },
           {
-            "ratio": 81.64,
-            "momentum": 98.44
+            "ratio": 86.53,
+            "momentum": 79.65
           },
           {
-            "ratio": 81.07,
-            "momentum": 99.34
+            "ratio": 87.77,
+            "momentum": 115.21
           }
         ]
       },
@@ -380,62 +380,62 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": -0.51,
-        "w1": 4.05,
-        "m1": 4.64,
-        "m3": 45.55,
-        "m6": 85.82,
-        "y1": 71.14,
-        "y5": 131.46,
-        "m1_vs_spy": 1.89,
+        "d1": 3.64,
+        "w1": 9.19,
+        "m1": 10.24,
+        "m3": 44.45,
+        "m6": 95.62,
+        "y1": 76.71,
+        "y5": 137.12,
+        "m1_vs_spy": 7.18,
         "vs_spy": {
-          "d1": -0.76,
-          "w1": 3.7,
-          "m1": 1.89,
-          "m3": 41.04,
-          "m6": 72.69,
-          "y1": 50.9,
-          "y5": 56.89
+          "d1": 2.94,
+          "w1": 7.98,
+          "m1": 7.18,
+          "m3": 39.14,
+          "m6": 82.27,
+          "y1": 56.14,
+          "y5": 62.66
         }
       },
       "breadth_pct": 100.0,
-      "dollar_vol_ratio": 0.98,
+      "dollar_vol_ratio": 1.0,
       "rrg": {
-        "ratio": 125.29,
-        "momentum": 99.9,
+        "ratio": 125.17,
+        "momentum": 99.93,
         "quadrant": "weakening",
         "tail": [
           {
-            "ratio": 109.87,
-            "momentum": 115.28
+            "ratio": 109.54,
+            "momentum": 115.36
           },
           {
-            "ratio": 113.91,
-            "momentum": 118.64
+            "ratio": 113.58,
+            "momentum": 118.82
           },
           {
-            "ratio": 118.92,
-            "momentum": 121.46
+            "ratio": 118.6,
+            "momentum": 121.68
           },
           {
-            "ratio": 121.26,
-            "momentum": 109.65
+            "ratio": 120.98,
+            "momentum": 109.91
           },
           {
-            "ratio": 124.58,
-            "momentum": 113.28
+            "ratio": 124.34,
+            "momentum": 113.54
           },
           {
-            "ratio": 124.77,
+            "ratio": 124.6,
+            "momentum": 100.21
+          },
+          {
+            "ratio": 124.83,
+            "momentum": 99.89
+          },
+          {
+            "ratio": 125.17,
             "momentum": 99.93
-          },
-          {
-            "ratio": 124.96,
-            "momentum": 99.68
-          },
-          {
-            "ratio": 125.29,
-            "momentum": 99.9
           }
         ]
       },
@@ -472,29 +472,29 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": -0.81,
-        "w1": 1.21,
-        "m1": -2.13,
-        "m3": 25.67,
-        "m6": 28.57,
-        "y1": 59.47,
-        "y5": -65.19,
-        "m1_vs_spy": -4.88,
+        "d1": 0.02,
+        "w1": 2.58,
+        "m1": -1.55,
+        "m3": 27.08,
+        "m6": 26.01,
+        "y1": 58.44,
+        "y5": -64.74,
+        "m1_vs_spy": -4.61,
         "vs_spy": {
-          "d1": -1.06,
-          "w1": 0.86,
-          "m1": -4.88,
-          "m3": 21.16,
-          "m6": 15.44,
-          "y1": 39.23,
-          "y5": -139.76
+          "d1": -0.68,
+          "w1": 1.37,
+          "m1": -4.61,
+          "m3": 21.77,
+          "m6": 12.66,
+          "y1": 37.87,
+          "y5": -139.2
         }
       },
-      "breadth_pct": 75.0,
-      "dollar_vol_ratio": 1.0,
+      "breadth_pct": 62.5,
+      "dollar_vol_ratio": 0.91,
       "rrg": {
-        "ratio": 126.32,
-        "momentum": 98.53,
+        "ratio": 126.33,
+        "momentum": 98.49,
         "quadrant": "weakening",
         "tail": [
           {
@@ -522,12 +522,12 @@
             "momentum": 83.15
           },
           {
-            "ratio": 125.99,
-            "momentum": 88.39
+            "ratio": 126.02,
+            "momentum": 88.48
           },
           {
-            "ratio": 126.32,
-            "momentum": 98.53
+            "ratio": 126.33,
+            "momentum": 98.49
           }
         ]
       },
@@ -562,29 +562,29 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.47,
-        "w1": 3.7,
-        "m1": 12.49,
-        "m3": 15.05,
-        "m6": 3.29,
-        "y1": 38.21,
-        "y5": 81.3,
-        "m1_vs_spy": 9.74,
+        "d1": 0.43,
+        "w1": 4.39,
+        "m1": 11.57,
+        "m3": 18.28,
+        "m6": 4.11,
+        "y1": 37.86,
+        "y5": 82.0,
+        "m1_vs_spy": 8.51,
         "vs_spy": {
-          "d1": 0.22,
-          "w1": 3.35,
-          "m1": 9.74,
-          "m3": 10.54,
-          "m6": -9.84,
-          "y1": 17.97,
-          "y5": 6.73
+          "d1": -0.27,
+          "w1": 3.18,
+          "m1": 8.51,
+          "m3": 12.97,
+          "m6": -9.24,
+          "y1": 17.29,
+          "y5": 7.54
         }
       },
       "breadth_pct": 100.0,
-      "dollar_vol_ratio": 0.94,
+      "dollar_vol_ratio": 0.92,
       "rrg": {
-        "ratio": 97.47,
-        "momentum": 104.89,
+        "ratio": 97.6,
+        "momentum": 104.65,
         "quadrant": "improving",
         "tail": [
           {
@@ -612,12 +612,12 @@
             "momentum": 102.19
           },
           {
-            "ratio": 96.54,
-            "momentum": 104.54
+            "ratio": 96.7,
+            "momentum": 105.61
           },
           {
-            "ratio": 97.47,
-            "momentum": 104.89
+            "ratio": 97.6,
+            "momentum": 104.65
           }
         ]
       },
@@ -649,62 +649,62 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.21,
-        "w1": 2.43,
-        "m1": 5.76,
-        "m3": 15.59,
-        "m6": 7.46,
-        "y1": 40.41,
-        "y5": 127.95,
-        "m1_vs_spy": 3.01,
+        "d1": 0.43,
+        "w1": 2.19,
+        "m1": 4.05,
+        "m3": 14.08,
+        "m6": 15.19,
+        "y1": 36.9,
+        "y5": 113.7,
+        "m1_vs_spy": 0.99,
         "vs_spy": {
-          "d1": -0.04,
-          "w1": 2.08,
-          "m1": 3.01,
-          "m3": 11.08,
-          "m6": -5.67,
-          "y1": 20.17,
-          "y5": 53.38
+          "d1": -0.27,
+          "w1": 0.98,
+          "m1": 0.99,
+          "m3": 8.77,
+          "m6": 1.84,
+          "y1": 16.33,
+          "y5": 39.24
         }
       },
-      "breadth_pct": 80.0,
-      "dollar_vol_ratio": 0.89,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 0.85,
       "rrg": {
-        "ratio": 111.4,
-        "momentum": 91.46,
+        "ratio": 113.64,
+        "momentum": 84.94,
         "quadrant": "weakening",
         "tail": [
           {
-            "ratio": 104.06,
-            "momentum": 93.77
+            "ratio": 104.7,
+            "momentum": 93.51
           },
           {
-            "ratio": 107.37,
-            "momentum": 118.58
+            "ratio": 109.13,
+            "momentum": 134.73
           },
           {
-            "ratio": 109.69,
-            "momentum": 111.75
+            "ratio": 111.99,
+            "momentum": 119.59
           },
           {
-            "ratio": 110.11,
-            "momentum": 99.58
+            "ratio": 112.52,
+            "momentum": 99.44
           },
           {
-            "ratio": 111.01,
-            "momentum": 102.52
+            "ratio": 113.69,
+            "momentum": 104.72
           },
           {
-            "ratio": 112.38,
-            "momentum": 105.39
+            "ratio": 115.11,
+            "momentum": 106.7
           },
           {
-            "ratio": 112.21,
-            "momentum": 95.65
+            "ratio": 114.77,
+            "momentum": 91.6
           },
           {
-            "ratio": 111.4,
-            "momentum": 91.46
+            "ratio": 113.64,
+            "momentum": 84.94
           }
         ]
       },
@@ -737,26 +737,26 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.71,
-        "w1": 2.61,
-        "m1": 9.83,
-        "m3": 13.63,
-        "m6": -3.16,
-        "y1": 20.99,
-        "y5": 76.09,
-        "m1_vs_spy": 7.08,
+        "d1": -0.8,
+        "w1": 0.76,
+        "m1": 9.25,
+        "m3": 10.05,
+        "m6": -5.33,
+        "y1": 18.45,
+        "y5": 72.19,
+        "m1_vs_spy": 6.19,
         "vs_spy": {
-          "d1": 0.46,
-          "w1": 2.26,
-          "m1": 7.08,
-          "m3": 9.12,
-          "m6": -16.29,
-          "y1": 0.75,
-          "y5": 1.52
+          "d1": -1.5,
+          "w1": -0.45,
+          "m1": 6.19,
+          "m3": 4.74,
+          "m6": -18.68,
+          "y1": -2.12,
+          "y5": -2.27
         }
       },
       "breadth_pct": 100.0,
-      "dollar_vol_ratio": 0.72,
+      "dollar_vol_ratio": 0.7,
       "rrg": {
         "ratio": 92.27,
         "momentum": 103.06,
@@ -829,26 +829,26 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": -0.23,
-        "w1": 6.71,
-        "m1": 9.29,
-        "m3": 1.02,
-        "m6": 12.06,
-        "y1": 32.47,
-        "y5": 85.14,
-        "m1_vs_spy": 6.54,
+        "d1": -0.92,
+        "w1": 3.68,
+        "m1": 8.54,
+        "m3": -2.08,
+        "m6": 8.4,
+        "y1": 32.04,
+        "y5": 82.53,
+        "m1_vs_spy": 5.48,
         "vs_spy": {
-          "d1": -0.48,
-          "w1": 6.36,
-          "m1": 6.54,
-          "m3": -3.49,
-          "m6": -1.07,
-          "y1": 12.23,
-          "y5": 10.57
+          "d1": -1.62,
+          "w1": 2.47,
+          "m1": 5.48,
+          "m3": -7.39,
+          "m6": -4.95,
+          "y1": 11.47,
+          "y5": 8.07
         }
       },
-      "breadth_pct": 100.0,
-      "dollar_vol_ratio": 0.98,
+      "breadth_pct": 80.0,
+      "dollar_vol_ratio": 0.95,
       "rrg": {
         "ratio": 103.82,
         "momentum": 93.08,
@@ -921,62 +921,62 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 1.06,
-        "w1": 0.28,
-        "m1": 0.85,
-        "m3": 19.28,
-        "m6": 16.73,
-        "y1": 30.7,
-        "y5": 108.81,
-        "m1_vs_spy": -1.9,
+        "d1": -0.35,
+        "w1": 1.47,
+        "m1": -0.91,
+        "m3": 17.83,
+        "m6": 14.5,
+        "y1": 28.61,
+        "y5": 101.77,
+        "m1_vs_spy": -3.97,
         "vs_spy": {
-          "d1": 0.81,
-          "w1": -0.07,
-          "m1": -1.9,
-          "m3": 14.77,
-          "m6": 3.6,
-          "y1": 10.46,
-          "y5": 34.24
+          "d1": -1.05,
+          "w1": 0.26,
+          "m1": -3.97,
+          "m3": 12.52,
+          "m6": 1.15,
+          "y1": 8.04,
+          "y5": 27.31
         }
       },
       "breadth_pct": 80.0,
-      "dollar_vol_ratio": 0.76,
+      "dollar_vol_ratio": 0.77,
       "rrg": {
-        "ratio": 115.79,
-        "momentum": 94.05,
+        "ratio": 115.6,
+        "momentum": 94.4,
         "quadrant": "weakening",
         "tail": [
           {
-            "ratio": 104.32,
-            "momentum": 122.02
+            "ratio": 103.63,
+            "momentum": 121.71
           },
           {
-            "ratio": 107.26,
-            "momentum": 119.33
+            "ratio": 106.62,
+            "momentum": 119.52
           },
           {
-            "ratio": 108.95,
-            "momentum": 111.33
+            "ratio": 108.36,
+            "momentum": 111.59
           },
           {
-            "ratio": 110.97,
-            "momentum": 113.01
+            "ratio": 110.41,
+            "momentum": 113.16
           },
           {
-            "ratio": 113.78,
-            "momentum": 117.07
+            "ratio": 113.34,
+            "momentum": 117.55
           },
           {
-            "ratio": 116.57,
-            "momentum": 116.17
+            "ratio": 116.25,
+            "momentum": 116.69
           },
           {
-            "ratio": 116.76,
-            "momentum": 100.84
+            "ratio": 116.52,
+            "momentum": 101.36
           },
           {
-            "ratio": 115.79,
-            "momentum": 94.05
+            "ratio": 115.6,
+            "momentum": 94.4
           }
         ]
       },
@@ -1013,62 +1013,62 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.62,
-        "w1": 0.52,
-        "m1": 2.01,
-        "m3": -3.04,
-        "m6": -4.21,
-        "y1": 9.92,
-        "y5": 79.58,
-        "m1_vs_spy": -0.74,
+        "d1": 0.67,
+        "w1": 1.0,
+        "m1": 3.02,
+        "m3": -4.11,
+        "m6": -4.91,
+        "y1": 7.6,
+        "y5": 61.7,
+        "m1_vs_spy": -0.04,
         "vs_spy": {
-          "d1": 0.37,
-          "w1": 0.17,
-          "m1": -0.74,
-          "m3": -7.55,
-          "m6": -17.34,
-          "y1": -10.32,
-          "y5": 5.01
+          "d1": -0.03,
+          "w1": -0.21,
+          "m1": -0.04,
+          "m3": -9.42,
+          "m6": -18.26,
+          "y1": -12.97,
+          "y5": -12.76
         }
       },
-      "breadth_pct": 75.0,
-      "dollar_vol_ratio": 0.85,
+      "breadth_pct": 80.0,
+      "dollar_vol_ratio": 0.81,
       "rrg": {
-        "ratio": 82.78,
-        "momentum": 91.11,
+        "ratio": 81.1,
+        "momentum": 91.68,
         "quadrant": "lagging",
         "tail": [
           {
-            "ratio": 90.43,
-            "momentum": 89.71
+            "ratio": 88.4,
+            "momentum": 89.13
           },
           {
-            "ratio": 89.82,
-            "momentum": 98.36
+            "ratio": 87.66,
+            "momentum": 97.17
           },
           {
-            "ratio": 88.2,
-            "momentum": 91.5
+            "ratio": 86.09,
+            "momentum": 91.69
           },
           {
-            "ratio": 85.88,
-            "momentum": 86.36
+            "ratio": 83.72,
+            "momentum": 85.69
           },
           {
-            "ratio": 85.12,
-            "momentum": 96.47
+            "ratio": 82.96,
+            "momentum": 95.55
           },
           {
-            "ratio": 84.23,
-            "momentum": 94.91
+            "ratio": 82.21,
+            "momentum": 94.83
           },
           {
-            "ratio": 84.14,
-            "momentum": 100.67
+            "ratio": 82.26,
+            "momentum": 100.61
           },
           {
-            "ratio": 82.78,
-            "momentum": 91.11
+            "ratio": 81.1,
+            "momentum": 91.68
           }
         ]
       },
@@ -1095,62 +1095,62 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.14,
-        "w1": 1.69,
-        "m1": 0.73,
-        "m3": -0.57,
-        "m6": -6.02,
-        "y1": 1.3,
-        "y5": 13.39,
-        "m1_vs_spy": -2.02,
+        "d1": 0.23,
+        "w1": 2.46,
+        "m1": -1.19,
+        "m3": 2.07,
+        "m6": -4.76,
+        "y1": -4.27,
+        "y5": 180.06,
+        "m1_vs_spy": -4.25,
         "vs_spy": {
-          "d1": -0.11,
-          "w1": 1.34,
-          "m1": -2.02,
-          "m3": -5.08,
-          "m6": -19.15,
-          "y1": -18.94,
-          "y5": -61.18
+          "d1": -0.47,
+          "w1": 1.25,
+          "m1": -4.25,
+          "m3": -3.24,
+          "m6": -18.11,
+          "y1": -24.84,
+          "y5": 105.6
         }
       },
-      "breadth_pct": 33.3,
-      "dollar_vol_ratio": 1.1,
+      "breadth_pct": 20.0,
+      "dollar_vol_ratio": 0.93,
       "rrg": {
-        "ratio": 80.56,
-        "momentum": 107.02,
+        "ratio": 83.15,
+        "momentum": 101.73,
         "quadrant": "improving",
         "tail": [
           {
-            "ratio": 75.01,
-            "momentum": 110.2
+            "ratio": 79.98,
+            "momentum": 116.05
           },
           {
-            "ratio": 76.16,
-            "momentum": 110.88
+            "ratio": 81.3,
+            "momentum": 117.29
           },
           {
-            "ratio": 75.82,
-            "momentum": 102.46
+            "ratio": 81.18,
+            "momentum": 104.75
           },
           {
-            "ratio": 76.23,
-            "momentum": 106.65
+            "ratio": 81.58,
+            "momentum": 109.35
           },
           {
-            "ratio": 77.13,
-            "momentum": 109.24
+            "ratio": 82.12,
+            "momentum": 110.46
           },
           {
-            "ratio": 79.12,
-            "momentum": 114.73
+            "ratio": 83.51,
+            "momentum": 116.96
           },
           {
-            "ratio": 79.99,
-            "momentum": 108.7
+            "ratio": 83.61,
+            "momentum": 106.46
           },
           {
-            "ratio": 80.56,
-            "momentum": 107.02
+            "ratio": 83.15,
+            "momentum": 101.73
           }
         ]
       },
@@ -1182,62 +1182,62 @@
       "data_ok": true,
       "quadrant": "leading",
       "returns": {
-        "d1": -0.93,
-        "w1": -0.64,
-        "m1": 6.15,
-        "m3": 9.46,
-        "m6": 13.63,
-        "y1": 28.41,
-        "y5": 67.81,
-        "m1_vs_spy": 3.4,
+        "d1": -0.54,
+        "w1": -0.59,
+        "m1": 6.08,
+        "m3": 9.57,
+        "m6": 11.99,
+        "y1": 27.31,
+        "y5": 64.4,
+        "m1_vs_spy": 3.02,
         "vs_spy": {
-          "d1": -1.18,
-          "w1": -0.99,
-          "m1": 3.4,
-          "m3": 4.95,
-          "m6": 0.5,
-          "y1": 8.17,
-          "y5": -6.76
+          "d1": -1.24,
+          "w1": -1.8,
+          "m1": 3.02,
+          "m3": 4.26,
+          "m6": -1.36,
+          "y1": 6.74,
+          "y5": -10.06
         }
       },
       "breadth_pct": 80.0,
-      "dollar_vol_ratio": 0.78,
+      "dollar_vol_ratio": 0.75,
       "rrg": {
-        "ratio": 111.64,
-        "momentum": 101.93,
+        "ratio": 111.21,
+        "momentum": 102.31,
         "quadrant": "leading",
         "tail": [
           {
-            "ratio": 112.79,
-            "momentum": 96.18
+            "ratio": 112.8,
+            "momentum": 96.68
           },
           {
-            "ratio": 113.09,
-            "momentum": 98.6
+            "ratio": 112.99,
+            "momentum": 98.01
           },
           {
-            "ratio": 112.74,
-            "momentum": 94.19
+            "ratio": 112.52,
+            "momentum": 93.85
           },
           {
-            "ratio": 111.49,
-            "momentum": 88.35
+            "ratio": 111.24,
+            "momentum": 88.86
           },
           {
-            "ratio": 110.67,
-            "momentum": 91.46
+            "ratio": 110.32,
+            "momentum": 91.36
           },
           {
-            "ratio": 110.92,
-            "momentum": 98.76
+            "ratio": 110.5,
+            "momentum": 98.56
           },
           {
-            "ratio": 110.91,
-            "momentum": 96.94
+            "ratio": 110.41,
+            "momentum": 96.7
           },
           {
-            "ratio": 111.64,
-            "momentum": 101.93
+            "ratio": 111.21,
+            "momentum": 102.31
           }
         ]
       },
@@ -1264,61 +1264,61 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 8.21,
-        "w1": 7.95,
-        "m1": 9.93,
-        "m3": 23.41,
-        "m6": 78.12,
-        "y1": 142.2,
-        "y5": 759.62,
-        "m1_vs_spy": 7.18,
+        "d1": 0.59,
+        "w1": 11.22,
+        "m1": 15.63,
+        "m3": 27.67,
+        "m6": 80.13,
+        "y1": 142.43,
+        "y5": 771.22,
+        "m1_vs_spy": 12.57,
         "vs_spy": {
-          "d1": 7.96,
-          "w1": 7.6,
-          "m1": 7.18,
-          "m3": 18.9,
-          "m6": 64.99,
-          "y1": 121.96,
-          "y5": 685.05
+          "d1": -0.11,
+          "w1": 10.01,
+          "m1": 12.57,
+          "m3": 22.36,
+          "m6": 66.78,
+          "y1": 121.86,
+          "y5": 696.76
         }
       },
       "breadth_pct": 100.0,
-      "dollar_vol_ratio": 0.98,
+      "dollar_vol_ratio": 1.06,
       "rrg": {
-        "ratio": 113.6,
+        "ratio": 113.81,
         "momentum": 96.17,
         "quadrant": "weakening",
         "tail": [
           {
-            "ratio": 124.2,
-            "momentum": 89.54
+            "ratio": 124.36,
+            "momentum": 89.57
           },
           {
-            "ratio": 122.85,
+            "ratio": 123.01,
             "momentum": 90.82
           },
           {
-            "ratio": 120.39,
-            "momentum": 86.05
+            "ratio": 120.56,
+            "momentum": 86.08
           },
           {
-            "ratio": 119.6,
+            "ratio": 119.77,
             "momentum": 94.23
           },
           {
-            "ratio": 117.03,
-            "momentum": 86.32
+            "ratio": 117.22,
+            "momentum": 86.37
           },
           {
-            "ratio": 116.24,
-            "momentum": 94.95
+            "ratio": 116.43,
+            "momentum": 94.97
           },
           {
-            "ratio": 114.27,
-            "momentum": 89.75
+            "ratio": 114.47,
+            "momentum": 89.78
           },
           {
-            "ratio": 113.6,
+            "ratio": 113.81,
             "momentum": 96.17
           }
         ]
@@ -1357,62 +1357,62 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 2.17,
-        "w1": 3.37,
-        "m1": 11.89,
-        "m3": 2.55,
-        "m6": 15.31,
-        "y1": 32.69,
-        "y5": 99.02,
-        "m1_vs_spy": 9.14,
+        "d1": 0.46,
+        "w1": 11.2,
+        "m1": 18.8,
+        "m3": 4.3,
+        "m6": 19.86,
+        "y1": 22.45,
+        "y5": 183.22,
+        "m1_vs_spy": 15.74,
         "vs_spy": {
-          "d1": 1.92,
-          "w1": 3.02,
-          "m1": 9.14,
-          "m3": -1.96,
-          "m6": 2.18,
-          "y1": 12.45,
-          "y5": 24.45
+          "d1": -0.24,
+          "w1": 9.99,
+          "m1": 15.74,
+          "m3": -1.01,
+          "m6": 6.51,
+          "y1": 1.88,
+          "y5": 108.76
         }
       },
       "breadth_pct": 100.0,
-      "dollar_vol_ratio": 0.98,
+      "dollar_vol_ratio": 1.01,
       "rrg": {
-        "ratio": 89.76,
-        "momentum": 102.93,
+        "ratio": 89.6,
+        "momentum": 102.71,
         "quadrant": "improving",
         "tail": [
           {
-            "ratio": 97.6,
-            "momentum": 102.56
+            "ratio": 99.99,
+            "momentum": 102.78
           },
           {
-            "ratio": 96.9,
-            "momentum": 97.91
+            "ratio": 99.12,
+            "momentum": 96.33
           },
           {
-            "ratio": 96.04,
-            "momentum": 96.89
+            "ratio": 98.12,
+            "momentum": 95.61
           },
           {
-            "ratio": 94.58,
-            "momentum": 92.82
+            "ratio": 96.18,
+            "momentum": 89.92
           },
           {
-            "ratio": 92.53,
-            "momentum": 89.24
+            "ratio": 93.4,
+            "momentum": 85.22
           },
           {
-            "ratio": 90.83,
-            "momentum": 91.88
+            "ratio": 90.99,
+            "momentum": 88.02
           },
           {
-            "ratio": 89.84,
-            "momentum": 96.77
+            "ratio": 89.63,
+            "momentum": 94.51
           },
           {
-            "ratio": 89.76,
-            "momentum": 102.93
+            "ratio": 89.6,
+            "momentum": 102.71
           }
         ]
       },
@@ -1437,62 +1437,62 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -1.45,
-        "w1": 2.69,
-        "m1": 5.87,
-        "m3": -12.87,
-        "m6": -19.95,
-        "y1": -14.39,
-        "y5": 277.97,
-        "m1_vs_spy": 3.12,
+        "d1": 1.0,
+        "w1": 6.11,
+        "m1": 6.98,
+        "m3": -8.11,
+        "m6": -17.53,
+        "y1": -3.88,
+        "y5": 288.85,
+        "m1_vs_spy": 3.92,
         "vs_spy": {
-          "d1": -1.7,
-          "w1": 2.34,
-          "m1": 3.12,
-          "m3": -17.38,
-          "m6": -33.08,
-          "y1": -34.63,
-          "y5": 203.4
+          "d1": 0.3,
+          "w1": 4.9,
+          "m1": 3.92,
+          "m3": -13.42,
+          "m6": -30.88,
+          "y1": -24.45,
+          "y5": 214.39
         }
       },
-      "breadth_pct": 100.0,
-      "dollar_vol_ratio": 0.95,
+      "breadth_pct": 75.0,
+      "dollar_vol_ratio": 0.89,
       "rrg": {
-        "ratio": 82.1,
-        "momentum": 115.38,
+        "ratio": 82.13,
+        "momentum": 112.74,
         "quadrant": "improving",
         "tail": [
           {
-            "ratio": 86.22,
-            "momentum": 101.85
+            "ratio": 89.21,
+            "momentum": 99.17
           },
           {
-            "ratio": 85.07,
-            "momentum": 96.71
+            "ratio": 87.74,
+            "momentum": 93.15
           },
           {
-            "ratio": 83.86,
-            "momentum": 96.25
+            "ratio": 86.1,
+            "momentum": 91.9
           },
           {
-            "ratio": 82.91,
-            "momentum": 98.87
+            "ratio": 84.67,
+            "momentum": 94.15
           },
           {
-            "ratio": 81.76,
-            "momentum": 97.33
+            "ratio": 82.97,
+            "momentum": 91.76
           },
           {
-            "ratio": 81.41,
-            "momentum": 105.56
+            "ratio": 82.12,
+            "momentum": 100.42
           },
           {
-            "ratio": 81.39,
-            "momentum": 108.72
+            "ratio": 81.68,
+            "momentum": 104.33
           },
           {
-            "ratio": 82.1,
-            "momentum": 115.38
+            "ratio": 82.13,
+            "momentum": 112.74
           }
         ]
       },
@@ -1529,62 +1529,62 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 1.38,
-        "w1": 8.79,
-        "m1": 22.48,
-        "m3": 3.92,
-        "m6": -8.39,
-        "y1": 49.85,
-        "y5": 165.01,
-        "m1_vs_spy": 19.73,
+        "d1": -2.18,
+        "w1": 4.96,
+        "m1": 20.54,
+        "m3": 1.8,
+        "m6": -12.7,
+        "y1": 43.99,
+        "y5": 162.42,
+        "m1_vs_spy": 17.48,
         "vs_spy": {
-          "d1": 1.13,
-          "w1": 8.44,
-          "m1": 19.73,
-          "m3": -0.59,
-          "m6": -21.52,
-          "y1": 29.61,
-          "y5": 90.44
+          "d1": -2.88,
+          "w1": 3.75,
+          "m1": 17.48,
+          "m3": -3.51,
+          "m6": -26.05,
+          "y1": 23.42,
+          "y5": 87.96
         }
       },
       "breadth_pct": 100.0,
-      "dollar_vol_ratio": 1.42,
+      "dollar_vol_ratio": 1.39,
       "rrg": {
-        "ratio": 93.0,
-        "momentum": 111.51,
+        "ratio": 93.01,
+        "momentum": 111.4,
         "quadrant": "improving",
         "tail": [
           {
-            "ratio": 101.84,
-            "momentum": 92.14
+            "ratio": 101.85,
+            "momentum": 92.12
           },
           {
-            "ratio": 100.29,
-            "momentum": 88.5
+            "ratio": 100.31,
+            "momentum": 88.51
           },
           {
-            "ratio": 98.77,
-            "momentum": 88.98
+            "ratio": 98.79,
+            "momentum": 88.93
           },
           {
-            "ratio": 96.86,
-            "momentum": 85.65
+            "ratio": 96.88,
+            "momentum": 85.64
           },
           {
-            "ratio": 94.71,
-            "momentum": 83.95
+            "ratio": 94.74,
+            "momentum": 83.92
           },
           {
-            "ratio": 93.49,
-            "momentum": 92.73
+            "ratio": 93.52,
+            "momentum": 92.63
           },
           {
-            "ratio": 92.18,
-            "momentum": 92.14
+            "ratio": 92.21,
+            "momentum": 92.1
           },
           {
-            "ratio": 93.0,
-            "momentum": 111.51
+            "ratio": 93.01,
+            "momentum": 111.4
           }
         ]
       },
@@ -1618,64 +1618,64 @@
       "name_th": "พลังงานแสงอาทิตย์",
       "type": "theme",
       "data_ok": true,
-      "quadrant": "improving",
+      "quadrant": "lagging",
       "returns": {
-        "d1": -3.79,
-        "w1": -1.92,
-        "m1": -9.86,
-        "m3": -18.47,
-        "m6": -19.82,
-        "y1": -6.53,
-        "y5": -14.36,
-        "m1_vs_spy": -12.61,
+        "d1": -0.07,
+        "w1": 1.44,
+        "m1": -8.62,
+        "m3": -17.84,
+        "m6": -21.18,
+        "y1": 8.24,
+        "y5": -14.44,
+        "m1_vs_spy": -11.68,
         "vs_spy": {
-          "d1": -4.04,
-          "w1": -2.27,
-          "m1": -12.61,
-          "m3": -22.98,
-          "m6": -32.95,
-          "y1": -26.77,
-          "y5": -88.93
+          "d1": -0.77,
+          "w1": 0.23,
+          "m1": -11.68,
+          "m3": -23.15,
+          "m6": -34.53,
+          "y1": -12.33,
+          "y5": -88.9
         }
       },
-      "breadth_pct": 66.7,
-      "dollar_vol_ratio": 1.05,
+      "breadth_pct": 75.0,
+      "dollar_vol_ratio": 0.85,
       "rrg": {
-        "ratio": 88.71,
-        "momentum": 100.37,
-        "quadrant": "improving",
+        "ratio": 96.68,
+        "momentum": 93.25,
+        "quadrant": "lagging",
         "tail": [
           {
-            "ratio": 104.01,
-            "momentum": 97.04
+            "ratio": 113.0,
+            "momentum": 93.41
           },
           {
-            "ratio": 102.95,
-            "momentum": 91.51
+            "ratio": 110.95,
+            "momentum": 86.6
           },
           {
-            "ratio": 100.4,
-            "momentum": 83.07
+            "ratio": 108.86,
+            "momentum": 86.98
           },
           {
-            "ratio": 98.13,
-            "momentum": 85.42
+            "ratio": 106.88,
+            "momentum": 87.97
           },
           {
-            "ratio": 95.1,
-            "momentum": 81.92
+            "ratio": 104.28,
+            "momentum": 85.31
           },
           {
-            "ratio": 91.42,
-            "momentum": 79.55
+            "ratio": 101.39,
+            "momentum": 84.52
           },
           {
-            "ratio": 88.7,
-            "momentum": 85.45
+            "ratio": 98.02,
+            "momentum": 82.87
           },
           {
-            "ratio": 88.71,
-            "momentum": 100.37
+            "ratio": 96.68,
+            "momentum": 93.25
           }
         ]
       },
@@ -1706,62 +1706,62 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -0.09,
-        "w1": -4.32,
-        "m1": -9.39,
-        "m3": -16.65,
-        "m6": 11.27,
-        "y1": -24.03,
-        "y5": 4.02,
-        "m1_vs_spy": -12.14,
+        "d1": 0.09,
+        "w1": -1.46,
+        "m1": -10.36,
+        "m3": -14.64,
+        "m6": 10.06,
+        "y1": -26.54,
+        "y5": 2.87,
+        "m1_vs_spy": -13.42,
         "vs_spy": {
-          "d1": -0.34,
-          "w1": -4.67,
-          "m1": -12.14,
-          "m3": -21.16,
-          "m6": -1.86,
-          "y1": -44.27,
-          "y5": -70.55
+          "d1": -0.61,
+          "w1": -2.67,
+          "m1": -13.42,
+          "m3": -19.95,
+          "m6": -3.29,
+          "y1": -47.11,
+          "y5": -71.59
         }
       },
-      "breadth_pct": 0.0,
-      "dollar_vol_ratio": 0.93,
+      "breadth_pct": 40.0,
+      "dollar_vol_ratio": 0.97,
       "rrg": {
-        "ratio": 88.71,
-        "momentum": 103.06,
+        "ratio": 88.69,
+        "momentum": 103.59,
         "quadrant": "improving",
         "tail": [
           {
-            "ratio": 88.28,
-            "momentum": 106.72
+            "ratio": 87.99,
+            "momentum": 108.09
           },
           {
-            "ratio": 88.4,
-            "momentum": 103.96
+            "ratio": 88.16,
+            "momentum": 104.75
           },
           {
-            "ratio": 88.76,
-            "momentum": 105.55
+            "ratio": 88.61,
+            "momentum": 106.88
           },
           {
-            "ratio": 88.94,
-            "momentum": 104.58
+            "ratio": 88.87,
+            "momentum": 105.63
           },
           {
-            "ratio": 88.88,
-            "momentum": 103.16
+            "ratio": 88.85,
+            "momentum": 103.86
           },
           {
-            "ratio": 88.93,
-            "momentum": 103.85
+            "ratio": 88.91,
+            "momentum": 104.36
           },
           {
-            "ratio": 88.75,
-            "momentum": 102.21
+            "ratio": 88.72,
+            "momentum": 102.43
           },
           {
-            "ratio": 88.71,
-            "momentum": 103.06
+            "ratio": 88.69,
+            "momentum": 103.59
           }
         ]
       },
@@ -1798,26 +1798,26 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 1.41,
-        "w1": 13.79,
-        "m1": 17.29,
-        "m3": -10.19,
-        "m6": -9.86,
-        "y1": 37.51,
-        "y5": 348.22,
-        "m1_vs_spy": 14.54,
+        "d1": -1.07,
+        "w1": 9.94,
+        "m1": 18.35,
+        "m3": -14.24,
+        "m6": -14.54,
+        "y1": 34.93,
+        "y5": 353.96,
+        "m1_vs_spy": 15.29,
         "vs_spy": {
-          "d1": 1.16,
-          "w1": 13.44,
-          "m1": 14.54,
-          "m3": -14.7,
-          "m6": -22.99,
-          "y1": 17.27,
-          "y5": 273.65
+          "d1": -1.77,
+          "w1": 8.73,
+          "m1": 15.29,
+          "m3": -19.55,
+          "m6": -27.89,
+          "y1": 14.36,
+          "y5": 279.5
         }
       },
       "breadth_pct": 100.0,
-      "dollar_vol_ratio": 1.19,
+      "dollar_vol_ratio": 1.23,
       "rrg": {
         "ratio": 92.91,
         "momentum": 99.68,
@@ -1885,62 +1885,62 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -0.5,
-        "w1": -1.79,
-        "m1": 5.33,
-        "m3": -9.83,
-        "m6": -13.57,
-        "y1": -5.81,
-        "y5": -20.6,
-        "m1_vs_spy": 2.58,
+        "d1": -3.6,
+        "w1": -5.15,
+        "m1": -0.9,
+        "m3": -11.14,
+        "m6": -11.7,
+        "y1": -7.42,
+        "y5": -32.15,
+        "m1_vs_spy": -3.96,
         "vs_spy": {
-          "d1": -0.75,
-          "w1": -2.14,
-          "m1": 2.58,
-          "m3": -14.34,
-          "m6": -26.7,
-          "y1": -26.05,
-          "y5": -95.17
+          "d1": -4.3,
+          "w1": -6.36,
+          "m1": -3.96,
+          "m3": -16.45,
+          "m6": -25.05,
+          "y1": -27.99,
+          "y5": -106.61
         }
       },
-      "breadth_pct": 75.0,
-      "dollar_vol_ratio": 0.84,
+      "breadth_pct": 40.0,
+      "dollar_vol_ratio": 1.08,
       "rrg": {
-        "ratio": 80.45,
-        "momentum": 109.42,
+        "ratio": 80.99,
+        "momentum": 110.72,
         "quadrant": "improving",
         "tail": [
           {
-            "ratio": 72.98,
-            "momentum": 96.09
+            "ratio": 73.32,
+            "momentum": 95.22
           },
           {
-            "ratio": 72.35,
-            "momentum": 98.45
+            "ratio": 72.6,
+            "momentum": 97.43
           },
           {
-            "ratio": 73.08,
-            "momentum": 107.51
+            "ratio": 73.28,
+            "momentum": 108.02
           },
           {
-            "ratio": 74.61,
-            "momentum": 112.55
+            "ratio": 74.8,
+            "momentum": 114.17
           },
           {
-            "ratio": 76.38,
-            "momentum": 113.64
+            "ratio": 76.62,
+            "momentum": 115.87
           },
           {
-            "ratio": 77.44,
-            "momentum": 108.86
+            "ratio": 77.8,
+            "momentum": 110.67
           },
           {
-            "ratio": 79.19,
-            "momentum": 113.01
+            "ratio": 79.68,
+            "momentum": 115.39
           },
           {
-            "ratio": 80.45,
-            "momentum": 109.42
+            "ratio": 80.99,
+            "momentum": 110.72
           }
         ]
       },
@@ -1972,29 +1972,29 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -2.68,
-        "w1": -2.99,
-        "m1": -0.25,
+        "d1": 1.68,
+        "w1": 1.28,
+        "m1": 0.25,
         "m3": 11.87,
-        "m6": -15.09,
-        "y1": -13.65,
-        "y5": 78.56,
-        "m1_vs_spy": -3.0,
+        "m6": -13.65,
+        "y1": -11.66,
+        "y5": 83.63,
+        "m1_vs_spy": -2.81,
         "vs_spy": {
-          "d1": -2.93,
-          "w1": -3.34,
-          "m1": -3.0,
-          "m3": 7.36,
-          "m6": -28.22,
-          "y1": -33.89,
-          "y5": 3.99
+          "d1": 0.98,
+          "w1": 0.07,
+          "m1": -2.81,
+          "m3": 6.56,
+          "m6": -27.0,
+          "y1": -32.23,
+          "y5": 9.17
         }
       },
-      "breadth_pct": 40.0,
-      "dollar_vol_ratio": 0.82,
+      "breadth_pct": 80.0,
+      "dollar_vol_ratio": 0.81,
       "rrg": {
-        "ratio": 84.78,
-        "momentum": 102.2,
+        "ratio": 84.73,
+        "momentum": 102.3,
         "quadrant": "improving",
         "tail": [
           {
@@ -2022,12 +2022,12 @@
             "momentum": 102.78
           },
           {
-            "ratio": 84.44,
-            "momentum": 99.21
+            "ratio": 84.38,
+            "momentum": 98.88
           },
           {
-            "ratio": 84.78,
-            "momentum": 102.2
+            "ratio": 84.73,
+            "momentum": 102.3
           }
         ]
       },
@@ -2057,64 +2057,64 @@
       "name_th": "ท่องเที่ยวและสายการบิน",
       "type": "theme",
       "data_ok": true,
-      "quadrant": "leading",
+      "quadrant": "improving",
       "returns": {
-        "d1": -0.59,
-        "w1": 1.91,
-        "m1": 10.21,
-        "m3": 27.3,
-        "m6": 21.66,
-        "y1": 27.34,
-        "y5": 105.22,
-        "m1_vs_spy": 7.46,
+        "d1": 0.86,
+        "w1": 3.5,
+        "m1": 9.5,
+        "m3": 26.56,
+        "m6": 15.63,
+        "y1": 15.99,
+        "y5": 132.41,
+        "m1_vs_spy": 6.44,
         "vs_spy": {
-          "d1": -0.84,
-          "w1": 1.56,
-          "m1": 7.46,
-          "m3": 22.79,
-          "m6": 8.53,
-          "y1": 7.1,
-          "y5": 30.65
+          "d1": 0.16,
+          "w1": 2.29,
+          "m1": 6.44,
+          "m3": 21.25,
+          "m6": 2.28,
+          "y1": -4.58,
+          "y5": 57.95
         }
       },
       "breadth_pct": 80.0,
-      "dollar_vol_ratio": 1.06,
+      "dollar_vol_ratio": 1.03,
       "rrg": {
-        "ratio": 116.98,
-        "momentum": 107.52,
-        "quadrant": "leading",
+        "ratio": 95.96,
+        "momentum": 110.46,
+        "quadrant": "improving",
         "tail": [
           {
-            "ratio": 93.69,
-            "momentum": 119.85
+            "ratio": 85.43,
+            "momentum": 117.01
           },
           {
-            "ratio": 104.51,
-            "momentum": 136.46
+            "ratio": 89.74,
+            "momentum": 123.53
           },
           {
-            "ratio": 110.92,
-            "momentum": 120.25
+            "ratio": 91.6,
+            "momentum": 111.09
           },
           {
-            "ratio": 112.15,
-            "momentum": 103.42
+            "ratio": 91.72,
+            "momentum": 102.57
           },
           {
-            "ratio": 111.66,
-            "momentum": 97.87
+            "ratio": 91.67,
+            "momentum": 101.77
           },
           {
-            "ratio": 112.22,
-            "momentum": 101.28
+            "ratio": 92.2,
+            "momentum": 104.73
           },
           {
-            "ratio": 114.34,
-            "momentum": 106.08
+            "ratio": 94.12,
+            "momentum": 111.25
           },
           {
-            "ratio": 116.98,
-            "momentum": 107.52
+            "ratio": 95.96,
+            "momentum": 110.46
           }
         ]
       },
@@ -2147,25 +2147,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.31,
-        "w1": -0.64,
-        "m1": 7.05,
-        "m3": 17.1,
-        "m6": 14.45,
-        "y1": -1.57,
-        "y5": 35.78,
-        "m1_vs_spy": 4.3,
+        "d1": 1.17,
+        "w1": 0.1,
+        "m1": 4.2,
+        "m3": 17.63,
+        "m6": 14.71,
+        "y1": -1.41,
+        "y5": 33.69,
+        "m1_vs_spy": 1.14,
         "vs_spy": {
-          "d1": 0.06,
-          "w1": -0.99,
-          "m1": 4.3,
-          "m3": 12.59,
-          "m6": 1.32,
-          "y1": -21.81,
-          "y5": -38.79
+          "d1": 0.47,
+          "w1": -1.11,
+          "m1": 1.14,
+          "m3": 12.32,
+          "m6": 1.36,
+          "y1": -21.98,
+          "y5": -40.77
         }
       },
-      "breadth_pct": 80.0,
+      "breadth_pct": 100.0,
       "dollar_vol_ratio": 0.72,
       "rrg": {
         "ratio": 89.08,
@@ -2234,26 +2234,26 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 1.49,
-        "w1": 1.59,
-        "m1": 2.85,
-        "m3": 7.15,
-        "m6": 35.4,
-        "y1": 44.26,
-        "y5": 144.21,
-        "m1_vs_spy": 0.1,
+        "d1": 1.01,
+        "w1": 2.94,
+        "m1": 5.06,
+        "m3": 9.41,
+        "m6": 35.38,
+        "y1": 45.06,
+        "y5": 144.72,
+        "m1_vs_spy": 2.0,
         "vs_spy": {
-          "d1": 1.24,
-          "w1": 1.24,
-          "m1": 0.1,
-          "m3": 2.64,
-          "m6": 22.27,
-          "y1": 24.02,
-          "y5": 69.64
+          "d1": 0.31,
+          "w1": 1.73,
+          "m1": 2.0,
+          "m3": 4.1,
+          "m6": 22.03,
+          "y1": 24.49,
+          "y5": 70.26
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.74,
+      "dollar_vol_ratio": 0.72,
       "rrg": {
         "ratio": 119.08,
         "momentum": 97.14,
@@ -2306,26 +2306,26 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.21,
-        "w1": -0.14,
-        "m1": 3.1,
-        "m3": 13.35,
-        "m6": 10.96,
-        "y1": 8.75,
-        "y5": 48.78,
-        "m1_vs_spy": 0.35,
+        "d1": 0.59,
+        "w1": 0.78,
+        "m1": 3.01,
+        "m3": 12.6,
+        "m6": 10.78,
+        "y1": 8.55,
+        "y5": 47.46,
+        "m1_vs_spy": -0.05,
         "vs_spy": {
-          "d1": -0.04,
-          "w1": -0.49,
-          "m1": 0.35,
-          "m3": 8.84,
-          "m6": -2.17,
-          "y1": -11.49,
-          "y5": -25.79
+          "d1": -0.11,
+          "w1": -0.43,
+          "m1": -0.05,
+          "m3": 7.29,
+          "m6": -2.57,
+          "y1": -12.02,
+          "y5": -27.0
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.75,
+      "dollar_vol_ratio": 0.73,
       "rrg": {
         "ratio": 91.4,
         "momentum": 104.96,
@@ -2378,26 +2378,26 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.26,
-        "w1": 2.61,
-        "m1": 6.41,
-        "m3": 16.09,
-        "m6": 7.03,
-        "y1": 23.67,
-        "y5": 32.28,
-        "m1_vs_spy": 3.66,
+        "d1": -0.04,
+        "w1": 2.39,
+        "m1": 6.37,
+        "m3": 15.55,
+        "m6": 6.79,
+        "y1": 22.86,
+        "y5": 31.58,
+        "m1_vs_spy": 3.31,
         "vs_spy": {
-          "d1": 0.01,
-          "w1": 2.26,
-          "m1": 3.66,
-          "m3": 11.58,
-          "m6": -6.1,
-          "y1": 3.43,
-          "y5": -42.29
+          "d1": -0.74,
+          "w1": 1.18,
+          "m1": 3.31,
+          "m3": 10.24,
+          "m6": -6.56,
+          "y1": 2.29,
+          "y5": -42.88
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.83,
+      "dollar_vol_ratio": 0.79,
       "rrg": {
         "ratio": 95.18,
         "momentum": 99.16,
@@ -2450,26 +2450,26 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.16,
-        "w1": 6.49,
-        "m1": 7.16,
-        "m3": 2.67,
-        "m6": 13.54,
-        "y1": 38.12,
-        "y5": 113.95,
-        "m1_vs_spy": 4.41,
+        "d1": 0.05,
+        "w1": 4.99,
+        "m1": 8.07,
+        "m3": 0.79,
+        "m6": 11.46,
+        "y1": 38.41,
+        "y5": 113.01,
+        "m1_vs_spy": 5.01,
         "vs_spy": {
-          "d1": -0.09,
-          "w1": 6.14,
-          "m1": 4.41,
-          "m3": -1.84,
-          "m6": 0.41,
-          "y1": 17.88,
-          "y5": 39.38
+          "d1": -0.65,
+          "w1": 3.78,
+          "m1": 5.01,
+          "m3": -4.52,
+          "m6": -1.89,
+          "y1": 17.84,
+          "y5": 38.55
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.89,
+      "dollar_vol_ratio": 0.87,
       "rrg": {
         "ratio": 105.47,
         "momentum": 92.81,
@@ -2522,26 +2522,26 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.1,
-        "w1": -0.25,
-        "m1": 3.01,
-        "m3": 8.45,
-        "m6": 6.17,
-        "y1": 22.6,
-        "y5": 82.4,
-        "m1_vs_spy": 0.26,
+        "d1": -0.05,
+        "w1": 0.56,
+        "m1": 3.18,
+        "m3": 8.81,
+        "m6": 6.14,
+        "y1": 21.3,
+        "y5": 80.57,
+        "m1_vs_spy": 0.12,
         "vs_spy": {
-          "d1": -0.15,
-          "w1": -0.6,
-          "m1": 0.26,
-          "m3": 3.94,
-          "m6": -6.96,
-          "y1": 2.36,
-          "y5": 7.83
+          "d1": -0.75,
+          "w1": -0.65,
+          "m1": 0.12,
+          "m3": 3.5,
+          "m6": -7.21,
+          "y1": 0.73,
+          "y5": 6.11
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.76,
+      "dollar_vol_ratio": 0.75,
       "rrg": {
         "ratio": 105.64,
         "momentum": 97.74,
@@ -2594,26 +2594,26 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.48,
-        "w1": 0.41,
-        "m1": -4.05,
-        "m3": -0.07,
-        "m6": -5.48,
-        "y1": 3.07,
-        "y5": 33.11,
-        "m1_vs_spy": -6.8,
+        "d1": 0.46,
+        "w1": 1.52,
+        "m1": -2.61,
+        "m3": 0.23,
+        "m6": -3.44,
+        "y1": 3.31,
+        "y5": 34.1,
+        "m1_vs_spy": -5.67,
         "vs_spy": {
-          "d1": 0.23,
-          "w1": 0.06,
-          "m1": -6.8,
-          "m3": -4.58,
-          "m6": -18.61,
-          "y1": -17.17,
-          "y5": -41.46
+          "d1": -0.24,
+          "w1": 0.31,
+          "m1": -5.67,
+          "m3": -5.08,
+          "m6": -16.79,
+          "y1": -17.26,
+          "y5": -40.36
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 1.03,
+      "dollar_vol_ratio": 0.94,
       "rrg": {
         "ratio": 78.97,
         "momentum": 91.05,
@@ -2666,26 +2666,26 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.46,
-        "w1": -0.29,
-        "m1": 1.99,
-        "m3": 0.52,
-        "m6": -3.54,
-        "y1": 4.96,
-        "y5": 19.86,
-        "m1_vs_spy": -0.76,
+        "d1": 1.08,
+        "w1": 1.05,
+        "m1": 3.03,
+        "m3": 0.12,
+        "m6": -2.32,
+        "y1": 6.79,
+        "y5": 21.45,
+        "m1_vs_spy": -0.03,
         "vs_spy": {
-          "d1": 0.21,
-          "w1": -0.64,
-          "m1": -0.76,
-          "m3": -3.99,
-          "m6": -16.67,
-          "y1": -15.28,
-          "y5": -54.71
+          "d1": 0.38,
+          "w1": -0.16,
+          "m1": -0.03,
+          "m3": -5.19,
+          "m6": -15.67,
+          "y1": -13.78,
+          "y5": -53.01
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.64,
+      "dollar_vol_ratio": 0.68,
       "rrg": {
         "ratio": 85.91,
         "momentum": 86.85,
@@ -2735,68 +2735,30 @@
       "name_en": "Real Estate (XLRE)",
       "name_th": "อสังหาริมทรัพย์ (XLRE)",
       "type": "sector_etf",
-      "data_ok": true,
-      "quadrant": "lagging",
+      "data_ok": false,
+      "quadrant": null,
       "returns": {
-        "d1": 0.93,
-        "w1": -1.57,
-        "m1": 0.02,
-        "m3": 2.91,
-        "m6": 1.25,
-        "y1": 5.6,
-        "y5": -3.66,
-        "m1_vs_spy": -2.73,
+        "d1": null,
+        "w1": null,
+        "m1": null,
+        "m3": null,
+        "m6": null,
+        "y1": null,
+        "y5": null,
+        "m1_vs_spy": null,
         "vs_spy": {
-          "d1": 0.68,
-          "w1": -1.92,
-          "m1": -2.73,
-          "m3": -1.6,
-          "m6": -11.88,
-          "y1": -14.64,
-          "y5": -78.23
+          "d1": null,
+          "w1": null,
+          "m1": null,
+          "m3": null,
+          "m6": null,
+          "y1": null,
+          "y5": null
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.95,
-      "rrg": {
-        "ratio": 89.81,
-        "momentum": 72.57,
-        "quadrant": "lagging",
-        "tail": [
-          {
-            "ratio": 89.6,
-            "momentum": 90.14
-          },
-          {
-            "ratio": 90.84,
-            "momentum": 113.56
-          },
-          {
-            "ratio": 90.59,
-            "momentum": 95.66
-          },
-          {
-            "ratio": 89.61,
-            "momentum": 85.7
-          },
-          {
-            "ratio": 90.42,
-            "momentum": 108.88
-          },
-          {
-            "ratio": 91.99,
-            "momentum": 117.98
-          },
-          {
-            "ratio": 91.84,
-            "momentum": 95.49
-          },
-          {
-            "ratio": 89.81,
-            "momentum": 72.57
-          }
-        ]
-      },
+      "dollar_vol_ratio": null,
+      "rrg": null,
       "constituents": [
         "XLRE"
       ],
@@ -2810,26 +2772,26 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -1.24,
-        "w1": -0.11,
-        "m1": 3.83,
-        "m3": 4.53,
-        "m6": -0.23,
-        "y1": 14.72,
-        "y5": 25.34,
-        "m1_vs_spy": 1.08,
+        "d1": -0.51,
+        "w1": 0.27,
+        "m1": 3.58,
+        "m3": 4.16,
+        "m6": -1.34,
+        "y1": 13.82,
+        "y5": 24.33,
+        "m1_vs_spy": 0.52,
         "vs_spy": {
-          "d1": -1.49,
-          "w1": -0.46,
-          "m1": 1.08,
-          "m3": 0.02,
-          "m6": -13.36,
-          "y1": -5.52,
-          "y5": -49.23
+          "d1": -1.21,
+          "w1": -0.94,
+          "m1": 0.52,
+          "m3": -1.15,
+          "m6": -14.69,
+          "y1": -6.75,
+          "y5": -50.13
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.99,
+      "dollar_vol_ratio": 1.0,
       "rrg": {
         "ratio": 95.73,
         "momentum": 97.36,
@@ -2882,29 +2844,29 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -1.13,
-        "w1": -0.63,
-        "m1": 1.72,
-        "m3": 1.17,
-        "m6": 1.59,
-        "y1": 1.35,
-        "y5": 26.65,
-        "m1_vs_spy": -1.03,
+        "d1": 0.48,
+        "w1": 0.3,
+        "m1": 1.24,
+        "m3": 1.83,
+        "m6": 1.22,
+        "y1": 1.37,
+        "y5": 25.34,
+        "m1_vs_spy": -1.82,
         "vs_spy": {
-          "d1": -1.38,
-          "w1": -0.98,
-          "m1": -1.03,
-          "m3": -3.34,
-          "m6": -11.54,
-          "y1": -18.89,
-          "y5": -47.92
+          "d1": -0.22,
+          "w1": -0.91,
+          "m1": -1.82,
+          "m3": -3.48,
+          "m6": -12.13,
+          "y1": -19.2,
+          "y5": -49.12
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.65,
+      "dollar_vol_ratio": 0.62,
       "rrg": {
-        "ratio": 78.62,
-        "momentum": 112.12,
+        "ratio": 79.37,
+        "momentum": 109.63,
         "quadrant": "improving",
         "tail": [
           {
@@ -2932,12 +2894,12 @@
             "momentum": 96.48
           },
           {
-            "ratio": 77.13,
-            "momentum": 104.4
+            "ratio": 78.25,
+            "momentum": 111.57
           },
           {
-            "ratio": 78.62,
-            "momentum": 112.12
+            "ratio": 79.37,
+            "momentum": 109.63
           }
         ]
       },
@@ -2954,26 +2916,26 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -0.9,
-        "w1": -0.54,
-        "m1": -1.06,
-        "m3": -5.01,
-        "m6": -3.61,
-        "y1": -1.09,
-        "y5": 36.96,
-        "m1_vs_spy": -3.81,
+        "d1": 2.07,
+        "w1": 1.23,
+        "m1": -0.73,
+        "m3": -3.79,
+        "m6": -1.78,
+        "y1": 1.4,
+        "y5": 40.13,
+        "m1_vs_spy": -3.79,
         "vs_spy": {
-          "d1": -1.15,
-          "w1": -0.89,
-          "m1": -3.81,
-          "m3": -9.52,
-          "m6": -16.74,
-          "y1": -21.33,
-          "y5": -37.61
+          "d1": 1.37,
+          "w1": 0.02,
+          "m1": -3.79,
+          "m3": -9.1,
+          "m6": -15.13,
+          "y1": -19.17,
+          "y5": -34.33
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.68,
+      "dollar_vol_ratio": 0.78,
       "rrg": {
         "ratio": 75.29,
         "momentum": 106.46,
@@ -3029,13 +2991,13 @@
       "data_ok": true,
       "quadrant": null,
       "returns": {
-        "d1": 0.25,
-        "w1": 0.35,
-        "m1": 2.75,
-        "m3": 4.51,
-        "m6": 13.13,
-        "y1": 20.24,
-        "y5": 74.57,
+        "d1": 0.7,
+        "w1": 1.21,
+        "m1": 3.06,
+        "m3": 5.31,
+        "m6": 13.35,
+        "y1": 20.57,
+        "y5": 74.46,
         "vs_spy": {
           "d1": 0.0,
           "w1": 0.0,
@@ -3046,8 +3008,8 @@
           "y5": 0.0
         }
       },
-      "breadth_pct": 44.4,
-      "dollar_vol_ratio": 0.8,
+      "breadth_pct": 55.6,
+      "dollar_vol_ratio": 0.78,
       "rrg": null
     },
     {
@@ -3059,24 +3021,24 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.73,
-        "w1": 0.89,
-        "m1": 0.56,
-        "m3": 2.08,
-        "m6": 20.36,
-        "y1": 26.89,
-        "y5": 97.39,
+        "d1": 1.16,
+        "w1": 2.44,
+        "m1": 2.0,
+        "m3": 3.71,
+        "m6": 20.85,
+        "y1": 27.85,
+        "y5": 98.43,
         "vs_spy": {
-          "d1": 0.48,
-          "w1": 0.54,
-          "m1": -2.19,
-          "m3": -2.43,
-          "m6": 7.23,
-          "y1": 6.65,
-          "y5": 22.82
+          "d1": 0.46,
+          "w1": 1.23,
+          "m1": -1.06,
+          "m3": -1.6,
+          "m6": 7.5,
+          "y1": 7.28,
+          "y5": 23.97
         }
       },
-      "breadth_pct": 44.4,
+      "breadth_pct": 55.6,
       "dollar_vol_ratio": 0.74,
       "rrg": {
         "ratio": 114.0,
@@ -3127,24 +3089,24 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.57,
-        "w1": 0.98,
-        "m1": 2.78,
-        "m3": 9.05,
-        "m6": 15.08,
-        "y1": 30.28,
-        "y5": 34.02,
+        "d1": 0.26,
+        "w1": 1.76,
+        "m1": 2.61,
+        "m3": 9.98,
+        "m6": 14.97,
+        "y1": 29.55,
+        "y5": 34.79,
         "vs_spy": {
-          "d1": 0.32,
-          "w1": 0.63,
-          "m1": 0.03,
-          "m3": 4.54,
-          "m6": 1.95,
-          "y1": 10.04,
-          "y5": -40.55
+          "d1": -0.44,
+          "w1": 0.55,
+          "m1": -0.45,
+          "m3": 4.67,
+          "m6": 1.62,
+          "y1": 8.98,
+          "y5": -39.67
         }
       },
-      "breadth_pct": 50.0,
+      "breadth_pct": 44.4,
       "dollar_vol_ratio": 0.78,
       "rrg": {
         "ratio": 115.72,
@@ -3195,25 +3157,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 1.57,
-        "w1": 1.13,
-        "m1": 1.2,
-        "m3": 2.14,
-        "m6": 9.18,
-        "y1": 32.02,
-        "y5": 29.5,
+        "d1": 0.33,
+        "w1": 2.55,
+        "m1": 1.69,
+        "m3": 2.63,
+        "m6": 8.97,
+        "y1": 32.8,
+        "y5": 28.38,
         "vs_spy": {
-          "d1": 1.32,
-          "w1": 0.78,
-          "m1": -1.55,
-          "m3": -2.37,
-          "m6": -3.95,
-          "y1": 11.78,
-          "y5": -45.07
+          "d1": -0.37,
+          "w1": 1.34,
+          "m1": -1.37,
+          "m3": -2.68,
+          "m6": -4.38,
+          "y1": 12.23,
+          "y5": -46.08
         }
       },
-      "breadth_pct": 62.5,
-      "dollar_vol_ratio": 0.79,
+      "breadth_pct": 75.0,
+      "dollar_vol_ratio": 0.76,
       "rrg": {
         "ratio": 108.17,
         "momentum": 89.4,
@@ -3263,25 +3225,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -1.21,
-        "w1": -2.36,
-        "m1": 4.32,
-        "m3": -2.68,
-        "m6": -8.54,
-        "y1": -9.99,
-        "y5": -12.6,
+        "d1": -1.05,
+        "w1": -3.03,
+        "m1": 1.69,
+        "m3": -3.6,
+        "m6": -9.97,
+        "y1": -11.12,
+        "y5": -14.35,
         "vs_spy": {
-          "d1": -1.46,
-          "w1": -2.71,
-          "m1": 1.57,
-          "m3": -7.19,
-          "m6": -21.67,
-          "y1": -30.23,
-          "y5": -87.17
+          "d1": -1.75,
+          "w1": -4.24,
+          "m1": -1.37,
+          "m3": -8.91,
+          "m6": -23.32,
+          "y1": -31.69,
+          "y5": -88.81
         }
       },
-      "breadth_pct": 40.0,
-      "dollar_vol_ratio": 0.81,
+      "breadth_pct": 25.0,
+      "dollar_vol_ratio": 0.89,
       "rrg": {
         "ratio": 81.54,
         "momentum": 112.18,
@@ -3331,25 +3293,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.96,
-        "w1": 6.81,
-        "m1": 2.33,
-        "m3": 8.64,
-        "m6": 15.75,
-        "y1": 7.55,
-        "y5": -29.6,
+        "d1": 1.5,
+        "w1": 9.06,
+        "m1": 3.76,
+        "m3": 10.84,
+        "m6": 15.69,
+        "y1": 8.29,
+        "y5": -28.68,
         "vs_spy": {
-          "d1": 0.71,
-          "w1": 6.46,
-          "m1": -0.42,
-          "m3": 4.13,
-          "m6": 2.62,
-          "y1": -12.69,
-          "y5": -104.17
+          "d1": 0.8,
+          "w1": 7.85,
+          "m1": 0.7,
+          "m3": 5.53,
+          "m6": 2.34,
+          "y1": -12.28,
+          "y5": -103.14
         }
       },
-      "breadth_pct": 50.0,
-      "dollar_vol_ratio": 0.9,
+      "breadth_pct": 62.5,
+      "dollar_vol_ratio": 0.91,
       "rrg": {
         "ratio": 85.5,
         "momentum": 116.73,
@@ -3399,25 +3361,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.16,
-        "w1": 6.49,
-        "m1": 7.16,
-        "m3": 2.67,
-        "m6": 13.54,
-        "y1": 38.12,
-        "y5": 113.95,
+        "d1": 0.05,
+        "w1": 4.99,
+        "m1": 8.07,
+        "m3": 0.79,
+        "m6": 11.46,
+        "y1": 38.41,
+        "y5": 113.01,
         "vs_spy": {
-          "d1": -0.09,
-          "w1": 6.14,
-          "m1": 4.41,
-          "m3": -1.84,
-          "m6": 0.41,
-          "y1": 17.88,
-          "y5": 39.38
+          "d1": -0.65,
+          "w1": 3.78,
+          "m1": 5.01,
+          "m3": -4.52,
+          "m6": -1.89,
+          "y1": 17.84,
+          "y5": 38.55
         }
       },
-      "breadth_pct": 88.9,
-      "dollar_vol_ratio": 0.89,
+      "breadth_pct": 90.0,
+      "dollar_vol_ratio": 0.87,
       "rrg": {
         "ratio": 105.47,
         "momentum": 92.81,
@@ -3467,25 +3429,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.38,
-        "w1": 1.0,
-        "m1": 4.37,
-        "m3": 6.67,
-        "m6": 4.11,
-        "y1": 17.93,
-        "y5": 36.79,
+        "d1": 0.18,
+        "w1": 1.24,
+        "m1": 3.86,
+        "m3": 5.87,
+        "m6": 4.17,
+        "y1": 18.27,
+        "y5": 35.9,
         "vs_spy": {
-          "d1": 0.13,
-          "w1": 0.65,
-          "m1": 1.62,
-          "m3": 2.16,
-          "m6": -9.02,
-          "y1": -2.31,
-          "y5": -37.78
+          "d1": -0.52,
+          "w1": 0.03,
+          "m1": 0.8,
+          "m3": 0.56,
+          "m6": -9.18,
+          "y1": -2.3,
+          "y5": -38.56
         }
       },
-      "breadth_pct": 50.0,
-      "dollar_vol_ratio": 0.77,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 0.79,
       "rrg": {
         "ratio": 89.75,
         "momentum": 104.13,
@@ -3535,25 +3497,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -0.35,
-        "w1": -6.23,
-        "m1": -6.02,
-        "m3": -6.54,
-        "m6": -10.28,
-        "y1": 17.81,
-        "y5": 4.28,
+        "d1": -0.27,
+        "w1": -5.7,
+        "m1": -5.88,
+        "m3": -8.08,
+        "m6": -11.2,
+        "y1": 18.04,
+        "y5": 1.53,
         "vs_spy": {
-          "d1": -0.6,
-          "w1": -6.58,
-          "m1": -8.77,
-          "m3": -11.05,
-          "m6": -23.41,
-          "y1": -2.43,
-          "y5": -70.29
+          "d1": -0.97,
+          "w1": -6.91,
+          "m1": -8.94,
+          "m3": -13.39,
+          "m6": -24.55,
+          "y1": -2.53,
+          "y5": -72.93
         }
       },
-      "breadth_pct": 16.7,
-      "dollar_vol_ratio": 1.25,
+      "breadth_pct": 14.3,
+      "dollar_vol_ratio": 1.26,
       "rrg": {
         "ratio": 96.46,
         "momentum": 92.62,
@@ -3603,25 +3565,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 1.49,
-        "w1": 1.59,
-        "m1": 2.85,
-        "m3": 7.15,
-        "m6": 35.4,
-        "y1": 44.26,
-        "y5": 144.21,
+        "d1": 1.01,
+        "w1": 2.94,
+        "m1": 5.06,
+        "m3": 9.41,
+        "m6": 35.38,
+        "y1": 45.06,
+        "y5": 144.72,
         "vs_spy": {
-          "d1": 1.24,
-          "w1": 1.24,
-          "m1": 0.1,
-          "m3": 2.64,
-          "m6": 22.27,
-          "y1": 24.02,
-          "y5": 69.64
+          "d1": 0.31,
+          "w1": 1.73,
+          "m1": 2.0,
+          "m3": 4.1,
+          "m6": 22.03,
+          "y1": 24.49,
+          "y5": 70.26
         }
       },
-      "breadth_pct": 77.8,
-      "dollar_vol_ratio": 0.74,
+      "breadth_pct": 66.7,
+      "dollar_vol_ratio": 0.72,
       "rrg": {
         "ratio": 119.08,
         "momentum": 97.14,
@@ -3671,28 +3633,28 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.74,
-        "w1": 0.05,
-        "m1": 3.17,
-        "m3": 15.54,
-        "m6": 8.18,
-        "y1": 19.99,
-        "y5": 9.76,
+        "d1": 0.48,
+        "w1": 1.65,
+        "m1": 2.6,
+        "m3": 14.47,
+        "m6": 8.92,
+        "y1": 19.19,
+        "y5": 10.41,
         "vs_spy": {
-          "d1": 0.49,
-          "w1": -0.3,
-          "m1": 0.42,
-          "m3": 11.03,
-          "m6": -4.95,
-          "y1": -0.25,
-          "y5": -64.81
+          "d1": -0.22,
+          "w1": 0.44,
+          "m1": -0.46,
+          "m3": 9.16,
+          "m6": -4.43,
+          "y1": -1.38,
+          "y5": -64.05
         }
       },
-      "breadth_pct": 80.0,
-      "dollar_vol_ratio": 0.8,
+      "breadth_pct": 90.0,
+      "dollar_vol_ratio": 0.72,
       "rrg": {
-        "ratio": 112.03,
-        "momentum": 91.31,
+        "ratio": 112.15,
+        "momentum": 91.15,
         "quadrant": "weakening",
         "tail": [
           {
@@ -3720,12 +3682,12 @@
             "momentum": 109.12
           },
           {
-            "ratio": 113.62,
-            "momentum": 102.86
+            "ratio": 113.78,
+            "momentum": 103.52
           },
           {
-            "ratio": 112.03,
-            "momentum": 91.31
+            "ratio": 112.15,
+            "momentum": 91.15
           }
         ]
       }
@@ -3739,25 +3701,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.48,
-        "w1": 0.41,
-        "m1": -4.05,
-        "m3": -0.07,
-        "m6": -5.48,
-        "y1": 3.07,
-        "y5": 33.11,
+        "d1": 0.46,
+        "w1": 1.52,
+        "m1": -2.61,
+        "m3": 0.23,
+        "m6": -3.44,
+        "y1": 3.31,
+        "y5": 34.1,
         "vs_spy": {
-          "d1": 0.23,
-          "w1": 0.06,
-          "m1": -6.8,
-          "m3": -4.58,
-          "m6": -18.61,
-          "y1": -17.17,
-          "y5": -41.46
+          "d1": -0.24,
+          "w1": 0.31,
+          "m1": -5.67,
+          "m3": -5.08,
+          "m6": -16.79,
+          "y1": -17.26,
+          "y5": -40.36
         }
       },
-      "breadth_pct": 12.5,
-      "dollar_vol_ratio": 1.03,
+      "breadth_pct": 20.0,
+      "dollar_vol_ratio": 0.94,
       "rrg": {
         "ratio": 78.97,
         "momentum": 91.05,
@@ -3807,25 +3769,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.31,
-        "w1": 0.57,
-        "m1": 2.87,
-        "m3": 5.26,
-        "m6": 13.28,
-        "y1": 20.58,
-        "y5": 66.47,
+        "d1": 0.65,
+        "w1": 1.38,
+        "m1": 3.19,
+        "m3": 6.05,
+        "m6": 13.42,
+        "y1": 20.81,
+        "y5": 66.56,
         "vs_spy": {
-          "d1": 0.06,
-          "w1": 0.22,
-          "m1": 0.12,
-          "m3": 0.75,
-          "m6": 0.15,
-          "y1": 0.34,
-          "y5": -8.1
+          "d1": -0.05,
+          "w1": 0.17,
+          "m1": 0.13,
+          "m3": 0.74,
+          "m6": 0.07,
+          "y1": 0.24,
+          "y5": -7.9
         }
       },
-      "breadth_pct": 44.4,
-      "dollar_vol_ratio": 1.13,
+      "breadth_pct": 55.6,
+      "dollar_vol_ratio": 1.1,
       "rrg": {
         "ratio": 113.53,
         "momentum": 96.97,
@@ -3875,24 +3837,24 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.25,
-        "w1": 0.36,
-        "m1": 2.76,
-        "m3": 4.52,
-        "m6": 13.09,
-        "y1": 20.23,
-        "y5": 74.59,
+        "d1": 0.67,
+        "w1": 1.21,
+        "m1": 3.05,
+        "m3": 5.31,
+        "m6": 13.28,
+        "y1": 20.55,
+        "y5": 74.41,
         "vs_spy": {
-          "d1": 0.0,
-          "w1": 0.01,
-          "m1": 0.01,
-          "m3": 0.01,
-          "m6": -0.04,
-          "y1": -0.01,
-          "y5": 0.02
+          "d1": -0.03,
+          "w1": 0.0,
+          "m1": -0.01,
+          "m3": 0.0,
+          "m6": -0.07,
+          "y1": -0.02,
+          "y5": -0.05
         }
       },
-      "breadth_pct": 44.4,
+      "breadth_pct": 55.6,
       "dollar_vol_ratio": 0.95,
       "rrg": {
         "ratio": 83.55,
@@ -3943,28 +3905,28 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -1.13,
-        "w1": -0.63,
-        "m1": 1.72,
-        "m3": 1.17,
-        "m6": 1.59,
-        "y1": 1.35,
-        "y5": 26.65,
+        "d1": 0.48,
+        "w1": 0.3,
+        "m1": 1.24,
+        "m3": 1.83,
+        "m6": 1.22,
+        "y1": 1.37,
+        "y5": 25.34,
         "vs_spy": {
-          "d1": -1.38,
-          "w1": -0.98,
-          "m1": -1.03,
-          "m3": -3.34,
-          "m6": -11.54,
-          "y1": -18.89,
-          "y5": -47.92
+          "d1": -0.22,
+          "w1": -0.91,
+          "m1": -1.82,
+          "m3": -3.48,
+          "m6": -12.13,
+          "y1": -19.2,
+          "y5": -49.12
         }
       },
-      "breadth_pct": 62.5,
-      "dollar_vol_ratio": 0.65,
+      "breadth_pct": 80.0,
+      "dollar_vol_ratio": 0.62,
       "rrg": {
-        "ratio": 78.62,
-        "momentum": 112.12,
+        "ratio": 79.37,
+        "momentum": 109.63,
         "quadrant": "improving",
         "tail": [
           {
@@ -3992,12 +3954,12 @@
             "momentum": 96.48
           },
           {
-            "ratio": 77.13,
-            "momentum": 104.4
+            "ratio": 78.25,
+            "momentum": 111.57
           },
           {
-            "ratio": 78.62,
-            "momentum": 112.12
+            "ratio": 79.37,
+            "momentum": 109.63
           }
         ]
       }
@@ -4011,28 +3973,28 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -0.28,
-        "w1": -0.72,
-        "m1": 2.5,
-        "m3": 4.08,
-        "m6": -6.23,
-        "y1": -6.16,
-        "y5": -0.91,
+        "d1": 0.06,
+        "w1": -0.28,
+        "m1": 2.59,
+        "m3": 4.47,
+        "m6": -6.26,
+        "y1": -4.89,
+        "y5": -1.03,
         "vs_spy": {
-          "d1": -0.53,
-          "w1": -1.07,
-          "m1": -0.25,
-          "m3": -0.43,
-          "m6": -19.36,
-          "y1": -26.4,
-          "y5": -75.48
+          "d1": -0.64,
+          "w1": -1.49,
+          "m1": -0.47,
+          "m3": -0.84,
+          "m6": -19.61,
+          "y1": -25.46,
+          "y5": -75.49
         }
       },
-      "breadth_pct": 66.7,
-      "dollar_vol_ratio": 0.56,
+      "breadth_pct": 57.1,
+      "dollar_vol_ratio": 0.65,
       "rrg": {
-        "ratio": 83.67,
-        "momentum": 105.8,
+        "ratio": 83.69,
+        "momentum": 105.63,
         "quadrant": "improving",
         "tail": [
           {
@@ -4060,12 +4022,12 @@
             "momentum": 104.84
           },
           {
-            "ratio": 83.41,
-            "momentum": 112.17
+            "ratio": 83.45,
+            "momentum": 112.71
           },
           {
-            "ratio": 83.67,
-            "momentum": 105.8
+            "ratio": 83.69,
+            "momentum": 105.63
           }
         ]
       }
@@ -4079,25 +4041,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.46,
-        "w1": -0.29,
-        "m1": 1.99,
-        "m3": 0.52,
-        "m6": -3.54,
-        "y1": 4.96,
-        "y5": 19.86,
+        "d1": 1.08,
+        "w1": 1.05,
+        "m1": 3.03,
+        "m3": 0.12,
+        "m6": -2.32,
+        "y1": 6.79,
+        "y5": 21.45,
         "vs_spy": {
-          "d1": 0.21,
-          "w1": -0.64,
-          "m1": -0.76,
-          "m3": -3.99,
-          "m6": -16.67,
-          "y1": -15.28,
-          "y5": -54.71
+          "d1": 0.38,
+          "w1": -0.16,
+          "m1": -0.03,
+          "m3": -5.19,
+          "m6": -15.67,
+          "y1": -13.78,
+          "y5": -53.01
         }
       },
-      "breadth_pct": 50.0,
-      "dollar_vol_ratio": 0.64,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 0.68,
       "rrg": {
         "ratio": 85.91,
         "momentum": 86.85,
@@ -4147,25 +4109,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.26,
-        "w1": 2.61,
-        "m1": 6.41,
-        "m3": 16.09,
-        "m6": 7.03,
-        "y1": 23.67,
-        "y5": 32.28,
+        "d1": -0.04,
+        "w1": 2.39,
+        "m1": 6.37,
+        "m3": 15.55,
+        "m6": 6.79,
+        "y1": 22.86,
+        "y5": 31.58,
         "vs_spy": {
-          "d1": 0.01,
-          "w1": 2.26,
-          "m1": 3.66,
-          "m3": 11.58,
-          "m6": -6.1,
-          "y1": 3.43,
-          "y5": -42.29
+          "d1": -0.74,
+          "w1": 1.18,
+          "m1": 3.31,
+          "m3": 10.24,
+          "m6": -6.56,
+          "y1": 2.29,
+          "y5": -42.88
         }
       },
-      "breadth_pct": 88.9,
-      "dollar_vol_ratio": 0.83,
+      "breadth_pct": 77.8,
+      "dollar_vol_ratio": 0.79,
       "rrg": {
         "ratio": 95.18,
         "momentum": 99.16,
@@ -4215,25 +4177,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.1,
-        "w1": -0.25,
-        "m1": 3.01,
-        "m3": 8.45,
-        "m6": 6.17,
-        "y1": 22.6,
-        "y5": 82.4,
+        "d1": -0.05,
+        "w1": 0.56,
+        "m1": 3.18,
+        "m3": 8.81,
+        "m6": 6.14,
+        "y1": 21.3,
+        "y5": 80.57,
         "vs_spy": {
-          "d1": -0.15,
-          "w1": -0.6,
-          "m1": 0.26,
-          "m3": 3.94,
-          "m6": -6.96,
-          "y1": 2.36,
-          "y5": 7.83
+          "d1": -0.75,
+          "w1": -0.65,
+          "m1": 0.12,
+          "m3": 3.5,
+          "m6": -7.21,
+          "y1": 0.73,
+          "y5": 6.11
         }
       },
-      "breadth_pct": 87.5,
-      "dollar_vol_ratio": 0.76,
+      "breadth_pct": 88.9,
+      "dollar_vol_ratio": 0.75,
       "rrg": {
         "ratio": 105.64,
         "momentum": 97.74,
@@ -4283,25 +4245,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -1.96,
-        "w1": -3.5,
-        "m1": 5.19,
-        "m3": -2.24,
-        "m6": -15.83,
-        "y1": -28.49,
-        "y5": -45.04,
+        "d1": -2.51,
+        "w1": -5.39,
+        "m1": -0.56,
+        "m3": -4.31,
+        "m6": -18.36,
+        "y1": -30.3,
+        "y5": -46.75,
         "vs_spy": {
-          "d1": -2.21,
-          "w1": -3.85,
-          "m1": 2.44,
-          "m3": -6.75,
-          "m6": -28.96,
-          "y1": -48.73,
-          "y5": -119.61
+          "d1": -3.21,
+          "w1": -6.6,
+          "m1": -3.62,
+          "m3": -9.62,
+          "m6": -31.71,
+          "y1": -50.87,
+          "y5": -121.21
         }
       },
-      "breadth_pct": 40.0,
-      "dollar_vol_ratio": 0.88,
+      "breadth_pct": 22.2,
+      "dollar_vol_ratio": 1.14,
       "rrg": {
         "ratio": 84.4,
         "momentum": 108.43,
@@ -4351,28 +4313,28 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -0.88,
-        "w1": 4.35,
-        "m1": 11.85,
-        "m3": 1.04,
-        "m6": 1.46,
-        "y1": 44.81,
-        "y5": 164.59,
+        "d1": -1.3,
+        "w1": 4.46,
+        "m1": 11.7,
+        "m3": 1.82,
+        "m6": -1.55,
+        "y1": 41.99,
+        "y5": 157.47,
         "vs_spy": {
-          "d1": -1.13,
-          "w1": 4.0,
-          "m1": 9.1,
-          "m3": -3.47,
-          "m6": -11.67,
-          "y1": 24.57,
-          "y5": 90.02
+          "d1": -2.0,
+          "w1": 3.25,
+          "m1": 8.64,
+          "m3": -3.49,
+          "m6": -14.9,
+          "y1": 21.42,
+          "y5": 83.01
         }
       },
       "breadth_pct": 100.0,
-      "dollar_vol_ratio": 1.09,
+      "dollar_vol_ratio": 0.97,
       "rrg": {
-        "ratio": 96.99,
-        "momentum": 104.58,
+        "ratio": 96.85,
+        "momentum": 104.85,
         "quadrant": "improving",
         "tail": [
           {
@@ -4400,12 +4362,12 @@
             "momentum": 90.28
           },
           {
-            "ratio": 96.95,
-            "momentum": 90.37
+            "ratio": 96.78,
+            "momentum": 89.02
           },
           {
-            "ratio": 96.99,
-            "momentum": 104.58
+            "ratio": 96.85,
+            "momentum": 104.85
           }
         ]
       }
@@ -4419,25 +4381,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -0.95,
-        "w1": -2.89,
-        "m1": 1.14,
-        "m3": 12.25,
-        "m6": 1.58,
-        "y1": 4.94,
-        "y5": -3.24,
+        "d1": 0.57,
+        "w1": -0.62,
+        "m1": 0.21,
+        "m3": 12.19,
+        "m6": 1.4,
+        "y1": 5.59,
+        "y5": -2.6,
         "vs_spy": {
-          "d1": -1.2,
-          "w1": -3.24,
-          "m1": -1.61,
-          "m3": 7.74,
-          "m6": -11.55,
-          "y1": -15.3,
-          "y5": -77.81
+          "d1": -0.13,
+          "w1": -1.83,
+          "m1": -2.85,
+          "m3": 6.88,
+          "m6": -11.95,
+          "y1": -14.98,
+          "y5": -77.06
         }
       },
-      "breadth_pct": 40.0,
-      "dollar_vol_ratio": 0.9,
+      "breadth_pct": 44.4,
+      "dollar_vol_ratio": 0.82,
       "rrg": {
         "ratio": 87.05,
         "momentum": 101.39,
@@ -4487,28 +4449,28 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -0.97,
-        "w1": -1.66,
-        "m1": 3.48,
-        "m3": -2.75,
-        "m6": -9.12,
-        "y1": -10.5,
-        "y5": -20.95,
+        "d1": -1.2,
+        "w1": -2.67,
+        "m1": 0.5,
+        "m3": -3.44,
+        "m6": -10.71,
+        "y1": -11.68,
+        "y5": -22.73,
         "vs_spy": {
-          "d1": -1.22,
-          "w1": -2.01,
-          "m1": 0.73,
-          "m3": -7.26,
-          "m6": -22.25,
-          "y1": -30.74,
-          "y5": -95.52
+          "d1": -1.9,
+          "w1": -3.88,
+          "m1": -2.56,
+          "m3": -8.75,
+          "m6": -24.06,
+          "y1": -32.25,
+          "y5": -97.19
         }
       },
-      "breadth_pct": 50.0,
-      "dollar_vol_ratio": 0.9,
+      "breadth_pct": 20.0,
+      "dollar_vol_ratio": 1.11,
       "rrg": {
-        "ratio": 80.78,
-        "momentum": 111.68,
+        "ratio": 80.84,
+        "momentum": 111.47,
         "quadrant": "improving",
         "tail": [
           {
@@ -4536,12 +4498,12 @@
             "momentum": 114.55
           },
           {
-            "ratio": 79.54,
-            "momentum": 115.8
+            "ratio": 79.63,
+            "momentum": 116.37
           },
           {
-            "ratio": 80.78,
-            "momentum": 111.68
+            "ratio": 80.84,
+            "momentum": 111.47
           }
         ]
       }
@@ -4555,25 +4517,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.84,
-        "w1": 4.17,
-        "m1": 2.53,
-        "m3": 21.96,
-        "m6": 27.89,
-        "y1": 79.51,
+        "d1": -1.59,
+        "w1": 1.53,
+        "m1": 0.41,
+        "m3": 22.86,
+        "m6": 24.89,
+        "y1": 74.48,
         "y5": 25.41,
         "vs_spy": {
-          "d1": 0.59,
-          "w1": 3.82,
-          "m1": -0.22,
-          "m3": 17.45,
-          "m6": 14.76,
-          "y1": 59.27,
-          "y5": -49.16
+          "d1": -2.29,
+          "w1": 0.32,
+          "m1": -2.65,
+          "m3": 17.55,
+          "m6": 11.54,
+          "y1": 53.91,
+          "y5": -49.05
         }
       },
-      "breadth_pct": 80.0,
-      "dollar_vol_ratio": 0.95,
+      "breadth_pct": 77.8,
+      "dollar_vol_ratio": 0.94,
       "rrg": {
         "ratio": 114.74,
         "momentum": 96.31,
@@ -4623,25 +4585,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 2.08,
-        "w1": 2.66,
-        "m1": -2.58,
-        "m3": 5.12,
-        "m6": 43.51,
-        "y1": 98.98,
-        "y5": 349.18,
+        "d1": 0.73,
+        "w1": 3.09,
+        "m1": -0.28,
+        "m3": 7.87,
+        "m6": 42.8,
+        "y1": 98.52,
+        "y5": 348.72,
         "vs_spy": {
-          "d1": 1.83,
-          "w1": 2.31,
-          "m1": -5.33,
-          "m3": 0.61,
-          "m6": 30.38,
-          "y1": 78.74,
-          "y5": 274.61
+          "d1": 0.03,
+          "w1": 1.88,
+          "m1": -3.34,
+          "m3": 2.56,
+          "m6": 29.45,
+          "y1": 77.95,
+          "y5": 274.26
         }
       },
       "breadth_pct": 88.9,
-      "dollar_vol_ratio": 0.54,
+      "dollar_vol_ratio": 0.57,
       "rrg": {
         "ratio": 116.3,
         "momentum": 90.04,
@@ -4691,25 +4653,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.96,
-        "w1": -1.63,
-        "m1": -0.27,
-        "m3": 3.62,
-        "m6": 1.91,
-        "y1": 6.18,
-        "y5": -8.59,
+        "d1": 1.31,
+        "w1": 0.55,
+        "m1": 0.74,
+        "m3": 3.76,
+        "m6": 4.46,
+        "y1": 7.84,
+        "y5": -7.33,
         "vs_spy": {
-          "d1": 0.71,
-          "w1": -1.98,
-          "m1": -3.02,
-          "m3": -0.89,
-          "m6": -11.22,
-          "y1": -14.06,
-          "y5": -83.16
+          "d1": 0.61,
+          "w1": -0.66,
+          "m1": -2.32,
+          "m3": -1.55,
+          "m6": -8.89,
+          "y1": -12.73,
+          "y5": -81.79
         }
       },
-      "breadth_pct": 44.4,
-      "dollar_vol_ratio": 0.99,
+      "breadth_pct": 42.9,
+      "dollar_vol_ratio": 0.97,
       "rrg": {
         "ratio": 90.08,
         "momentum": 72.26,
@@ -4759,25 +4721,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": -0.03,
-        "w1": 1.84,
-        "m1": 6.4,
-        "m3": 8.01,
-        "m6": 9.04,
-        "y1": 23.37,
-        "y5": 34.07,
+        "d1": 0.5,
+        "w1": 2.17,
+        "m1": 6.46,
+        "m3": 7.46,
+        "m6": 9.09,
+        "y1": 24.07,
+        "y5": 34.14,
         "vs_spy": {
-          "d1": -0.28,
-          "w1": 1.49,
-          "m1": 3.65,
-          "m3": 3.5,
-          "m6": -4.09,
-          "y1": 3.13,
-          "y5": -40.5
+          "d1": -0.2,
+          "w1": 0.96,
+          "m1": 3.4,
+          "m3": 2.15,
+          "m6": -4.26,
+          "y1": 3.5,
+          "y5": -40.32
         }
       },
-      "breadth_pct": 75.0,
-      "dollar_vol_ratio": 0.94,
+      "breadth_pct": 70.0,
+      "dollar_vol_ratio": 0.92,
       "rrg": {
         "ratio": 106.7,
         "momentum": 90.69,
@@ -4824,29 +4786,67 @@
       "theme_label": "Developed Markets Equity",
       "rank": 56,
       "has_breadth": true,
-      "data_ok": false,
-      "quadrant": null,
+      "data_ok": true,
+      "quadrant": "weakening",
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m6": null,
-        "y1": null,
-        "y5": null,
+        "d1": 0.33,
+        "w1": 1.97,
+        "m1": 3.84,
+        "m3": 5.78,
+        "m6": 6.87,
+        "y1": 24.98,
+        "y5": 41.78,
         "vs_spy": {
-          "d1": null,
-          "w1": null,
-          "m1": null,
-          "m3": null,
-          "m6": null,
-          "y1": null,
-          "y5": null
+          "d1": -0.37,
+          "w1": 0.76,
+          "m1": 0.78,
+          "m3": 0.47,
+          "m6": -6.48,
+          "y1": 4.41,
+          "y5": -32.68
         }
       },
       "breadth_pct": 50.0,
-      "dollar_vol_ratio": null,
-      "rrg": null
+      "dollar_vol_ratio": 1.05,
+      "rrg": {
+        "ratio": 103.89,
+        "momentum": 96.4,
+        "quadrant": "weakening",
+        "tail": [
+          {
+            "ratio": 109.21,
+            "momentum": 103.73
+          },
+          {
+            "ratio": 109.61,
+            "momentum": 102.31
+          },
+          {
+            "ratio": 108.72,
+            "momentum": 94.94
+          },
+          {
+            "ratio": 107.27,
+            "momentum": 91.86
+          },
+          {
+            "ratio": 105.89,
+            "momentum": 92.29
+          },
+          {
+            "ratio": 105.11,
+            "momentum": 95.77
+          },
+          {
+            "ratio": 104.56,
+            "momentum": 97.03
+          },
+          {
+            "ratio": 103.89,
+            "momentum": 96.4
+          }
+        ]
+      }
     },
     {
       "ticker": "VWO",
@@ -4857,25 +4857,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.48,
-        "w1": 0.67,
-        "m1": 2.25,
-        "m3": 3.37,
-        "m6": 4.53,
-        "y1": 16.28,
-        "y5": 17.87,
+        "d1": -0.12,
+        "w1": 0.63,
+        "m1": 1.45,
+        "m3": 3.18,
+        "m6": 4.12,
+        "y1": 16.4,
+        "y5": 16.49,
         "vs_spy": {
-          "d1": 0.23,
-          "w1": 0.32,
-          "m1": -0.5,
-          "m3": -1.14,
-          "m6": -8.6,
-          "y1": -3.96,
-          "y5": -56.7
+          "d1": -0.82,
+          "w1": -0.58,
+          "m1": -1.61,
+          "m3": -2.13,
+          "m6": -9.23,
+          "y1": -4.17,
+          "y5": -57.97
         }
       },
-      "breadth_pct": 83.3,
-      "dollar_vol_ratio": 0.96,
+      "breadth_pct": 62.5,
+      "dollar_vol_ratio": 0.99,
       "rrg": {
         "ratio": 81.88,
         "momentum": 95.68,
@@ -4925,25 +4925,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.92,
-        "w1": -1.55,
-        "m1": -0.08,
-        "m3": 3.72,
-        "m6": 2.27,
-        "y1": 6.54,
-        "y5": -3.43,
+        "d1": 1.33,
+        "w1": 0.67,
+        "m1": 1.02,
+        "m3": 3.94,
+        "m6": 4.88,
+        "y1": 8.32,
+        "y5": -2.13,
         "vs_spy": {
-          "d1": 0.67,
-          "w1": -1.9,
-          "m1": -2.83,
-          "m3": -0.79,
-          "m6": -10.86,
-          "y1": -13.7,
-          "y5": -78.0
+          "d1": 0.63,
+          "w1": -0.54,
+          "m1": -2.04,
+          "m3": -1.37,
+          "m6": -8.47,
+          "y1": -12.25,
+          "y5": -76.59
         }
       },
-      "breadth_pct": 55.6,
-      "dollar_vol_ratio": 0.92,
+      "breadth_pct": 57.1,
+      "dollar_vol_ratio": 0.91,
       "rrg": {
         "ratio": 90.36,
         "momentum": 75.24,
@@ -4993,25 +4993,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -0.02,
-        "w1": -1.04,
-        "m1": 2.37,
-        "m3": 8.43,
-        "m6": 8.33,
-        "y1": 18.56,
-        "y5": 53.85,
+        "d1": 0.14,
+        "w1": -0.05,
+        "m1": 2.27,
+        "m3": 8.23,
+        "m6": 8.23,
+        "y1": 18.35,
+        "y5": 52.45,
         "vs_spy": {
-          "d1": -0.27,
-          "w1": -1.39,
-          "m1": -0.38,
-          "m3": 3.92,
-          "m6": -4.8,
-          "y1": -1.68,
-          "y5": -20.72
+          "d1": -0.56,
+          "w1": -1.26,
+          "m1": -0.79,
+          "m3": 2.92,
+          "m6": -5.12,
+          "y1": -2.22,
+          "y5": -22.01
         }
       },
-      "breadth_pct": 55.6,
-      "dollar_vol_ratio": 0.78,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 0.71,
       "rrg": {
         "ratio": 94.8,
         "momentum": 98.29,
@@ -5061,25 +5061,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 2.16,
-        "w1": 4.41,
-        "m1": 4.22,
-        "m3": 16.32,
-        "m6": 45.67,
-        "y1": 79.18,
-        "y5": 74.12,
+        "d1": 1.24,
+        "w1": 5.41,
+        "m1": 4.89,
+        "m3": 17.15,
+        "m6": 47.3,
+        "y1": 80.67,
+        "y5": 73.72,
         "vs_spy": {
-          "d1": 1.91,
-          "w1": 4.06,
-          "m1": 1.47,
-          "m3": 11.81,
-          "m6": 32.54,
-          "y1": 58.94,
-          "y5": -0.45
+          "d1": 0.54,
+          "w1": 4.2,
+          "m1": 1.83,
+          "m3": 11.84,
+          "m6": 33.95,
+          "y1": 60.1,
+          "y5": -0.74
         }
       },
-      "breadth_pct": 85.7,
-      "dollar_vol_ratio": 0.71,
+      "breadth_pct": 100.0,
+      "dollar_vol_ratio": 0.69,
       "rrg": {
         "ratio": 118.25,
         "momentum": 92.04,
@@ -5129,25 +5129,25 @@
       "data_ok": true,
       "quadrant": "leading",
       "returns": {
-        "d1": 1.57,
-        "w1": 2.76,
-        "m1": 4.15,
-        "m3": 7.38,
-        "m6": 6.44,
-        "y1": 23.71,
-        "y5": 43.14,
+        "d1": 0.7,
+        "w1": 3.49,
+        "m1": 5.32,
+        "m3": 8.3,
+        "m6": 7.76,
+        "y1": 24.77,
+        "y5": 42.63,
         "vs_spy": {
-          "d1": 1.32,
-          "w1": 2.41,
-          "m1": 1.4,
-          "m3": 2.87,
-          "m6": -6.69,
-          "y1": 3.47,
-          "y5": -31.43
+          "d1": 0.0,
+          "w1": 2.28,
+          "m1": 2.26,
+          "m3": 2.99,
+          "m6": -5.59,
+          "y1": 4.2,
+          "y5": -31.83
         }
       },
-      "breadth_pct": 75.0,
-      "dollar_vol_ratio": 0.7,
+      "breadth_pct": 100.0,
+      "dollar_vol_ratio": 0.69,
       "rrg": {
         "ratio": 102.25,
         "momentum": 101.32,
@@ -5197,28 +5197,28 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 1.01,
-        "w1": 1.48,
-        "m1": -1.27,
-        "m3": -1.24,
-        "m6": 3.46,
-        "y1": 11.21,
-        "y5": -9.27,
+        "d1": -0.71,
+        "w1": 0.2,
+        "m1": -1.78,
+        "m3": -1.5,
+        "m6": 2.26,
+        "y1": 10.38,
+        "y5": -10.36,
         "vs_spy": {
-          "d1": 0.76,
-          "w1": 1.13,
-          "m1": -4.02,
-          "m3": -5.75,
-          "m6": -9.67,
-          "y1": -9.03,
-          "y5": -83.84
+          "d1": -1.41,
+          "w1": -1.01,
+          "m1": -4.84,
+          "m3": -6.81,
+          "m6": -11.09,
+          "y1": -10.19,
+          "y5": -84.82
         }
       },
-      "breadth_pct": 40.0,
-      "dollar_vol_ratio": 0.71,
+      "breadth_pct": 33.3,
+      "dollar_vol_ratio": 0.77,
       "rrg": {
-        "ratio": 82.82,
-        "momentum": 77.27,
+        "ratio": 82.68,
+        "momentum": 77.54,
         "quadrant": "lagging",
         "tail": [
           {
@@ -5246,12 +5246,12 @@
             "momentum": 86.09
           },
           {
-            "ratio": 87.33,
-            "momentum": 80.54
+            "ratio": 87.16,
+            "momentum": 79.67
           },
           {
-            "ratio": 82.82,
-            "momentum": 77.27
+            "ratio": 82.68,
+            "momentum": 77.54
           }
         ]
       }
@@ -5265,25 +5265,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.38,
-        "w1": 0.97,
-        "m1": 4.25,
-        "m3": 6.09,
-        "m6": 3.83,
-        "y1": 17.47,
-        "y5": 33.89,
+        "d1": 0.2,
+        "w1": 1.22,
+        "m1": 3.76,
+        "m3": 5.32,
+        "m6": 3.98,
+        "y1": 17.8,
+        "y5": 33.14,
         "vs_spy": {
-          "d1": 0.13,
-          "w1": 0.62,
-          "m1": 1.5,
-          "m3": 1.58,
-          "m6": -9.3,
+          "d1": -0.5,
+          "w1": 0.01,
+          "m1": 0.7,
+          "m3": 0.01,
+          "m6": -9.37,
           "y1": -2.77,
-          "y5": -40.68
+          "y5": -41.32
         }
       },
-      "breadth_pct": 50.0,
-      "dollar_vol_ratio": 0.87,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 0.84,
       "rrg": {
         "ratio": 89.07,
         "momentum": 103.78,
@@ -5333,28 +5333,28 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.37,
-        "w1": 1.38,
-        "m1": 3.29,
-        "m3": 8.09,
-        "m6": 9.37,
-        "y1": 20.63,
-        "y5": 42.56,
+        "d1": 0.46,
+        "w1": 2.18,
+        "m1": 3.69,
+        "m3": 8.69,
+        "m6": 9.42,
+        "y1": 20.68,
+        "y5": 43.08,
         "vs_spy": {
-          "d1": 0.12,
-          "w1": 1.03,
-          "m1": 0.54,
-          "m3": 3.58,
-          "m6": -3.76,
-          "y1": 0.39,
-          "y5": -32.01
+          "d1": -0.24,
+          "w1": 0.97,
+          "m1": 0.63,
+          "m3": 3.38,
+          "m6": -3.93,
+          "y1": 0.11,
+          "y5": -31.38
         }
       },
       "breadth_pct": 50.0,
       "dollar_vol_ratio": 0.87,
       "rrg": {
-        "ratio": 106.55,
-        "momentum": 89.37,
+        "ratio": 106.46,
+        "momentum": 89.56,
         "quadrant": "weakening",
         "tail": [
           {
@@ -5382,12 +5382,12 @@
             "momentum": 104.99
           },
           {
-            "ratio": 107.56,
-            "momentum": 90.78
+            "ratio": 107.45,
+            "momentum": 90.03
           },
           {
-            "ratio": 106.55,
-            "momentum": 89.37
+            "ratio": 106.46,
+            "momentum": 89.56
           }
         ]
       }
@@ -5401,25 +5401,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.42,
-        "w1": 0.07,
-        "m1": 2.52,
-        "m3": 11.28,
-        "m6": 13.94,
-        "y1": 26.97,
-        "y5": 32.44,
+        "d1": 0.46,
+        "w1": 1.29,
+        "m1": 2.44,
+        "m3": 11.4,
+        "m6": 14.13,
+        "y1": 27.12,
+        "y5": 33.68,
         "vs_spy": {
-          "d1": 0.17,
-          "w1": -0.28,
-          "m1": -0.23,
-          "m3": 6.77,
-          "m6": 0.81,
-          "y1": 6.73,
-          "y5": -42.13
+          "d1": -0.24,
+          "w1": 0.08,
+          "m1": -0.62,
+          "m3": 6.09,
+          "m6": 0.78,
+          "y1": 6.55,
+          "y5": -40.78
         }
       },
       "breadth_pct": 50.0,
-      "dollar_vol_ratio": 0.76,
+      "dollar_vol_ratio": 0.73,
       "rrg": {
         "ratio": 117.66,
         "momentum": 87.78,
@@ -5469,25 +5469,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.25,
-        "w1": 0.37,
-        "m1": 2.79,
-        "m3": 4.54,
-        "m6": 13.17,
-        "y1": 20.22,
-        "y5": 74.71,
+        "d1": 0.68,
+        "w1": 1.21,
+        "m1": 3.04,
+        "m3": 5.33,
+        "m6": 13.36,
+        "y1": 20.55,
+        "y5": 74.56,
         "vs_spy": {
-          "d1": 0.0,
-          "w1": 0.02,
-          "m1": 0.04,
-          "m3": 0.03,
-          "m6": 0.04,
+          "d1": -0.02,
+          "w1": 0.0,
+          "m1": -0.02,
+          "m3": 0.02,
+          "m6": 0.01,
           "y1": -0.02,
-          "y5": 0.14
+          "y5": 0.1
         }
       },
-      "breadth_pct": 44.4,
-      "dollar_vol_ratio": 0.88,
+      "breadth_pct": 55.6,
+      "dollar_vol_ratio": 0.9,
       "rrg": {
         "ratio": 88.04,
         "momentum": 103.16,
@@ -5537,25 +5537,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 1.15,
-        "w1": 1.71,
-        "m1": -3.46,
-        "m3": -15.51,
-        "m6": -1.71,
-        "y1": 27.94,
-        "y5": -19.47,
+        "d1": -0.27,
+        "w1": 1.32,
+        "m1": -3.77,
+        "m3": -13.92,
+        "m6": -3.52,
+        "y1": 27.59,
+        "y5": -19.93,
         "vs_spy": {
-          "d1": 0.9,
-          "w1": 1.36,
-          "m1": -6.21,
-          "m3": -20.02,
-          "m6": -14.84,
-          "y1": 7.7,
-          "y5": -94.04
+          "d1": -0.97,
+          "w1": 0.11,
+          "m1": -6.83,
+          "m3": -19.23,
+          "m6": -16.87,
+          "y1": 7.02,
+          "y5": -94.39
         }
       },
-      "breadth_pct": 55.6,
-      "dollar_vol_ratio": 1.01,
+      "breadth_pct": 66.7,
+      "dollar_vol_ratio": 1.02,
       "rrg": {
         "ratio": 100.15,
         "momentum": 85.74,
@@ -5605,28 +5605,28 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.22,
-        "w1": 0.74,
-        "m1": 3.75,
-        "m3": 7.32,
-        "m6": 8.37,
-        "y1": 17.33,
-        "y5": 54.72,
+        "d1": 0.17,
+        "w1": 0.92,
+        "m1": 3.9,
+        "m3": 7.01,
+        "m6": 8.19,
+        "y1": 17.03,
+        "y5": 53.81,
         "vs_spy": {
-          "d1": -0.03,
-          "w1": 0.39,
-          "m1": 1.0,
-          "m3": 2.81,
-          "m6": -4.76,
-          "y1": -2.91,
-          "y5": -19.85
+          "d1": -0.53,
+          "w1": -0.29,
+          "m1": 0.84,
+          "m3": 1.7,
+          "m6": -5.16,
+          "y1": -3.54,
+          "y5": -20.65
         }
       },
-      "breadth_pct": 80.0,
-      "dollar_vol_ratio": 0.86,
+      "breadth_pct": 88.9,
+      "dollar_vol_ratio": 0.84,
       "rrg": {
-        "ratio": 87.56,
-        "momentum": 95.43,
+        "ratio": 87.19,
+        "momentum": 96.21,
         "quadrant": "lagging",
         "tail": [
           {
@@ -5654,12 +5654,12 @@
             "momentum": 115.78
           },
           {
-            "ratio": 88.08,
-            "momentum": 108.38
+            "ratio": 87.59,
+            "momentum": 105.22
           },
           {
-            "ratio": 87.56,
-            "momentum": 95.43
+            "ratio": 87.19,
+            "momentum": 96.21
           }
         ]
       }
@@ -5673,25 +5673,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -1.51,
-        "w1": 12.87,
-        "m1": -2.77,
-        "m3": 3.4,
-        "m6": 16.92,
-        "y1": -13.31,
-        "y5": -84.28,
+        "d1": 1.97,
+        "w1": 6.9,
+        "m1": 1.97,
+        "m3": 0.87,
+        "m6": 21.73,
+        "y1": -15.45,
+        "y5": -83.75,
         "vs_spy": {
-          "d1": -1.76,
-          "w1": 12.52,
-          "m1": -5.52,
-          "m3": -1.11,
-          "m6": 3.79,
-          "y1": -33.55,
-          "y5": -158.85
+          "d1": 1.27,
+          "w1": 5.69,
+          "m1": -1.09,
+          "m3": -4.44,
+          "m6": 8.38,
+          "y1": -36.02,
+          "y5": -158.21
         }
       },
       "breadth_pct": 100.0,
-      "dollar_vol_ratio": 1.04,
+      "dollar_vol_ratio": 1.01,
       "rrg": {
         "ratio": 93.05,
         "momentum": 75.7,
@@ -5741,28 +5741,28 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.72,
-        "w1": 0.03,
-        "m1": 3.26,
-        "m3": 15.14,
-        "m6": 8.64,
-        "y1": 17.74,
-        "y5": 28.71,
+        "d1": 0.55,
+        "w1": 1.8,
+        "m1": 2.62,
+        "m3": 14.31,
+        "m6": 9.31,
+        "y1": 17.26,
+        "y5": 29.16,
         "vs_spy": {
-          "d1": 0.47,
-          "w1": -0.32,
-          "m1": 0.51,
-          "m3": 10.63,
-          "m6": -4.49,
-          "y1": -2.5,
-          "y5": -45.86
+          "d1": -0.15,
+          "w1": 0.59,
+          "m1": -0.44,
+          "m3": 9.0,
+          "m6": -4.04,
+          "y1": -3.31,
+          "y5": -45.3
         }
       },
-      "breadth_pct": 88.9,
-      "dollar_vol_ratio": 0.63,
+      "breadth_pct": 90.0,
+      "dollar_vol_ratio": 0.71,
       "rrg": {
-        "ratio": 108.22,
-        "momentum": 93.81,
+        "ratio": 108.4,
+        "momentum": 93.62,
         "quadrant": "weakening",
         "tail": [
           {
@@ -5790,12 +5790,12 @@
             "momentum": 111.53
           },
           {
-            "ratio": 109.44,
-            "momentum": 105.18
+            "ratio": 109.67,
+            "momentum": 106.01
           },
           {
-            "ratio": 108.22,
-            "momentum": 93.81
+            "ratio": 108.4,
+            "momentum": 93.62
           }
         ]
       }
@@ -5809,25 +5809,25 @@
       "data_ok": true,
       "quadrant": "leading",
       "returns": {
-        "d1": 0.49,
-        "w1": 4.65,
-        "m1": 6.39,
-        "m3": 20.31,
-        "m6": 15.34,
-        "y1": 46.44,
-        "y5": 27.14,
+        "d1": -0.89,
+        "w1": 3.09,
+        "m1": 4.76,
+        "m3": 21.28,
+        "m6": 13.84,
+        "y1": 43.67,
+        "y5": 26.66,
         "vs_spy": {
-          "d1": 0.24,
-          "w1": 4.3,
-          "m1": 3.64,
-          "m3": 15.8,
-          "m6": 2.21,
-          "y1": 26.2,
-          "y5": -47.43
+          "d1": -1.59,
+          "w1": 1.88,
+          "m1": 1.7,
+          "m3": 15.97,
+          "m6": 0.49,
+          "y1": 23.1,
+          "y5": -47.8
         }
       },
-      "breadth_pct": 80.0,
-      "dollar_vol_ratio": 1.25,
+      "breadth_pct": 70.0,
+      "dollar_vol_ratio": 1.15,
       "rrg": {
         "ratio": 109.17,
         "momentum": 101.68,
@@ -5877,28 +5877,28 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": -0.5,
-        "w1": 7.32,
-        "m1": 7.22,
-        "m3": -6.19,
-        "m6": 10.03,
-        "y1": 64.05,
-        "y5": 87.68,
+        "d1": -0.65,
+        "w1": 4.72,
+        "m1": 7.46,
+        "m3": -9.55,
+        "m6": 6.61,
+        "y1": 64.8,
+        "y5": 83.32,
         "vs_spy": {
-          "d1": -0.75,
-          "w1": 6.97,
-          "m1": 4.47,
-          "m3": -10.7,
-          "m6": -3.1,
-          "y1": 43.81,
-          "y5": 13.11
+          "d1": -1.35,
+          "w1": 3.51,
+          "m1": 4.4,
+          "m3": -14.86,
+          "m6": -6.74,
+          "y1": 44.23,
+          "y5": 8.86
         }
       },
-      "breadth_pct": 87.5,
-      "dollar_vol_ratio": 1.06,
+      "breadth_pct": 90.0,
+      "dollar_vol_ratio": 1.01,
       "rrg": {
-        "ratio": 105.34,
-        "momentum": 93.31,
+        "ratio": 105.55,
+        "momentum": 92.99,
         "quadrant": "weakening",
         "tail": [
           {
@@ -5926,12 +5926,12 @@
             "momentum": 95.83
           },
           {
-            "ratio": 106.17,
-            "momentum": 92.67
+            "ratio": 106.44,
+            "momentum": 94.12
           },
           {
-            "ratio": 105.34,
-            "momentum": 93.31
+            "ratio": 105.55,
+            "momentum": 92.99
           }
         ]
       }
@@ -5945,25 +5945,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.12,
-        "w1": 8.11,
-        "m1": 7.68,
-        "m3": 2.56,
-        "m6": 22.82,
-        "y1": 37.41,
-        "y5": 68.77,
+        "d1": 0.33,
+        "w1": 7.26,
+        "m1": 8.68,
+        "m3": 1.68,
+        "m6": 21.02,
+        "y1": 38.31,
+        "y5": 70.3,
         "vs_spy": {
-          "d1": -0.13,
-          "w1": 7.76,
-          "m1": 4.93,
-          "m3": -1.95,
-          "m6": 9.69,
-          "y1": 17.17,
-          "y5": -5.8
+          "d1": -0.37,
+          "w1": 6.05,
+          "m1": 5.62,
+          "m3": -3.63,
+          "m6": 7.67,
+          "y1": 17.74,
+          "y5": -4.16
         }
       },
-      "breadth_pct": 77.8,
-      "dollar_vol_ratio": 0.93,
+      "breadth_pct": 90.0,
+      "dollar_vol_ratio": 0.92,
       "rrg": {
         "ratio": 106.12,
         "momentum": 93.97,
@@ -6013,25 +6013,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.32,
-        "w1": 0.16,
-        "m1": 2.2,
-        "m3": 1.65,
-        "m6": 16.04,
-        "y1": 16.52,
-        "y5": 78.11,
+        "d1": 0.97,
+        "w1": 1.18,
+        "m1": 2.24,
+        "m3": 3.03,
+        "m6": 16.41,
+        "y1": 17.0,
+        "y5": 78.47,
         "vs_spy": {
-          "d1": 0.07,
-          "w1": -0.19,
-          "m1": -0.55,
-          "m3": -2.86,
-          "m6": 2.91,
-          "y1": -3.72,
-          "y5": 3.54
+          "d1": 0.27,
+          "w1": -0.03,
+          "m1": -0.82,
+          "m3": -2.28,
+          "m6": 3.06,
+          "y1": -3.57,
+          "y5": 4.01
         }
       },
-      "breadth_pct": 44.4,
-      "dollar_vol_ratio": 1.0,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 0.96,
       "rrg": {
         "ratio": 90.32,
         "momentum": 111.74,
@@ -6081,28 +6081,28 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.42,
-        "w1": 1.03,
-        "m1": 3.52,
+        "d1": 0.34,
+        "w1": 1.65,
+        "m1": 4.4,
         "m3": 9.49,
         "m6": 9.93,
-        "y1": 24.31,
-        "y5": 61.73,
+        "y1": 24.39,
+        "y5": 61.17,
         "vs_spy": {
-          "d1": 0.17,
-          "w1": 0.68,
-          "m1": 0.77,
-          "m3": 4.98,
-          "m6": -3.2,
-          "y1": 4.07,
-          "y5": -12.84
+          "d1": -0.36,
+          "w1": 0.44,
+          "m1": 1.34,
+          "m3": 4.18,
+          "m6": -3.42,
+          "y1": 3.82,
+          "y5": -13.29
         }
       },
-      "breadth_pct": 77.8,
-      "dollar_vol_ratio": 0.89,
+      "breadth_pct": 37.5,
+      "dollar_vol_ratio": 0.87,
       "rrg": {
-        "ratio": 109.8,
-        "momentum": 87.21,
+        "ratio": 109.61,
+        "momentum": 87.59,
         "quadrant": "weakening",
         "tail": [
           {
@@ -6130,12 +6130,12 @@
             "momentum": 111.35
           },
           {
-            "ratio": 111.04,
-            "momentum": 99.07
+            "ratio": 110.81,
+            "momentum": 97.49
           },
           {
-            "ratio": 109.8,
-            "momentum": 87.21
+            "ratio": 109.61,
+            "momentum": 87.59
           }
         ]
       }
@@ -6149,28 +6149,28 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.13,
-        "w1": 0.28,
-        "m1": 2.83,
-        "m3": 7.13,
-        "m6": 11.48,
-        "y1": 19.66,
-        "y5": 65.41,
+        "d1": 0.77,
+        "w1": 0.98,
+        "m1": 3.36,
+        "m3": 7.71,
+        "m6": 11.64,
+        "y1": 20.16,
+        "y5": 65.75,
         "vs_spy": {
-          "d1": -0.12,
-          "w1": -0.07,
-          "m1": 0.08,
-          "m3": 2.62,
-          "m6": -1.65,
-          "y1": -0.58,
-          "y5": -9.16
+          "d1": 0.07,
+          "w1": -0.23,
+          "m1": 0.3,
+          "m3": 2.4,
+          "m6": -1.71,
+          "y1": -0.41,
+          "y5": -8.71
         }
       },
-      "breadth_pct": 55.6,
-      "dollar_vol_ratio": 0.89,
+      "breadth_pct": 70.0,
+      "dollar_vol_ratio": 0.87,
       "rrg": {
-        "ratio": 98.22,
-        "momentum": 99.85,
+        "ratio": 98.64,
+        "momentum": 99.06,
         "quadrant": "lagging",
         "tail": [
           {
@@ -6198,12 +6198,12 @@
             "momentum": 116.22
           },
           {
-            "ratio": 97.87,
-            "momentum": 110.99
+            "ratio": 98.38,
+            "momentum": 114.77
           },
           {
-            "ratio": 98.22,
-            "momentum": 99.85
+            "ratio": 98.64,
+            "momentum": 99.06
           }
         ]
       }
@@ -6217,25 +6217,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 2.07,
-        "w1": 1.53,
-        "m1": -1.57,
-        "m3": 5.52,
-        "m6": 25.07,
-        "y1": 29.6,
-        "y5": 73.05,
+        "d1": 0.41,
+        "w1": 2.55,
+        "m1": 1.07,
+        "m3": 7.38,
+        "m6": 24.67,
+        "y1": 28.9,
+        "y5": 71.81,
         "vs_spy": {
-          "d1": 1.82,
-          "w1": 1.18,
-          "m1": -4.32,
-          "m3": 1.01,
-          "m6": 11.94,
-          "y1": 9.36,
-          "y5": -1.52
+          "d1": -0.29,
+          "w1": 1.34,
+          "m1": -1.99,
+          "m3": 2.07,
+          "m6": 11.32,
+          "y1": 8.33,
+          "y5": -2.65
         }
       },
-      "breadth_pct": 77.8,
-      "dollar_vol_ratio": 0.6,
+      "breadth_pct": 71.4,
+      "dollar_vol_ratio": 0.59,
       "rrg": {
         "ratio": 116.7,
         "momentum": 89.77,
@@ -6285,28 +6285,28 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.04,
-        "w1": 1.08,
-        "m1": 4.02,
-        "m3": 6.41,
-        "m6": 5.14,
-        "y1": 7.57,
-        "y5": 33.31,
+        "d1": 0.6,
+        "w1": 1.37,
+        "m1": 5.49,
+        "m3": 5.59,
+        "m6": 5.56,
+        "y1": 8.22,
+        "y5": 33.89,
         "vs_spy": {
-          "d1": -0.21,
-          "w1": 0.73,
-          "m1": 1.27,
-          "m3": 1.9,
-          "m6": -7.99,
-          "y1": -12.67,
-          "y5": -41.26
+          "d1": -0.1,
+          "w1": 0.16,
+          "m1": 2.43,
+          "m3": 0.28,
+          "m6": -7.79,
+          "y1": -12.35,
+          "y5": -40.57
         }
       },
-      "breadth_pct": 62.5,
-      "dollar_vol_ratio": 0.88,
+      "breadth_pct": 25.0,
+      "dollar_vol_ratio": 0.85,
       "rrg": {
-        "ratio": 84.62,
-        "momentum": 102.39,
+        "ratio": 84.65,
+        "momentum": 102.27,
         "quadrant": "improving",
         "tail": [
           {
@@ -6334,12 +6334,12 @@
             "momentum": 107.88
           },
           {
-            "ratio": 84.38,
-            "momentum": 106.01
+            "ratio": 84.42,
+            "momentum": 106.44
           },
           {
-            "ratio": 84.62,
-            "momentum": 102.39
+            "ratio": 84.65,
+            "momentum": 102.27
           }
         ]
       }
@@ -6353,28 +6353,28 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -0.13,
-        "w1": -0.8,
-        "m1": 3.6,
-        "m3": -6.69,
-        "m6": -4.18,
-        "y1": 4.37,
-        "y5": -6.81,
+        "d1": 0.22,
+        "w1": 0.04,
+        "m1": 1.9,
+        "m3": -6.13,
+        "m6": -4.5,
+        "y1": 4.85,
+        "y5": -8.05,
         "vs_spy": {
-          "d1": -0.38,
-          "w1": -1.15,
-          "m1": 0.85,
-          "m3": -11.2,
-          "m6": -17.31,
-          "y1": -15.87,
-          "y5": -81.38
+          "d1": -0.48,
+          "w1": -1.17,
+          "m1": -1.16,
+          "m3": -11.44,
+          "m6": -17.85,
+          "y1": -15.72,
+          "y5": -82.51
         }
       },
-      "breadth_pct": 30.0,
-      "dollar_vol_ratio": 0.89,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 0.85,
       "rrg": {
-        "ratio": 79.63,
-        "momentum": 102.81,
+        "ratio": 79.34,
+        "momentum": 103.38,
         "quadrant": "improving",
         "tail": [
           {
@@ -6402,12 +6402,12 @@
             "momentum": 115.3
           },
           {
-            "ratio": 79.62,
-            "momentum": 115.75
+            "ratio": 79.21,
+            "momentum": 114.2
           },
           {
-            "ratio": 79.63,
-            "momentum": 102.81
+            "ratio": 79.34,
+            "momentum": 103.38
           }
         ]
       }
@@ -6421,25 +6421,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.29,
-        "w1": -0.3,
-        "m1": 1.49,
-        "m3": -0.97,
-        "m6": -5.32,
-        "y1": 23.9,
-        "y5": 56.17,
+        "d1": -1.32,
+        "w1": -1.54,
+        "m1": 0.08,
+        "m3": -3.15,
+        "m6": -5.86,
+        "y1": 22.8,
+        "y5": 50.66,
         "vs_spy": {
-          "d1": 0.04,
-          "w1": -0.65,
-          "m1": -1.26,
-          "m3": -5.48,
-          "m6": -18.45,
-          "y1": 3.66,
-          "y5": -18.4
+          "d1": -2.02,
+          "w1": -2.75,
+          "m1": -2.98,
+          "m3": -8.46,
+          "m6": -19.21,
+          "y1": 2.23,
+          "y5": -23.8
         }
       },
-      "breadth_pct": 22.2,
-      "dollar_vol_ratio": 0.88,
+      "breadth_pct": 20.0,
+      "dollar_vol_ratio": 0.87,
       "rrg": {
         "ratio": 97.02,
         "momentum": 93.0,
@@ -6489,25 +6489,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.44,
-        "w1": 0.85,
-        "m1": 3.03,
-        "m3": 5.22,
-        "m6": 10.42,
-        "y1": 20.93,
-        "y5": 54.29,
+        "d1": 0.53,
+        "w1": 1.54,
+        "m1": 3.24,
+        "m3": 5.65,
+        "m6": 10.46,
+        "y1": 21.26,
+        "y5": 54.03,
         "vs_spy": {
-          "d1": 0.19,
-          "w1": 0.5,
-          "m1": 0.28,
-          "m3": 0.71,
-          "m6": -2.71,
+          "d1": -0.17,
+          "w1": 0.33,
+          "m1": 0.18,
+          "m3": 0.34,
+          "m6": -2.89,
           "y1": 0.69,
-          "y5": -20.28
+          "y5": -20.43
         }
       },
       "breadth_pct": 55.6,
-      "dollar_vol_ratio": 1.09,
+      "dollar_vol_ratio": 0.93,
       "rrg": {
         "ratio": 100.74,
         "momentum": 95.84,
@@ -6557,28 +6557,28 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.47,
-        "w1": 0.72,
-        "m1": 3.0,
-        "m3": 4.91,
-        "m6": 10.72,
-        "y1": 21.22,
-        "y5": 57.26,
+        "d1": 0.51,
+        "w1": 1.49,
+        "m1": 3.15,
+        "m3": 5.27,
+        "m6": 10.81,
+        "y1": 21.59,
+        "y5": 56.79,
         "vs_spy": {
-          "d1": 0.22,
-          "w1": 0.37,
-          "m1": 0.25,
-          "m3": 0.4,
-          "m6": -2.41,
-          "y1": 0.98,
-          "y5": -17.31
+          "d1": -0.19,
+          "w1": 0.28,
+          "m1": 0.09,
+          "m3": -0.04,
+          "m6": -2.54,
+          "y1": 1.02,
+          "y5": -17.67
         }
       },
       "breadth_pct": 55.6,
-      "dollar_vol_ratio": 0.55,
+      "dollar_vol_ratio": 0.64,
       "rrg": {
-        "ratio": 100.09,
-        "momentum": 95.09,
+        "ratio": 100.98,
+        "momentum": 93.73,
         "quadrant": "weakening",
         "tail": [
           {
@@ -6606,12 +6606,12 @@
             "momentum": 92.61
           },
           {
-            "ratio": 101.04,
-            "momentum": 91.08
+            "ratio": 102.15,
+            "momentum": 97.3
           },
           {
-            "ratio": 100.09,
-            "momentum": 95.09
+            "ratio": 100.98,
+            "momentum": 93.73
           }
         ]
       }
@@ -6625,25 +6625,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -0.9,
-        "w1": -0.54,
-        "m1": -1.06,
-        "m3": -5.01,
-        "m6": -3.61,
-        "y1": -1.09,
-        "y5": 36.96,
+        "d1": 2.07,
+        "w1": 1.23,
+        "m1": -0.73,
+        "m3": -3.79,
+        "m6": -1.78,
+        "y1": 1.4,
+        "y5": 40.13,
         "vs_spy": {
-          "d1": -1.15,
-          "w1": -0.89,
-          "m1": -3.81,
-          "m3": -9.52,
-          "m6": -16.74,
-          "y1": -21.33,
-          "y5": -37.61
+          "d1": 1.37,
+          "w1": 0.02,
+          "m1": -3.79,
+          "m3": -9.1,
+          "m6": -15.13,
+          "y1": -19.17,
+          "y5": -34.33
         }
       },
-      "breadth_pct": 55.6,
-      "dollar_vol_ratio": 0.68,
+      "breadth_pct": 66.7,
+      "dollar_vol_ratio": 0.78,
       "rrg": {
         "ratio": 75.29,
         "momentum": 106.46,
@@ -6693,25 +6693,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 2.11,
-        "w1": 2.42,
-        "m1": -0.56,
-        "m3": -0.98,
-        "m6": 54.29,
-        "y1": 66.54,
-        "y5": 123.96,
+        "d1": 3.42,
+        "w1": 7.11,
+        "m1": 3.64,
+        "m3": 3.81,
+        "m6": 56.21,
+        "y1": 70.25,
+        "y5": 127.4,
         "vs_spy": {
-          "d1": 1.86,
-          "w1": 2.07,
-          "m1": -3.31,
-          "m3": -5.49,
-          "m6": 41.16,
-          "y1": 46.3,
-          "y5": 49.39
+          "d1": 2.72,
+          "w1": 5.9,
+          "m1": 0.58,
+          "m3": -1.5,
+          "m6": 42.86,
+          "y1": 49.68,
+          "y5": 52.94
         }
       },
-      "breadth_pct": 44.4,
-      "dollar_vol_ratio": 0.86,
+      "breadth_pct": 55.6,
+      "dollar_vol_ratio": 0.84,
       "rrg": {
         "ratio": 115.05,
         "momentum": 98.07,
@@ -6761,25 +6761,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -2.15,
-        "w1": -2.53,
-        "m1": -3.39,
-        "m3": -13.17,
-        "m6": -48.85,
-        "y1": -58.35,
-        "y5": -96.25,
+        "d1": -3.43,
+        "w1": -6.87,
+        "m1": -7.45,
+        "m3": -17.23,
+        "m6": -49.52,
+        "y1": -59.28,
+        "y5": -96.31,
         "vs_spy": {
-          "d1": -2.4,
-          "w1": -2.88,
-          "m1": -6.14,
-          "m3": -17.68,
-          "m6": -61.98,
-          "y1": -78.59,
-          "y5": -170.82
+          "d1": -4.13,
+          "w1": -8.08,
+          "m1": -10.51,
+          "m3": -22.54,
+          "m6": -62.87,
+          "y1": -79.85,
+          "y5": -170.77
         }
       },
-      "breadth_pct": 44.4,
-      "dollar_vol_ratio": 0.7,
+      "breadth_pct": 55.6,
+      "dollar_vol_ratio": 0.68,
       "rrg": {
         "ratio": 83.29,
         "momentum": 93.84,
@@ -6826,67 +6826,29 @@
       "theme_label": "3x Leveraged Semiconductors",
       "rank": 6,
       "has_breadth": true,
-      "data_ok": true,
-      "quadrant": "weakening",
+      "data_ok": false,
+      "quadrant": null,
       "returns": {
-        "d1": 6.89,
-        "w1": 7.64,
-        "m1": -19.53,
-        "m3": -13.41,
-        "m6": 120.92,
-        "y1": 420.73,
-        "y5": 246.31,
+        "d1": null,
+        "w1": null,
+        "m1": null,
+        "m3": null,
+        "m6": null,
+        "y1": null,
+        "y5": null,
         "vs_spy": {
-          "d1": 6.64,
-          "w1": 7.29,
-          "m1": -22.28,
-          "m3": -17.92,
-          "m6": 107.79,
-          "y1": 400.49,
-          "y5": 171.74
+          "d1": null,
+          "w1": null,
+          "m1": null,
+          "m3": null,
+          "m6": null,
+          "y1": null,
+          "y5": null
         }
       },
       "breadth_pct": 88.9,
-      "dollar_vol_ratio": 0.73,
-      "rrg": {
-        "ratio": 114.47,
-        "momentum": 90.22,
-        "quadrant": "weakening",
-        "tail": [
-          {
-            "ratio": 133.62,
-            "momentum": 98.47
-          },
-          {
-            "ratio": 131.03,
-            "momentum": 79.72
-          },
-          {
-            "ratio": 127.57,
-            "momentum": 76.49
-          },
-          {
-            "ratio": 125.2,
-            "momentum": 83.45
-          },
-          {
-            "ratio": 121.59,
-            "momentum": 78.23
-          },
-          {
-            "ratio": 118.91,
-            "momentum": 83.85
-          },
-          {
-            "ratio": 116.07,
-            "momentum": 83.75
-          },
-          {
-            "ratio": 114.47,
-            "momentum": 90.22
-          }
-        ]
-      }
+      "dollar_vol_ratio": null,
+      "rrg": null
     },
     {
       "ticker": "SOXS",
@@ -6897,25 +6859,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -6.95,
-        "w1": -9.12,
-        "m1": -4.28,
-        "m3": -97.04,
-        "m6": -99.23,
+        "d1": -2.07,
+        "w1": -10.37,
+        "m1": -12.74,
+        "m3": -97.31,
+        "m6": -99.22,
         "y1": -99.8,
         "y5": -100.0,
         "vs_spy": {
-          "d1": -7.2,
-          "w1": -9.47,
-          "m1": -7.03,
-          "m3": -101.55,
-          "m6": -112.36,
-          "y1": -120.04,
-          "y5": -174.57
+          "d1": -2.77,
+          "w1": -11.58,
+          "m1": -15.8,
+          "m3": -102.62,
+          "m6": -112.57,
+          "y1": -120.37,
+          "y5": -174.46
         }
       },
       "breadth_pct": 88.9,
-      "dollar_vol_ratio": 0.65,
+      "dollar_vol_ratio": 0.62,
       "rrg": {
         "ratio": 88.15,
         "momentum": 95.81,
@@ -6965,25 +6927,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -0.74,
-        "w1": -0.83,
-        "m1": -7.61,
-        "m3": -13.18,
-        "m6": -32.53,
-        "y1": -43.44,
-        "y5": -88.57,
+        "d1": -2.0,
+        "w1": -3.32,
+        "m1": -8.43,
+        "m3": -15.13,
+        "m6": -32.88,
+        "y1": -43.9,
+        "y5": -88.54,
         "vs_spy": {
-          "d1": -0.99,
-          "w1": -1.18,
-          "m1": -10.36,
-          "m3": -17.69,
-          "m6": -45.66,
-          "y1": -63.68,
-          "y5": -163.14
+          "d1": -2.7,
+          "w1": -4.53,
+          "m1": -11.49,
+          "m3": -20.44,
+          "m6": -46.23,
+          "y1": -64.47,
+          "y5": -163.0
         }
       },
-      "breadth_pct": 44.4,
-      "dollar_vol_ratio": 0.76,
+      "breadth_pct": 55.6,
+      "dollar_vol_ratio": 0.8,
       "rrg": {
         "ratio": 82.84,
         "momentum": 86.19,
@@ -7033,25 +6995,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -0.77,
-        "w1": -0.82,
-        "m1": -7.55,
-        "m3": -13.24,
-        "m6": -32.48,
-        "y1": -44.59,
-        "y5": -89.42,
+        "d1": -1.99,
+        "w1": -3.34,
+        "m1": -8.4,
+        "m3": -15.14,
+        "m6": -32.86,
+        "y1": -45.04,
+        "y5": -89.4,
         "vs_spy": {
-          "d1": -1.02,
-          "w1": -1.17,
-          "m1": -10.3,
-          "m3": -17.75,
-          "m6": -45.61,
-          "y1": -64.83,
-          "y5": -163.99
+          "d1": -2.69,
+          "w1": -4.55,
+          "m1": -11.46,
+          "m3": -20.45,
+          "m6": -46.21,
+          "y1": -65.61,
+          "y5": -163.86
         }
       },
-      "breadth_pct": 44.4,
-      "dollar_vol_ratio": 0.61,
+      "breadth_pct": 55.6,
+      "dollar_vol_ratio": 0.65,
       "rrg": {
         "ratio": 83.14,
         "momentum": 86.31,
@@ -7098,67 +7060,29 @@
       "theme_label": "3x Leveraged US Small Cap",
       "rank": 40,
       "has_breadth": true,
-      "data_ok": true,
-      "quadrant": "weakening",
+      "data_ok": false,
+      "quadrant": null,
       "returns": {
-        "d1": 1.71,
-        "w1": 2.73,
-        "m1": 7.2,
-        "m3": 24.85,
-        "m6": 39.68,
-        "y1": 86.63,
-        "y5": -16.82,
+        "d1": null,
+        "w1": null,
+        "m1": null,
+        "m3": null,
+        "m6": null,
+        "y1": null,
+        "y5": null,
         "vs_spy": {
-          "d1": 1.46,
-          "w1": 2.38,
-          "m1": 4.45,
-          "m3": 20.34,
-          "m6": 26.55,
-          "y1": 66.39,
-          "y5": -91.39
+          "d1": null,
+          "w1": null,
+          "m1": null,
+          "m3": null,
+          "m6": null,
+          "y1": null,
+          "y5": null
         }
       },
-      "breadth_pct": 50.0,
-      "dollar_vol_ratio": 0.83,
-      "rrg": {
-        "ratio": 119.0,
-        "momentum": 95.85,
-        "quadrant": "weakening",
-        "tail": [
-          {
-            "ratio": 120.5,
-            "momentum": 104.48
-          },
-          {
-            "ratio": 122.0,
-            "momentum": 106.71
-          },
-          {
-            "ratio": 122.35,
-            "momentum": 96.85
-          },
-          {
-            "ratio": 121.82,
-            "momentum": 89.56
-          },
-          {
-            "ratio": 121.14,
-            "momentum": 88.64
-          },
-          {
-            "ratio": 120.05,
-            "momentum": 85.71
-          },
-          {
-            "ratio": 118.93,
-            "momentum": 85.87
-          },
-          {
-            "ratio": 119.0,
-            "momentum": 95.85
-          }
-        ]
-      }
+      "breadth_pct": 44.4,
+      "dollar_vol_ratio": null,
+      "rrg": null
     },
     {
       "ticker": "SH",
@@ -7169,25 +7093,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -0.28,
-        "w1": -0.25,
-        "m1": -2.31,
-        "m3": -4.35,
-        "m6": -11.37,
-        "y1": -16.77,
-        "y5": -45.63,
+        "d1": -0.62,
+        "w1": -1.05,
+        "m1": -2.57,
+        "m3": -5.09,
+        "m6": -11.49,
+        "y1": -16.99,
+        "y5": -45.53,
         "vs_spy": {
-          "d1": -0.53,
-          "w1": -0.6,
-          "m1": -5.06,
-          "m3": -8.86,
-          "m6": -24.5,
-          "y1": -37.01,
-          "y5": -120.2
+          "d1": -1.32,
+          "w1": -2.26,
+          "m1": -5.63,
+          "m3": -10.4,
+          "m6": -24.84,
+          "y1": -37.56,
+          "y5": -119.99
         }
       },
-      "breadth_pct": 44.4,
-      "dollar_vol_ratio": 0.85,
+      "breadth_pct": 55.6,
+      "dollar_vol_ratio": 0.9,
       "rrg": {
         "ratio": 81.99,
         "momentum": 87.4,
@@ -7237,25 +7161,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.13,
-        "w1": 3.33,
-        "m1": -6.68,
-        "m3": -22.4,
-        "m6": -23.49,
-        "y1": -42.09,
-        "y5": -81.64,
+        "d1": -0.36,
+        "w1": 0.45,
+        "m1": -6.39,
+        "m3": -21.92,
+        "m6": -23.27,
+        "y1": -41.83,
+        "y5": -81.08,
         "vs_spy": {
-          "d1": -0.12,
-          "w1": 2.98,
-          "m1": -9.43,
-          "m3": -26.91,
+          "d1": -1.06,
+          "w1": -0.76,
+          "m1": -9.45,
+          "m3": -27.23,
           "m6": -36.62,
-          "y1": -62.33,
-          "y5": -156.21
+          "y1": -62.4,
+          "y5": -155.54
         }
       },
-      "breadth_pct": 55.6,
-      "dollar_vol_ratio": 0.94,
+      "breadth_pct": 60.0,
+      "dollar_vol_ratio": 0.74,
       "rrg": {
         "ratio": 82.71,
         "momentum": 88.39,
@@ -7305,25 +7229,25 @@
       "data_ok": true,
       "quadrant": "leading",
       "returns": {
-        "d1": 0.78,
-        "w1": 0.85,
-        "m1": 7.12,
-        "m3": 10.61,
-        "m6": 35.5,
-        "y1": 53.52,
-        "y5": 148.95,
+        "d1": 2.03,
+        "w1": 3.44,
+        "m1": 8.1,
+        "m3": 13.15,
+        "m6": 36.2,
+        "y1": 54.77,
+        "y5": 148.28,
         "vs_spy": {
-          "d1": 0.53,
-          "w1": 0.5,
-          "m1": 4.37,
-          "m3": 6.1,
-          "m6": 22.37,
-          "y1": 33.28,
-          "y5": 74.38
+          "d1": 1.33,
+          "w1": 2.23,
+          "m1": 5.04,
+          "m3": 7.84,
+          "m6": 22.85,
+          "y1": 34.2,
+          "y5": 73.82
         }
       },
-      "breadth_pct": 44.4,
-      "dollar_vol_ratio": 0.85,
+      "breadth_pct": 55.6,
+      "dollar_vol_ratio": 0.88,
       "rrg": {
         "ratio": 119.45,
         "momentum": 111.61,
@@ -7373,25 +7297,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -1.67,
-        "w1": -2.75,
-        "m1": -7.97,
-        "m3": -25.04,
-        "m6": -39.15,
-        "y1": -60.28,
-        "y5": -86.66,
+        "d1": -0.73,
+        "w1": -4.97,
+        "m1": -7.49,
+        "m3": -26.91,
+        "m6": -38.99,
+        "y1": -59.62,
+        "y5": -86.86,
         "vs_spy": {
-          "d1": -1.92,
-          "w1": -3.1,
-          "m1": -10.72,
-          "m3": -29.55,
-          "m6": -52.28,
-          "y1": -80.52,
-          "y5": -161.23
+          "d1": -1.43,
+          "w1": -6.18,
+          "m1": -10.55,
+          "m3": -32.22,
+          "m6": -52.34,
+          "y1": -80.19,
+          "y5": -161.32
         }
       },
-      "breadth_pct": 50.0,
-      "dollar_vol_ratio": 0.94,
+      "breadth_pct": 44.4,
+      "dollar_vol_ratio": 0.91,
       "rrg": {
         "ratio": 85.04,
         "momentum": 94.66,
@@ -7441,28 +7365,28 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.5,
-        "w1": -0.84,
-        "m1": 8.3,
-        "m3": 41.17,
-        "m6": 28.07,
-        "y1": 5.11,
-        "y5": 40.17,
+        "d1": 1.73,
+        "w1": 2.13,
+        "m1": 7.98,
+        "m3": 38.62,
+        "m6": 27.42,
+        "y1": 4.58,
+        "y5": 37.04,
         "vs_spy": {
-          "d1": 0.25,
-          "w1": -1.19,
-          "m1": 5.55,
-          "m3": 36.66,
-          "m6": 14.94,
-          "y1": -15.13,
-          "y5": -34.4
+          "d1": 1.03,
+          "w1": 0.92,
+          "m1": 4.92,
+          "m3": 33.31,
+          "m6": 14.07,
+          "y1": -15.99,
+          "y5": -37.42
         }
       },
       "breadth_pct": 80.0,
-      "dollar_vol_ratio": 0.64,
+      "dollar_vol_ratio": 0.68,
       "rrg": {
-        "ratio": 96.53,
-        "momentum": 107.51,
+        "ratio": 96.5,
+        "momentum": 107.55,
         "quadrant": "improving",
         "tail": [
           {
@@ -7490,12 +7414,12 @@
             "momentum": 109.69
           },
           {
-            "ratio": 95.14,
-            "momentum": 109.52
+            "ratio": 95.11,
+            "momentum": 109.35
           },
           {
-            "ratio": 96.53,
-            "momentum": 107.51
+            "ratio": 96.5,
+            "momentum": 107.55
           }
         ]
       }
@@ -7509,25 +7433,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -0.67,
-        "w1": 0.74,
-        "m1": -8.13,
-        "m3": -32.01,
-        "m6": -29.24,
-        "y1": -25.98,
-        "y5": -84.79,
+        "d1": -1.53,
+        "w1": -1.85,
+        "m1": -7.81,
+        "m3": -30.58,
+        "m6": -28.83,
+        "y1": -25.35,
+        "y5": -84.38,
         "vs_spy": {
-          "d1": -0.92,
-          "w1": 0.39,
-          "m1": -10.88,
-          "m3": -36.52,
-          "m6": -42.37,
-          "y1": -46.22,
-          "y5": -159.36
+          "d1": -2.23,
+          "w1": -3.06,
+          "m1": -10.87,
+          "m3": -35.89,
+          "m6": -42.18,
+          "y1": -45.92,
+          "y5": -158.84
         }
       },
       "breadth_pct": 80.0,
-      "dollar_vol_ratio": 0.9,
+      "dollar_vol_ratio": 0.89,
       "rrg": {
         "ratio": 74.93,
         "momentum": 89.72,
@@ -7577,25 +7501,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -1.6,
-        "w1": -2.69,
-        "m1": -7.91,
-        "m3": -25.28,
-        "m6": -39.23,
-        "y1": -61.21,
-        "y5": -87.97,
+        "d1": -0.76,
+        "w1": -4.94,
+        "m1": -7.35,
+        "m3": -27.15,
+        "m6": -39.04,
+        "y1": -60.58,
+        "y5": -88.15,
         "vs_spy": {
-          "d1": -1.85,
-          "w1": -3.04,
-          "m1": -10.66,
-          "m3": -29.79,
-          "m6": -52.36,
-          "y1": -81.45,
-          "y5": -162.54
+          "d1": -1.46,
+          "w1": -6.15,
+          "m1": -10.41,
+          "m3": -32.46,
+          "m6": -52.39,
+          "y1": -81.15,
+          "y5": -162.61
         }
       },
-      "breadth_pct": 50.0,
-      "dollar_vol_ratio": 0.76,
+      "breadth_pct": 44.4,
+      "dollar_vol_ratio": 0.79,
       "rrg": {
         "ratio": 85.25,
         "momentum": 94.62,
@@ -7645,25 +7569,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": 0.73,
-        "w1": 0.89,
-        "m1": 0.56,
-        "m3": 2.09,
-        "m6": 20.36,
-        "y1": 26.92,
-        "y5": 97.74,
+        "d1": 1.15,
+        "w1": 2.43,
+        "m1": 1.98,
+        "m3": 3.71,
+        "m6": 20.86,
+        "y1": 27.85,
+        "y5": 98.74,
         "vs_spy": {
-          "d1": 0.48,
-          "w1": 0.54,
-          "m1": -2.19,
-          "m3": -2.42,
-          "m6": 7.23,
-          "y1": 6.68,
-          "y5": 23.17
+          "d1": 0.45,
+          "w1": 1.22,
+          "m1": -1.08,
+          "m3": -1.6,
+          "m6": 7.51,
+          "y1": 7.28,
+          "y5": 24.28
         }
       },
-      "breadth_pct": 44.4,
-      "dollar_vol_ratio": 0.85,
+      "breadth_pct": 55.6,
+      "dollar_vol_ratio": 0.81,
       "rrg": {
         "ratio": 114.02,
         "momentum": 94.47,
@@ -7713,25 +7637,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 1.72,
-        "w1": 17.41,
-        "m1": 43.92,
-        "m3": 0.23,
-        "m6": -30.28,
-        "y1": 68.6,
-        "y5": 211.43,
+        "d1": -5.76,
+        "w1": 9.93,
+        "m1": 38.79,
+        "m3": -5.07,
+        "m6": -37.15,
+        "y1": 52.52,
+        "y5": 199.54,
         "vs_spy": {
-          "d1": 1.47,
-          "w1": 17.06,
-          "m1": 41.17,
-          "m3": -4.28,
-          "m6": -43.41,
-          "y1": 48.36,
-          "y5": 136.86
+          "d1": -6.46,
+          "w1": 8.72,
+          "m1": 35.73,
+          "m3": -10.38,
+          "m6": -50.5,
+          "y1": 31.95,
+          "y5": 125.08
         }
       },
       "breadth_pct": 100.0,
-      "dollar_vol_ratio": 1.28,
+      "dollar_vol_ratio": 1.38,
       "rrg": {
         "ratio": 90.45,
         "momentum": 107.89,
@@ -7781,25 +7705,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.21,
-        "w1": -0.14,
-        "m1": 3.1,
-        "m3": 13.35,
-        "m6": 10.96,
-        "y1": 8.75,
-        "y5": 48.78,
+        "d1": 0.59,
+        "w1": 0.78,
+        "m1": 3.01,
+        "m3": 12.6,
+        "m6": 10.78,
+        "y1": 8.55,
+        "y5": 47.46,
         "vs_spy": {
-          "d1": -0.04,
-          "w1": -0.49,
-          "m1": 0.35,
-          "m3": 8.84,
-          "m6": -2.17,
-          "y1": -11.49,
-          "y5": -25.79
+          "d1": -0.11,
+          "w1": -0.43,
+          "m1": -0.05,
+          "m3": 7.29,
+          "m6": -2.57,
+          "y1": -12.02,
+          "y5": -27.0
         }
       },
       "breadth_pct": 80.0,
-      "dollar_vol_ratio": 0.75,
+      "dollar_vol_ratio": 0.73,
       "rrg": {
         "ratio": 91.4,
         "momentum": 104.96,
@@ -7849,25 +7773,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.13,
-        "w1": 0.11,
-        "m1": -0.09,
-        "m3": 0.19,
-        "m6": -1.48,
+        "d1": 0.23,
+        "w1": 0.42,
+        "m1": -0.03,
+        "m3": 0.31,
+        "m6": -1.38,
         "y1": -1.34,
-        "y5": -8.88,
+        "y5": -8.52,
         "vs_spy": {
-          "d1": -0.12,
-          "w1": -0.24,
-          "m1": -2.84,
-          "m3": -4.32,
-          "m6": -14.61,
-          "y1": -21.58,
-          "y5": -83.45
+          "d1": -0.47,
+          "w1": -0.79,
+          "m1": -3.09,
+          "m3": -5.0,
+          "m6": -14.73,
+          "y1": -21.91,
+          "y5": -82.98
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.78,
+      "dollar_vol_ratio": 0.77,
       "rrg": {
         "ratio": 80.89,
         "momentum": 90.34,
@@ -7914,29 +7838,67 @@
       "theme_label": "Volatility Futures",
       "rank": 11,
       "has_breadth": false,
-      "data_ok": false,
-      "quadrant": null,
+      "data_ok": true,
+      "quadrant": "lagging",
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m6": null,
-        "y1": null,
-        "y5": null,
+        "d1": 0.87,
+        "w1": -3.02,
+        "m1": -5.9,
+        "m3": -27.87,
+        "m6": -30.57,
+        "y1": -45.29,
+        "y5": -94.62,
         "vs_spy": {
-          "d1": null,
-          "w1": null,
-          "m1": null,
-          "m3": null,
-          "m6": null,
-          "y1": null,
-          "y5": null
+          "d1": 0.17,
+          "w1": -4.23,
+          "m1": -8.96,
+          "m3": -33.18,
+          "m6": -43.92,
+          "y1": -65.86,
+          "y5": -169.08
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
-      "rrg": null
+      "dollar_vol_ratio": 0.74,
+      "rrg": {
+        "ratio": 83.42,
+        "momentum": 90.8,
+        "quadrant": "lagging",
+        "tail": [
+          {
+            "ratio": 87.75,
+            "momentum": 96.74
+          },
+          {
+            "ratio": 87.28,
+            "momentum": 98.84
+          },
+          {
+            "ratio": 86.52,
+            "momentum": 95.62
+          },
+          {
+            "ratio": 85.64,
+            "momentum": 93.8
+          },
+          {
+            "ratio": 85.22,
+            "momentum": 97.69
+          },
+          {
+            "ratio": 84.9,
+            "momentum": 98.01
+          },
+          {
+            "ratio": 84.28,
+            "momentum": 94.44
+          },
+          {
+            "ratio": 83.42,
+            "momentum": 90.8
+          }
+        ]
+      }
     },
     {
       "ticker": "SLV",
@@ -7947,25 +7909,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.87,
-        "w1": 5.33,
-        "m1": 11.08,
-        "m3": -14.46,
-        "m6": -11.01,
-        "y1": 68.65,
-        "y5": 170.92,
+        "d1": -1.52,
+        "w1": 4.14,
+        "m1": 11.4,
+        "m3": -16.84,
+        "m6": -17.02,
+        "y1": 66.08,
+        "y5": 169.51,
         "vs_spy": {
-          "d1": 0.62,
-          "w1": 4.98,
-          "m1": 8.33,
-          "m3": -18.97,
-          "m6": -24.14,
-          "y1": 48.41,
-          "y5": 96.35
+          "d1": -2.22,
+          "w1": 2.93,
+          "m1": 8.34,
+          "m3": -22.15,
+          "m6": -30.37,
+          "y1": 45.51,
+          "y5": 95.05
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 1.22,
+      "dollar_vol_ratio": 1.23,
       "rrg": {
         "ratio": 96.43,
         "momentum": 99.16,
@@ -8015,25 +7977,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.99,
-        "w1": 3.92,
-        "m1": 8.81,
-        "m3": -2.96,
-        "m6": -9.66,
-        "y1": 30.69,
-        "y5": 141.02,
+        "d1": -1.47,
+        "w1": 2.38,
+        "m1": 7.15,
+        "m3": -4.65,
+        "m6": -12.94,
+        "y1": 27.84,
+        "y5": 141.31,
         "vs_spy": {
-          "d1": 0.74,
-          "w1": 3.57,
-          "m1": 6.06,
-          "m3": -7.47,
-          "m6": -22.79,
-          "y1": 10.45,
-          "y5": 66.45
+          "d1": -2.17,
+          "w1": 1.17,
+          "m1": 4.09,
+          "m3": -9.96,
+          "m6": -26.29,
+          "y1": 7.27,
+          "y5": 66.85
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 1.4,
+      "dollar_vol_ratio": 1.34,
       "rrg": {
         "ratio": 90.07,
         "momentum": 100.62,
@@ -8083,25 +8045,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -0.1,
-        "w1": -1.07,
-        "m1": -2.34,
-        "m3": -1.85,
-        "m6": -8.63,
-        "y1": -5.4,
-        "y5": -43.71,
+        "d1": 0.58,
+        "w1": 0.08,
+        "m1": -1.96,
+        "m3": -1.16,
+        "m6": -7.75,
+        "y1": -4.8,
+        "y5": -43.05,
         "vs_spy": {
-          "d1": -0.35,
-          "w1": -1.42,
-          "m1": -5.09,
-          "m3": -6.36,
-          "m6": -21.76,
-          "y1": -25.64,
-          "y5": -118.28
+          "d1": -0.12,
+          "w1": -1.13,
+          "m1": -5.02,
+          "m3": -6.47,
+          "m6": -21.1,
+          "y1": -25.37,
+          "y5": -117.51
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 1.3,
+      "dollar_vol_ratio": 1.28,
       "rrg": {
         "ratio": 78.94,
         "momentum": 92.76,
@@ -8151,28 +8113,28 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.12,
-        "w1": -0.58,
-        "m1": -1.02,
-        "m3": -1.61,
-        "m6": -5.0,
-        "y1": -3.45,
-        "y5": -20.63,
+        "d1": 0.41,
+        "w1": 0.18,
+        "m1": -0.96,
+        "m3": -1.03,
+        "m6": -4.52,
+        "y1": -3.13,
+        "y5": -20.02,
         "vs_spy": {
-          "d1": -0.13,
-          "w1": -0.93,
-          "m1": -3.77,
-          "m3": -6.12,
-          "m6": -18.13,
-          "y1": -23.69,
-          "y5": -95.2
+          "d1": -0.29,
+          "w1": -1.03,
+          "m1": -4.02,
+          "m3": -6.34,
+          "m6": -17.87,
+          "y1": -23.7,
+          "y5": -94.48
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.87,
+      "dollar_vol_ratio": 0.84,
       "rrg": {
-        "ratio": 79.45,
-        "momentum": 92.24,
+        "ratio": 79.42,
+        "momentum": 92.41,
         "quadrant": "lagging",
         "tail": [
           {
@@ -8200,12 +8162,12 @@
             "momentum": 103.51
           },
           {
-            "ratio": 80.15,
-            "momentum": 101.46
+            "ratio": 80.1,
+            "momentum": 100.93
           },
           {
-            "ratio": 79.45,
-            "momentum": 92.24
+            "ratio": 79.42,
+            "momentum": 92.41
           }
         ]
       }
@@ -8219,25 +8181,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.93,
-        "w1": 8.7,
-        "m1": 21.47,
-        "m3": 4.13,
-        "m6": -9.27,
-        "y1": 50.95,
-        "y5": 176.89,
+        "d1": -2.96,
+        "w1": 5.18,
+        "m1": 19.28,
+        "m3": 1.3,
+        "m6": -13.93,
+        "y1": 43.3,
+        "y5": 171.43,
         "vs_spy": {
-          "d1": 0.68,
-          "w1": 8.35,
-          "m1": 18.72,
-          "m3": -0.38,
-          "m6": -22.4,
-          "y1": 30.71,
-          "y5": 102.32
+          "d1": -3.66,
+          "w1": 3.97,
+          "m1": 16.22,
+          "m3": -4.01,
+          "m6": -27.28,
+          "y1": 22.73,
+          "y5": 96.97
         }
       },
       "breadth_pct": 100.0,
-      "dollar_vol_ratio": 1.37,
+      "dollar_vol_ratio": 1.44,
       "rrg": {
         "ratio": 93.2,
         "momentum": 109.23,
@@ -8287,25 +8249,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": -0.24,
-        "w1": 10.81,
-        "m1": 5.93,
-        "m3": -14.12,
-        "m6": 68.1,
-        "y1": 68.05,
-        "y5": 124.08,
+        "d1": -1.78,
+        "w1": 5.18,
+        "m1": 3.01,
+        "m3": -16.25,
+        "m6": 57.47,
+        "y1": 68.85,
+        "y5": 118.78,
         "vs_spy": {
-          "d1": -0.49,
-          "w1": 10.46,
-          "m1": 3.18,
-          "m3": -18.63,
-          "m6": 54.97,
-          "y1": 47.81,
-          "y5": 49.51
+          "d1": -2.48,
+          "w1": 3.97,
+          "m1": -0.05,
+          "m3": -21.56,
+          "m6": 44.12,
+          "y1": 48.28,
+          "y5": 44.32
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.8,
+      "dollar_vol_ratio": 0.79,
       "rrg": {
         "ratio": 110.26,
         "momentum": 94.78,
@@ -8352,29 +8314,67 @@
       "theme_label": "1.5x Leveraged Volatility",
       "rank": 24,
       "has_breadth": false,
-      "data_ok": false,
-      "quadrant": null,
+      "data_ok": true,
+      "quadrant": "lagging",
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m6": null,
-        "y1": null,
-        "y5": null,
+        "d1": 0.93,
+        "w1": -4.82,
+        "m1": -9.64,
+        "m3": -41.02,
+        "m6": -46.66,
+        "y1": -65.37,
+        "y5": -99.55,
         "vs_spy": {
-          "d1": null,
-          "w1": null,
-          "m1": null,
-          "m3": null,
-          "m6": null,
-          "y1": null,
-          "y5": null
+          "d1": 0.23,
+          "w1": -6.03,
+          "m1": -12.7,
+          "m3": -46.33,
+          "m6": -60.01,
+          "y1": -85.94,
+          "y5": -174.01
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
-      "rrg": null
+      "dollar_vol_ratio": 0.69,
+      "rrg": {
+        "ratio": 85.38,
+        "momentum": 87.13,
+        "quadrant": "lagging",
+        "tail": [
+          {
+            "ratio": 88.93,
+            "momentum": 95.95
+          },
+          {
+            "ratio": 88.53,
+            "momentum": 96.9
+          },
+          {
+            "ratio": 87.96,
+            "momentum": 94.13
+          },
+          {
+            "ratio": 87.33,
+            "momentum": 91.98
+          },
+          {
+            "ratio": 86.95,
+            "momentum": 94.58
+          },
+          {
+            "ratio": 86.62,
+            "momentum": 94.12
+          },
+          {
+            "ratio": 86.07,
+            "momentum": 90.68
+          },
+          {
+            "ratio": 85.38,
+            "momentum": 87.13
+          }
+        ]
+      }
     },
     {
       "ticker": "UNG",
@@ -8415,25 +8415,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.1,
-        "w1": -0.38,
-        "m1": -0.63,
-        "m3": -0.59,
-        "m6": -4.36,
-        "y1": -2.74,
-        "y5": -19.28,
+        "d1": 0.37,
+        "w1": 0.38,
+        "m1": -0.51,
+        "m3": -0.18,
+        "m6": -3.81,
+        "y1": -2.64,
+        "y5": -18.58,
         "vs_spy": {
-          "d1": -0.15,
-          "w1": -0.73,
-          "m1": -3.38,
-          "m3": -5.1,
-          "m6": -17.49,
-          "y1": -22.98,
-          "y5": -93.85
+          "d1": -0.33,
+          "w1": -0.83,
+          "m1": -3.57,
+          "m3": -5.49,
+          "m6": -17.16,
+          "y1": -23.21,
+          "y5": -93.04
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 2.05,
+      "dollar_vol_ratio": 2.07,
       "rrg": {
         "ratio": 79.75,
         "momentum": 94.07,
@@ -8483,25 +8483,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.17,
-        "w1": 0.19,
-        "m1": -0.05,
-        "m3": 0.14,
-        "m6": -1.58,
-        "y1": -1.5,
-        "y5": -12.16,
+        "d1": 0.2,
+        "w1": 0.45,
+        "m1": -0.03,
+        "m3": 0.28,
+        "m6": -1.53,
+        "y1": -1.52,
+        "y5": -11.81,
         "vs_spy": {
-          "d1": -0.08,
-          "w1": -0.16,
-          "m1": -2.8,
-          "m3": -4.37,
-          "m6": -14.71,
-          "y1": -21.74,
-          "y5": -86.73
+          "d1": -0.5,
+          "w1": -0.76,
+          "m1": -3.09,
+          "m3": -5.03,
+          "m6": -14.88,
+          "y1": -22.09,
+          "y5": -86.27
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 1.21,
+      "dollar_vol_ratio": 1.17,
       "rrg": {
         "ratio": 80.9,
         "momentum": 89.78,
@@ -8551,21 +8551,21 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 1.37,
-        "w1": 8.03,
-        "m1": -7.17,
-        "m3": -24.23,
-        "m6": -40.7,
-        "y1": -61.54,
+        "d1": -5.4,
+        "w1": 4.64,
+        "m1": -13.23,
+        "m3": -31.0,
+        "m6": -43.65,
+        "y1": -63.71,
         "y5": -99.86,
         "vs_spy": {
-          "d1": 1.12,
-          "w1": 7.68,
-          "m1": -9.92,
-          "m3": -28.74,
-          "m6": -53.83,
-          "y1": -81.78,
-          "y5": -174.43
+          "d1": -6.1,
+          "w1": 3.43,
+          "m1": -16.29,
+          "m3": -36.31,
+          "m6": -57.0,
+          "y1": -84.28,
+          "y5": -174.32
         }
       },
       "breadth_pct": null,
@@ -8619,25 +8619,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -0.23,
-        "w1": -2.51,
-        "m1": -2.29,
-        "m3": -20.91,
-        "m6": -8.65,
-        "y1": -57.34,
+        "d1": 0.12,
+        "w1": -1.61,
+        "m1": -2.73,
+        "m3": -18.4,
+        "m6": -6.55,
+        "y1": -57.41,
         "y5": null,
         "vs_spy": {
-          "d1": -0.48,
-          "w1": -2.86,
-          "m1": -5.04,
-          "m3": -25.42,
-          "m6": -21.78,
-          "y1": -77.58,
+          "d1": -0.58,
+          "w1": -2.82,
+          "m1": -5.79,
+          "m3": -23.71,
+          "m6": -19.9,
+          "y1": -77.98,
           "y5": null
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.32,
+      "dollar_vol_ratio": 0.37,
       "rrg": {
         "ratio": 88.25,
         "momentum": 102.72,
@@ -8687,25 +8687,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -0.14,
-        "w1": -2.31,
-        "m1": -1.89,
-        "m3": -19.92,
-        "m6": -6.51,
-        "y1": -42.92,
+        "d1": -0.03,
+        "w1": -1.67,
+        "m1": -2.53,
+        "m3": -17.57,
+        "m6": -4.42,
+        "y1": -43.14,
         "y5": null,
         "vs_spy": {
-          "d1": -0.39,
-          "w1": -2.66,
-          "m1": -4.64,
-          "m3": -24.43,
-          "m6": -19.64,
-          "y1": -63.16,
+          "d1": -0.73,
+          "w1": -2.88,
+          "m1": -5.59,
+          "m3": -22.88,
+          "m6": -17.77,
+          "y1": -63.71,
           "y5": null
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.91,
+      "dollar_vol_ratio": 0.88,
       "rrg": {
         "ratio": 86.14,
         "momentum": 104.88,
@@ -8755,25 +8755,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.1,
-        "w1": -0.25,
-        "m1": -0.58,
-        "m3": -0.63,
-        "m6": -3.46,
-        "y1": -1.85,
-        "y5": -15.45,
+        "d1": 0.28,
+        "w1": 0.32,
+        "m1": -0.47,
+        "m3": -0.29,
+        "m6": -3.09,
+        "y1": -1.7,
+        "y5": -15.01,
         "vs_spy": {
-          "d1": -0.15,
-          "w1": -0.6,
-          "m1": -3.33,
-          "m3": -5.14,
-          "m6": -16.59,
-          "y1": -22.09,
-          "y5": -90.02
+          "d1": -0.42,
+          "w1": -0.89,
+          "m1": -3.53,
+          "m3": -5.6,
+          "m6": -16.44,
+          "y1": -22.27,
+          "y5": -89.47
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 1.18,
+      "dollar_vol_ratio": 1.29,
       "rrg": {
         "ratio": 79.79,
         "momentum": 92.05,
@@ -8823,28 +8823,28 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.11,
-        "w1": -0.29,
-        "m1": -0.58,
-        "m3": -0.6,
-        "m6": -3.53,
-        "y1": -1.83,
-        "y5": -15.17,
+        "d1": 0.27,
+        "w1": 0.27,
+        "m1": -0.46,
+        "m3": -0.33,
+        "m6": -3.14,
+        "y1": -1.69,
+        "y5": -14.73,
         "vs_spy": {
-          "d1": -0.14,
-          "w1": -0.64,
-          "m1": -3.33,
-          "m3": -5.11,
-          "m6": -16.66,
-          "y1": -22.07,
-          "y5": -89.74
+          "d1": -0.43,
+          "w1": -0.94,
+          "m1": -3.52,
+          "m3": -5.64,
+          "m6": -16.49,
+          "y1": -22.26,
+          "y5": -89.19
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.97,
+      "dollar_vol_ratio": 0.88,
       "rrg": {
-        "ratio": 79.78,
-        "momentum": 91.91,
+        "ratio": 79.72,
+        "momentum": 92.19,
         "quadrant": "lagging",
         "tail": [
           {
@@ -8872,12 +8872,12 @@
             "momentum": 105.48
           },
           {
-            "ratio": 80.51,
-            "momentum": 102.5
+            "ratio": 80.44,
+            "momentum": 101.59
           },
           {
-            "ratio": 79.78,
-            "momentum": 91.91
+            "ratio": 79.72,
+            "momentum": 92.19
           }
         ]
       }
@@ -8888,29 +8888,67 @@
       "theme_label": "Senior Bank Loans",
       "rank": 68,
       "has_breadth": false,
-      "data_ok": false,
-      "quadrant": null,
+      "data_ok": true,
+      "quadrant": "lagging",
       "returns": {
-        "d1": null,
-        "w1": null,
-        "m1": null,
-        "m3": null,
-        "m6": null,
-        "y1": null,
-        "y5": null,
+        "d1": 0.15,
+        "w1": 0.34,
+        "m1": 0.49,
+        "m3": 0.24,
+        "m6": -0.48,
+        "y1": -1.58,
+        "y5": -7.18,
         "vs_spy": {
-          "d1": null,
-          "w1": null,
-          "m1": null,
-          "m3": null,
-          "m6": null,
-          "y1": null,
-          "y5": null
+          "d1": -0.55,
+          "w1": -0.87,
+          "m1": -2.57,
+          "m3": -5.07,
+          "m6": -13.83,
+          "y1": -22.15,
+          "y5": -81.64
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": null,
-      "rrg": null
+      "dollar_vol_ratio": 0.8,
+      "rrg": {
+        "ratio": 81.64,
+        "momentum": 91.6,
+        "quadrant": "lagging",
+        "tail": [
+          {
+            "ratio": 81.65,
+            "momentum": 97.53
+          },
+          {
+            "ratio": 81.83,
+            "momentum": 103.65
+          },
+          {
+            "ratio": 81.6,
+            "momentum": 98.39
+          },
+          {
+            "ratio": 81.29,
+            "momentum": 97.04
+          },
+          {
+            "ratio": 81.63,
+            "momentum": 104.79
+          },
+          {
+            "ratio": 82.08,
+            "momentum": 105.86
+          },
+          {
+            "ratio": 82.2,
+            "momentum": 101.45
+          },
+          {
+            "ratio": 81.64,
+            "momentum": 91.6
+          }
+        ]
+      }
     },
     {
       "ticker": "TMF",
@@ -8921,25 +8959,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -0.29,
-        "w1": -3.34,
-        "m1": -6.68,
-        "m3": -6.0,
-        "m6": -24.54,
-        "y1": -17.73,
-        "y5": -88.69,
+        "d1": 1.69,
+        "w1": 0.06,
+        "m1": -5.48,
+        "m3": -3.94,
+        "m6": -22.29,
+        "y1": -16.04,
+        "y5": -88.31,
         "vs_spy": {
-          "d1": -0.54,
-          "w1": -3.69,
-          "m1": -9.43,
-          "m3": -10.51,
-          "m6": -37.67,
-          "y1": -37.97,
-          "y5": -163.26
+          "d1": 0.99,
+          "w1": -1.15,
+          "m1": -8.54,
+          "m3": -9.25,
+          "m6": -35.64,
+          "y1": -36.61,
+          "y5": -162.77
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.85,
+      "dollar_vol_ratio": 0.87,
       "rrg": {
         "ratio": 78.21,
         "momentum": 99.03,
@@ -8989,25 +9027,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 1.31,
-        "w1": 18.4,
-        "m1": 43.24,
-        "m3": -4.94,
-        "m6": -32.25,
-        "y1": 75.07,
-        "y5": 146.18,
+        "d1": -5.72,
+        "w1": 11.82,
+        "m1": 40.04,
+        "m3": -8.97,
+        "m6": -39.24,
+        "y1": 58.77,
+        "y5": 135.75,
         "vs_spy": {
-          "d1": 1.06,
-          "w1": 18.05,
-          "m1": 40.49,
-          "m3": -9.45,
-          "m6": -45.38,
-          "y1": 54.83,
-          "y5": 71.61
+          "d1": -6.42,
+          "w1": 10.61,
+          "m1": 36.98,
+          "m3": -14.28,
+          "m6": -52.59,
+          "y1": 38.2,
+          "y5": 61.29
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 1.08,
+      "dollar_vol_ratio": 1.18,
       "rrg": {
         "ratio": 90.38,
         "momentum": 106.61,
@@ -9057,28 +9095,28 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": -1.72,
-        "w1": -17.67,
-        "m1": -36.94,
-        "m3": -24.2,
-        "m6": -23.11,
-        "y1": -83.08,
-        "y5": -98.8,
+        "d1": 5.92,
+        "w1": -12.79,
+        "m1": -35.47,
+        "m3": -20.98,
+        "m6": -15.0,
+        "y1": -81.37,
+        "y5": -98.75,
         "vs_spy": {
-          "d1": -1.97,
-          "w1": -18.02,
-          "m1": -39.69,
-          "m3": -28.71,
-          "m6": -36.24,
-          "y1": -103.32,
-          "y5": -173.37
+          "d1": 5.22,
+          "w1": -14.0,
+          "m1": -38.53,
+          "m3": -26.29,
+          "m6": -28.35,
+          "y1": -101.94,
+          "y5": -173.21
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 1.18,
+      "dollar_vol_ratio": 1.31,
       "rrg": {
-        "ratio": 92.23,
-        "momentum": 71.06,
+        "ratio": 92.3,
+        "momentum": 70.32,
         "quadrant": "lagging",
         "tail": [
           {
@@ -9106,12 +9144,12 @@
             "momentum": 103.14
           },
           {
-            "ratio": 92.51,
-            "momentum": 97.8
+            "ratio": 92.59,
+            "momentum": 103.39
           },
           {
-            "ratio": 92.23,
-            "momentum": 71.06
+            "ratio": 92.3,
+            "momentum": 70.32
           }
         ]
       }
@@ -9125,25 +9163,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 1.01,
-        "w1": 3.93,
-        "m1": 8.82,
-        "m3": -2.95,
-        "m6": -9.55,
-        "y1": 31.05,
-        "y5": 144.35,
+        "d1": -1.47,
+        "w1": 2.4,
+        "m1": 7.24,
+        "m3": -4.59,
+        "m6": -12.78,
+        "y1": 28.2,
+        "y5": 144.88,
         "vs_spy": {
-          "d1": 0.76,
-          "w1": 3.58,
-          "m1": 6.07,
-          "m3": -7.46,
-          "m6": -22.68,
-          "y1": 10.81,
-          "y5": 69.78
+          "d1": -2.17,
+          "w1": 1.19,
+          "m1": 4.18,
+          "m3": -9.9,
+          "m6": -26.13,
+          "y1": 7.63,
+          "y5": 70.42
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 1.62,
+      "dollar_vol_ratio": 1.47,
       "rrg": {
         "ratio": 90.25,
         "momentum": 100.59,
@@ -9193,25 +9231,25 @@
       "data_ok": true,
       "quadrant": "weakening",
       "returns": {
-        "d1": -0.41,
-        "w1": 18.06,
-        "m1": 5.9,
-        "m3": -17.03,
-        "m6": 86.86,
-        "y1": 73.54,
-        "y5": 70.71,
+        "d1": -2.42,
+        "w1": 9.34,
+        "m1": 1.73,
+        "m3": -19.72,
+        "m6": 68.42,
+        "y1": 76.85,
+        "y5": 65.35,
         "vs_spy": {
-          "d1": -0.66,
-          "w1": 17.71,
-          "m1": 3.15,
-          "m3": -21.54,
-          "m6": 73.73,
-          "y1": 53.3,
-          "y5": -3.86
+          "d1": -3.12,
+          "w1": 8.13,
+          "m1": -1.33,
+          "m3": -25.03,
+          "m6": 55.07,
+          "y1": 56.28,
+          "y5": -9.11
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.85,
+      "dollar_vol_ratio": 0.83,
       "rrg": {
         "ratio": 109.84,
         "momentum": 93.29,
@@ -9261,25 +9299,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.27,
-        "w1": -16.21,
-        "m1": -9.82,
-        "m3": 7.38,
-        "m6": -60.32,
-        "y1": -60.97,
-        "y5": -90.02,
+        "d1": 2.36,
+        "w1": -9.55,
+        "m1": -6.29,
+        "m3": 10.83,
+        "m6": -55.73,
+        "y1": -61.67,
+        "y5": -89.72,
         "vs_spy": {
-          "d1": 0.02,
-          "w1": -16.56,
-          "m1": -12.57,
-          "m3": 2.87,
-          "m6": -73.45,
-          "y1": -81.21,
-          "y5": -164.59
+          "d1": 1.66,
+          "w1": -10.76,
+          "m1": -9.35,
+          "m3": 5.52,
+          "m6": -69.08,
+          "y1": -82.24,
+          "y5": -164.18
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 0.88,
+      "dollar_vol_ratio": 0.78,
       "rrg": {
         "ratio": 84.98,
         "momentum": 104.67,
@@ -9329,21 +9367,21 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.31,
-        "w1": 2.37,
-        "m1": 4.8,
-        "m3": 2.65,
-        "m6": 16.89,
-        "y1": 6.4,
-        "y5": 114.94,
+        "d1": -1.2,
+        "w1": -0.34,
+        "m1": 3.72,
+        "m3": 1.2,
+        "m6": 14.48,
+        "y1": 4.78,
+        "y5": 110.02,
         "vs_spy": {
-          "d1": 0.06,
-          "w1": 2.02,
-          "m1": 2.05,
-          "m3": -1.86,
-          "m6": 3.76,
-          "y1": -13.84,
-          "y5": 40.37
+          "d1": -1.9,
+          "w1": -1.55,
+          "m1": 0.66,
+          "m3": -4.11,
+          "m6": 1.13,
+          "y1": -15.79,
+          "y5": 35.56
         }
       },
       "breadth_pct": null,
@@ -9397,25 +9435,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": 0.4,
-        "w1": 3.65,
-        "m1": 7.05,
-        "m3": 4.11,
-        "m6": 26.22,
-        "y1": 11.24,
-        "y5": 186.27,
+        "d1": -1.66,
+        "w1": 0.07,
+        "m1": 5.72,
+        "m3": 1.94,
+        "m6": 22.68,
+        "y1": 9.09,
+        "y5": 176.81,
         "vs_spy": {
-          "d1": 0.15,
-          "w1": 3.3,
-          "m1": 4.3,
-          "m3": -0.4,
-          "m6": 13.09,
-          "y1": -9.0,
-          "y5": 111.7
+          "d1": -2.36,
+          "w1": -1.14,
+          "m1": 2.66,
+          "m3": -3.37,
+          "m6": 9.33,
+          "y1": -11.48,
+          "y5": 102.35
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 1.26,
+      "dollar_vol_ratio": 1.19,
       "rrg": {
         "ratio": 98.33,
         "momentum": 105.45,
@@ -9465,25 +9503,25 @@
       "data_ok": true,
       "quadrant": "improving",
       "returns": {
-        "d1": -1.38,
-        "w1": -8.61,
-        "m1": 4.16,
-        "m3": 16.54,
-        "m6": 29.08,
-        "y1": -28.2,
-        "y5": -59.11,
+        "d1": 5.5,
+        "w1": -5.67,
+        "m1": 11.64,
+        "m3": 27.86,
+        "m6": 35.39,
+        "y1": -23.91,
+        "y5": -59.42,
         "vs_spy": {
-          "d1": -1.63,
-          "w1": -8.96,
-          "m1": 1.41,
-          "m3": 12.03,
-          "m6": 15.95,
-          "y1": -48.44,
-          "y5": -133.68
+          "d1": 4.8,
+          "w1": -6.88,
+          "m1": 8.58,
+          "m3": 22.55,
+          "m6": 22.04,
+          "y1": -44.48,
+          "y5": -133.88
         }
       },
       "breadth_pct": null,
-      "dollar_vol_ratio": 1.16,
+      "dollar_vol_ratio": 1.14,
       "rrg": {
         "ratio": 92.59,
         "momentum": 107.4,
@@ -9533,25 +9571,25 @@
       "data_ok": true,
       "quadrant": "lagging",
       "returns": {
-        "d1": 0.09,
+        "d1": 0.14,
         "w1": 0.57,
-        "m1": 2.23,
-        "m3": 3.49,
-        "m6": -2.3,
-        "y1": 1.4,
-        "y5": -5.1,
+        "m1": 2.3,
+        "m3": 3.19,
+        "m6": -2.38,
+        "y1": 1.45,
+        "y5": -5.41,
         "vs_spy": {
-          "d1": -0.16,
-          "w1": 0.22,
-          "m1": -0.52,
-          "m3": -1.02,
-          "m6": -15.43,
-          "y1": -18.84,
-          "y5": -79.67
+          "d1": -0.56,
+          "w1": -0.64,
+          "m1": -0.76,
+          "m3": -2.12,
+          "m6": -15.73,
+          "y1": -19.12,
+          "y5": -79.87
         }
       },
       "breadth_pct": 55.6,
-      "dollar_vol_ratio": 0.91,
+      "dollar_vol_ratio": 0.83,
       "rrg": {
         "ratio": 81.26,
         "momentum": 96.98,
@@ -9594,18 +9632,18 @@
     }
   ],
   "warnings": [
-    "Batch starting at 80 (['6981.T', 'PETR4', 'RIG']...) failed all retries. Last error: TypeError(\"expected string or bytes-like object, got 'int'\")",
-    "Batch starting at 160 (['VTI', 'CNX', 'BAC']...) failed all retries. Last error: TypeError(\"expected string or bytes-like object, got 'int'\")",
-    "QUANTUM: ticker 00939 could not be fetched from yfinance.",
+    "Batch starting at 100 (['GBCI', 'RY', 'KBE']...) failed all retries. Last error: TypeError(\"expected string or bytes-like object, got 'int'\")",
+    "Batch starting at 180 (['XLC', 'DIS', 'GDXJ']...) failed all retries. Last error: TypeError(\"expected string or bytes-like object, got 'int'\")",
     "QUANTUM: ticker 01398 could not be fetched from yfinance.",
-    "QUANTUM: ticker PETR4 could not be fetched from yfinance.",
     "QUANTUM: ticker 500034 could not be fetched from yfinance.",
-    "QUANTUM: ticker 005935 could not be fetched from yfinance.",
-    "QUANTUM: ticker XTSLA could not be fetched from yfinance.",
+    "QUANTUM: ticker BBDC4 could not be fetched from yfinance.",
     "QUANTUM: ticker ITUB4 could not be fetched from yfinance.",
+    "QUANTUM: ticker 005935 could not be fetched from yfinance.",
     "QUANTUM: ticker 649 could not be fetched from yfinance.",
-    "QUANTUM: ticker 03988 could not be fetched from yfinance.",
+    "QUANTUM: ticker PETR4 could not be fetched from yfinance.",
+    "QUANTUM: ticker 00939 could not be fetched from yfinance.",
+    "QUANTUM: ticker XTSLA could not be fetched from yfinance.",
     "QUANTUM: ticker 02318 could not be fetched from yfinance.",
-    "QUANTUM: ticker BBDC4 could not be fetched from yfinance."
+    "QUANTUM: ticker 03988 could not be fetched from yfinance."
   ]
 }
