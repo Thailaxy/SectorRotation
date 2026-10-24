@@ -18,3 +18,4 @@ jobs:
           projectId: sectorrotation-546e0
           channelId: live
           target: wk
+          firebaseToolsVersion: "15.34.0"
